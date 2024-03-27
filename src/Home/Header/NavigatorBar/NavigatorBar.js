@@ -7,13 +7,16 @@ import { signInContext } from '../../../SignInControl/SignInProvider';
 import { displaySignInFormContext } from '../../../SignInControl/DisplaySignInProvider';
 
 const NavigatorBar = () => {
-  const {isSignIn} = useContext(signInContext);
+  const {isSignIn,setIsSignIn} = useContext(signInContext);
   const {setIsDisplaySignInForm} = useContext(displaySignInFormContext);
 
-  const displaySingInForm = () => {
+  const displaySignInForm = () => {
     setIsDisplaySignInForm(true);
   }
 
+  const handleSignOut = () => {
+    setIsSignIn(false);
+  }
     return (
       <div>
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -25,8 +28,10 @@ const NavigatorBar = () => {
                 <Nav.Link href="/">Home</Nav.Link>
               </Nav>
             </Navbar.Collapse>
-            {!isSignIn && (
-              <Button variant='primary' onClick={displaySingInForm}>Log In</Button>
+            {!isSignIn? (
+              <Button variant='primary' onClick={displaySignInForm}>Sign In</Button>
+            ) : (
+              <Button variant='primary' onClick={handleSignOut}>Sign Out</Button>
             )}
           </Container>
         </Navbar> 

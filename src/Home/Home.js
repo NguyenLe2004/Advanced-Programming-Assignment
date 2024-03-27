@@ -17,7 +17,7 @@ const Home = () => {
       {isDisplaySignInForm && (
         <SignInForm/>
       )}
-      <div onClick={hideSignInForm} id='mainPage'>
+      <div onClick={hideSignInForm} className={`mainPage-${isDisplaySignInForm? 'whileDisplayForm' : ''}`}>
         <Header/>
       </div>
     </div>
