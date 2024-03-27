@@ -1,14 +1,13 @@
 import Home from "./Home/Home";
-import {LoginAuth} from "./LoginAuth";
-import { LoginFormDislay } from "./DisplayLoginForm";
-
+import { SignInProvider } from "./SignInControl/SignInProvider";
+import { DisplaySignInProvider } from "./SignInControl/DisplaySignInProvider";
 function App() {
   return ( 
-    <LoginAuth>
-      <LoginFormDislay>
+    <SignInProvider>
+      <DisplaySignInProvider>
           <Home/>
-      </LoginFormDislay>
-    </LoginAuth>
+      </DisplaySignInProvider>
+    </SignInProvider>
   );
 }
 
