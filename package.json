@@ -1,0 +1,24 @@
+{
+  "name": "server-side",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.0",
+    "firebase": "^10.9.0",
+    "firebase-tools": "^13.5.2",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.23.6"
+  }
+}
