@@ -1,10 +1,6 @@
-## Nội dung
-- [Tổng quan](#overview)
-  - [Thử thách](#the-challenge)   
-- [Quá trình](#my-process)
-- [Tác giả](#author)
-## Tổng quan
-## Thử thách
-## Quá trình
-## Tác giả
+# Features of this application include:
 
+- Three different User Permission Levels
+- Associated databases for easy relationship management
+- Easy visual views of information
+- Mobile-friendly design
