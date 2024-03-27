@@ -1,0 +1,29 @@
+.loginForm{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    width: 50vh;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.submitBtn{
+    display: flex;
+    justify-content: center;
+}
+.closeBtn{
+    font-size: 30px;
+    float: right;
+    position: relative;
+    left: 10px;
+    bottom: 15px;
+    color: black;
+    transition: color 0.3s;
+}
+.closeBtn:hover{
+    cursor: pointer;
+    color: gray;
+}
