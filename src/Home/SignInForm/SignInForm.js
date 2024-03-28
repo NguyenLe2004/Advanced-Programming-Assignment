@@ -61,25 +61,26 @@ const SignInForm = () => {
       return;
     }
 
+    hideSignInForm();
+    hideSignInBtn();
+    // submitBtnLoad();
 
-    submitBtnLoad();
-
-    axios.post('http://localhost:5000/api/users/login', {
-      email: email,
-      password: password
-    })
-    .then(function (response) {
-      if (response.data.success) {
-        hideSignInForm();
-        hideSignInBtn();
-      } else{
-        displayFailSignIn();
-        submitBtnNotLoad();
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    // axios.post('http://localhost:5000/api/users/login', {
+    //   email: email,
+    //   password: password
+    // })
+    // .then(function (response) {
+    //   if (response.data.success) {
+    //     hideSignInForm();
+    //     hideSignInBtn();
+    //   } else{
+    //     displayFailSignIn();
+    //     submitBtnNotLoad();
+    //   }
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
   }
 
   return (

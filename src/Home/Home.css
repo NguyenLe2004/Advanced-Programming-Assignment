@@ -1,6 +1,22 @@
 .mainPage{
     height: 100vh;
 }
+.firstImg {
+    width: 80vw;
+    height: 70vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%);
+}
+.footer {
+    position: absolute;
+    background-color: rgb(62, 62, 179);
+    top: 80vh;
+    color: white;
+    border: 1px black solid;
+    width: 100vw;
+    height: 20vh;
+}
 .mainPage-whileDisplayForm {
     border: 1px black solid;
     height: 100vh;
