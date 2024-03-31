@@ -11,7 +11,7 @@
 .footer {
     position: absolute;
     background-color: rgb(62, 62, 179);
-    top: 80vh;
+    top: 100vh;
     color: white;
     border: 1px black solid;
     width: 100vw;

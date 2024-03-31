@@ -1,19 +1,20 @@
-import React, {useState,useEffect} from 'react'
-import Search from './Search/Search'
+import React, {useState,useEffect, useContext} from 'react'
+import Search from './DisplayDataPatient/DisplayDataPatient'
 import axios from 'axios'
-import DataTable from './DataTable/DataTable'
-import "./Patient.css"
+import { dataDisplayPatientContext, dataPatientContext } from '../DataControl/DataPatientProvider'
+
+import DisplayDataPatient from './DisplayDataPatient/DisplayDataPatient'
 
 const Patient = () => {
-
-  const [jsonData, setJsonData] = useState(null);
-
+  const {dataPatientDisplay,setDataPatientDisplay} = useContext(dataDisplayPatientContext);
+  const {setDataPatient } = useContext(dataPatientContext);
   useEffect(() => {
     const getAllPatient = async () => {
       try {
         const response = await axios.get('http://localhost:3000/Patient');
-        console.log('call api', response.data);
-        setJsonData(response.data);
+        setDataPatient(response.data);
+        setDataPatientDisplay(response.data);
+        console.log(dataPatientDisplay);
       } catch (error) {
         console.log(error);
       }
@@ -22,10 +23,7 @@ const Patient = () => {
   }, []);
 
   return (
-    <div>
-      <Search/>
-      {jsonData && <DataTable jsonData={jsonData} />}
-    </div>
+    <DisplayDataPatient/>
   )
 }
 

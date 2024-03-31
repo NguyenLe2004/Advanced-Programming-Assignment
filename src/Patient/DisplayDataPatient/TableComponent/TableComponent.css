@@ -1,0 +1,58 @@
+table {
+  position: absolute;
+  top: 20vh;
+  margin-left: 10vw;
+  width: 80vw;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+  
+  /* Áp dụng kiểu cho tiêu đề cột */
+thead tr th {
+  font-size: 20px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+  
+  /* Áp dụng kiểu cho ô dữ liệu */
+tbody td {
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+  /* Áp dụng kiểu cho hàng chẵn */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tbody tr {
+  transition: all 0.3s ease-in-out;
+}
+tbody tr:hover{
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.patient-name{
+  text-align: left;
+}
+
+.patient-medical-condition{
+  text-align: left;
+}
+
+.pagination{
+  position: absolute;
+  top: 92vh;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+.close-btn {
+  position: absolute;
+  top: 27vh;
+  right: 26vw;
+  z-index: 4;
+}

@@ -1,0 +1,12 @@
+.detail-block{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 50vw;
+    height: 50vh;
+    /* border: 1px black solid; */
+    border-radius: 50px;
+    z-index: 3;
+}
