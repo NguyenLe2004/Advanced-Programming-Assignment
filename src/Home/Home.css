@@ -25,3 +25,9 @@
     filter: brightness(0.8);
     transition: all 0.2s ease-in-out;
 }
+.prevent{
+    position: absolute;
+    width: 100vw;
+    z-index: 3;
+    height: 120vh;
+}

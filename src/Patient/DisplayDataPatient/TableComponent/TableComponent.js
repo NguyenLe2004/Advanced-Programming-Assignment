@@ -4,9 +4,11 @@ import DisplayDetailInfo from './DisplayDetailInfo/DisplayDetailInfo';
 import "./TableComponent.css";
 import { dataDisplayPatientContext } from '../../../DataControl/DataPatientProvider';
 import CloseButton from 'react-bootstrap/CloseButton';
+import { preventOperateContext } from '../../../PreventOperateProvider';
 
 const TableComponent = () => {
   const {dataPatientDisplay} = useContext(dataDisplayPatientContext);
+  const {isPreventOperate,setIsPreventOperate} = useContext(preventOperateContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [isDisplayDetail,setIsDisplayDetail] = useState(false);
   const [citizenID,setCitizenID] = useState("");
@@ -46,7 +48,13 @@ const TableComponent = () => {
   }
 
   const closeDetailInfo = () => { 
+    stopPreventUserOperation();
     setIsDisplayDetail(false);
+  }
+
+  const handleClickRow = () => {
+    preventUserOperation();
+    displayDetailInfo();
   }
 
   const displayDetailInfo = (id) => {
@@ -55,6 +63,15 @@ const TableComponent = () => {
     setCitizenID(newCitizenID);
     
   }
+
+  const preventUserOperation = () => {
+    setIsPreventOperate(true);
+  }
+
+  const stopPreventUserOperation = () => {
+    setIsPreventOperate(false);
+  }
+
   const startIndex = (currentPage - 1) * rowsPerPage;
   const endIndex = currentPage * rowsPerPage;
   const currentIds = Object.keys(dataPatientDisplay).slice(startIndex, endIndex);
@@ -79,7 +96,7 @@ const TableComponent = () => {
         </thead>
         <tbody>
           {currentIds.map((id) => (
-            <tr key={id} onClick={() => displayDetailInfo(id)} >
+            <tr key={id} onClick={() => handleClickRow(id)} >
               <td>{id}</td>
               <td className='patient-name'>{dataPatientDisplay[id].name}</td>
               <td>{dataPatientDisplay[id].gender}</td>

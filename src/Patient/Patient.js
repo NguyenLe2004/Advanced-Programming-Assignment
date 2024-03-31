@@ -1,8 +1,6 @@
-import React, {useState,useEffect, useContext} from 'react'
-import Search from './DisplayDataPatient/DisplayDataPatient'
+import React, {useEffect, useContext} from 'react'
 import axios from 'axios'
 import { dataDisplayPatientContext, dataPatientContext } from '../DataControl/DataPatientProvider'
-
 import DisplayDataPatient from './DisplayDataPatient/DisplayDataPatient'
 
 const Patient = () => {
@@ -23,7 +21,10 @@ const Patient = () => {
   }, []);
 
   return (
-    <DisplayDataPatient/>
+    <div>
+      <DisplayDataPatient/>
+    </div>
+    
   )
 }
 
