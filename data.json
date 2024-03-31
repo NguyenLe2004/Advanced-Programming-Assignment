@@ -19,7 +19,7 @@
                 }
             } ,
             "medHistory" : "Từng bị trĩ",
-            "medCondition" : "Suy nhược cơ thể",
+            "symptoms" : "Suy nhược cơ thể",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" : 
             [
@@ -56,7 +56,7 @@
                 }
             } ,
             "medHistory" : "Không có",
-            "medCondition" : "Thường xuyên chóng mặt",
+            "symptoms" : "Thường xuyên chóng mặt",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" : 
             [
@@ -87,7 +87,8 @@
                 }
             } ,
             "medHistory" : "Không có",
-            "medCondition" : "Đau vùng thái dương trái",
+            "symptoms" : "Đau vùng thái dương trái",
+            "diagnosis" : "Thiếu máu, xơ gan",
             "treatProcess" : 
             [
             ],
@@ -111,7 +112,7 @@
                 }
             } ,
             "medHistory" : "Không có",
-            "medCondition" : "Cảm giác đau hoặc nặng ở phía dưới bụng",
+            "symptoms" : "Cảm giác đau hoặc nặng ở phía dưới bụng",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" : 
             [
@@ -142,7 +143,7 @@
                 }
             } ,
             "medHistory" : "Thoái hóa đốt sống",
-            "medCondition" : "Ổn định",
+            "symptoms" : "Ổn định",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" : 
             [
@@ -173,7 +174,7 @@
                 }
             } ,
             "medHistory" : "Không có",
-            "medCondition" : "Tiểu chảy",
+            "symptoms" : "Tiểu chảy",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" :
             [
@@ -204,7 +205,7 @@
                 }
             } ,
             "medHistory" : "Không có",
-            "medCondition" : "Tầm nhìn kém",
+            "symptoms" : "Tầm nhìn kém",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" :
             [
@@ -235,7 +236,7 @@
                 }
             } ,
             "medHistory" : "Không có",
-            "medCondition" : "Sốt",
+            "symptoms" : "Sốt",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" :
             [
@@ -266,7 +267,7 @@
                 }
             } ,
             "medHistory" : "Không có",
-            "medCondition" : "Mệt mỏi, uể oải",
+            "symptoms" : "Mệt mỏi, uể oải",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" :
             [
@@ -297,7 +298,7 @@
                 }
             } ,
             "medHistory" : "Không có",
-            "medCondition" : "Thường xuyên chóng mặt",
+            "symptoms" : "Thường xuyên chóng mặt",
             "diagnosis" : "Thiếu máu, xơ gan" ,
             "treatProcess" :
             [
