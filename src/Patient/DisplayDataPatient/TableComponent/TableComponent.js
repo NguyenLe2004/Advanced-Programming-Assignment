@@ -2,12 +2,10 @@ import React, {  useContext, useEffect, useRef, useState } from 'react';
 import moment from 'moment';
 import DisplayDetailInfo from './DisplayDetailInfo/DisplayDetailInfo';
 import "./TableComponent.css";
-import { dataDisplayPatientContext } from '../../../DataControl/DataPatientProvider';
 import CloseButton from 'react-bootstrap/CloseButton';
-import { preventOperateContext } from '../../../PreventOperateProvider';
+import { preventOperateContext } from '../../../DisplayDataAllProvider/PreventOperateProvider';
 
-const TableComponent = () => {
-  const {dataPatientDisplay} = useContext(dataDisplayPatientContext);
+const TableComponent = ({dataPatientDisplay}) => {
   const {isPreventOperate,setIsPreventOperate} = useContext(preventOperateContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [isDisplayDetail,setIsDisplayDetail] = useState(false);
@@ -101,7 +99,7 @@ const TableComponent = () => {
               <td className='patient-name'>{dataPatientDisplay[id].name}</td>
               <td>{dataPatientDisplay[id].gender}</td>
               <td>{dataPatientDisplay[id].dateOfBirth}</td>
-              <td className='patient-medical-condition'>{dataPatientDisplay[id].medCondition}</td>
+              <td >{dataPatientDisplay[id].diagnosis}</td>
               <td>{getPatientStatus(dataPatientDisplay[id].treatProcess)}</td>
             </tr>
           ))}

@@ -6,7 +6,7 @@ import Footer from './Footer/Footer'
 import Patient from '../Patient/Patient'
 import { Routes, Route } from 'react-router-dom';
 import { displaySignInFormContext } from '../SignInControl/DisplaySignInProvider'
-import { preventOperateContext } from '../PreventOperateProvider'
+import { preventOperateContext } from '../DisplayDataAllProvider/PreventOperateProvider'
 import "./Home.css"
 const Home = () => {
   const {isDisplaySignInForm,setIsDisplaySignInForm} = useContext(displaySignInFormContext);

@@ -1,20 +1,17 @@
-import React, {useEffect, useContext} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import { dataDisplayPatientContext, dataPatientContext } from '../DataControl/DataPatientProvider'
 import DisplayDataPatient from './DisplayDataPatient/DisplayDataPatient'
 
 const Patient = () => {
-  const {dataPatientDisplay,setDataPatientDisplay} = useContext(dataDisplayPatientContext);
-  const {setDataPatient } = useContext(dataPatientContext);
+  const [allDataPatient, setAllDataPatient] = useState({});
   useEffect(() => {
     const getAllPatient = async () => {
       try {
         const response = await axios.get('http://localhost:3000/Patient');
-        setDataPatient(response.data);
-        setDataPatientDisplay(response.data);
-        console.log(dataPatientDisplay);
+        setAllDataPatient(response.data);
+        console.log(response.data);
       } catch (error) {
-        console.log(error);
+        console.log(error); 
       }
     };
     getAllPatient();
@@ -22,9 +19,8 @@ const Patient = () => {
 
   return (
     <div>
-      <DisplayDataPatient/>
+      <DisplayDataPatient allDataPatient = {allDataPatient}/>
     </div>
-    
   )
 }
 

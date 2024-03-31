@@ -1,14 +1,12 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState, useRef,useEffect} from 'react';
 import Alert from 'react-bootstrap/Alert';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import "./DisplayDataPatient.css"
 import TableComponent from './TableComponent/TableComponent';
-import { dataDisplayPatientContext, dataPatientContext } from '../../DataControl/DataPatientProvider';
 
-const DisplayDataPatient = () => {
-  const {dataPatient} = useContext(dataPatientContext);
-  const {dataPatientDisplay, setDataPatientDisplay } = useContext(dataDisplayPatientContext);
+const DisplayDataPatient = ({allDataPatient}) => {
+  const [dataPatientDisplay, setDataPatientDisplay] = useState("");
   const [isClicked, setIsClicked] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [searchError, setSearchError] = useState("");
@@ -32,13 +30,12 @@ const DisplayDataPatient = () => {
   };
   const submitSearch = () => {
     setSearchError("");
-    // setInputValue(inputValue.replace(/\s/g, ""));
     if (inputValue === ""){
-      setDataPatientDisplay(dataPatient);
+      setDataPatientDisplay(dataPatientDisplay);
       return;
     }
     if (inputValue.length === 12 && /^\d+$/.test(inputValue)) {
-      setDataPatientDisplay(dataPatient[inputValue] != null ? { [inputValue] : dataPatient[inputValue]} : {});
+      setDataPatientDisplay(dataPatientDisplay[inputValue] != null ? { [inputValue] : dataPatientDisplay[inputValue]} : {});
       return;
     }
     setSearchError("Căn cước công dân không hợp lệ");
@@ -52,6 +49,10 @@ const DisplayDataPatient = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setDataPatientDisplay(allDataPatient);
+    console.log(dataPatientDisplay)
+  },[allDataPatient]);
 
   return (
     <div>
@@ -75,7 +76,7 @@ const DisplayDataPatient = () => {
         </Alert>
         )}
         {Object.keys(dataPatientDisplay).length !== 0 ? (
-            <TableComponent  />
+            <TableComponent dataPatientDisplay = {dataPatientDisplay}  />
           ):(
             <div> NO DATA AVAILABLE </div>
           )}
