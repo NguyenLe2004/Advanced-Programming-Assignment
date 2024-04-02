@@ -1,12 +1,14 @@
 {
     "Patient" :
     {
-        "911034398097":{
+        "1":{
+            "citizenID" : "911034398097",
             "name" : "Nguyễn Văn Nguyên",
             "gender" : "Nam",
-            "dateOfBirth" : "15/09/2000",
+            "dateOfBirth" : "15 - 09 - 2000",
             "email" : "nguyenvana@gmail.com",
             "phoneNum" : "0931 234 567",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Lập trình viên" ,
             "Doctor_ID " : "SP1",
             "test ":{
@@ -15,7 +17,7 @@
                     "TestName" : "Xét nghiệm máu",
                     "Result" : "Thiếu máu",
                     "Room": "H3-101",
-                    "Time": "10/03/2024"
+                    "Time": "10 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Từng bị trĩ",
@@ -24,26 +26,28 @@
             "treatProcess" : 
             [
                 {
-                    "dateBegin" : "10/03/2024",
-                    "dateEnd" : "11/03/2024",
+                    "dateBegin" : "10 - 03 - 2024",
+                    "dateEnd" : "11 - 03 - 2024",
                     "Room " :  "H1-101",
                     "Description" : "truyền máu"
                 },
                 {
-                    "dateBegin" : "15/03/2024",
-                    "dateEnd" : "15/03/2024",
+                    "dateBegin" : "15 - 03 - 2024",
+                    "dateEnd" : "15 - 03 - 2024",
                     "Room" : "H3-102" ,
                     "Description" : "Khám tổng quát và bổ sung thuốc"
                 }
             ],
             "treatStatus" : "Đang điều trị"
         },
-        "841471188467":{
+        "2":{
+            "citizenID" :"841471188467",
             "name" : "Bùi Phú Hưng",
             "gender" : "Nam",
-            "dateOfBirth" : "10/29/1994",
+            "dateOfBirth" : "29 - 10 - 1994",
             "email" : "hung.buiphu123@gmail.com",
             "phoneNum" : "0963 789 012",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Xe ôm" ,
             "Doctor_ID " : "",
             "test ":{
@@ -52,7 +56,7 @@
                     "TestName" : "ECG",
                     "Result" : "Nhịp tim không đều",
                     "Room": "B1-302",
-                    "Time": "12/03/2024"
+                    "Time": "12 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Không có",
@@ -69,12 +73,14 @@
             ],
             "treatStatus" : "Đang điều trị"
         },
-        "470704891087":{
+        "3":{
+            "citizenID" : "470704891087",
             "name" : "Phạm Xuân An",
             "gender" : "Nữ",
-            "dateOfBirth" : "05/02/1986",
+            "dateOfBirth" : "05 - 02 - 1986",
             "email" : "an.phamxuam86@gmail.com",
             "phoneNum" : "0912 345 678",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Thợ may" ,
             "Doctor_ID " : "",
             "test ":{
@@ -83,7 +89,7 @@
                     "TestName" : "MRI não",
                     "Result" : "Không có khuyết tật",
                     "Room": "C2-205",
-                    "Time": "15/03/2024"
+                    "Time": "15 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Không có",
@@ -94,21 +100,23 @@
             ],
             "treatStatus" : "Đang điều trị"
         },
-        "071292392595":{
+        "4":{
+            "citizenID":"071292392595",
             "name" : "Phó Tuấn Thành",
             "gender" : "Nam",
-            "dateOfBirth" : "11/20/1990",
+            "dateOfBirth" : "11 - 20 - 1990",
             "email" : "thanh.photuan@gmail.com",
             "phoneNum" : "0908 456 789",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Giáo viên" ,
-            "Doctor_ID " : "#N/A",
+            "Doctor_ID " : "#N - A",
             "test ":{
                 "TEST1":{
                     "TestID" : "URINE101",
                     "TestName" : "Xét nghiệm nước tiểu",
                     "Result" : "Nhiễm trùng đường tiểu",
                     "Room": "A4-115",
-                    "Time": "09/03/2024"
+                    "Time": "09 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Không có",
@@ -125,12 +133,14 @@
             ],
             "treatStatus" : "Đang điều trị"
         },
-        "829329507883":{
+        "5":{
+            "citizenID" :"829329507883",
             "name" : "Phó Tuấn Thành",
             "gender" : "Nam",
-            "dateOfBirth" : "11/20/1990",
+            "dateOfBirth" : "11 - 20 - 1990",
             "email" : "thanh.photuan@gmail.com",
             "phoneNum" : "0908 456 789",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Công nhân" ,
             "Doctor_ID " : "",
             "test ":{
@@ -139,7 +149,7 @@
                     "TestName" : "Chụp X-quang ngực",
                     "Result" : "Không có vấn đề gì",
                     "Room": "D5-503",
-                    "Time": "14/03/2024"
+                    "Time": "14 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Thoái hóa đốt sống",
@@ -148,20 +158,22 @@
             "treatProcess" : 
             [
                 {
-                    "dateBegin" : "28/03/2024",
-                    "dateEnd" : "28/03/2024",
+                    "dateBegin" : "28 - 03 - 2024",
+                    "dateEnd" : "28 - 03 - 2024",
                     "Room " :  "Phòng khám tổng quát 4",
                     "Description" : "Khám tổng quát cho bệnh nhân"
                 }
             ],
             "treatStatus" : "Đang điều trị"
         },
-        "618797017311":{
+        "6":{
+            "citizenID" :"618797017311",
             "name" : "Hoàng Văn Thanh",
             "gender" : "Nam",
-            "dateOfBirth" : "04/27/1993",
+            "dateOfBirth" : "04 - 27 - 1993",
             "email" : "thanh.hoangvan@gmail.com",
             "phoneNum" : "0921 234 567",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Thợ sửa ống nước" ,
             "Doctor_ID " : "",
             "test ":{
@@ -170,7 +182,7 @@
                     "TestName" : "CT scan bụng",
                     "Result" : "Khối u phình to",
                     "Room": "E6-601",
-                    "Time": "11/03/2024"
+                    "Time": "11 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Không có",
@@ -187,12 +199,14 @@
             ],
             "treatStatus" : "Đang điều trị"
         },            
-        "164171815965":{
+        "7":{
+            "citizenID" :"164171815965",
             "name" : "Nguyễn Thị Thu Hà",
             "gender" : "Nữ",
-            "dateOfBirth" : "10/02/1978",
+            "dateOfBirth" : "10 - 02 - 1978",
             "email" : "ha.nguyenthithu@gmail.com",
             "phoneNum" : "0998 765 432",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Bác sĩ" ,
             "Doctor_ID " : "",
             "test ":{
@@ -201,7 +215,7 @@
                     "TestName" : "Kiểm tra mắt",
                     "Result" : "Cần kính cận",
                     "Room": "F7-701",
-                    "Time": "16/03/2024"
+                    "Time": "16 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Không có",
@@ -218,12 +232,14 @@
             ],
             "treatStatus" : "Đang điều trị"
         },            
-        "529785803689":{
+        "8":{
+            "citizenID" :"529785803689",
             "name" : "Trần Văn Dũng",
             "gender" : "Nam",
-            "dateOfBirth" : "02/14/1989",
+            "dateOfBirth" : "02 - 14 - 1989",
             "email" : "dung.tranvan@gmail.com",
             "phoneNum" : "0963 789 012",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Cảnh sát" ,
             "Doctor_ID " : "",
             "test ":{
@@ -232,7 +248,7 @@
                     "TestName" : "Xét nghiệm phân",
                     "Result" : "Dương tính với vi khuẩn",
                     "Room": "J11-1101",
-                    "Time": "20/03/2024"
+                    "Time": "20 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Không có",
@@ -249,12 +265,14 @@
             ],
             "treatStatus" : "Đang điều trị"
         },
-        "714698464496":{
+        "9":{
+            "citizenID" :"714698464496",
             "name" : "Lê Thị Hương",
             "gender" : "Nữ",
-            "dateOfBirth" : "12/05/1982",
+            "dateOfBirth" : "12 - 05 - 1982",
             "email" : "huong.lethi@gmail.com",
             "phoneNum" : "0978 654 321",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Nhân viên văn phòng" ,
             "Doctor_ID " : "",
             "test ":{
@@ -263,7 +281,7 @@
                     "TestName" : "Xét nghiệm khảo sát ung thư",
                     "Result" : "Không phát hiện tế bào ung thư",
                     "Room": "D9-901",
-                    "Time": "08/03/2024"
+                    "Time": "08 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Không có",
@@ -280,12 +298,14 @@
             ],
             "treatStatus" : "Đang điều trị"
         },         
-        "184965740502":{
+        "10":{
+            "citizenID" :"184965740502",
             "name" : "Hoàng Minh Tuấn",
             "gender" : "Nam",
-            "dateOfBirth" : "08/18/1997",
+            "dateOfBirth" : "08 - 18 - 1997",
             "email" : "tuanhoangminh@gmail.com",
             "phoneNum" : "0945 321 678",
+            "hometown" : "Triệu Đại, Triệu Phong, Quảng Trị",
             "job": "Sinh viên" ,
             "Doctor_ID " : "",
             "test ":{
@@ -294,7 +314,7 @@
                     "TestName" : "Điện não đồ",
                     "Result" : "Hoạt động não bình thường",
                     "Room": "C10-1003",
-                    "Time": "17/03/2024"
+                    "Time": "17 - 03 - 2024"
                 }
             } ,
             "medHistory" : "Không có",
@@ -303,8 +323,8 @@
             "treatProcess" :
             [
                 {
-                    "dateBegin" : "01/03/2024",
-                    "dateEnd" : "01/03/2024",
+                    "dateBegin" : "01 - 03 - 2024",
+                    "dateEnd" : "01 - 03 - 2024",
                     "Room " : "105",
                     "Description" : "Tiêm vắc xin COVID-19"
                 }
@@ -316,12 +336,12 @@
         "SP1" :{
             "name" : "Lê Hòa Anh",
             "gender" : "Nữ",
-            "dateOfBirth" : "15/09/1954",
+            "dateOfBirth" : "15 - 09 - 1954",
             "email" : "lehoaanh@gmail.com",
             "phoneNum" : "09317654321",
             "education" : [
                 {
-                "dateInterval" : "20/08/1975 - 12/07/1981",
+                "dateInterval" : "20 - 08 - 1975 - 12 - 07 - 1981",
                 "university" : "Trường đại học y dược TP HCM" ,
                 "major" :  "Y khoa",
                 "degree": "Cử nhân"
@@ -330,34 +350,34 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "12/12/1982" ,
+                    "date" : "12 - 12 - 1982" ,
                     "organization" : "Bộ y tế"
                 },
                 {
                     "title" : "chứng chỉ bác sĩ chuyên khoa 1",
-                    "date" : "2/2/1984",
+                    "date" : "2 - 2 - 1984",
                     "organization" : "Bộ y tế"
                 },
                 {
                     "title" : "chứng chỉ bác sĩ chuyên khoa 2",
-                    "date" : "3/5/1986",
+                    "date" : "3 - 5 - 1986",
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "Tim mạch",
             "schedule" : [
                 {
-                    "date" : "22/03/2024",
+                    "date" : "22 - 03 - 2024",
                     "time" : "09:00",
                     "description" : "Kiểm tra và đánh giá bệnh nhân"
                 },
                 {
-                    "date" : "25/03/2024 ",
+                    "date" : "25 - 03 - 2024 ",
                     "time" : "10:30",
                     "description" : "Điều trị bệnh nhân"
                 },
                 {
-                    "date" : "29/03/2024",
+                    "date" : "29 - 03 - 2024",
                     "time" : "10:30",
                     "description" : "Họp"
                 }
@@ -366,12 +386,12 @@
         "SP2" :{
             "name" : "Nguyễn Hòa Bình",
             "gender" : "Nam",
-            "dateOfBirth" : "10/12/1984",
+            "dateOfBirth" : "10 - 12 - 1984",
             "email" : "nguyenhoabinh@gmail.com",
             "phoneNum" : "090345787",
             "education" : [
                 {
-                "dateInterval" : "12/08/2004 - 19/07/2012",
+                "dateInterval" : "12 - 08 - 2004 - 19 - 07 - 2012",
                 "university" : "Trường đại học Phạm Ngọc Thạch TP HCM" ,
                 "major" :  "Tuần hoàn",
                 "degree": "Thạc sĩ"
@@ -380,19 +400,19 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "12/9/2013" ,
+                    "date" : "12 - 9 - 2013" ,
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "khoa nội",
             "schedule" : [
                 {
-                    "date" : "19/03/2024",
+                    "date" : "19 - 03 - 2024",
                     "time" : "09:30",
                     "description" : "Khám bệnh"
                 },
                 {
-                    "date" : "29/03/2024",
+                    "date" : "29 - 03 - 2024",
                     "time" : "10:30",
                     "description" : "Đo điện tâm đồ"
                 }
@@ -401,12 +421,12 @@
         "SP3" :{
             "name" : "Trần Quang Cường",
             "gender" : "Nam",
-            "dateOfBirth" : "10/12/1970",
+            "dateOfBirth" : "10 - 12 - 1970",
             "email" : "tranquangcuong@gmail.com",
             "phoneNum" : "0907899087",
             "education" : [
                 {
-                "dateInterval" : "12/09/1990 - 20/07/1999",
+                "dateInterval" : "12 - 09 - 1990 - 20 - 07 - 1999",
                 "university" : "Trường đại học Y dược TP HCM" ,
                 "major" :  "Tuần hoàn",
                 "degree": "Tiến sĩ"
@@ -415,13 +435,13 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "02/09/2000" ,
+                    "date" : "02 - 09 - 2000" ,
                     "organization" : "Bộ y tế"
                     
                 },
                 {
                     "title" : "Bác sĩ cao cấp (hạng I)",
-                    "date" : "02/09/2008" ,
+                    "date" : "02 - 09 - 2008" ,
                     "organization" : "Bộ y tế"
                 }
                 
@@ -429,15 +449,15 @@
             "specialiy" : "khoa nội",
             "schedule" : [
                 {
-                "time" : "19/02/2024 09:00",
+                "time" : "19 - 02 - 2024 09:00",
                 "description" : "Xét nghiệm hóa sinh"
                 },
                 {
-                "time" : "02/03/2024 8:30",
+                "time" : "02 - 03 - 2024 8:30",
                 "description" : "Hội chuẩn bệnh tim"
                 },
                 {
-                "time" : "22/03/2024 8:30",
+                "time" : "22 - 03 - 2024 8:30",
                 "description" : "Điều trị hở van tim"
                 }
             ]
@@ -445,12 +465,12 @@
         "SP4" :{
             "name" : "Lý Dương",
             "gender" : "Nam",
-            "dateOfBirth" : "10/12/1964",
+            "dateOfBirth" : "10 - 12 - 1964",
             "email" : "tranduong@gmail.com",
             "phoneNum" : "0701238290",
             "education" : [
                 {
-                "dateInterval" : "02/08/1984 - 18/07/1990",
+                "dateInterval" : "02 - 08 - 1984 - 18 - 07 - 1990",
                 "university" : "Trường đại học Y Dược Huế" ,
                 "major" :  "Hô hấp",
                 "degree": "Tiến sĩ"
@@ -459,24 +479,24 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "15/09/1991" ,
+                    "date" : "15 - 09 - 1991" ,
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "khoa tai mũi họng",
             "schedule" : [
                 {
-                "date" : "18/03/2024",
+                "date" : "18 - 03 - 2024",
                 "time" : "09:00",
                 "description" : "Nội soi tai mũi họng"
                 },
                 {
-                "date" : "21/03/2024",
+                "date" : "21 - 03 - 2024",
                 "time" : "11:30",
                 "description" : "Khám bệnh"
                 },
                 {
-                "date" : "29/03/2024",
+                "date" : "29 - 03 - 2024",
                 "time" : " 11:30",
                 "description" : "Chuẩn đoán và điều trị viêm xoang"
                 }
@@ -485,12 +505,12 @@
         "SP5" :{
             "name" : "William Emily",
             "gender" : "Nữ",
-            "dateOfBirth" : "10/02/1979",
+            "dateOfBirth" : "10 - 02 - 1979",
             "email" : "williamemily@gmail.com",
             "phoneNum" : "0907854367",
             "education" : [
                 {
-                "dateInterval" : "15/02/1999 - 20/08/2007",
+                "dateInterval" : "15 - 02 - 1999 - 20 - 08 - 2007",
                 "university" : "Trường Y khoa Yale - Đại học Yale" ,
                 "major" :  "Da liễu",
                 "degree": "Tiến sĩ"
@@ -499,27 +519,27 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "02/09/2008" ,
+                    "date" : "02 - 09 - 2008" ,
                     "organization" : "Bộ y tế"
                 },
                 {
                     "title" : "Bác sĩ cao cấp (hạng II)",
-                    "date" : "02/09/2010" ,
+                    "date" : "02 - 09 - 2010" ,
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "khoa Da liễu",
             "schedule" : [
                 {
-                "time" : "01/03/2024 010:00",
+                "time" : "01 - 03 - 2024 010:00",
                 "description" : "Xét nghiệm mô tế bào"
                 },
                 {
-                "time" : "02/03/2024 10:30",
+                "time" : "02 - 03 - 2024 10:30",
                 "description" : "Hội nghị Da liễu thành phố"
                 },
                 {
-                    "time" : "12/03/2024 8:30",
+                    "time" : "12 - 03 - 2024 8:30",
                     "description" : "Điều trị chuyên sâu về da liễu"
                 }
             ]
@@ -527,12 +547,12 @@
         "SP6" :{
             "name" : "Alan Ferb",
             "gender" : "Nam",
-            "dateOfBirth" : "10/09/1969",
+            "dateOfBirth" : "10 - 09 - 1969",
             "email" : "anlanferb@gmail.com",
             "phoneNum" : "09317634890",
             "education" : [
                 {
-                "dateInterval" : "20/08/1988 - 12/07/1996",
+                "dateInterval" : "20 - 08 - 1988 - 12 - 07 - 1996",
                 "university" : "Trường đại học y dược TP HCM" ,
                 "major" :  "Y đa khoa",
                 "degree": "Thạc sĩ"
@@ -541,22 +561,22 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "12/12/1985" ,
+                    "date" : "12 - 12 - 1985" ,
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "khoa ngoại",
             "schedule" : [
                 {
-                "time" : "02/03/2024 09:00",
+                "time" : "02 - 03 - 2024 09:00",
                 "description" : "Phẫu thuật nội soi viêm ruột thừa"
                 },
                 {
-                "time" : "12/03/2024 10:30",
+                "time" : "12 - 03 - 2024 10:30",
                 "description" : "Phẫu thuật cắt túi sỏi mật"
                 },
                 {
-                "time" : "21/03/2024 10:30",
+                "time" : "21 - 03 - 2024 10:30",
                 "description" : "Nội soi bao tử"
                 }
             ]
@@ -564,12 +584,12 @@
         "SP7" :{
             "name" : "Nguyễn Hương Giang",
             "gender" : "Nữ",
-            "dateOfBirth" : "10/01/1984",
+            "dateOfBirth" : "10 - 01 - 1984",
             "email" : "nguyenhuonggiang@gmail.com",
             "phoneNum" : "0903123487",
             "education" : [
                 {
-                "dateInterval" : "01/08/2004 - 08/02/2012",
+                "dateInterval" : "01 - 08 - 2004 - 08 - 02 - 2012",
                 "university" : "Trường đại học Phạm Ngọc Thạch TP HCM" ,
                 "major" :  "Răng hàm mặt",
                 "degree": "Thạc sĩ"
@@ -578,22 +598,22 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "02/08/2013" ,
+                    "date" : "02 - 08 - 2013" ,
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "khoa răng hàm mặt",
             "schedule" : [
                 {
-                "time" : "15/03/2024 08:30",
+                "time" : "15 - 03 - 2024 08:30",
                 "description" : "Khám bệnh và tư vấn trồn răng"
                 },
                 {
-                "time" : "27/03/2024 11:30",
+                "time" : "27 - 03 - 2024 11:30",
                 "description" : "Trồng răng implant"
                 },
                 {
-                "time" : "29/03/2024 11:30",
+                "time" : "29 - 03 - 2024 11:30",
                 "description" : "Trồng răng sứ"
                 }
             ]
@@ -601,12 +621,12 @@
         "SP8" :{
             "name" : "Lê Hòa",
             "gender" : "Nam",
-            "dateOfBirth" : "01/12/1970",
+            "dateOfBirth" : "01 - 12 - 1970",
             "email" : "lehoa@gmail.com",
             "phoneNum" : "0907908456",
             "education" : [
                 {
-                "dateInterval" : "10/08/1990 - 20/07/1997",
+                "dateInterval" : "10 - 08 - 1990 - 20 - 07 - 1997",
                 "university" : "Trường đại học Y dược TP HCM" ,
                 "major" :  "Kĩ thuật xét nghiệm y học",
                 "degree": "Thạc sĩ"
@@ -615,22 +635,22 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "02/09/2000" ,
+                    "date" : "02 - 09 - 2000" ,
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "khoa Xét nghiệm",
             "schedule" : [
                 {
-                "time" : "19/03/2024 09:00",
+                "time" : "19 - 03 - 2024 09:00",
                 "description" : "Xét nghiệm huyết học tế bào"
                 },
                 {
-                "time" : "22/03/2024 8:30",
+                "time" : "22 - 03 - 2024 8:30",
                 "description" : "Xét nghiệm sinh hóa đường"
                 },
                 {
-                    "time" : "29/03/2024 8:30",
+                    "time" : "29 - 03 - 2024 8:30",
                     "description" : "Xét nghiệm máu"
                 }
             ]
@@ -638,12 +658,12 @@
         "SP9" :{
             "name" : "Lê Hoàng Yên",
             "gender" : "Nữ",
-            "dateOfBirth" : "10/12/1964",
+            "dateOfBirth" : "10 - 12 - 1964",
             "email" : "lehoangyen@gmail.com",
             "phoneNum" : "0701198790",
             "education" : [
                 {
-                "dateInterval" : "02/08/1984 - 18/07/1990",
+                "dateInterval" : "02 - 08 - 1984 - 18 - 07 - 1990",
                 "university" : "Trường đại học Y Dược Thai Nguyên" ,
                 "major" :  "Hộ sinh",
                 "degree": "Thạc sĩ"
@@ -652,27 +672,27 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "12/8/1991" ,
+                    "date" : "12 - 8 - 1991" ,
                     "organization" : "Bộ y tế"
                 },
                 {
                     "title" : "Bác sĩ cao cấp (hạng I)",
-                    "date" : "12/8/1996" ,
+                    "date" : "12 - 8 - 1996" ,
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "khoa sản",
             "schedule" : [
                 {
-                "time" : "19/03/2024 09:00",
+                "time" : "19 - 03 - 2024 09:00",
                 "description" : "Chăm sóc thai nghén"
                 },
                 {
-                "time" : "22/03/2024 11:30",
+                "time" : "22 - 03 - 2024 11:30",
                 "description" : "Chăm sóc khám thai định kì"
                 },
                 {
-                "time" : "29/04/2024 11:30",
+                "time" : "29 - 04 - 2024 11:30",
                 "description" : "Chăm sóc khám thai định kì"
                 }
             ]
@@ -680,12 +700,12 @@
         "SP10" :{
             "name" : "Hoàng Ninh Lan",
             "gender" : "Nữ",
-            "dateOfBirth" : "10/02/1979",
+            "dateOfBirth" : "10 - 02 - 1979",
             "email" : "hoangninhlan@gmail.com",
             "phoneNum" : "0909845367",
             "education" : [
                 {
-                "dateInterval" : "15/04/1999 - 29/08/2007",
+                "dateInterval" : "15 - 04 - 1999 - 29 - 08 - 2007",
                 "university" : "Trường Y khoa Hà Nội" ,
                 "major" :  "Y học cổ truyền",
                 "degree": "Tiến sĩ"
@@ -694,22 +714,22 @@
             "cert" : [
                 {
                     "title" : "Chứng chỉ hành nghề",
-                    "date" : "02/09/2008",
+                    "date" : "02 - 09 - 2008",
                     "organization" : "Bộ y tế"
                 }
             ],
             "specialiy" : "khoa Y học cổ truyền",
             "schedule" : [
                 {
-                "time" : "19/02/2024 10:00",
+                "time" : "19 - 02 - 2024 10:00",
                 "description" : "Châm cứu tứ chi"
                 },
                 {
-                "time" : "12/03/2024 10:30",
+                "time" : "12 - 03 - 2024 10:30",
                 "description" : "Hồi phục sau chấn thương"
                 },
                 {
-                "time" : "12/04/2024 10:30",
+                "time" : "12 - 04 - 2024 10:30",
                 "description" : "Khám và điều trị"
                 }
             ]
@@ -719,12 +739,12 @@
         "NU1": {
           "name": "Trần Thị M",
           "gender": "Nữ",
-          "dateOfBirth": "15/09/1970",
+          "dateOfBirth": "15 - 09 - 1970",
           "email": "TranThiM@gmail.com",
           "phoneNum": "0925374819",
           "education": [
             {
-              "dateInterval": "20/08/1988 - 12/07/1994",
+              "dateInterval": "20 - 08 - 1988 - 12 - 07 - 1994",
               "university": "Trường đại học y dược TP HCM",
               "major": "Khoa Nhi"
             }
@@ -732,7 +752,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -741,12 +761,12 @@
         "NU2": {
           "name": "Trần Thị G",
           "gender": "Nữ",
-          "dateOfBirth": "25/01/1979",
+          "dateOfBirth": "25 - 01 - 1979",
           "email": "TranThiG@gmail.com",
           "phoneNum": "0925748104",
           "education": [
             {
-              "dateInterval": "20/08/1997 - 12/07/2006",
+              "dateInterval": "20 - 08 - 1997 - 12 - 07 - 2006",
               "university": "Trường đại học y dược TP HCM",
               "major": "Điều dưỡng"
             }
@@ -754,7 +774,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -763,12 +783,12 @@
         "NU3": {
           "name": "Nguyễn THị N",
           "gender": "Nữ",
-          "dateOfBirth": "12/10/1979",
+          "dateOfBirth": "12 - 10 - 1979",
           "email": "nguyenThiN@gmail.com",
           "phoneNum": "0934780292",
           "education": [
             {
-              "dateInterval": "20/08/1979 - 12/07/1985",
+              "dateInterval": "20 - 08 - 1979 - 12 - 07 - 1985",
               "university": "Trường đại học y dược TP HCM",
               "major": "Điều dưỡng"
             }
@@ -776,7 +796,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -785,12 +805,12 @@
         "NU4": {
           "name": "Nguyễn Thị T",
           "gender": "Nữ",
-          "dateOfBirth": "16/10/1989",
+          "dateOfBirth": "16 - 10 - 1989",
           "email": "NguyenThiT@gmail.com",
           "phoneNum": "0977881902",
           "education": [
             {
-              "dateInterval": "20/08/2007 - 12/07/2015",
+              "dateInterval": "20 - 08 - 2007 - 12 - 07 - 2015",
               "university": "Trường đại học y dược TP HCM",
               "major": "Khoa Nhi"
             }
@@ -798,7 +818,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -807,12 +827,12 @@
         "NU5": {
           "name": "Đinh Nguyễn X",
           "gender": "Nữ",
-          "dateOfBirth": "25/01/1995",
+          "dateOfBirth": "25 - 01 - 1995",
           "email": "DinhNguyenX@gmail.com",
           "phoneNum": "0929384619",
           "education": [
             {
-              "dateInterval": "20/08/2013 - 12/07/2018",
+              "dateInterval": "20 - 08 - 2013 - 12 - 07 - 2018",
               "university": "Trường đại học y dược TP HCM",
               "major": "Điều dưỡng"
             }
@@ -820,7 +840,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -829,12 +849,12 @@
         "NU6": {
           "name": "Đinh Thị L",
           "gender": "Nữ",
-          "dateOfBirth": "25/01/1992",
+          "dateOfBirth": "25 - 01 - 1992",
           "email": "DinhThiL@gmail.com",
           "phoneNum": "0900882718",
           "education": [
             {
-              "dateInterval": "20/08/2010 - 12/07/2018",
+              "dateInterval": "20 - 08 - 2010 - 12 - 07 - 2018",
               "university": "Trường đại học y dược TP HCM",
               "major": "Điều dưỡng"
             }
@@ -842,7 +862,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -851,12 +871,12 @@
         "NU7": {
           "name": "Hà Tuyết N",
           "gender": "Nữ",
-          "dateOfBirth": "29/02/1988",
+          "dateOfBirth": "29 - 02 - 1988",
           "email": "HaTuyeN@gmail.com",
           "phoneNum": "0915472984",
           "education": [
             {
-              "dateInterval": "20/08/2009 - 12/07/2015",
+              "dateInterval": "20 - 08 - 2009 - 12 - 07 - 2015",
               "university": "Trường đại học y dược TP HCM",
               "major": "Khoa Nhi"
             }
@@ -864,7 +884,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -873,12 +893,12 @@
         "NU8": {
           "name": "Nguyen Thi T",
           "gender": "Nữ",
-          "dateOfBirth": "25/01/1994",
+          "dateOfBirth": "25 - 01 - 1994",
           "email": "DinhThiL@gmail.com",
           "phoneNum": "0910284672",
           "education": [
             {
-              "dateInterval": "20/08/2012 - 12/07/2017",
+              "dateInterval": "20 - 08 - 2012 - 12 - 07 - 2017",
               "university": "Trường đại học y dược TP HCM",
               "major": "Điều dưỡng"
             }
@@ -886,7 +906,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -895,12 +915,12 @@
         "NU9": {
           "name": "Lê Trúc H",
           "gender": "Nữ",
-          "dateOfBirth": "25/01/1986",
+          "dateOfBirth": "25 - 01 - 1986",
           "email": "LeTrucH@gmail.com",
           "phoneNum": "0947263819",
           "education": [
             {
-              "dateInterval": "20/08/2004 - 12/07/2009",
+              "dateInterval": "20 - 08 - 2004 - 12 - 07 - 2009",
               "university": "Trường đại học y dược TP HCM",
               "major": "Điều dưỡng"
             }
@@ -908,7 +928,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -917,12 +937,12 @@
         "NU10": {
           "name": "Lê Thị P",
           "gender": "Nữ",
-          "dateOfBirth": "25/01/1974",
+          "dateOfBirth": "25 - 01 - 1974",
           "email": "LeThiP@gmail.com",
           "phoneNum": "0947281937",
           "education": [
             {
-              "dateInterval": "20/08/1992 - 12/07/2000",
+              "dateInterval": "20 - 08 - 1992 - 12 - 07 - 2000",
               "university": "Trường đại học y dược TP HCM",
               "major": "Khoa Nhi"
             }
@@ -930,7 +950,7 @@
           "cert": [
             {
               "title": "Chứng chỉ hành nghề",
-              "Date": "1/10/2018",
+              "Date": "1 - 10 - 2018",
               "organization": "Bộ y tế"
             }
           ],
@@ -942,7 +962,7 @@
         "SS1" : {
             "name" : "Tri Thiên Trí",
             "gender" : "F",
-            "dateOfBirth" : "27/3/2007",
+            "dateOfBirth" : "27 - 3 - 2007",
             "email" : "trithientri157@gmail.com",
             "phoneNum" : "0580682413",
             "education" : [],
@@ -951,7 +971,7 @@
         "SS2" : {
             "name" : "Cầm Thanh Hồng",
             "gender" : "F",
-            "dateOfBirth" : "14/11/1966",
+            "dateOfBirth" : "14 - 11 - 1966",
             "email" : "camthanhhong495@gmail.com",
             "phoneNum" : "0937394608",
             "education" : [],
@@ -960,7 +980,7 @@
         "SS3" : {
             "name" : "Hàn Diễm Uyên",
             "gender" : "F",
-            "dateOfBirth" : "7/2/1988",
+            "dateOfBirth" : "7 - 2 - 1988",
             "email" : "handiemuyen55@gmail.com",
             "phoneNum" : "0388461230",
             "education" : [],
@@ -969,7 +989,7 @@
         "SS4" : {
             "name" : "Bá Thiên Giang",
             "gender" : "F",
-            "dateOfBirth" : "3/9/19799",
+            "dateOfBirth" : "3 - 9 - 19799",
             "email" : "bathiengiang558@gmail.com",
             "phoneNum" : "0776453182",
             "education" : [],
@@ -978,7 +998,7 @@
         "SS5" : {
             "name" : "Đào Gia Vinh",
             "gender" : "M",
-            "dateOfBirth" : "21/6/1970",
+            "dateOfBirth" : "21 - 6 - 1970",
             "email" : "daogiavinh872@gmail.com",
             "phoneNum" : "0846419578",
             "education" : [],
@@ -987,7 +1007,7 @@
         "SS6" : {
             "name" : "Viên Trung Chính",
             "gender" : "M",
-            "dateOfBirth" : "27/3/1967",
+            "dateOfBirth" : "27 - 3 - 1967",
             "email" : "vientrungchinh43@gmail.com",
             "phoneNum" : "0378137402",
             "education" : [],
@@ -996,7 +1016,7 @@
         "SS7" : {
             "name" : "Lư Ðan Khanh",
             "gender" : "F",
-            "dateOfBirth" : "15/09/1970",
+            "dateOfBirth" : "15 - 09 - 1970",
             "email" : "luankhanh339@gmail.com",
             "phoneNum" : "09317654321",
             "education" : [],
@@ -1005,7 +1025,7 @@
         "SS8" : {
             "name" : "Kim Ðình Ðôn",
             "gender" : "M",
-            "dateOfBirth" : "9/7/1982",
+            "dateOfBirth" : "9 - 7 - 1982",
             "email" : "kiminhon99@gmall.com",
             "phoneNum" : "0976178035",
             "education" : [],
@@ -1014,7 +1034,7 @@
         "SS9" : {
             "name" : "Lạc Bảo Thúy",
             "gender" : "F",
-            "dateOfBirth" : "31/8/1989",
+            "dateOfBirth" : "31 - 8 - 1989",
             "email" : "lacbaothuy248@gmail.com",
             "phoneNum" : "0335839271",
             "education" : [],
@@ -1023,7 +1043,7 @@
         "SS10" : {
             "name" : "Trần Thị Thịnh",
             "gender" : "F",
-            "dateOfBirth" : "2/3/2004",
+            "dateOfBirth" : "2 - 3 - 2004",
             "email" : "hachiko1012004@gmail.com",
             "phoneNum" : "0335162337",
             "education" : [],
@@ -1033,72 +1053,72 @@
     "Medicine" :{
         "MED1" :{
             "medName" : "Paracetamol",
-            "arriveTime" : "25/3/2024 9:00:00",
-            "departureTime" : "1/4/2024 7:00:00", 	
-            "Expire date" : "5/12/2029",
+            "arriveTime" : "25 - 3 - 2024 9:00:00",
+            "departureTime" : "1 - 4 - 2024 7:00:00", 	
+            "Expire date" : "5 - 12 - 2029",
             "Amount" : "10000"
         },
         "MED2" :{
             "medName" : "Aspirin",
-            "arriveTime" : "25/3/2024 9:00:00",
-            "departureTime" : "1/4/2024 7:00:00",
-            "Expire date" : "4/10/2029",
+            "arriveTime" : "25 - 3 - 2024 9:00:00",
+            "departureTime" : "1 - 4 - 2024 7:00:00",
+            "Expire date" : "4 - 10 - 2029",
             "Amount" : "10000"
         },
         "MED3" :{
             "medName" : "Phosphalugel",
-            "arriveTime" : "25/3/2024 9:00:00",
-            "departureTime" : "1/4/2024 7:00:00",
-            "Expire date" : "2/3/2029",
+            "arriveTime" : "25 - 3 - 2024 9:00:00",
+            "departureTime" : "1 - 4 - 2024 7:00:00",
+            "Expire date" : "2 - 3 - 2029",
             "Amount" : "5000"
         },
         "MED4" :{
             "medName" : "Ibuprofen",
-            "arriveTime" : "25/3/2024 9:00:00",
-            "departureTime" : "1/4/2024 7:00:00",
-            "Expire date" : "2/3/2029",
+            "arriveTime" : "25 - 3 - 2024 9:00:00",
+            "departureTime" : "1 - 4 - 2024 7:00:00",
+            "Expire date" : "2 - 3 - 2029",
             "Amount" : "2000"
         },
         "MED5" :{
             "medName" :"Diphenoxylate",
-            "arriveTime" : "30/1/2024 15:00:00",
-            "departureTime" : "12/2/2024 10:00:00",
-            "Expire date" : "10/11/2028",
+            "arriveTime" : "30 - 1 - 2024 15:00:00",
+            "departureTime" : "12 - 2 - 2024 10:00:00",
+            "Expire date" : "10 - 11 - 2028",
             "Amount" : "5000"
         },
         "MED6" :{
             "medName" : "Chloramphenicol",
-            "arriveTime" : "3/1/2024 8:00:00",
-            "departureTime" : "17/7/2024 13:00:00",
-            "Expire date" : "10/11/2028",
+            "arriveTime" : "3 - 1 - 2024 8:00:00",
+            "departureTime" : "17 - 7 - 2024 13:00:00",
+            "Expire date" : "10 - 11 - 2028",
             "Amount" : "2500"
         },
         "MED7" :{
             "medName" : "Thiamphenicol",
-            "arriveTime" : "3/1/2024 8:00:00",
-            "departureTime" : "17/7/2024 13:00:00",
-            "Expire date" : "10/11/2028",
+            "arriveTime" : "3 - 1 - 2024 8:00:00",
+            "departureTime" : "17 - 7 - 2024 13:00:00",
+            "Expire date" : "10 - 11 - 2028",
             "Amount" : "2500"
         },
         "MED8" :{
             "medName" : "Heparin",
-            "arriveTime" : "5/5/2024 8:00:00",
-            "departureTime" : "7/7/2024 13:00:00",
-            "Expire date" : "2/11/2028",
+            "arriveTime" : "5 - 5 - 2024 8:00:00",
+            "departureTime" : "7 - 7 - 2024 13:00:00",
+            "Expire date" : "2 - 11 - 2028",
             "Amount" : "3500"
         },
         "MED9" :{
             "medName" : "Ternafast 60",
-            "arriveTime" : "5/5/2024 8:00:00",
-            "departureTime" : "7/7/2024 13:00:00",
-            "Expire date" : "2/11/2028",
+            "arriveTime" : "5 - 5 - 2024 8:00:00",
+            "departureTime" : "7 - 7 - 2024 13:00:00",
+            "Expire date" : "2 - 11 - 2028",
             "Amount" : "1500"
         },
         "MED10" :{
             "medName" : "Acetylcystein",
-            "arriveTime" : "15/3/2024 15:00:00",
-            "departureTime" : "20/3/2024 7:00:00",
-            "Expire date" : "19/8/2027",
+            "arriveTime" : "15 - 3 - 2024 15:00:00",
+            "departureTime" : "20 - 3 - 2024 7:00:00",
+            "Expire date" : "19 - 8 - 2027",
             "Amount" : "8000"
         }
     },
@@ -1107,16 +1127,16 @@
             "eqName" : "Máy siêu âm",
             "usageHistory" : [	
                             {
-                            "Time" : "27/03/2024 09:00:30",
+                            "Time" : "27 - 03 - 2024 09:00:30",
                             "Room" : "Phòng siêu âm số 01"
                             },
                             {
-                            "Time" : "30/03/2024 11:00:00",
+                            "Time" : "30 - 03 - 2024 11:00:00",
                             "Room" : "Phòng siêu âm số 01"
                             }
                         ],
             "regularMaintenance" : {
-                                    "Day" : "15/04/2024",
+                                    "Day" : "15 - 04 - 2024",
                                     "Description" : "Bảo hành "
                                     },
                    "Status " : "Chưa phân công"
@@ -1125,20 +1145,20 @@
             "eqName" : "Máy đo điện tâm đồ",
             "usageHistory" : [	
                             {
-                            "Time" : "21/03/2024 09:00:30",
+                            "Time" : "21 - 03 - 2024 09:00:30",
                             "Room" : "Phòng tim mạch 07"
                             },
                             {
-                            "Time" : "21/03/2024 11:00:00",
+                            "Time" : "21 - 03 - 2024 11:00:00",
                             "Room" : "Phòng tim mạch số 01"
                             },
                             {
-                            "Time" : "22/03/2024 09:00:00",
+                            "Time" : "22 - 03 - 2024 09:00:00",
                             "Room" : "Phòng tim mạch 07"
                             }
                         ],
             "regularMaintenance" : {
-                                    "Day" : "17/07/2024",
+                                    "Day" : "17 - 07 - 2024",
                                     "Description" : "Bảo hành "
                                     },
                    "Status " : "đã phân công"
@@ -1147,24 +1167,24 @@
             "eqName" : "Máy chụp CT Scan",
             "usageHistory" : [	
                             {
-                            "Time" : "23/03/2024 08:00:00",
+                            "Time" : "23 - 03 - 2024 08:00:00",
                             "Room" : "Phòng chụp CT số 01"
                             },
                             {
-                            "Time" : "23/03/2024 11:00:00",
+                            "Time" : "23 - 03 - 2024 11:00:00",
                             "Room" : "Phòng chụp CT số 01"
                             },
                             {
-                            "Time" : "24/03/2024 15:00:00",
+                            "Time" : "24 - 03 - 2024 15:00:00",
                             "Room" : "Phòng chụp CT số 01"
                             },
                             {
-                            "Time" : "24/03/2024 15:00:00",
+                            "Time" : "24 - 03 - 2024 15:00:00",
                             "Room" : "Phòng chụp CT số 02"
                             }	
                         ],
             "regularMaintenance" : {
-                                    "Day" : "03/01/2024",
+                                    "Day" : "03 - 01 - 2024",
                                     "Description" : "Bảo hành "
                                     },
                    "Status " : "Đã phân công"
@@ -1173,16 +1193,16 @@
             "eqName" : "Máy thở y tế",
             "usageHistory" : [	
                             {
-                            "Time" : "22/03/2024 21:00:00",
+                            "Time" : "22 - 03 - 2024 21:00:00",
                             "Room" : "Phòng hồi sức cấp cứu số 01"
                             },
                             {
-                            "Time" : "22/03/2024 11:00:00",
+                            "Time" : "22 - 03 - 2024 11:00:00",
                             "Room" : "Phòng hồi sức cấp cứu số 01"
                             }
                         ],
             "regularMaintenance" : {
-                                    "Day" : "22/11/2024",
+                                    "Day" : "22 - 11 - 2024",
                                     "Description" : "Bảo hành "
                                     },
                    "Status " : "Đã phân công"
@@ -1191,20 +1211,20 @@
             "eqName" : "Máy lọc máu",
             "usageHistory" : [	
                             {
-                            "Time" : "19/04/2024 07:00:00",
+                            "Time" : "19 - 04 - 2024 07:00:00",
                             "Room" : "Phòng cấp cứu số 01"
                             },
                             {
-                            "Time" : "20/04/2024 11:00:00",
+                            "Time" : "20 - 04 - 2024 11:00:00",
                             "Room" : "Phòng cấp cứu số 01"
                             },
                             {
-                            "Time" : "20/04/2024 15:00:00",
+                            "Time" : "20 - 04 - 2024 15:00:00",
                             "Room" : "Phòng cấp cứu số 03"
                             }
                         ],
             "regularMaintenance" : {
-                                    "Day" : "10/11/2024",
+                                    "Day" : "10 - 11 - 2024",
                                     "Description" : "Bảo hành "
                                                       },
                    "Status " : "Chưa phân công"
@@ -1213,12 +1233,12 @@
             "eqName" : "Máy lọc thận",
             "usageHistory" : [	
                             {
-                            "Time" : "25/05/2024 09:00:00",
+                            "Time" : "25 - 05 - 2024 09:00:00",
                             "Room" : "Phòng cấp cứu số 01"
                             }
                         ],
             "regularMaintenance" : {
-                                    "Day" : "15/04/2024",
+                                    "Day" : "15 - 04 - 2024",
                                     "Description" : "Bảo hành "
                                     },
                    "Status " : "Đã phân công"
@@ -1227,32 +1247,32 @@
             "eqName" : "Giường cho bệnh nhân",
             "usageHistory" : [	
                             {
-                            "Time" : "22/08/2024 09:00:00",
+                            "Time" : "22 - 08 - 2024 09:00:00",
                             "Room" : "Phòng hồi sức số 01"
                             },
                             {
-                            "Time" : "22/08/2024 09:00:00",
+                            "Time" : "22 - 08 - 2024 09:00:00",
                             "Room" : "Phòng hồi sức số 02"
                             },
                             {
-                            "Time" : "22/08/2024 11:00:00",
+                            "Time" : "22 - 08 - 2024 11:00:00",
                             "Room" : "Phòng hồi sức số 02"
                             },
                             {
-                            "Time" : "22/08/2024 11:00:00",
+                            "Time" : "22 - 08 - 2024 11:00:00",
                             "Room" : "Phòng hồi sức số 03"
                             },
                             {
-                            "Time" : "23/08/2024 12:00:00",
+                            "Time" : "23 - 08 - 2024 12:00:00",
                             "Room" : "Phòng hồi sức số 01"
                             },
                             {
-                            "Time" : "23/08/2024 15:00:00",
+                            "Time" : "23 - 08 - 2024 15:00:00",
                             "Room" : "Phòng hồi sức số 01"
                             }
                         ],
             "regularMaintenance" : {
-                                    "Day" : "15/04/2024",
+                                    "Day" : "15 - 04 - 2024",
                                     "Description" : "Bảo hành "
                                     },
                    "Status " : "Đã phân công"
@@ -1261,16 +1281,16 @@
             "eqName" : "Máy chụp X-quang",
             "usageHistory" : [	
                             {
-                            "Time" : "02/02/2024 08:00:00",
+                            "Time" : "02 - 02 - 2024 08:00:00",
                             "Room" : "Phòng chụp X-quang"
                             },
                             {
-                            "Time" : "02/02/2024 10:00:00",
+                            "Time" : "02 - 02 - 2024 10:00:00",
                             "Room" : " Phòng chụp X-quang "
                             }
                         ],
             "regularMaintenance" : {
-                                    "Day" : "15/04/2024",
+                                    "Day" : "15 - 04 - 2024",
                                     "Description" : "Bảo hành "
                                     },
                    "Status " : "Chưa phân công"
@@ -1279,20 +1299,20 @@
             "eqName" : "Máy tim phổi",
             "usageHistory" : [	
                             {
-                            "Time" : "30/04/2024 00:00:00",
+                            "Time" : "30 - 04 - 2024 00:00:00",
                             "Room" : "Phòng cấp cứu số 01"
                             },
                             {
-                            "Time" : "30/04/2024 01:00:00",
+                            "Time" : "30 - 04 - 2024 01:00:00",
                             "Room" : "Phòng siêu âm số 03"
                             },
                             {
-                            "Time" : "2/05/2024 22:00:00",
+                            "Time" : "2 - 05 - 2024 22:00:00",
                             "Room" : "Phòng siêu âm số 01"
                             }
                         ],
             "regularMaintenance" : {
-                                    "Day" : "15/04/2024",
+                                    "Day" : "15 - 04 - 2024",
                                     "Description" : "Bảo hành "
                                     },
                    "Status " : "Chưa phân công"
@@ -1301,16 +1321,16 @@
         "eqName" : "Máy laze y tế",
         "usageHistory" : [	
                         {
-                        "Time" : "27/04/2024 00:00:00",
+                        "Time" : "27 - 04 - 2024 00:00:00",
                         "Room" : "Phòng cấp mổ 01"
                         },
                         {
-                        "Time" : "30/04/2024 01:00:00",
+                        "Time" : "30 - 04 - 2024 01:00:00",
                         "Room" : "Phòng mổ số 01"
                         }
                     ],
         "regularMaintenance" : {
-                                "Day" : "15/04/2024",
+                                "Day" : "15 - 04 - 2024",
                                 "Description" : "Bảo hành "
                                 },
                "Status " : "Đã phân công"
