@@ -49,7 +49,7 @@
             "dateOfBirth": "29 - 10 - 1994",
             "email": "hung.buiphu123@gmail.com",
             "phoneNum": "0963 789 012",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Quảng Phong, Cửa Lò, Nghệ An",
             "job": "Xe ôm",
             "Doctor_ID ": "",
             "test ": {
@@ -83,7 +83,7 @@
             "dateOfBirth": "05 - 02 - 1986",
             "email": "an.phamxuam86@gmail.com",
             "phoneNum": "0912 345 678",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Phước Hưng, Vị Thanh, Hậu Giang",
             "job": "Thợ may",
             "Doctor_ID ": "",
             "test ": {
@@ -110,7 +110,7 @@
             "dateOfBirth": "11 - 20 - 1990",
             "email": "thanh.photuan@gmail.com",
             "phoneNum": "0908 456 789",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Hồng Kỳ, Bến Lức, Long An",
             "job": "Giáo viên",
             "Doctor_ID ": "#N - A",
             "test ": {
@@ -144,7 +144,7 @@
             "dateOfBirth": "11 - 20 - 1990",
             "email": "thanh.photuan@gmail.com",
             "phoneNum": "0908 456 789",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Phú Điền, Phú Vang, Thừa Thiên Huế",
             "job": "Công nhân",
             "Doctor_ID ": "",
             "test ": {
@@ -178,7 +178,7 @@
             "dateOfBirth": "04 - 27 - 1993",
             "email": "thanh.hoangvan@gmail.com",
             "phoneNum": "0921 234 567",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Bình Yên, Lập Thạch, Vĩnh Phúc",
             "job": "Thợ sửa ống nước",
             "Doctor_ID ": "",
             "test ": {
@@ -212,7 +212,7 @@
             "dateOfBirth": "10 - 02 - 1978",
             "email": "ha.nguyenthithu@gmail.com",
             "phoneNum": "0998 765 432",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Đắk Phú, Đắk Tô, Kon Tum",
             "job": "Bác sĩ",
             "Doctor_ID ": "",
             "test ": {
@@ -246,7 +246,7 @@
             "dateOfBirth": "02 - 14 - 1989",
             "email": "dung.tranvan@gmail.com",
             "phoneNum": "0963 789 012",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Hòa Thạch, Phú Thọ, Phú Thọ",
             "job": "Cảnh sát",
             "Doctor_ID ": "",
             "test ": {
@@ -280,7 +280,7 @@
             "dateOfBirth": "12 - 05 - 1982",
             "email": "huong.lethi@gmail.com",
             "phoneNum": "0978 654 321",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Bảo Tân, Lục Ngạn, Bắc Giang",
             "job": "Nhân viên văn phòng",
             "Doctor_ID ": "",
             "test ": {
@@ -314,7 +314,7 @@
             "dateOfBirth": "08 - 18 - 1997",
             "email": "tuanhoangminh@gmail.com",
             "phoneNum": "0945 321 678",
-            "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
+            "hometown": "Vĩnh Hải, Ninh Hải, Ninh Thuận",
             "job": "Sinh viên",
             "Doctor_ID ": "",
             "test ": {
@@ -343,11 +343,13 @@
     "specialist": [
         {
             "id": 1,
+            "citizenID": "768240953126",
             "name": "Lê Hòa Anh",
             "gender": "Nữ",
             "dateOfBirth": "15 - 09 - 1954",
             "email": "lehoaanh@gmail.com",
             "phoneNum": "09317654321",
+            "hometown": "Thanh Trạch, Bố Trạch, Quảng Bình",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 1975 - 12 - 07 - 1981",
@@ -394,11 +396,13 @@
         },
         {
             "id": 2,
+            "citizenID": "509431276845",
             "name": "Nguyễn Hòa Bình",
             "gender": "Nam",
             "dateOfBirth": "10 - 12 - 1984",
             "email": "nguyenhoabinh@gmail.com",
             "phoneNum": "090345787",
+            "hometown": "An Lạc, Phú Xuyên, Hà Nội",
             "education": [
                 {
                     "dateInterval": "12 - 08 - 2004 - 19 - 07 - 2012",
@@ -430,11 +434,13 @@
         },
         {
             "id": 3,
+            "citizenID": "623780941526", 
             "name": "Trần Quang Cường",
             "gender": "Nam",
             "dateOfBirth": "10 - 12 - 1970",
             "email": "tranquangcuong@gmail.com",
             "phoneNum": "0907899087",
+            "hometown": "Nam Đồng, Đại Lộc, Quảng Nam",
             "education": [
                 {
                     "dateInterval": "12 - 09 - 1990 - 20 - 07 - 1999",
@@ -473,11 +479,13 @@
         },
         {
             "id": 4,
+            "citizenID": "421789056312",
             "name": "Lý Dương",
             "gender": "Nam",
             "dateOfBirth": "10 - 12 - 1964",
             "email": "tranduong@gmail.com",
             "phoneNum": "0701238290",
+            "hometown": "Trường Sơn, Hương Sơn, Hà Tĩnh",
             "education": [
                 {
                     "dateInterval": "02 - 08 - 1984 - 18 - 07 - 1990",
@@ -514,11 +522,13 @@
         },
         {
             "id": 5,
+            "citizenID": "879640231576",
             "name": "William Emily",
             "gender": "Nữ",
             "dateOfBirth": "10 - 02 - 1979",
             "email": "williamemily@gmail.com",
             "phoneNum": "0907854367",
+            "hometown": "Điện Lâm, Điện Bàn, Quảng Nam",
             "education": [
                 {
                     "dateInterval": "15 - 02 - 1999 - 20 - 08 - 2007",
@@ -557,11 +567,13 @@
         },
         {
             "id": 6,
+            "citizenID": "305847921634",
             "name": "Alan Ferb",
             "gender": "Nam",
             "dateOfBirth": "10 - 09 - 1969",
             "email": "anlanferb@gmail.com",
             "phoneNum": "09317634890",
+            "hometown": "Hoà Hội, Hoà Vang, Đà Nẵng",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 1988 - 12 - 07 - 1996",
@@ -595,11 +607,13 @@
         },
         {
             "id": 7,
+            "citizenID": "192487503186",
             "name": "Nguyễn Hương Giang",
             "gender": "Nữ",
             "dateOfBirth": "10 - 01 - 1984",
             "email": "nguyenhuonggiang@gmail.com",
             "phoneNum": "0903123487",
+            "hometown": "An Lợi, Bình Đại, Bến Tre",
             "education": [
                 {
                     "dateInterval": "01 - 08 - 2004 - 08 - 02 - 2012",
@@ -633,11 +647,13 @@
         },
         {
             "id": 8,
+            "citizenID": "536197420815",
             "name": "Lê Hòa",
             "gender": "Nam",
             "dateOfBirth": "01 - 12 - 1970",
             "email": "lehoa@gmail.com",
             "phoneNum": "0907908456",
+            "hometown": "Lam Đồng, Di Linh, Lâm Đồng",
             "education": [
                 {
                     "dateInterval": "10 - 08 - 1990 - 20 - 07 - 1997",
@@ -671,11 +687,13 @@
         },
         {
             "id": 9,
+            "citizenID": "748205913267", 
             "name": "Lê Hoàng Yên",
             "gender": "Nữ",
             "dateOfBirth": "10 - 12 - 1964",
             "email": "lehoangyen@gmail.com",
             "phoneNum": "0701198790",
+            "hometown": "Phước Kiền, Hòa Vang, Đà Nẵng",
             "education": [
                 {
                     "dateInterval": "02 - 08 - 1984 - 18 - 07 - 1990",
@@ -714,11 +732,13 @@
         },
         {
             "id": 10,
+            "citizenID": "319672048573",
             "name": "Hoàng Ninh Lan",
             "gender": "Nữ",
             "dateOfBirth": "10 - 02 - 1979",
             "email": "hoangninhlan@gmail.com",
             "phoneNum": "0909845367",
+            "hometown": "Phước Ninh, Ninh Phước, Ninh Thuận",
             "education": [
                 {
                     "dateInterval": "15 - 04 - 1999 - 29 - 08 - 2007",
@@ -754,11 +774,13 @@
     "Nurse": [
         {
             "id": 1,
-            "name": "Trần Thị M",
+            "citizenID": "925081736492",
+            "name": "Trần Thị Minh",
             "gender": "Nữ",
             "dateOfBirth": "15 - 09 - 1970",
             "email": "TranThiM@gmail.com",
             "phoneNum": "0925374819",
+            "hometown": "Tràng An, Hoa Lư, Ninh Bình",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 1988 - 12 - 07 - 1994",
@@ -777,11 +799,13 @@
         },
         {
             "id": 2,
-            "name": "Trần Thị G",
+            "citizenID": "847129056234",
+            "name": "Trần Thị Giang Hà",
             "gender": "Nữ",
             "dateOfBirth": "25 - 01 - 1979",
             "email": "TranThiG@gmail.com",
             "phoneNum": "0925748104",
+            "hometown": "Bình Nghi, Bình Sơn, Quảng Ngãi",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 1997 - 12 - 07 - 2006",
@@ -800,11 +824,13 @@
         },
         {
             "id": 3,
-            "name": "Nguyễn THị N",
+            "citizenID": "681245097836",
+            "name": "Nguyễn Thị Nhi",
             "gender": "Nữ",
             "dateOfBirth": "12 - 10 - 1979",
             "email": "nguyenThiN@gmail.com",
             "phoneNum": "0934780292",
+            "hometown": "An Mỹ, Tuy An, Phú Yên",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 1979 - 12 - 07 - 1985",
@@ -823,11 +849,13 @@
         },
         {
             "id": 4,
-            "name": "Nguyễn Thị T",
+            "citizenID": "530279416785",
+            "name": "Nguyễn Thị Thảo",
             "gender": "Nữ",
             "dateOfBirth": "16 - 10 - 1989",
             "email": "NguyenThiT@gmail.com",
             "phoneNum": "0977881902",
+            "hometown": "Hội An, Tuy Hòa, Phú Yên",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 2007 - 12 - 07 - 2015",
@@ -846,11 +874,13 @@
         },
         {
             "id": 5,
-            "name": "Đinh Nguyễn X",
-            "gender": "Nữ",
+            "citizenID": "490328157642",
+            "name": "Đinh Nguyễn Xuân Nhã",
+            "gender": "Nam",
             "dateOfBirth": "25 - 01 - 1995",
             "email": "DinhNguyenX@gmail.com",
             "phoneNum": "0929384619",
+            "hometown": "Bình An, Long Mỹ, Hậu Giang",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 2013 - 12 - 07 - 2018",
@@ -869,11 +899,13 @@
         },
         {
             "id": 6,
-            "name": "Đinh Thị L",
+            "citizenID": "816490235781",
+            "name": "Đinh Thị Lan Hương",
             "gender": "Nữ",
             "dateOfBirth": "25 - 01 - 1992",
             "email": "DinhThiL@gmail.com",
             "phoneNum": "0900882718",
+            "hometown": "An Hòa, Tân Biên, Tây Ninh",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 2010 - 12 - 07 - 2018",
@@ -892,11 +924,13 @@
         },
         {
             "id": 7,
-            "name": "Hà Tuyết N",
+            "citizenID": "243809517826",
+            "name": "Hà Tuyết Nhi",
             "gender": "Nữ",
             "dateOfBirth": "29 - 02 - 1988",
             "email": "HaTuyeN@gmail.com",
             "phoneNum": "0915472984",
+            "hometown": "Phước Hưng, Đồng Phú, Bình Phước",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 2009 - 12 - 07 - 2015",
@@ -915,11 +949,13 @@
         },
         {
             "id": 8,
-            "name": "Nguyen Thi T",
+            "citizenID": "765024913287",
+            "name": "Nguyen Thi Thương",
             "gender": "Nữ",
             "dateOfBirth": "25 - 01 - 1994",
             "email": "DinhThiL@gmail.com",
             "phoneNum": "0910284672",
+            "hometown": "Hòa Phú, Tân Yên, Bắc Giang",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 2012 - 12 - 07 - 2017",
@@ -938,11 +974,13 @@
         },
         {
             "id": 9,
-            "name": "Lê Trúc H",
+            "citizenID": "978032165794", 
+            "name": "Lê Trúc Hòa",
             "gender": "Nữ",
             "dateOfBirth": "25 - 01 - 1986",
             "email": "LeTrucH@gmail.com",
             "phoneNum": "0947263819",
+            "hometown": "Thạch Thắng, Thạch An, Cao Bằng",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 2004 - 12 - 07 - 2009",
@@ -961,11 +999,13 @@
         },
         {
             "id": 10,
-            "name": "Lê Thị P",
+            "citizenID": "587401239865",
+            "name": "Lê Thị Phương",
             "gender": "Nữ",
             "dateOfBirth": "25 - 01 - 1974",
             "email": "LeThiP@gmail.com",
             "phoneNum": "0947281937",
+            "hometown": "Lạc Hồng, Thanh Trì, Hà Nội",
             "education": [
                 {
                     "dateInterval": "20 - 08 - 1992 - 12 - 07 - 2000",
@@ -986,101 +1026,121 @@
     "SuportStaff": [
         {
             "id": 1,
+            "citizenID": "320675841923",
             "name": "Tri Thiên Trí",
-            "gender": "F",
+            "gender": "Nữ",
             "dateOfBirth": "27 - 3 - 2007",
             "email": "trithientri157@gmail.com",
             "phoneNum": "0580682413",
+            "hometown": "Vĩnh Hảo, Tuy Phước, Bình Định",
             "education": [],
             "cer": []
         },
         {
             "id": 2,
+            "citizenID": "864927031258",
             "name": "Cầm Thanh Hồng",
-            "gender": "F",
+            "gender": "Nữ",
             "dateOfBirth": "14 - 11 - 1966",
             "email": "camthanhhong495@gmail.com",
             "phoneNum": "0937394608",
+            "hometown": "Phước Trạch, Phước Long, Bạc Liêu",
             "education": [],
             "cer": []
         },
         {
             "id": 3,
+            "citizenID": "197534028615",
             "name": "Hàn Diễm Uyên",
-            "gender": "F",
+            "gender": "Nữ",
             "dateOfBirth": "7 - 2 - 1988",
             "email": "handiemuyen55@gmail.com",
             "phoneNum": "0388461230",
+            "hometown": "Lương Phong, Hương Khê, Hà Tĩnh",
             "education": [],
             "cer": []
         },
         {
             "id": 4,
+            "citizenID": "690481372580",
             "name": "Bá Thiên Giang",
-            "gender": "F",
+            "gender": "Nữ",
             "dateOfBirth": "3 - 9 - 19799",
             "email": "bathiengiang558@gmail.com",
             "phoneNum": "0776453182",
+            "hometown": "An Hóa, Đồng Hới, Quảng Bình",
             "education": [],
             "cer": []
         },
         {
             "id": 5,
+            "citizenID": "510937246815", 
             "name": "Đào Gia Vinh",
-            "gender": "M",
+            "gender": "Nam",
             "dateOfBirth": "21 - 6 - 1970",
             "email": "daogiavinh872@gmail.com",
             "phoneNum": "0846419578",
+            "hometown": "An Mỹ, Mỹ Lộc, Nam Định",
             "education": [],
             "cer": []
         },
         {
             "id": 6,
+            "citizenID": "820436197584",
             "name": "Viên Trung Chính",
-            "gender": "M",
+            "gender": "Nam",
             "dateOfBirth": "27 - 3 - 1967",
             "email": "vientrungchinh43@gmail.com",
             "phoneNum": "0378137402",
+            "hometown": "Cẩm Thanh, Hội An, Quảng Nam",
             "education": [],
             "cer": []
         },
         {
             "id": 7,
+            "citizenID": "634290178563",
             "name": "Lư Ðan Khanh",
-            "gender": "F",
+            "gender": "Nữ",
             "dateOfBirth": "15 - 09 - 1970",
             "email": "luankhanh339@gmail.com",
             "phoneNum": "09317654321",
+            "hometown": "Phước Hòa, Phước Sơn, Quảng Nam",
             "education": [],
             "cer": []
         },
         {
             "id": 8,
+            "citizenID": "972365014829", 
             "name": "Kim Ðình Ðôn",
-            "gender": "M",
+            "gender": "Nam",
             "dateOfBirth": "9 - 7 - 1982",
             "email": "kiminhon99@gmall.com",
             "phoneNum": "0976178035",
+            "hometown": "Bình Tân, Bắc Bình, Bình Thuận",
             "education": [],
             "cer": []
         },
         {
             "id": 9,
+            "citizenID": "518429607316",
             "name": "Lạc Bảo Thúy",
-            "gender": "F",
+            "gender": "Nữ",
             "dateOfBirth": "31 - 8 - 1989",
             "email": "lacbaothuy248@gmail.com",
             "phoneNum": "0335839271",
+            "hometown": "An Sơn, Trảng Bàng, Tây Ninh",
             "education": [],
             "cer": []
         },
         {
             "id": 10,
+            "citizenID": "307294851632",
             "name": "Trần Thị Thịnh",
-            "gender": "F",
+            "gender": "Nữ",
             "dateOfBirth": "2 - 3 - 2004",
             "email": "hachiko1012004@gmail.com",
             "phoneNum": "0335162337",
+            "hometown": "Bình Khang, Cẩm Mỹ, Đồng Nai",
             "education": [],
             "cer": []
         }
