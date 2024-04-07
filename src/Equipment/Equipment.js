@@ -2,23 +2,23 @@ import React, {useState,useEffect} from 'react'
 import Search from './Search/Search'
 import axios from 'axios'
 import DataTable from './DataTable/DataTable'
-import "./Patient.css"
+import "./Equipment.css"
 
-const Patient = () => {
+const Equipment = () => {
 
   const [jsonData, setJsonData] = useState(null);
 
   useEffect(() => {
-    const getAllPatient = async () => {
+    const getAllEquipment = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/Patient');
+        const response = await axios.get('http://localhost:3001/Equipment');
         console.log('call api', response.data);
         setJsonData(response.data);
       } catch (error) {
         console.log(error);
       }
     };
-    getAllPatient();
+    getAllEquipment();
   }, []);
 
   return (
@@ -29,4 +29,4 @@ const Patient = () => {
   )
 }
 
-export default Patient;
+export default Equipment;

@@ -1,0 +1,73 @@
+.control-button{
+    background-color: rgb(6, 137, 202);
+    border: 1px solid black;
+    padding-left: 100px;
+    
+    padding-bottom: 10px ;
+
+}
+.icon{
+    height: 20vh;
+    background-image:  none;
+    /* i want image in icon in the center of its col */
+    padding-top: 2px;
+    
+    float:left;
+   
+}
+.colorOfa{
+    color: rgb(251, 245, 245);
+   
+
+}
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(10, 4, 102);
+    
+}
+.rowAndCol{
+    height: 150px;
+    width: 27%;
+    margin: 20px;
+    display: inline-block;
+    background-color: rgb(135, 192, 243);
+}
+.rowAndCol{
+    box-shadow: auto rgba(0, 0, 0, 0.5);
+  }
+.rowAndCol:hover{
+    transform: translateY(-5px);
+    box-shadow: auto rgba(0, 0, 0, 0.25);
+    color:rgb(228, 236, 243);
+  }
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.persona-button-container {
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding: 10px 0 4px 5px;
+    cursor: pointer;
+    position: relative;
+    min-height: 130px;
+   
+}
+.container {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.content{
+   
+    font-size: 16px;
+    line-height: 24px;
+    height: 45px;
+    max-height: 45px;
+    color: white;
+}

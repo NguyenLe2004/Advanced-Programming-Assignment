@@ -9,13 +9,14 @@
     transform: translate(10%);
 }
 .footer {
-    position: absolute;
+    position: relative;
     background-color: rgb(62, 62, 179);
-    top: 80vh;
+    bottom: 0px;
     color: white;
     border: 1px black solid;
     width: 100vw;
     height: 20vh;
+    display:flex;
 }
 .mainPage-whileDisplayForm {
     border: 1px black solid;

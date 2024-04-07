@@ -7,6 +7,10 @@ import Patient from '../Patient/Patient'
 import { Routes, Route } from 'react-router-dom';
 import { displaySignInFormContext } from '../SignInControl/DisplaySignInProvider'
 import "./Home.css"
+import Medicine from '../Medicine/Medicine';
+import Specialist from '../Specialist/Specialist'
+import Equipment from '../Equipment/Equipment'
+import SuportStaff from '../SuportStaff/SuportStaff'
 const Home = () => {
   const {isDisplaySignInForm,setIsDisplaySignInForm} = useContext(displaySignInFormContext);
 
@@ -26,11 +30,11 @@ const Home = () => {
         <Routes>
           <Route path ='/' element = {<Body/>} />
           <Route path='/patient' element ={<Patient/>}/>
-          <Route path='/specialist' element ={<div> specialist here</div>}/>
+          <Route path='/specialist' element ={<Specialist/>}/>
           <Route path='/nurse' element ={<div> nurse here</div>}/>
-          <Route path='/support' element ={<div> support here</div>}/>
-          <Route path='/medicine' element ={<div> medicine here</div>}/>
-          <Route path='/equipment' element ={<div> equipment here</div>}/>
+          <Route path='/support' element ={<SuportStaff/>}/>
+          <Route path='/medicine' element ={<Medicine/>}/>
+          <Route path='/equipment' element ={<Equipment/>}/>
         </Routes>
         
         <Footer/>
