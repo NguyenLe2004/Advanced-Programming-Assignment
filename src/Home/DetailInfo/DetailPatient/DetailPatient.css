@@ -1,0 +1,54 @@
+.main-page-detail{
+    position: relative;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(204, 230, 255,0.3);
+}
+.avatar{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 5vh 5vh 5vh 5vh;
+    background-color: rgb(57, 113, 0);
+    color: white;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    border-radius: 50%;
+}
+.info-block{
+    display: flex;
+    margin-left: 10vw;
+    width: 80vw;
+    height: 85vh;
+    font-weight: bold;
+}
+.info{
+    background-color: white;
+    width: 35vw;
+    border-radius: 10px;
+}
+.med-info{
+    margin-left: 10vw;
+    border-radius: 10px;
+    width: 60%;
+}
+.pen-to-square-icon {
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    left: 37vw;
+}
+.pen-to-square-icon:hover{
+    cursor: pointer;
+    color: gray;
+}
+.treat-page{
+    margin-top: 7vh;
+    min-height: 100vh;
+}

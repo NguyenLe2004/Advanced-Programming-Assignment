@@ -1,5 +1,12 @@
-.mainPage{
+.mainPage-{
     height: 100vh;
+    background-color: rgb(204, 230, 255,0.3);
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
 }
 .firstImg {
     width: 80vw;
@@ -9,13 +16,12 @@
     transform: translate(10%);
 }
 .footer {
-    position: absolute;
     background-color: rgb(62, 62, 179);
-    top: 100vh;
     color: white;
     border: 1px black solid;
     width: 100vw;
-    height: 20vh;
+    min-height: 20vh;
+    margin-top: auto;
 }
 .mainPage-whileDisplayForm {
     border: 1px black solid;

@@ -5,43 +5,36 @@ import Body from './Body/Body'
 import Footer from './Footer/Footer'
 import Patient from '../Patient/Patient'
 import { Routes, Route } from 'react-router-dom';
-import { displaySignInFormContext } from '../SignInControl/DisplaySignInProvider'
-import { preventOperateContext } from '../DisplayDataAllProvider/PreventOperateProvider'
+import { displaySignInFormContext } from '../Provider/DisplaySignInProvider'
+import DetailPatient from './DetailInfo/DetailPatient/DetailPatient'
 import "./Home.css"
 const Home = () => {
   const {isDisplaySignInForm,setIsDisplaySignInForm} = useContext(displaySignInFormContext);
-  const {isPreventOperate} = useContext(preventOperateContext);
 
   const hideSignInForm = () => { // hide login form if click outside 
     if(isDisplaySignInForm) {
       setIsDisplaySignInForm(false);
     }
   };
-
-  useEffect(() => {
-    console.log("prevent",isPreventOperate);
-  },[isPreventOperate])
   return (
-    <div> 
+    <div className='main-containter'> 
       {isDisplaySignInForm && (
         <SignInForm/>
       )}
 
       <div onClick={hideSignInForm} className={`mainPage-${isDisplaySignInForm? 'whileDisplayForm' : ''}`}>
-        {isPreventOperate && (
-          <div className='prevent'></div>
-        )}
-        <Header/>
+        <Header className = "navBar"/>
         <Routes>
           <Route path ='/' element = {<Body/>} />
           <Route path='/patient' element ={<Patient/>}/>
+          <Route path = '/patient/:id' element={<DetailPatient/>} />
           <Route path='/specialist' element ={<div> specialist here</div>}/>
           <Route path='/nurse' element ={<div> nurse here</div>}/>
           <Route path='/support' element ={<div> support here</div>}/>
           <Route path='/medicine' element ={<div> medicine here</div>}/>
           <Route path='/equipment' element ={<div> equipment here</div>}/>
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     </div>
   )

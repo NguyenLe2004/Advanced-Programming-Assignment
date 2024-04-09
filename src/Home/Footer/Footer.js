@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 const Footer = () => {
   return (
-    <div className='footer'> 
+    <footer className='footer'> 
         <Container >
         <Row>
             <Col>
@@ -17,7 +17,7 @@ const Footer = () => {
             <Col>Help Center</Col>
         </Row>
         </Container>
-    </div>
+    </footer>
 
   )
 }

@@ -2,13 +2,17 @@
     display: inline-block;
     height: 5vh;
     width: fit-content;
-    position: absolute;
-    top: 10vh;
-    left: 50vw;
+    position: relative;
+    top: 11vh;
+    left: 17vw;
+    z-index: 20;
     transform: translate(-100%,0);
     
 }
-
+.search-filter{
+    border: 1px red solid;
+    height: fit-content;
+}
 .searchIcon{
     position: absolute;
     top: 16%;
@@ -19,12 +23,11 @@
     padding: 5px;
     transform: rotate(90deg);
     transition: transform 0.5s ease-in-out, color 0.2s ease-in-out ;
-    /* z-index: 2; */
 }
 
 .searchIcon:hover {
     cursor: pointer;
-    color: rgb(150, 150, 150);
+    color: rgb(26, 98, 255);
 }
 
 .searchIcon.active {
@@ -37,6 +40,7 @@
     position: absolute;
     transform: translate(-40%,15%) ;
     border-radius: 10px;
+    border: 1px rgb(216, 230, 255) solid;
     width: 0vw;
     visibility: hidden; 
     opacity: 0;
@@ -49,17 +53,17 @@
     opacity: 1;
 }
 .search-error {
-    text-align: center;
-    width: 20vw;
-}
-.filter-icon {
-    font-size: 25px;
     position: absolute;
-    top: 20vh;
-    right: 8vh;
-    transition: all 0.3s ease-in-out;
+    left: 10vw;
+    top: 25vh;
+    text-align: center;
+    align-items: center;
+    width: 20vw;
+    z-index: 10;
 }
-.filter-icon:hover{
-    cursor: pointer;
-    color: rgb(122, 122, 122);
+.filter-block{
+    border: 1px red solid;
+    position: relative;
+    /* left: ; */
+    top: 10vh;
 }

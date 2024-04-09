@@ -1,0 +1,57 @@
+.title-med-info{
+    text-align: center;
+    /* width: 100%; */
+    background-color: rgb(88, 135, 255);
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+.med-info-block{
+    height: fit-content;
+    border-radius: 10px;
+    background-color: white;
+}
+.med-info-test{
+    height:fit-content;
+    padding-bottom: 2vh;
+    margin-top: 10vh;
+    width: 100%;
+    background-color: white;
+}
+.med-info-row{
+    padding-left: 10px;
+    margin-top: 1vh;
+}
+.med-info-test .label{
+    text-align: center;
+    color: rgb(176, 176, 176);
+    font-size: 15px;
+}
+.med-info-test .value{
+    text-align: center;
+    font-size: 25px;
+}
+.med-info-test .name{
+    font-size: 30px;
+    color: rgb(85, 85, 85);
+    text-align: center;
+}
+.med-info-test .result{
+    font-size: 17px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.bar {
+    border: 1px rgb(128, 128, 128,0.2) solid;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 100%;
+}
+.arrow-block{
+    margin-top: 2vh;
+    position: relative;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}

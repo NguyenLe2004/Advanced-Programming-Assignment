@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react'
-import { displaySignInFormContext } from '../../SignInControl/DisplaySignInProvider';
-import { signInContext } from '../../SignInControl/SignInProvider';
+import { displaySignInFormContext } from '../../Provider/DisplaySignInProvider';
+import { signInContext } from '../../Provider/SignInProvider';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark} from "@fortawesome/free-solid-svg-icons";
 import axios from 'axios';

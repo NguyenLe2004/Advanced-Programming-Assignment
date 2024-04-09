@@ -1,0 +1,38 @@
+.patient-info{
+    margin-top: 2vh;
+}
+.patient-label{
+    padding-left: 2vw;
+}
+.patient-value {
+    padding-right: 2vw;
+}
+.patient-img{
+    width: 40%;
+}
+.all-status{
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+}
+.status-on-going{
+    background-color: rgb(253,167,40,0.3);
+    color: rgb(214, 129, 2);
+}
+.status-not{
+    background-color: rgb(237,81,80,0.3);
+    color: rgb(237,81,80);
+}
+.status-complete{
+    background-color: #48b3ff4d;
+    color: rgb(0, 149, 255);
+}
+.patient-value{
+    color: rgb(74, 74, 74);
+}

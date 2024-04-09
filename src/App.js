@@ -1,14 +1,14 @@
 import Home from "./Home/Home";
-import { SignInProvider } from "./SignInControl/SignInProvider";
-import { DisplaySignInProvider } from "./SignInControl/DisplaySignInProvider";
-import { PreventOperateProvider } from "./DisplayDataAllProvider/PreventOperateProvider";
+import { SignInProvider } from "./Provider/SignInProvider";
+import { DisplaySignInProvider } from "./Provider/DisplaySignInProvider";
+import { DataProvider } from "./Provider/DataProvider";
 function App() {
   return ( 
     <SignInProvider>
       <DisplaySignInProvider>
-        <PreventOperateProvider>
-            <Home/>
-        </PreventOperateProvider>
+        <DataProvider>
+          <Home/>
+        </DataProvider>
       </DisplaySignInProvider>
     </SignInProvider>
   );
