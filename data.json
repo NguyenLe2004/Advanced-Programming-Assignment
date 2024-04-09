@@ -14,10 +14,10 @@
       "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
       "treatProcess": [
         {
-          "dateBegin": "01-04-2024", 
+          "dateBegin": "01-04-2024",
           "dateEnd": "02-04-2024",
-          "timeBegin":"07:00",
-          "timeEnd":"08:30",
+          "timeBegin": "07:00",
+          "timeEnd": "08:30",
           "room": "H3-102",
           "title": "Truyền máu",
           "description": "Bệnh nhân đã được thực hiện quá trình truyền máu nhằm cung cấp máu mới và khắc phục tình trạng thiếu máu. Loại máu được sử dụng trong quá trình truyền là máu loại A+. Đã truyền tổng cộng 2 đơn vị máu cho bệnh nhân.",
@@ -26,8 +26,8 @@
         {
           "dateBegin": "10-04-2024",
           "dateEnd": "11-04-2024",
-          "timeBegin":"08:15",
-          "timeEnd":"09:45",
+          "timeBegin": "08:15",
+          "timeEnd": "09:45",
           "room": "H3-102",
           "title": "Phẫu thuật Gan",
           "description": "Sắp tiến hành",
@@ -36,8 +36,8 @@
         {
           "dateBegin": "10-03-2024",
           "dateEnd": "11-03-2024",
-          "timeBegin":"09:30",
-          "timeEnd":"11:00",
+          "timeBegin": "09:30",
+          "timeEnd": "11:00",
           "room": "H1-101",
           "title": "Khám tổng quát và bổ sung thuốc",
           "description": "bệnh nhân đã được tiến hành khám tổng quát và bổ sung thuốc. Trong quá trình khám, bác sĩ đã kiểm tra các chỉ số y tế quan trọng của bệnh nhân như huyết áp, nhịp tim, nhiệt độ cơ thể và đánh giá tổng quan về tình trạng sức khỏe đồng thời bổ sung thuốc theo chỉ định của bác sĩ và theo dõi tình trạng",
@@ -49,8 +49,8 @@
           "room": "H3-101",
           "dateBegin": "10-03-2024",
           "dateEnd": "10-03-2024",
-          "timeBegin":"10:45",
-          "timeEnd":"12:30",
+          "timeBegin": "10:45",
+          "timeEnd": "12:30",
           "medicalStaffID": "1"
         },
         {
@@ -59,8 +59,8 @@
           "room": "H3-101",
           "dateBegin": "10-03-2024",
           "dateEnd": "10-03-2024",
-          "timeBegin":"12:00",
-          "timeEnd":"13:45",
+          "timeBegin": "12:00",
+          "timeEnd": "13:45",
           "medicalStaffID": "1"
         }
       ],
@@ -84,27 +84,19 @@
       "hometown": "Quảng Phong, Cửa Lò, Nghệ An",
       "job": "Xe ôm",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "ECG789",
-          "firstName": "ECG",
-          "lastMiddleName": "ECG",
-          "description": "Nhịp tim không đều",
-          "room": "B1-302",
-          "date": "12-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Thường xuyên chóng mặt",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "timeBegin": "",
-          "timeEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "05-04-2024",
+          "dateEnd": "06-04-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "08:30",
+          "room": "H3-102",
+          "title": "Kiểm tra EKG",
+          "description": "Lịch kiểm tra điện tâm đồ được đặt cho bệnh nhân để đánh giá chức năng tim.",
+          "medicalStaffID": "2"
         }
       ]
     },
@@ -123,27 +115,19 @@
       "hometown": "Phước Hưng, Vị Thanh, Hậu Giang",
       "job": "Thợ may",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "MRI456",
-          "firstName": "não",
-          "lastMiddleName": "MRI",
-          "description": "Không có khuyết tật",
-          "room": "C2-205",
-          "date": "15-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Đau vùng thái dương trái",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "timeBegin": "",
-          "timeEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "12-04-2024",
+          "dateEnd": "13-04-2024",
+          "timeBegin": "08:15",
+          "timeEnd": "09:45",
+          "room": "H3-102",
+          "title": "Phiên tập vận hành",
+          "description": "Phiên tập vận hành đã được lên lịch để phục hồi chức năng.",
+          "medicalStaffID": "2"
         }
       ]
     },
@@ -162,27 +146,29 @@
       "hometown": "Hồng Kỳ, Bến Lức, Long An",
       "job": "Giáo viên",
       "Doctor_ID ": "#N-A",
-      "test": {
-        "TEST1": {
-          "TestID": "URINE101",
-          "firstName": "tiểu",
-          "lastMiddleName": "Xét nghiệm nước",
-          "description": "Nhiễm trùng đường tiểu",
-          "room": "A4-115",
-          "date": "09-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Cảm giác đau hoặc nặng ở phía dưới bụng",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "timeBegin": "",
-          "timeEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "15-04-2024",
+          "dateEnd": "16-04-2024",
+          "timeBegin": "09:30",
+          "timeEnd": "11:00",
+          "room": "H1-101",
+          "title": "Tư vấn dinh dưỡng",
+          "description": "Cuộc hẹn với chuyên gia dinh dưỡng để hướng dẫn và đánh giá chế độ dinh dưỡng.",
+          "medicalStaffID": "3"
+        },
+        {
+          "dateBegin": "20-04-2024",
+          "dateEnd": "21-04-2024",
+          "timeBegin": "10:45",
+          "timeEnd": "12:30",
+          "room": "H3-101",
+          "title": "Quét MRI",
+          "description": "Cuộc hẹn quét MRI được lên lịch để có hình ảnh chi tiết về các cơ quan nội tạng.",
+          "medicalStaffID": "3"
         }
       ]
     },
@@ -201,27 +187,19 @@
       "hometown": "Phú Điền, Phú Vang, Thừa Thiên Huế",
       "job": "Công nhân",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "XRAY202",
-          "firstName": "ngực",
-          "lastMiddleName": "Chụp X-quang",
-          "description": "Không có vấn đề gì",
-          "room": "D5-503",
-          "date": "14-03-2024"
-        }
-      },
       "medHistory": "Thoái hóa đốt sống",
       "symptoms": "Ổn định",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "28-03-2024",
-          "dateEnd": "29-03-2024",
-          "timeBegin":"13:15",
-          "timeEnd":"14:45",
-          "room ": "Phòng khám tổng quát 4",
-          "title": "Khám tổng quát cho bệnh nhân"
+          "dateBegin": "25-04-2024",
+          "dateEnd": "26-04-2024",
+          "timeBegin": "12:00",
+          "timeEnd": "13:45",
+          "room": "H3-101",
+          "title": "Khám siêu âm",
+          "description": "Cuộc hẹn siêu âm để chẩn đoán mục đích.",
+          "medicalStaffID": "3"
         }
       ]
     },
@@ -240,27 +218,29 @@
       "hometown": "Bình Yên, Lập Thạch, Vĩnh Phúc",
       "job": "Thợ sửa ống nước",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "CTSCAN303",
-          "firstName": "bụng",
-          "lastMiddleName": "CT scan",
-          "description": "Khối u phình to",
-          "room": "E6-601",
-          "date": "11-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Tiểu chảy",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "timeBegin": "",
-          "timeEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "30-04-2024",
+          "dateEnd": "01-05-2024",
+          "timeBegin": "07:30",
+          "timeEnd": "09:15",
+          "room": "H3-102",
+          "title": "Phiên tập nghề nghiệp",
+          "description": "Phiên tập nghề nghiệp đã được lên lịch để phục hồi chức năng.",
+          "medicalStaffID": "4"
+        },
+        {
+          "dateBegin": "05-05-2024",
+          "dateEnd": "06-05-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "10:30",
+          "room": "H1-101",
+          "title": "Kiểm tra nha khoa",
+          "description": "Cuộc hẹn kiểm tra nha khoa định kỳ để đánh giá sức khỏe miệng.",
+          "medicalStaffID": "4"
         }
       ]
     },
@@ -279,27 +259,29 @@
       "hometown": "Đắk Phú, Đắk Tô, Kon Tum",
       "job": "Bác sĩ",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "EYE404",
-          "firstName": "mắt",
-          "lastMiddleName": "Kiểm tra",
-          "description": "Cần kính cận",
-          "room": "F7-701",
-          "date": "16-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Tầm nhìn kém",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "timeBegin": "",
-          "timeEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "10-05-2024",
+          "dateEnd": "11-05-2024",
+          "timeBegin": "10:15",
+          "timeEnd": "11:45",
+          "room": "H3-102",
+          "title": "Phiên tập nói",
+          "description": "Phiên tập nói đã được lên lịch để phục hồi chức năng ngôn ngữ.",
+          "medicalStaffID": "4"
+        },
+        {
+          "dateBegin": "15-05-2024",
+          "dateEnd": "16-05-2024",
+          "timeBegin": "12:30",
+          "timeEnd": "14:15",
+          "room": "H3-101",
+          "title": "Đánh giá tình trạng trí óc",
+          "description": "Cuộc hẹn để đánh giá và đánh giá chức năng trí óc.",
+          "medicalStaffID": "5"
         }
       ]
     },
@@ -318,27 +300,19 @@
       "hometown": "Hòa Thạch, Phú Thọ, Phú Thọ",
       "job": "Cảnh sát",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "FECAL808",
-          "firstName": "phân",
-          "lastMiddleName": "Xét nghiệm",
-          "description": "Dương tính với vi khuẩn",
-          "room": "J11-1101",
-          "date": "20-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Sốt",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "timeBegin": "",
-          "timeEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "20-05-2024",
+          "dateEnd": "21-05-2024",
+          "timeBegin": "13:45",
+          "timeEnd": "15:30",
+          "room": "H3-101",
+          "title": "Tư vấn di truyền học",
+          "description": "Cuộc hẹn để tư vấn di truyền học và đánh giá rủi ro.",
+          "medicalStaffID": "5"
         }
       ]
     },
@@ -357,27 +331,19 @@
       "hometown": "Bảo Tân, Lục Ngạn, Bắc Giang",
       "job": "Nhân viên văn phòng",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "BIOPSY606",
-          "firstName": "thư",
-          "lastMiddleName": "Xét nghiệm khảo sát ung",
-          "description": "Không phát hiện tế bào ung thư",
-          "room": "D9-901",
-          "date": "08-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Mệt mỏi, uể oải",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "timeBegin": "",
-          "timeEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "25-05-2024",
+          "dateEnd": "26-05-2024",
+          "timeBegin": "15:00",
+          "timeEnd": "16:45",
+          "room": "H3-101",
+          "title": "Kiểm tra mắt",
+          "description": "Cuộc hẹn để kiểm tra mắt và kiểm tra thị lực chi tiết.",
+          "medicalStaffID": "5"
         }
       ]
     },
@@ -396,27 +362,29 @@
       "hometown": "Vĩnh Hải, Ninh Hải, Ninh Thuận",
       "job": "Sinh viên",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "EEG707",
-          "firstName": "đồ",
-          "lastMiddleName": "Điện não",
-          "description": "Hoạt động não bình thường",
-          "room": "C10-1003",
-          "date": "17-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Thường xuyên chóng mặt",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "01-03-2024",
-          "dateEnd": "01-03-2024",
-          "timeBegin":"14:30",
-          "timeEnd":"16:15",
-          "room ": "105",
-          "title": "Tiêm vắc xin COVID-19"
+          "dateBegin": "30-05-2024",
+          "dateEnd": "31-05-2024",
+          "timeBegin": "17:15",
+          "timeEnd": "19:00",
+          "room": "H3-102",
+          "title": "Kiểm tra thính lực",
+          "description": "Cuộc hẹn để đánh giá thính lực và kiểm tra thính lực.",
+          "medicalStaffID": "6"
+        },
+        {
+          "dateBegin": "05-06-2024",
+          "dateEnd": "06-06-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "08:30",
+          "room": "H3-102",
+          "title": "Kiểm tra sức khỏe tổng quát",
+          "description": "Cuộc hẹn kiểm tra sức khỏe tổng quát định kỳ cho đánh giá sức khỏe chung.",
+          "medicalStaffID": "6"
         }
       ]
     },
@@ -430,14 +398,25 @@
       "dateOfBirth": "2024-04-11",
       "address": "Le Duc Tho",
       "hometown": "Ho Chi Minh",
-      "height": "dsfsaf",
-      "weight": "sdafdsf",
+      "height": "183",
+      "weight": "63",
       "bloodType": "AB",
       "medHistory": "dsfasf",
       "symtoms": "dfasf",
       "diagnosis": "Chưa được chẩn đoán",
       "medicalStaffID": "1",
-      "treatProcess": [],
+      "treatProcess": [
+        {
+          "dateBegin": "10-06-2024",
+          "dateEnd": "11-06-2024",
+          "timeBegin": "08:15",
+          "timeEnd": "09:45",
+          "room": "H3-102",
+          "title": "Theo dõi huyết áp",
+          "description": "Cuộc hẹn để theo dõi và quản lý huyết áp.",
+          "medicalStaffID": "6"
+        }
+      ],
       "id": 11
     }
   ],
