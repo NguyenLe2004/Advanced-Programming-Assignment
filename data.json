@@ -1,7 +1,7 @@
 {
   "Patient": [
     {
-      "lastMidleName": "Nguyễn Văn",
+      "lastMiddleName": "Nguyễn Văn",
       "firstName": "Nguyên",
       "gender": "Nam",
       "height": "165",
@@ -14,8 +14,10 @@
       "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
       "treatProcess": [
         {
-          "dateBegin": "15-03-2024",
-          "dateEnd": "15-03-2024",
+          "dateBegin": "01-04-2024", 
+          "dateEnd": "02-04-2024",
+          "timeBegin":"07:00",
+          "timeEnd":"08:30",
           "room": "H3-102",
           "title": "Truyền máu",
           "description": "Bệnh nhân đã được thực hiện quá trình truyền máu nhằm cung cấp máu mới và khắc phục tình trạng thiếu máu. Loại máu được sử dụng trong quá trình truyền là máu loại A+. Đã truyền tổng cộng 2 đơn vị máu cho bệnh nhân.",
@@ -24,6 +26,8 @@
         {
           "dateBegin": "10-04-2024",
           "dateEnd": "11-04-2024",
+          "timeBegin":"08:15",
+          "timeEnd":"09:45",
           "room": "H3-102",
           "title": "Phẫu thuật Gan",
           "description": "Sắp tiến hành",
@@ -32,6 +36,8 @@
         {
           "dateBegin": "10-03-2024",
           "dateEnd": "11-03-2024",
+          "timeBegin":"09:30",
+          "timeEnd":"11:00",
           "room": "H1-101",
           "title": "Khám tổng quát và bổ sung thuốc",
           "description": "bệnh nhân đã được tiến hành khám tổng quát và bổ sung thuốc. Trong quá trình khám, bác sĩ đã kiểm tra các chỉ số y tế quan trọng của bệnh nhân như huyết áp, nhịp tim, nhiệt độ cơ thể và đánh giá tổng quan về tình trạng sức khỏe đồng thời bổ sung thuốc theo chỉ định của bác sĩ và theo dõi tình trạng",
@@ -43,6 +49,8 @@
           "room": "H3-101",
           "dateBegin": "10-03-2024",
           "dateEnd": "10-03-2024",
+          "timeBegin":"10:45",
+          "timeEnd":"12:30",
           "medicalStaffID": "1"
         },
         {
@@ -51,6 +59,8 @@
           "room": "H3-101",
           "dateBegin": "10-03-2024",
           "dateEnd": "10-03-2024",
+          "timeBegin":"12:00",
+          "timeEnd":"13:45",
           "medicalStaffID": "1"
         }
       ],
@@ -63,7 +73,7 @@
       "id": 2,
       "citizenID": "841471188467",
       "firstName": "Hưng",
-      "lastMidleName": "Bùi Phú",
+      "lastMiddleName": "Bùi Phú",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
       "dateOfBirth": "29-10-1994",
@@ -77,7 +87,8 @@
       "test": {
         "TEST1": {
           "TestID": "ECG789",
-          "name": "ECG",
+          "firstName": "ECG",
+          "lastMiddleName": "ECG",
           "description": "Nhịp tim không đều",
           "room": "B1-302",
           "date": "12-03-2024"
@@ -90,6 +101,8 @@
         {
           "dateBegin": "",
           "dateEnd": "",
+          "timeBegin": "",
+          "timeEnd": "",
           "room ": "",
           "title": ""
         }
@@ -99,7 +112,7 @@
       "id": 3,
       "citizenID": "470704891087",
       "firstName": "An",
-      "lastMidleName": "Phạm Xuân",
+      "lastMiddleName": "Phạm Xuân",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nữ",
       "dateOfBirth": "05-02-1986",
@@ -113,7 +126,8 @@
       "test": {
         "TEST1": {
           "TestID": "MRI456",
-          "name": "MRI não",
+          "firstName": "não",
+          "lastMiddleName": "MRI",
           "description": "Không có khuyết tật",
           "room": "C2-205",
           "date": "15-03-2024"
@@ -122,13 +136,22 @@
       "medHistory": "Không có",
       "symptoms": "Đau vùng thái dương trái",
       "diagnosis": "Thiếu máu, xơ gan",
-      "treatProcess": []
+      "treatProcess": [
+        {
+          "dateBegin": "",
+          "dateEnd": "",
+          "timeBegin": "",
+          "timeEnd": "",
+          "room ": "",
+          "title": ""
+        }
+      ]
     },
     {
       "id": 4,
       "citizenID": "071292392595",
       "firstName": "Thành",
-      "lastMidleName": "Phó Tuấn",
+      "lastMiddleName": "Phó Tuấn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
       "dateOfBirth": "11-20-1990",
@@ -142,7 +165,8 @@
       "test": {
         "TEST1": {
           "TestID": "URINE101",
-          "name": "Xét nghiệm nước tiểu",
+          "firstName": "tiểu",
+          "lastMiddleName": "Xét nghiệm nước",
           "description": "Nhiễm trùng đường tiểu",
           "room": "A4-115",
           "date": "09-03-2024"
@@ -155,6 +179,8 @@
         {
           "dateBegin": "",
           "dateEnd": "",
+          "timeBegin": "",
+          "timeEnd": "",
           "room ": "",
           "title": ""
         }
@@ -164,7 +190,7 @@
       "id": 5,
       "citizenID": "829329507883",
       "firstName": "Thành",
-      "lastMidleName": "Phó Tuấn",
+      "lastMiddleName": "Phó Tuấn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
       "dateOfBirth": "11-20-1990",
@@ -178,7 +204,8 @@
       "test": {
         "TEST1": {
           "TestID": "XRAY202",
-          "name": "Chụp X-quang ngực",
+          "firstName": "ngực",
+          "lastMiddleName": "Chụp X-quang",
           "description": "Không có vấn đề gì",
           "room": "D5-503",
           "date": "14-03-2024"
@@ -190,7 +217,9 @@
       "treatProcess": [
         {
           "dateBegin": "28-03-2024",
-          "dateEnd": "28-03-2024",
+          "dateEnd": "29-03-2024",
+          "timeBegin":"13:15",
+          "timeEnd":"14:45",
           "room ": "Phòng khám tổng quát 4",
           "title": "Khám tổng quát cho bệnh nhân"
         }
@@ -200,7 +229,7 @@
       "id": 6,
       "citizenID": "618797017311",
       "firstName": "Thanh",
-      "lastMidleName": "Hoàng Văn",
+      "lastMiddleName": "Hoàng Văn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
       "dateOfBirth": "04-27-1993",
@@ -214,7 +243,8 @@
       "test": {
         "TEST1": {
           "TestID": "CTSCAN303",
-          "name": "CT scan bụng",
+          "firstName": "bụng",
+          "lastMiddleName": "CT scan",
           "description": "Khối u phình to",
           "room": "E6-601",
           "date": "11-03-2024"
@@ -227,6 +257,8 @@
         {
           "dateBegin": "",
           "dateEnd": "",
+          "timeBegin": "",
+          "timeEnd": "",
           "room ": "",
           "title": ""
         }
@@ -236,7 +268,7 @@
       "id": 7,
       "citizenID": "164171815965",
       "firstName": "Hà",
-      "lastMidleName": "Nguyễn Thị Thu",
+      "lastMiddleName": "Nguyễn Thị Thu",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nữ",
       "dateOfBirth": "10-02-1978",
@@ -250,7 +282,8 @@
       "test": {
         "TEST1": {
           "TestID": "EYE404",
-          "name": "Kiểm tra mắt",
+          "firstName": "mắt",
+          "lastMiddleName": "Kiểm tra",
           "description": "Cần kính cận",
           "room": "F7-701",
           "date": "16-03-2024"
@@ -263,6 +296,8 @@
         {
           "dateBegin": "",
           "dateEnd": "",
+          "timeBegin": "",
+          "timeEnd": "",
           "room ": "",
           "title": ""
         }
@@ -272,7 +307,7 @@
       "id": 8,
       "citizenID": "529785803689",
       "firstName": "Dũng",
-      "lastMidleName": "Trần Văn",
+      "lastMiddleName": "Trần Văn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
       "dateOfBirth": "02-14-1989",
@@ -286,7 +321,8 @@
       "test": {
         "TEST1": {
           "TestID": "FECAL808",
-          "name": "Xét nghiệm phân",
+          "firstName": "phân",
+          "lastMiddleName": "Xét nghiệm",
           "description": "Dương tính với vi khuẩn",
           "room": "J11-1101",
           "date": "20-03-2024"
@@ -299,6 +335,8 @@
         {
           "dateBegin": "",
           "dateEnd": "",
+          "timeBegin": "",
+          "timeEnd": "",
           "room ": "",
           "title": ""
         }
@@ -308,7 +346,7 @@
       "id": 9,
       "citizenID": "714698464496",
       "firstName": "Hương",
-      "lastMidleName": "Lê Thị",
+      "lastMiddleName": "Lê Thị",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nữ",
       "dateOfBirth": "12-05-1982",
@@ -322,7 +360,8 @@
       "test": {
         "TEST1": {
           "TestID": "BIOPSY606",
-          "name": "Xét nghiệm khảo sát ung thư",
+          "firstName": "thư",
+          "lastMiddleName": "Xét nghiệm khảo sát ung",
           "description": "Không phát hiện tế bào ung thư",
           "room": "D9-901",
           "date": "08-03-2024"
@@ -335,6 +374,8 @@
         {
           "dateBegin": "",
           "dateEnd": "",
+          "timeBegin": "",
+          "timeEnd": "",
           "room ": "",
           "title": ""
         }
@@ -344,7 +385,7 @@
       "id": 10,
       "citizenID": "184965740502",
       "firstName": "Tuấn",
-      "lastMidleName": "Hoàng Minh",
+      "lastMiddleName": "Hoàng Minh",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
       "dateOfBirth": "08-18-1997",
@@ -358,7 +399,8 @@
       "test": {
         "TEST1": {
           "TestID": "EEG707",
-          "name": "Điện não đồ",
+          "firstName": "đồ",
+          "lastMiddleName": "Điện não",
           "description": "Hoạt động não bình thường",
           "room": "C10-1003",
           "date": "17-03-2024"
@@ -371,14 +413,16 @@
         {
           "dateBegin": "01-03-2024",
           "dateEnd": "01-03-2024",
+          "timeBegin":"14:30",
+          "timeEnd":"16:15",
           "room ": "105",
           "title": "Tiêm vắc xin COVID-19"
         }
       ]
     },
     {
-      "lastMidleName": "sdfsfd",
-      "firstName": "sgfdgd",
+      "lastMiddleName": "Nguyen",
+      "firstName": "Nguyen Le Quang",
       "gender": "Nam",
       "phoneNum": "0395645763",
       "email": "nguyenlequangdt@gmail.com",
@@ -402,7 +446,8 @@
       "id": "1",
       "position": "Bác sĩ",
       "citizenID": "768240953126",
-      "name": "Lê Hòa Anh",
+      "firstName": "Anh",
+      "lastMiddleName": "Lê Hòa",
       "gender": "Nữ",
       "dateOfBirth": "15-09-1954",
       "email": "lehoaanh@gmail.com",
@@ -456,7 +501,8 @@
       "id": "2",
       "position": "Bác sĩ",
       "citizenID": "509431276845",
-      "name": "Nguyễn Hòa Bình",
+      "firstName": "Bình",
+      "lastMiddleName": "Nguyễn Hòa",
       "gender": "Nam",
       "dateOfBirth": "10-12-1984",
       "email": "nguyenhoabinh@gmail.com",
@@ -495,7 +541,8 @@
       "id": 3,
       "position": "Bác sĩ",
       "citizenID": "623780941526",
-      "name": "Trần Quang Cường",
+      "firstName": "Cường",
+      "lastMiddleName": "Trần Quang",
       "gender": "Nam",
       "dateOfBirth": "10-12-1970",
       "email": "tranquangcuong@gmail.com",
@@ -541,7 +588,8 @@
       "id": 4,
       "position": "Bác sĩ",
       "citizenID": "421789056312",
-      "name": "Lý Dương",
+      "fileName": "Dương",
+      "lastMiddleName": "Lý",
       "gender": "Nam",
       "dateOfBirth": "10-12-1964",
       "email": "tranduong@gmail.com",
@@ -585,7 +633,8 @@
       "id": 5,
       "position": "Bác sĩ",
       "citizenID": "879640231576",
-      "name": "William Emily",
+      "firstName": "Emily",
+      "lastMiddleName": "William",
       "gender": "Nữ",
       "dateOfBirth": "10-02-1979",
       "email": "williamemily@gmail.com",
@@ -631,7 +680,8 @@
       "id": 6,
       "position": "Bác sĩ",
       "citizenID": "305847921634",
-      "name": "Alan Ferb",
+      "firstName": "Ferb",
+      "lastMiddleName": "Alan",
       "gender": "Nam",
       "dateOfBirth": "10-09-1969",
       "email": "anlanferb@gmail.com",
@@ -672,7 +722,8 @@
       "id": 7,
       "position": "Bác sĩ",
       "citizenID": "192487503186",
-      "name": "Nguyễn Hương Giang",
+      "firstName": "Giang",
+      "lastMiddleName": "Nguyễn Hương",
       "gender": "Nữ",
       "dateOfBirth": "10-01-1984",
       "email": "nguyenhuonggiang@gmail.com",
@@ -713,7 +764,8 @@
       "id": 8,
       "position": "Bác sĩ",
       "citizenID": "536197420815",
-      "name": "Lê Hòa",
+      "firstName": "Hòa",
+      "lastMiddleName": "Lê",
       "gender": "Nam",
       "dateOfBirth": "01-12-1970",
       "email": "lehoa@gmail.com",
@@ -754,7 +806,8 @@
       "id": 9,
       "position": "Bác sĩ",
       "citizenID": "748205913267",
-      "name": "Lê Hoàng Yên",
+      "firstName": "Yên",
+      "lastMiddleName": "Lê Hoàng",
       "gender": "Nữ",
       "dateOfBirth": "10-12-1964",
       "email": "lehoangyen@gmail.com",
@@ -800,7 +853,8 @@
       "id": 10,
       "position": "Bác sĩ",
       "citizenID": "319672048573",
-      "name": "Hoàng Ninh Lan",
+      "firstName": "Lan",
+      "lastMiddleName": "Hoàng Ninh",
       "gender": "Nữ",
       "dateOfBirth": "10-02-1979",
       "email": "hoangninhlan@gmail.com",
@@ -841,7 +895,8 @@
       "id": 11,
       "position": "Y tá",
       "citizenID": "925081736492",
-      "name": "Trần Thị Minh",
+      "firstName": "Minh",
+      "lastMiddleName": "Trần Thị",
       "gender": "Nữ",
       "dateOfBirth": "15-09-1970",
       "email": "TranThiM@gmail.com",
@@ -867,7 +922,8 @@
       "id": 12,
       "position": "Y tá",
       "citizenID": "847129056234",
-      "name": "Trần Thị Giang Hà",
+      "firstName": "Hà",
+      "lastMiddleName": "Trần Thị Giang",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1979",
       "email": "TranThiG@gmail.com",
@@ -893,7 +949,8 @@
       "id": 13,
       "position": "Y tá",
       "citizenID": "681245097836",
-      "name": "Nguyễn Thị Nhi",
+      "firstName": "Nhi",
+      "lastMiddleName": "Nguyễn Thị",
       "gender": "Nữ",
       "dateOfBirth": "12-10-1979",
       "email": "nguyenThiN@gmail.com",
@@ -919,7 +976,8 @@
       "id": 14,
       "position": "Y tá",
       "citizenID": "530279416785",
-      "name": "Nguyễn Thị Thảo",
+      "firstName": "Thảo",
+      "lastMiddleName": "Nguyễn Thị",
       "gender": "Nữ",
       "dateOfBirth": "16-10-1989",
       "email": "NguyenThiT@gmail.com",
@@ -945,7 +1003,8 @@
       "id": 15,
       "position": "Y tá",
       "citizenID": "490328157642",
-      "name": "Đinh Nguyễn Xuân Nhã",
+      "firstName": "Nhã",
+      "lastMiddleName": "Đinh Nguyễn Xuân",
       "gender": "Nam",
       "dateOfBirth": "25-01-1995",
       "email": "DinhNguyenX@gmail.com",
@@ -971,7 +1030,8 @@
       "id": 16,
       "position": "Y tá",
       "citizenID": "816490235781",
-      "name": "Đinh Thị Lan Hương",
+      "firstName": "Hương",
+      "lastMiddleName": "Đinh Thị Lan",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1992",
       "email": "DinhThiL@gmail.com",
@@ -997,7 +1057,8 @@
       "id": 17,
       "position": "Y tá",
       "citizenID": "243809517826",
-      "name": "Hà Tuyết Nhi",
+      "firstName": "Nhi",
+      "lastMiddleName": "Hà Tuyết",
       "gender": "Nữ",
       "dateOfBirth": "29-02-1988",
       "email": "HaTuyeN@gmail.com",
@@ -1023,7 +1084,8 @@
       "id": 18,
       "position": "Y tá",
       "citizenID": "765024913287",
-      "name": "Nguyen Thi Thương",
+      "firstName": "Thương",
+      "lastMiddleName": "Nguyen Thi",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1994",
       "email": "DinhThiL@gmail.com",
@@ -1049,7 +1111,8 @@
       "id": 19,
       "position": "Y tá",
       "citizenID": "978032165794",
-      "name": "Lê Trúc Hòa",
+      "firstName": "Hòa",
+      "lastMiddleName": "Lê Trúc",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1986",
       "email": "LeTrucH@gmail.com",
@@ -1075,7 +1138,8 @@
       "id": 20,
       "position": "Y tá",
       "citizenID": "587401239865",
-      "name": "Lê Thị Phương",
+      "firstName": "Phương",
+      "lastMiddleName": "Lê Thị",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1974",
       "email": "LeThiP@gmail.com",
@@ -1101,7 +1165,8 @@
       "id": 21,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "925081736492",
-      "name": "Trần Thị Minh",
+      "firstName": "Minh",
+      "lastMiddleName": "Trần Thị",
       "gender": "Nữ",
       "dateOfBirth": "15-09-1970",
       "email": "TranThiM@gmail.com",
@@ -1127,7 +1192,8 @@
       "id": 22,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "847129056234",
-      "name": "Trần Thị Giang Hà",
+      "firstName": "Hà",
+      "lastMiddleName": "Trần Thị Giang",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1979",
       "email": "TranThiG@gmail.com",
@@ -1153,7 +1219,8 @@
       "id": 23,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "681245097836",
-      "name": "Nguyễn Thị Nhi",
+      "firstName": "Nhi",
+      "lastMiddleName": "Nguyễn Thị",
       "gender": "Nữ",
       "dateOfBirth": "12-10-1979",
       "email": "nguyenThiN@gmail.com",
@@ -1179,7 +1246,8 @@
       "id": 24,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "530279416785",
-      "name": "Nguyễn Thị Thảo",
+      "firstName": "Thảo",
+      "lastMiddleName": "Nguyễn Thị",
       "gender": "Nữ",
       "dateOfBirth": "16-10-1989",
       "email": "NguyenThiT@gmail.com",
@@ -1205,7 +1273,8 @@
       "id": 25,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "490328157642",
-      "name": "Đinh Nguyễn Xuân Nhã",
+      "firstName": "Nhã",
+      "lastMiddleName": "Đinh Nguyễn Xuân",
       "gender": "Nam",
       "dateOfBirth": "25-01-1995",
       "email": "DinhNguyenX@gmail.com",
@@ -1231,7 +1300,8 @@
       "id": 26,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "816490235781",
-      "name": "Đinh Thị Lan Hương",
+      "firstName": "Hương",
+      "lastMiddleName": "Đinh Thị Lan",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1992",
       "email": "DinhThiL@gmail.com",
@@ -1257,7 +1327,8 @@
       "id": 27,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "243809517826",
-      "name": "Hà Tuyết Nhi",
+      "firstName": "Nhi",
+      "lastMiddleName": "Hà Tuyết",
       "gender": "Nữ",
       "dateOfBirth": "29-02-1988",
       "email": "HaTuyeN@gmail.com",
@@ -1283,7 +1354,8 @@
       "id": 28,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "765024913287",
-      "name": "Nguyen Thi Thương",
+      "firstName": "Thương",
+      "lastMiddleName": "Nguyen Thi",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1994",
       "email": "DinhThiL@gmail.com",
@@ -1309,7 +1381,8 @@
       "id": 29,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "978032165794",
-      "name": "Lê Trúc Hòa",
+      "firstName": "Hòa",
+      "lastMiddleName": "Lê Trúc",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1986",
       "email": "LeTrucH@gmail.com",
@@ -1335,7 +1408,8 @@
       "id": 30,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "587401239865",
-      "name": "Lê Thị Phương",
+      "firstName": "Phương",
+      "lastMiddleName": "Lê Thị",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1974",
       "email": "LeThiP@gmail.com",
