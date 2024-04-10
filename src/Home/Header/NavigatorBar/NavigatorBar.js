@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { signInContext } from '../../../Provider/SignInProvider';
 import { displaySignInFormContext } from '../../../Provider/DisplaySignInProvider';
-import { faHouse, faUser, faUserDoctor } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faUser, faUserDoctor, faUserNurse, faHeadset, faPills,faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./NavigatorBar.css"
 const NavigatorBar = () => {
@@ -29,8 +29,24 @@ const NavigatorBar = () => {
               <div className='label'>Bệnh nhân</div>
             </li>
             <li className='icon-block'>
-              <a href='/Patient'><FontAwesomeIcon icon={faUserDoctor} /></a>
+              <a href='/Specialist'><FontAwesomeIcon icon={faUserDoctor} /></a>
               <div className='label'>Bác sĩ</div>
+            </li>
+            <li className='icon-block'>
+              <a href='/Nurse'><FontAwesomeIcon icon={faUserNurse} /></a>
+              <div className='label'>Y tá</div>
+            </li>
+            <li className='icon-block'>
+              <a href='/Support'><FontAwesomeIcon icon={faHeadset} /></a>
+              <div className='label'>Hỗ trợ</div>
+            </li>
+            <li className='icon-block'>
+              <a href='/Medicine'><FontAwesomeIcon icon={faPills} /></a>
+              <div className='label'> Thuốc</div>
+            </li>
+            <li className='icon-block'>
+              <a href='/Equipment'><FontAwesomeIcon icon={faScrewdriverWrench} /></a>
+              <div className='label'>thiết bị</div>
             </li>
           </ul>
         </nav>

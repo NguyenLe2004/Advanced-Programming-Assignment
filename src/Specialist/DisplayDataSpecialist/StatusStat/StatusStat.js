@@ -22,11 +22,7 @@ const StatusStat = ({treatProcess}) => {
         return "Đang điều trị";
     }
 
-    const frequencyCount = {
-        "Chưa điều trị" : 0,
-        "Hoàn thành điều trị" : 0,
-        "Đang điều trị" :0
-    };
+    const frequencyCount = {};
 
     treatProcess.forEach((item) => {
         const status = getPatientStatus(item)

@@ -6,11 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "./TableComponent.css";
 
-const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
+const TableComponent = ({dataSpecialistDisplay,setDataSpecialistDisplay}) => {
   const rowsPerPage = 9;
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPage, setTotalPage] = useState(Object.keys(dataPatientDisplay).length / rowsPerPage);
+  const [totalPage, setTotalPage] = useState(Object.keys(dataSpecialistDisplay).length / rowsPerPage);
   const [currentID,setCurrentID] = useState("");
   const [sortColumn, setSortColumn] = useState("");
   const [sortDirect, setSortDirect] = useState("desc");
@@ -32,7 +32,7 @@ const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
     }
   };
 
-  const getPatientStatusClass = (status) => {
+  const getSpecialistStatusClass = (status) => {
     switch (status) {
       case "Đang điều trị" : 
         return "treating";
@@ -46,6 +46,7 @@ const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
 
 
   const  handleClickRow = (id) => {
+    console.log("here" , id)
     setCurrentID(id);
     handleShow();
   }
@@ -60,22 +61,22 @@ const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
   }
 
   useEffect(() => {
-    if (!dataPatientDisplay || !sortColumn) {
+    if (!dataSpecialistDisplay || !sortColumn) {
       return;
     }
-    const arr = Object.entries(dataPatientDisplay);
+    const arr = Object.entries(dataSpecialistDisplay);
     arr.sort((a, b) => {
       const sortValueA = a[1][sortColumn];
       const sortValueB = b[1][sortColumn];
       return sortDirect === "desc" ? sortValueB.localeCompare(sortValueA) : sortValueA.localeCompare(sortValueB);
     });
     console.log("sorted arr" , arr);
-    console.log(dataPatientDisplay)
+    console.log(dataSpecialistDisplay)
     let sortedArr = [];
     arr.forEach(item => {
       sortedArr.push(item[1]);
     })
-    setDataPatientDisplay(sortedArr);
+    setDataSpecialistDisplay(sortedArr);
   }, [sortColumn, sortDirect]);
 
   useEffect(() => {
@@ -84,10 +85,10 @@ const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
 
   const startIndex = (currentPage - 1) * rowsPerPage;
   const endIndex = currentPage * rowsPerPage;
-  const currentPageDataPatient = dataPatientDisplay.slice(startIndex,endIndex);
+  const currentPageDataSpecialist = dataSpecialistDisplay.slice(startIndex,endIndex);
   return (
     <div>
-      <DisplayMoreInfo show = {show} handleClose = {handleClose} dataMoreInfo = {dataPatientDisplay[currentID]} />
+      <DisplayMoreInfo show = {show} handleClose = {handleClose} dataMoreInfo = {dataSpecialistDisplay[currentID]} />
       <div className='outer-table'>
         <table>
           <thead>
@@ -157,18 +158,18 @@ const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
             </tr>
           </thead>
           <tbody>
-            {currentPageDataPatient.map((obj,index) => (
+            {currentPageDataSpecialist.map((obj,index) => (
               <tr key={obj.citizenID} onClick={() => handleClickRow(
                 currentPage > 1 ? index + rowsPerPage*(currentPage-1) : index
               )} >
-                <td className='patient-id'>{obj.citizenID}</td>
-                <td className='patient-name'>{obj.lastMiddleName}</td>
+                <td className='Specialist-id'>{obj.citizenID}</td>
+                <td className='Specialist-name'>{obj.lastMidleName}</td>
                 <td >{obj.firstName}</td>
                 <td>{obj.gender}</td>
                 <td>{obj.age}</td>
                 <td>{obj.diagnosis}</td>
                 <td className='status-block' >
-                  <div className={`status ${getPatientStatusClass(obj.status)}`}>
+                  <div className={`status ${getSpecialistStatusClass(obj.status)}`}>
                     {obj.status}
                   </div>
                 </td>

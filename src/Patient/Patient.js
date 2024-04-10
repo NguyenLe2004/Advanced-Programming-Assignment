@@ -21,7 +21,7 @@ const Patient = () => {
 
   const getPatientAge = (dateOfBirth) =>{
     const currentYear = moment().year();
-    const birthYear = moment(dateOfBirth,'DD - MM - YYYY').year();
+    const birthYear = moment(dateOfBirth,'DD-MM-YYYY').year();
     return currentYear - birthYear;
   }
 
@@ -40,7 +40,7 @@ const Patient = () => {
             }
             return dateB - dateA;
           });
-          const status = getPatientStatus(item.treatProcess);
+          const status = getPatientStatus(treatProcess);
 
 
           return {...item ,status,age,treatProcess};

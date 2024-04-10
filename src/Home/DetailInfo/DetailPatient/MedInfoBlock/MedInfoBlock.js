@@ -13,7 +13,31 @@ const MedInfoBlock = ({patient}) => {
         <div className='med-info-block' >
         <h3 className='title-med-info'>Thông tin y tế</h3>
         <Container >
-            <Row className='med-info-row'>
+            <Row className='mb-3'>
+                <Col md='4'>
+                    Chiều cao:
+                </Col>
+                <Col>
+                    {patient.height}
+                </Col>
+            </Row>
+            <Row className='mb-3'>
+                <Col md='4'>
+                    Cân nặng:
+                </Col>
+                <Col>
+                    {patient.weight}
+                </Col>
+            </Row>
+            <Row className='mb-3'>
+                <Col md='4'>
+                    Nhóm máu: 
+                </Col>
+                <Col>
+                    {patient.bloodType}
+                </Col>
+            </Row>
+            <Row className='mb-3'>
                 <Col md='4'>
                     Lịch sử bệnh án: 
                 </Col>
@@ -21,7 +45,7 @@ const MedInfoBlock = ({patient}) => {
                     {patient.medHistory}
                 </Col>
             </Row>
-            <Row className='med-info-row'>
+            <Row className='mb-3'>
                 <Col md='4'>
                     Triệu chứng bệnh: 
                 </Col>
@@ -29,7 +53,7 @@ const MedInfoBlock = ({patient}) => {
                     {patient.symptoms}
                 </Col>
             </Row>
-            <Row className='med-info-row'>
+            <Row className='mb-3'>
                 <Col md='4'>
                     Chẩn đoán của bác sĩ: 
                 </Col>
@@ -38,7 +62,7 @@ const MedInfoBlock = ({patient}) => {
                 </Col>
             </Row>
         </Container>
-        <Button onClick={handleScroll}>Xem tiến trình điều trị</Button>
+        <Button style={{marginLeft:"50%",transform:"translateX(-50%)"}} onClick={handleScroll}>Xem tiến trình điều trị</Button>
     </div>
     </div>
   )

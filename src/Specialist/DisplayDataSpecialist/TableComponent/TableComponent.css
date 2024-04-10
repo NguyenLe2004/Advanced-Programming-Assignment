@@ -1,0 +1,134 @@
+.outer-table{
+  position: absolute;
+  top: 30vh;
+  /* border: 1px black solid; */
+  margin-left: 10vw;
+  height: 61vh;
+  width: 80vw;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 3px #def6ff;
+}
+
+table {
+  position: relative;
+  height: fit-content;
+  width: 80vw;
+  font-family: Arial, sans-serif;
+}
+  
+  /* Áp dụng kiểu cho tiêu đề cột */
+thead tr th {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  background-color: #f3f8f8;
+  color: black;
+  padding: 1vh;
+}
+  
+  /* Áp dụng kiểu cho ô dữ liệu */
+tbody td {
+  font-weight: bold;
+  color: #777777;
+  font-size: 15px;
+  text-align: center;
+  padding: 15px;
+}
+
+  /* Áp dụng kiểu cho hàng chẵn */
+tbody tr:nth-child(even) {
+  background-color: #fbf9f9;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ffff;
+}
+tbody tr {
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+tbody tr:hover{
+  cursor: pointer;
+  background-color: #c4ebf9;
+}
+.patient-id{
+  /* font-size: 17px; */
+  color: black;
+}
+.patient-name{
+  text-align: left;
+}
+
+.patient-medical-condition{
+  text-align: left;
+}
+
+.pagination{
+  z-index: 4;
+  position: absolute;
+  top: 92vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  height: 3 vh;
+}
+.close-btn {
+  position: absolute;
+  top: 27vh;
+  right: 26vw;
+  z-index: 4;
+}
+.status-block{
+  padding: 13px;
+}
+.table-num-btn{
+  justify-content: center;
+  display: flex;
+  width: 5vw;
+  margin: 0 2% 0 2%;
+  height: 3vh;
+}
+.sort-col{
+  /* border: 1px red solid; */
+}
+.sort-col:hover{
+  cursor: pointer;
+  color: rgb(0, 149, 255);
+}
+.sort-icon{
+  margin-left: 10px;
+}
+.pagination span {
+  font-weight: bold;
+  font-size: 20px;
+  /* margin-top: 3vh; */
+}
+.icon-arrow-table{
+  position: relative;
+}
+.status{
+  position: relative;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%,0);
+  display: flex;
+  height: 150%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  /* overflow: hidden; */
+}
+.no-treat{
+  background-color: rgb(237,81,80,0.3);
+  color: rgb(237,81,80);
+}
+.treating{
+  background-color: rgb(253,167,40,0.3);
+  color: rgb(214, 129, 2);
+}
+.complete-treat{
+  background-color: #48b3ff4d;
+  color: rgb(0, 149, 255);
+}

@@ -24,7 +24,7 @@ const InfoBlock = ({patient}) => {
               <span>Họ và tên </span>
             </Col>
             <Col className='patient-info patient-value' xs={7}>
-              <span >{patient.lastMidleName + " " + patient.firstName}</span>
+              <span >{patient.lastMiddleName + " " + patient.firstName}</span>
             </Col>
           </Row>
           <Row  > 

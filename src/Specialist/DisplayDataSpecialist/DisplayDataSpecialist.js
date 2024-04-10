@@ -2,17 +2,17 @@ import React, { useState, useRef,useEffect, useContext} from 'react';
 import Alert from 'react-bootstrap/Alert';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
-import "./DisplayDataPatient.css"
+import "./DisplayDataSpecialist.css"
 import TableComponent from './TableComponent/TableComponent';
-import StatusStat from './StatusStat/StatusStat';
+// import StatusStat from './StatusStat/StatusStat';
 
-const DisplayDataPatient = ({dataPatient}) => {
-  const [dataPatientDisplay, setDataPatientDisplay] = useState("");
+const DisplayDataSpecialist = ({dataSpecialist}) => {
+  const [dataSpecialistDisplay, setDataSpecialistDisplay] = useState("");
   const [isClicked, setIsClicked] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [searchError, setSearchError] = useState("");
   const searchBlockRef = useRef(null);
-
+  console.log(dataSpecialist)
   const handleIconClick = () => {
     setIsClicked(true);
     submitSearch();
@@ -32,13 +32,13 @@ const DisplayDataPatient = ({dataPatient}) => {
   const submitSearch = () => {
     hideError();
     if (inputValue === ""){
-      setDataPatientDisplay(dataPatient);
+      setDataSpecialistDisplay(dataSpecialist);
       return;
     }
     if (inputValue.length === 12 && /^\d+$/.test(inputValue)) {
-      const searchID = Object.keys(dataPatient).find(key => dataPatient[key].citizenID == inputValue);
+      const searchID = Object.keys(dataSpecialist).find(key => dataSpecialist[key].citizenID == inputValue);
       if (searchID) {
-        setDataPatientDisplay({[searchID] : dataPatient[searchID]});
+        setDataSpecialistDisplay({[searchID] : dataSpecialist[searchID]});
       }
       else{
         setInputValue("");
@@ -62,12 +62,12 @@ const DisplayDataPatient = ({dataPatient}) => {
   }, []);
 
   useEffect(() => {
-    setDataPatientDisplay(dataPatient);
-  },[dataPatient]);
+    setDataSpecialistDisplay(dataSpecialist);
+  },[dataSpecialist]);
 
   return (
         <div className='main-page'>
-          <StatusStat treatProcess = {Object.values(dataPatient).map(patient =>  patient.treatProcess)}/>
+          {/* <StatusStat treatProcess = {Object.values(dataSpecialist).map(Specialist =>  Specialist.treatProcess)}/> */}
             <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
               <input 
                 placeholder='Nhập số căn cước công dân' 
@@ -88,8 +88,8 @@ const DisplayDataPatient = ({dataPatient}) => {
           {searchError}
         </Alert>
         )}
-        {Object.keys(dataPatientDisplay).length !== 0 ? (
-            <TableComponent dataPatientDisplay = {dataPatientDisplay} setDataPatientDisplay={setDataPatientDisplay}  />
+        {Object.keys(dataSpecialistDisplay).length !== 0 ? (
+            <TableComponent dataSpecialistDisplay = {dataSpecialistDisplay} setDataSpecialistDisplay={setDataSpecialistDisplay}  />
           ):(
             <div> NO DATA AVAILABLE </div>
           )}
@@ -99,4 +99,4 @@ const DisplayDataPatient = ({dataPatient}) => {
   );
 };
 
-export default DisplayDataPatient;
+export default DisplayDataSpecialist;

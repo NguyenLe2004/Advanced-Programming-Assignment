@@ -66,8 +66,8 @@ const DetailPatient = () => {
         <span className='info'>
         {!isUpdate && 
           <span className='pen-to-square-icon' ><FontAwesomeIcon onClick={handleClickUpdateIcon} icon={faPenToSquare} /></span>}
-          <div className='avatar' >{patient.firstName? patient.firstName.charAt(0) + patient.lastMidleName.charAt(0) : null}</div>
-          {isUpdate? 
+          <div className='avatar' >{patient.firstName? patient.firstName.charAt(0) + patient.lastMiddleName.charAt(0) : null}</div>
+          {isUpdate?  
             <UpdateBlock patient = {patient} /> : 
             <InfoBlock patient = {patient}/>}
         </span>

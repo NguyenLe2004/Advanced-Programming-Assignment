@@ -11,6 +11,7 @@
     height: fit-content;
     border-radius: 10px;
     background-color: white;
+    padding: 1vw 1vh;
 }
 .med-info-test{
     height:fit-content;
@@ -18,10 +19,6 @@
     margin-top: 10vh;
     width: 100%;
     background-color: white;
-}
-.med-info-row{
-    padding-left: 10px;
-    margin-top: 1vh;
 }
 .med-info-test .label{
     text-align: center;

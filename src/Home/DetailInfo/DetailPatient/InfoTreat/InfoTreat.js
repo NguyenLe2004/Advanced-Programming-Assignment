@@ -18,7 +18,6 @@ const InfoTreat = ({patient}) => {
         setShowButton(true);
       } else {
         setShowButton(false);
-        setShowTreatForm(false);
       }
     };
 
@@ -42,7 +41,7 @@ const InfoTreat = ({patient}) => {
               </span>
             </button>
           </div>
-          <div  className={ `prev-form ${(showTreatForm )? "show-form" : ""}`}><TreatForm/></div>
+          <div  className={ `prev-form ${(showTreatForm && showButton )? "show-form" : ""}`}><TreatForm patient={patient}/></div>
         </div>
         <div className={
               `all-status status-${patient.status === "Đang điều trị" ? "on-going" : 
@@ -50,7 +49,7 @@ const InfoTreat = ({patient}) => {
               }`}>{patient.status} </div>
         <div className='main-treat'>
             <div className='side-bar'></div>
-            <TreatProcess treatProcess={patient.treatProcess} />
+            <TreatProcess patient={patient} />
         </div>
 
     </div>

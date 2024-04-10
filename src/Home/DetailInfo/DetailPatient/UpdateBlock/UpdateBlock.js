@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import { InputGroup } from 'react-bootstrap';
+import moment from 'moment';
 import axios from 'axios';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -25,7 +26,7 @@ const UpdateBlock = ({patient}) => {
           phoneNum: form.elements.phoneNum.value,
           email: form.elements.email.value,
           citizenID: form.elements.citizenID.value,
-          dateOfBirth: form.elements.dateOfBirth.value,
+          dateOfBirth: formatDate(form.elements.dateOfBirth.value),
           address: form.elements.address.value,
           hometown: form.elements.hometown.value
 
@@ -36,11 +37,17 @@ const UpdateBlock = ({patient}) => {
           window.location.reload();
         })
         .catch(error => {
-          // Xử lý lỗi
           console.error('Lỗi cập nhật thông tin', error);
         });
       }
       setValidated(true);
+      
+    };
+
+    const formatDate = (date) => {
+      const parts = date.split('-');
+      const formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+      return formattedDate;
     };
   return (
     <div>
@@ -52,7 +59,7 @@ const UpdateBlock = ({patient}) => {
             required
             type="text"
             placeholder="Họ và tên đệm"
-            defaultValue={patient.lastMidleName}
+            defaultValue={patient.lastMiddleName}
           />
         </Form.Group>
         <Form.Group as={Col} controlId = "firstName"> 
@@ -73,51 +80,19 @@ const UpdateBlock = ({patient}) => {
             <option>Nữ</option>
           </Form.Select>
         </Form.Group>
-
-        <Form.Group as={Col} md="4" controlId="height">
-          <Form.Label>Height</Form.Label>
-          <InputGroup hasValidation>
-            <Form.Control
-              type="text"
-              placeholder="Height"
-              defaultValue={patient.height}
-              aria-describedby="inputGroupPrepend"
-              required
-            />
-            <InputGroup.Text id="inputGroupPrepend">cm</InputGroup.Text>
-            <Form.Control.Feedback type="invalid">
-              Please choose a username.
-            </Form.Control.Feedback>
-          </InputGroup>
-        </Form.Group>
-
-        <Form.Group as={Col} md="4" controlId="weight">
-          <Form.Label>Weight</Form.Label>
-          <InputGroup hasValidation>
-            <Form.Control
-              type="text"
-              placeholder="Weight"
-              defaultValue={patient.weight}
-              aria-describedby="inputGroupPrepend"
-              required
-            />
-            <InputGroup.Text id="inputGroupPrepend">kg</InputGroup.Text>
-            <Form.Control.Feedback type="invalid">
-              Please choose a username.
-            </Form.Control.Feedback>
-          </InputGroup>
-        </Form.Group>
-
-      </Row>
-      <Row className="mb-3">
         <Form.Group as={Col} md='5' controlId = "phoneNum" >
           <Form.Label>Số điện thoại</Form.Label>
           <Form.Control 
-            type='text'
+            type='tel'
             placeholder='Số điện thoại'
             defaultValue={patient.phoneNum}
            required />
         </Form.Group>
+
+
+      </Row>
+      <Row className="mb-3">
+
         <Form.Group as={Col} md='7' controlId = "email" >
           <Form.Label>Email</Form.Label>
           <Form.Control 
@@ -140,7 +115,7 @@ const UpdateBlock = ({patient}) => {
           <Form.Label>Ngày sinh</Form.Label>
           <Form.Control 
           type="date"
-          defaultValue={patient.dateOfBirth }
+          defaultValue={moment(patient.dateOfBirth,"DD-MM-YYYY").format("YYYY-MM-DD")}
            required />
         </Form.Group>
       </Row>

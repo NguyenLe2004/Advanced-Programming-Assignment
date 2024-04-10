@@ -2,9 +2,9 @@
     /* margin-left: 3vw;
     margin-top: 5vh; */
     width: 50vw;
-    min-height: 25vh;
+    height: fit-content;
     border-radius: 10px;
-    padding: 10px;
+    padding: 2vh 1vw;
     background-color: white;
     border: 3px rgb(0, 136, 255,0.5) solid ;
 }
@@ -41,9 +41,7 @@
     color: rgb(128, 128, 128);
 }
 .room-date .room{
-    position: absolute;
-    right: 1vw;
-    /* left: 1vw; */
+    margin-left: 2vw;
 }
 .treat-circle-block .title{
     font-size: 20px;
@@ -74,4 +72,21 @@
 }
 .circle-complete-task{
     background-color: rgb(173, 255, 173)
+}
+.icon-in-treatform{
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    font-size: 20px;
+}
+.icon-in-treatform:hover{
+    cursor: pointer;
+    color: gray;
+}
+.close{
+    font-size: 25px;
+    color: rgb(255, 66, 66);
+}
+.close:hover{
+    color: rgb(255, 166, 166);
 }

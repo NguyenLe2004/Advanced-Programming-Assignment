@@ -21,7 +21,7 @@
     position: fixed;
     height: fit-content;
     right: 1vw;
-    top: 20vh;
+    top: 10vh;
 }
 .add-treat-btn{
     /* transform: translateX(0); */
@@ -50,7 +50,7 @@
     margin-left: 5px;
 }
 .show{
-    transform: translateX(-20vw);
+    transform: translateX(-23vw);
     opacity: 1;
     visibility: visible;
 }
