@@ -1,7 +1,7 @@
 {
   "Patient": [
     {
-      "lastMidleName": "Nguyễn Văn",
+      "lastMiddleName": "Nguyễn Văn",
       "firstName": "Nguyên",
       "gender": "Nam",
       "height": "165",
@@ -9,33 +9,42 @@
       "phoneNum": "0931 234 567",
       "email": "nguyenvana@gmail.com",
       "citizenID": "911034398097",
-      "dateOfBirth": "2002-11-12",
+      "dateOfBirth": "11-12-2002",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
       "treatProcess": [
         {
-          "dateBegin": "15-03-2024",
-          "dateEnd": "15-03-2024",
+          "dateBegin": "01-04-2024",
+          "dateEnd": "02-04-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "08:30",
           "room": "H3-102",
           "title": "Truyền máu",
           "description": "Bệnh nhân đã được thực hiện quá trình truyền máu nhằm cung cấp máu mới và khắc phục tình trạng thiếu máu. Loại máu được sử dụng trong quá trình truyền là máu loại A+. Đã truyền tổng cộng 2 đơn vị máu cho bệnh nhân.",
-          "medicalStaffID": "1"
+          "medicalStaffID": "1",
+          "id": 1
         },
         {
           "dateBegin": "10-04-2024",
           "dateEnd": "11-04-2024",
+          "timeBegin": "08:15",
+          "timeEnd": "09:45",
           "room": "H3-102",
           "title": "Phẫu thuật Gan",
           "description": "Sắp tiến hành",
-          "medicalStaffID": "1"
+          "medicalStaffID": "1",
+          "id": 2
         },
         {
           "dateBegin": "10-03-2024",
           "dateEnd": "11-03-2024",
+          "timeBegin": "09:30",
+          "timeEnd": "11:00",
           "room": "H1-101",
           "title": "Khám tổng quát và bổ sung thuốc",
           "description": "bệnh nhân đã được tiến hành khám tổng quát và bổ sung thuốc. Trong quá trình khám, bác sĩ đã kiểm tra các chỉ số y tế quan trọng của bệnh nhân như huyết áp, nhịp tim, nhiệt độ cơ thể và đánh giá tổng quan về tình trạng sức khỏe đồng thời bổ sung thuốc theo chỉ định của bác sĩ và theo dõi tình trạng",
-          "medicalStaffID": "1"
+          "medicalStaffID": "1",
+          "id": 3
         },
         {
           "title": "Xét nghiệm máu",
@@ -43,7 +52,10 @@
           "room": "H3-101",
           "dateBegin": "10-03-2024",
           "dateEnd": "10-03-2024",
-          "medicalStaffID": "1"
+          "timeBegin": "10:45",
+          "timeEnd": "12:30",
+          "medicalStaffID": "1",
+          "id": 4
         },
         {
           "title": "Xét nghiệm nước tiểu",
@@ -51,19 +63,24 @@
           "room": "H3-101",
           "dateBegin": "10-03-2024",
           "dateEnd": "10-03-2024",
-          "medicalStaffID": "1"
+          "timeBegin": "12:00",
+          "timeEnd": "13:45",
+          "medicalStaffID": "1",
+          "id": 5
         }
       ],
       "medHistory": "Từng bị trĩ",
       "symptoms": "Suy nhược cơ thể",
       "diagnosis": "Thiếu máu, xơ gan",
-      "id": 1
+      "id": 1,
+      "lastMidleName": "Nguyễn Văn",
+      "bloodType": "A"
     },
     {
       "id": 2,
       "citizenID": "841471188467",
       "firstName": "Hưng",
-      "lastMidleName": "Bùi Phú",
+      "lastMiddleName": "Bùi Phú",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
       "dateOfBirth": "29-10-1994",
@@ -74,32 +91,29 @@
       "hometown": "Quảng Phong, Cửa Lò, Nghệ An",
       "job": "Xe ôm",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "ECG789",
-          "name": "ECG",
-          "description": "Nhịp tim không đều",
-          "room": "B1-302",
-          "date": "12-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Thường xuyên chóng mặt",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "05-04-2024",
+          "dateEnd": "06-04-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "08:30",
+          "room": "H3-102",
+          "title": "Kiểm tra EKG",
+          "description": "Lịch kiểm tra điện tâm đồ được đặt cho bệnh nhân để đánh giá chức năng tim.",
+          "medicalStaffID": "2",
+          "id": 1
         }
-      ]
+      ],
+      "bloodType": "O"
     },
     {
       "id": 3,
       "citizenID": "470704891087",
       "firstName": "An",
-      "lastMidleName": "Phạm Xuân",
+      "lastMiddleName": "Phạm Xuân",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nữ",
       "dateOfBirth": "05-02-1986",
@@ -110,28 +124,32 @@
       "hometown": "Phước Hưng, Vị Thanh, Hậu Giang",
       "job": "Thợ may",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "MRI456",
-          "name": "MRI não",
-          "description": "Không có khuyết tật",
-          "room": "C2-205",
-          "date": "15-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Đau vùng thái dương trái",
       "diagnosis": "Thiếu máu, xơ gan",
-      "treatProcess": []
+      "treatProcess": [
+        {
+          "dateBegin": "12-04-2024",
+          "dateEnd": "13-04-2024",
+          "timeBegin": "08:15",
+          "timeEnd": "09:45",
+          "room": "H3-102",
+          "title": "Phiên tập vận hành",
+          "description": "Phiên tập vận hành đã được lên lịch để phục hồi chức năng.",
+          "medicalStaffID": "2",
+          "id": 1
+        }
+      ],
+      "bloodType": "A"
     },
     {
       "id": 4,
       "citizenID": "071292392595",
       "firstName": "Thành",
-      "lastMidleName": "Phó Tuấn",
+      "lastMiddleName": "Phó Tuấn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "11-20-1990",
+      "dateOfBirth": "20-11-1990",
       "height": "168",
       "weight": "58",
       "email": "thanh.photuan@gmail.com",
@@ -139,35 +157,43 @@
       "hometown": "Hồng Kỳ, Bến Lức, Long An",
       "job": "Giáo viên",
       "Doctor_ID ": "#N-A",
-      "test": {
-        "TEST1": {
-          "TestID": "URINE101",
-          "name": "Xét nghiệm nước tiểu",
-          "description": "Nhiễm trùng đường tiểu",
-          "room": "A4-115",
-          "date": "09-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Cảm giác đau hoặc nặng ở phía dưới bụng",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "15-04-2024",
+          "dateEnd": "16-04-2024",
+          "timeBegin": "09:30",
+          "timeEnd": "11:00",
+          "room": "H1-101",
+          "title": "Tư vấn dinh dưỡng",
+          "description": "Cuộc hẹn với chuyên gia dinh dưỡng để hướng dẫn và đánh giá chế độ dinh dưỡng.",
+          "medicalStaffID": "3",
+          "id": 1
+        },
+        {
+          "dateBegin": "20-04-2024",
+          "dateEnd": "21-04-2024",
+          "timeBegin": "10:45",
+          "timeEnd": "12:30",
+          "room": "H3-101",
+          "title": "Quét MRI",
+          "description": "Cuộc hẹn quét MRI được lên lịch để có hình ảnh chi tiết về các cơ quan nội tạng.",
+          "medicalStaffID": "3",
+          "id": 2
         }
-      ]
+      ],
+      "bloodType": "AB"
     },
     {
       "id": 5,
       "citizenID": "829329507883",
       "firstName": "Thành",
-      "lastMidleName": "Phó Tuấn",
+      "lastMiddleName": "Phó Tuấn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "11-20-1990",
+      "dateOfBirth": "20-11-1990",
       "height": "175",
       "weight": "65",
       "email": "thanh.photuan@gmail.com",
@@ -175,35 +201,32 @@
       "hometown": "Phú Điền, Phú Vang, Thừa Thiên Huế",
       "job": "Công nhân",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "XRAY202",
-          "name": "Chụp X-quang ngực",
-          "description": "Không có vấn đề gì",
-          "room": "D5-503",
-          "date": "14-03-2024"
-        }
-      },
       "medHistory": "Thoái hóa đốt sống",
       "symptoms": "Ổn định",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "28-03-2024",
-          "dateEnd": "28-03-2024",
-          "room ": "Phòng khám tổng quát 4",
-          "title": "Khám tổng quát cho bệnh nhân"
+          "dateBegin": "25-04-2024",
+          "dateEnd": "26-04-2024",
+          "timeBegin": "12:00",
+          "timeEnd": "13:45",
+          "room": "H3-101",
+          "title": "Khám siêu âm",
+          "description": "Cuộc hẹn siêu âm để chẩn đoán mục đích.",
+          "medicalStaffID": "3",
+          "id": 1
         }
-      ]
+      ],
+      "bloodType": "B"
     },
     {
       "id": 6,
       "citizenID": "618797017311",
       "firstName": "Thanh",
-      "lastMidleName": "Hoàng Văn",
+      "lastMiddleName": "Hoàng Văn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "04-27-1993",
+      "dateOfBirth": "27-04-1993",
       "height": "158",
       "weight": "48",
       "email": "thanh.hoangvan@gmail.com",
@@ -211,32 +234,40 @@
       "hometown": "Bình Yên, Lập Thạch, Vĩnh Phúc",
       "job": "Thợ sửa ống nước",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "CTSCAN303",
-          "name": "CT scan bụng",
-          "description": "Khối u phình to",
-          "room": "E6-601",
-          "date": "11-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Tiểu chảy",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "30-04-2024",
+          "dateEnd": "01-05-2024",
+          "timeBegin": "07:30",
+          "timeEnd": "09:15",
+          "room": "H3-102",
+          "title": "Phiên tập nghề nghiệp",
+          "description": "Phiên tập nghề nghiệp đã được lên lịch để phục hồi chức năng.",
+          "medicalStaffID": "4",
+          "id": 1
+        },
+        {
+          "dateBegin": "05-05-2024",
+          "dateEnd": "06-05-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "10:30",
+          "room": "H1-101",
+          "title": "Kiểm tra nha khoa",
+          "description": "Cuộc hẹn kiểm tra nha khoa định kỳ để đánh giá sức khỏe miệng.",
+          "medicalStaffID": "4",
+          "id": 2
         }
-      ]
+      ],
+      "bloodType": "O"
     },
     {
       "id": 7,
       "citizenID": "164171815965",
       "firstName": "Hà",
-      "lastMidleName": "Nguyễn Thị Thu",
+      "lastMiddleName": "Nguyễn Thị Thu",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nữ",
       "dateOfBirth": "10-02-1978",
@@ -247,35 +278,43 @@
       "hometown": "Đắk Phú, Đắk Tô, Kon Tum",
       "job": "Bác sĩ",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "EYE404",
-          "name": "Kiểm tra mắt",
-          "description": "Cần kính cận",
-          "room": "F7-701",
-          "date": "16-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Tầm nhìn kém",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "10-05-2024",
+          "dateEnd": "11-05-2024",
+          "timeBegin": "10:15",
+          "timeEnd": "11:45",
+          "room": "H3-102",
+          "title": "Phiên tập nói",
+          "description": "Phiên tập nói đã được lên lịch để phục hồi chức năng ngôn ngữ.",
+          "medicalStaffID": "4",
+          "id": 1
+        },
+        {
+          "dateBegin": "15-05-2024",
+          "dateEnd": "16-05-2024",
+          "timeBegin": "12:30",
+          "timeEnd": "14:15",
+          "room": "H3-101",
+          "title": "Đánh giá tình trạng trí óc",
+          "description": "Cuộc hẹn để đánh giá và đánh giá chức năng trí óc.",
+          "medicalStaffID": "5",
+          "id": 2
         }
-      ]
+      ],
+      "bloodType": "A"
     },
     {
       "id": 8,
       "citizenID": "529785803689",
       "firstName": "Dũng",
-      "lastMidleName": "Trần Văn",
+      "lastMiddleName": "Trần Văn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "02-14-1989",
+      "dateOfBirth": "14-02-1989",
       "height": "163",
       "weight": "56",
       "email": "dung.tranvan@gmail.com",
@@ -283,32 +322,29 @@
       "hometown": "Hòa Thạch, Phú Thọ, Phú Thọ",
       "job": "Cảnh sát",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "FECAL808",
-          "name": "Xét nghiệm phân",
-          "description": "Dương tính với vi khuẩn",
-          "room": "J11-1101",
-          "date": "20-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Sốt",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "20-05-2024",
+          "dateEnd": "21-05-2024",
+          "timeBegin": "13:45",
+          "timeEnd": "15:30",
+          "room": "H3-101",
+          "title": "Tư vấn di truyền học",
+          "description": "Cuộc hẹn để tư vấn di truyền học và đánh giá rủi ro.",
+          "medicalStaffID": "5",
+          "id": 1
         }
-      ]
+      ],
+      "bloodType": "AB"
     },
     {
       "id": 9,
       "citizenID": "714698464496",
       "firstName": "Hương",
-      "lastMidleName": "Lê Thị",
+      "lastMiddleName": "Lê Thị",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nữ",
       "dateOfBirth": "12-05-1982",
@@ -319,35 +355,32 @@
       "hometown": "Bảo Tân, Lục Ngạn, Bắc Giang",
       "job": "Nhân viên văn phòng",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "BIOPSY606",
-          "name": "Xét nghiệm khảo sát ung thư",
-          "description": "Không phát hiện tế bào ung thư",
-          "room": "D9-901",
-          "date": "08-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Mệt mỏi, uể oải",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "",
-          "dateEnd": "",
-          "room ": "",
-          "title": ""
+          "dateBegin": "25-05-2024",
+          "dateEnd": "26-05-2024",
+          "timeBegin": "15:00",
+          "timeEnd": "16:45",
+          "room": "H3-101",
+          "title": "Kiểm tra mắt",
+          "description": "Cuộc hẹn để kiểm tra mắt và kiểm tra thị lực chi tiết.",
+          "medicalStaffID": "5",
+          "id": 1
         }
-      ]
+      ],
+      "bloodType": "B"
     },
     {
       "id": 10,
       "citizenID": "184965740502",
       "firstName": "Tuấn",
-      "lastMidleName": "Hoàng Minh",
+      "lastMiddleName": "Hoàng Minh",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "08-18-1997",
+      "dateOfBirth": "18-08-1997",
       "height": "171",
       "weight": "64",
       "email": "tuanhoangminh@gmail.com",
@@ -355,46 +388,34 @@
       "hometown": "Vĩnh Hải, Ninh Hải, Ninh Thuận",
       "job": "Sinh viên",
       "Doctor_ID ": "",
-      "test": {
-        "TEST1": {
-          "TestID": "EEG707",
-          "name": "Điện não đồ",
-          "description": "Hoạt động não bình thường",
-          "room": "C10-1003",
-          "date": "17-03-2024"
-        }
-      },
       "medHistory": "Không có",
       "symptoms": "Thường xuyên chóng mặt",
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "01-03-2024",
-          "dateEnd": "01-03-2024",
-          "room ": "105",
-          "title": "Tiêm vắc xin COVID-19"
+          "dateBegin": "30-05-2024",
+          "dateEnd": "31-05-2024",
+          "timeBegin": "17:15",
+          "timeEnd": "19:00",
+          "room": "H3-102",
+          "title": "Kiểm tra thính lực",
+          "description": "Cuộc hẹn để đánh giá thính lực và kiểm tra thính lực.",
+          "medicalStaffID": "6",
+          "id": 1
+        },
+        {
+          "dateBegin": "05-06-2024",
+          "dateEnd": "06-06-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "08:30",
+          "room": "H3-102",
+          "title": "Kiểm tra sức khỏe tổng quát",
+          "description": "Cuộc hẹn kiểm tra sức khỏe tổng quát định kỳ cho đánh giá sức khỏe chung.",
+          "medicalStaffID": "6",
+          "id": 2
         }
-      ]
-    },
-    {
-      "lastMidleName": "sdfsfd",
-      "firstName": "sgfdgd",
-      "gender": "Nam",
-      "phoneNum": "0395645763",
-      "email": "nguyenlequangdt@gmail.com",
-      "citizenID": "sdfgdf",
-      "dateOfBirth": "2024-04-11",
-      "address": "Le Duc Tho",
-      "hometown": "Ho Chi Minh",
-      "height": "dsfsaf",
-      "weight": "sdafdsf",
-      "bloodType": "AB",
-      "medHistory": "dsfasf",
-      "symtoms": "dfasf",
-      "diagnosis": "Chưa được chẩn đoán",
-      "medicalStaffID": "1",
-      "treatProcess": [],
-      "id": 11
+      ],
+      "bloodType": "B"
     }
   ],
   "MedicalStaff": [
@@ -402,7 +423,8 @@
       "id": "1",
       "position": "Bác sĩ",
       "citizenID": "768240953126",
-      "name": "Lê Hòa Anh",
+      "firstName": "Anh",
+      "lastMiddleName": "Lê Hòa",
       "gender": "Nữ",
       "dateOfBirth": "15-09-1954",
       "email": "lehoaanh@gmail.com",
@@ -437,18 +459,21 @@
       "schedule": [
         {
           "date": "22-03-2024",
-          "time": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân"
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
         },
         {
           "date": "25-03-2024 ",
-          "time": "10:30",
-          "description": "Điều trị bệnh nhân"
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
         },
         {
           "date": "29-03-2024",
-          "time": "10:30",
-          "description": "Họp"
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
         }
       ]
     },
@@ -456,7 +481,8 @@
       "id": "2",
       "position": "Bác sĩ",
       "citizenID": "509431276845",
-      "name": "Nguyễn Hòa Bình",
+      "firstName": "Bình",
+      "lastMiddleName": "Nguyễn Hòa",
       "gender": "Nam",
       "dateOfBirth": "10-12-1984",
       "email": "nguyenhoabinh@gmail.com",
@@ -481,13 +507,15 @@
       "schedule": [
         {
           "date": "19-03-2024",
-          "time": "09:30",
-          "description": "Khám bệnh"
+          "timeBegin": "09:30",
+          "description": "Khám bệnh",
+          "timeEnd": "11:30"
         },
         {
           "date": "29-03-2024",
-          "time": "10:30",
-          "description": "Đo điện tâm đồ"
+          "timeBegin": "10:30",
+          "description": "Đo điện tâm đồ",
+          "timeEnd": "12:30"
         }
       ]
     },
@@ -495,7 +523,8 @@
       "id": 3,
       "position": "Bác sĩ",
       "citizenID": "623780941526",
-      "name": "Trần Quang Cường",
+      "firstName": "Cường",
+      "lastMiddleName": "Trần Quang",
       "gender": "Nam",
       "dateOfBirth": "10-12-1970",
       "email": "tranquangcuong@gmail.com",
@@ -524,16 +553,19 @@
       "specialty": "khoa nội",
       "schedule": [
         {
-          "time": "19-02-2024 09:00",
-          "description": "Xét nghiệm hóa sinh"
+          "timeBegin": "19-02-2024 09:00",
+          "description": "Xét nghiệm hóa sinh",
+          "timeEnd": "21:00"
         },
         {
-          "time": "02-03-2024 8:30",
-          "description": "Hội chuẩn bệnh tim"
+          "timeBegin": "02-03-2024 8:30",
+          "description": "Hội chuẩn bệnh tim",
+          "timeEnd": "04:30"
         },
         {
-          "time": "22-03-2024 8:30",
-          "description": "Điều trị hở van tim"
+          "timeBegin": "22-03-2024 8:30",
+          "description": "Điều trị hở van tim",
+          "timeEnd": "00:30"
         }
       ]
     },
@@ -541,7 +573,8 @@
       "id": 4,
       "position": "Bác sĩ",
       "citizenID": "421789056312",
-      "name": "Lý Dương",
+      "firstName": "Dương",
+      "lastMiddleName": "Lý",
       "gender": "Nam",
       "dateOfBirth": "10-12-1964",
       "email": "tranduong@gmail.com",
@@ -566,18 +599,21 @@
       "schedule": [
         {
           "date": "18-03-2024",
-          "time": "09:00",
-          "description": "Nội soi tai mũi họng"
+          "timeBegin": "09:00",
+          "description": "Nội soi tai mũi họng",
+          "timeEnd": "11:00"
         },
         {
           "date": "21-03-2024",
-          "time": "11:30",
-          "description": "Khám bệnh"
+          "timeBegin": "11:30",
+          "description": "Khám bệnh",
+          "timeEnd": "13:30"
         },
         {
           "date": "29-03-2024",
-          "time": " 11:30",
-          "description": "Chuẩn đoán và điều trị viêm xoang"
+          "timeBegin": " 11:30",
+          "description": "Chuẩn đoán và điều trị viêm xoang",
+          "timeEnd": "13:30"
         }
       ]
     },
@@ -585,7 +621,8 @@
       "id": 5,
       "position": "Bác sĩ",
       "citizenID": "879640231576",
-      "name": "William Emily",
+      "firstName": "Emily",
+      "lastMiddleName": "William",
       "gender": "Nữ",
       "dateOfBirth": "10-02-1979",
       "email": "williamemily@gmail.com",
@@ -614,16 +651,19 @@
       "specialty": "khoa Da liễu",
       "schedule": [
         {
-          "time": "01-03-2024 010:00",
-          "description": "Xét nghiệm mô tế bào"
+          "timeBegin": "01-03-2024 010:00",
+          "description": "Xét nghiệm mô tế bào",
+          "timeEnd": "03:00"
         },
         {
-          "time": "02-03-2024 10:30",
-          "description": "Hội nghị Da liễu thành phố"
+          "timeBegin": "02-03-2024 10:30",
+          "description": "Hội nghị Da liễu thành phố",
+          "timeEnd": "04:30"
         },
         {
-          "time": "12-03-2024 8:30",
-          "description": "Điều trị chuyên sâu về da liễu"
+          "timeBegin": "12-03-2024 8:30",
+          "description": "Điều trị chuyên sâu về da liễu",
+          "timeEnd": "14:30"
         }
       ]
     },
@@ -631,7 +671,8 @@
       "id": 6,
       "position": "Bác sĩ",
       "citizenID": "305847921634",
-      "name": "Alan Ferb",
+      "firstName": "Ferb",
+      "lastMiddleName": "Alan",
       "gender": "Nam",
       "dateOfBirth": "10-09-1969",
       "email": "anlanferb@gmail.com",
@@ -655,16 +696,19 @@
       "specialty": "khoa ngoại",
       "schedule": [
         {
-          "time": "02-03-2024 09:00",
-          "description": "Phẫu thuật nội soi viêm ruột thừa"
+          "timeBegin": "02-03-2024 09:00",
+          "description": "Phẫu thuật nội soi viêm ruột thừa",
+          "timeEnd": "04:00"
         },
         {
-          "time": "12-03-2024 10:30",
-          "description": "Phẫu thuật cắt túi sỏi mật"
+          "timeBegin": "12-03-2024 10:30",
+          "description": "Phẫu thuật cắt túi sỏi mật",
+          "timeEnd": "14:30"
         },
         {
-          "time": "21-03-2024 10:30",
-          "description": "Nội soi bao tử"
+          "timeBegin": "21-03-2024 10:30",
+          "description": "Nội soi bao tử",
+          "timeEnd": "23:30"
         }
       ]
     },
@@ -672,7 +716,8 @@
       "id": 7,
       "position": "Bác sĩ",
       "citizenID": "192487503186",
-      "name": "Nguyễn Hương Giang",
+      "firstName": "Giang",
+      "lastMiddleName": "Nguyễn Hương",
       "gender": "Nữ",
       "dateOfBirth": "10-01-1984",
       "email": "nguyenhuonggiang@gmail.com",
@@ -696,16 +741,19 @@
       "specialty": "khoa răng hàm mặt",
       "schedule": [
         {
-          "time": "15-03-2024 08:30",
-          "description": "Khám bệnh và tư vấn trồn răng"
+          "timeBegin": "15-03-2024 08:30",
+          "description": "Khám bệnh và tư vấn trồn răng",
+          "timeEnd": "17:30"
         },
         {
-          "time": "27-03-2024 11:30",
-          "description": "Trồng răng implant"
+          "timeBegin": "27-03-2024 11:30",
+          "description": "Trồng răng implant",
+          "timeEnd": "Invalid date"
         },
         {
-          "time": "29-03-2024 11:30",
-          "description": "Trồng răng sứ"
+          "timeBegin": "29-03-2024 11:30",
+          "description": "Trồng răng sứ",
+          "timeEnd": "Invalid date"
         }
       ]
     },
@@ -713,7 +761,8 @@
       "id": 8,
       "position": "Bác sĩ",
       "citizenID": "536197420815",
-      "name": "Lê Hòa",
+      "firstName": "Hòa",
+      "lastMiddleName": "Lê",
       "gender": "Nam",
       "dateOfBirth": "01-12-1970",
       "email": "lehoa@gmail.com",
@@ -737,16 +786,19 @@
       "specialty": "khoa Xét nghiệm",
       "schedule": [
         {
-          "time": "19-03-2024 09:00",
-          "description": "Xét nghiệm huyết học tế bào"
+          "timeBegin": "19-03-2024 09:00",
+          "description": "Xét nghiệm huyết học tế bào",
+          "timeEnd": "21:00"
         },
         {
-          "time": "22-03-2024 8:30",
-          "description": "Xét nghiệm sinh hóa đường"
+          "timeBegin": "22-03-2024 8:30",
+          "description": "Xét nghiệm sinh hóa đường",
+          "timeEnd": "00:30"
         },
         {
-          "time": "29-03-2024 8:30",
-          "description": "Xét nghiệm máu"
+          "timeBegin": "29-03-2024 8:30",
+          "description": "Xét nghiệm máu",
+          "timeEnd": "Invalid date"
         }
       ]
     },
@@ -754,7 +806,8 @@
       "id": 9,
       "position": "Bác sĩ",
       "citizenID": "748205913267",
-      "name": "Lê Hoàng Yên",
+      "firstName": "Yên",
+      "lastMiddleName": "Lê Hoàng",
       "gender": "Nữ",
       "dateOfBirth": "10-12-1964",
       "email": "lehoangyen@gmail.com",
@@ -783,16 +836,19 @@
       "specialty": "khoa sản",
       "schedule": [
         {
-          "time": "19-03-2024 09:00",
-          "description": "Chăm sóc thai nghén"
+          "timeBegin": "19-03-2024 09:00",
+          "description": "Chăm sóc thai nghén",
+          "timeEnd": "21:00"
         },
         {
-          "time": "22-03-2024 11:30",
-          "description": "Chăm sóc khám thai định kì"
+          "timeBegin": "22-03-2024 11:30",
+          "description": "Chăm sóc khám thai định kì",
+          "timeEnd": "00:30"
         },
         {
-          "time": "29-04-2024 11:30",
-          "description": "Chăm sóc khám thai định kì"
+          "timeBegin": "29-04-2024 11:30",
+          "description": "Chăm sóc khám thai định kì",
+          "timeEnd": "Invalid date"
         }
       ]
     },
@@ -800,7 +856,8 @@
       "id": 10,
       "position": "Bác sĩ",
       "citizenID": "319672048573",
-      "name": "Hoàng Ninh Lan",
+      "firstName": "Lan",
+      "lastMiddleName": "Hoàng Ninh",
       "gender": "Nữ",
       "dateOfBirth": "10-02-1979",
       "email": "hoangninhlan@gmail.com",
@@ -824,16 +881,19 @@
       "specialty": "khoa Y học cổ truyền",
       "schedule": [
         {
-          "time": "19-02-2024 10:00",
-          "description": "Châm cứu tứ chi"
+          "timeBegin": "19-02-2024 10:00",
+          "description": "Châm cứu tứ chi",
+          "timeEnd": "21:00"
         },
         {
-          "time": "12-03-2024 10:30",
-          "description": "Hồi phục sau chấn thương"
+          "timeBegin": "12-03-2024 10:30",
+          "description": "Hồi phục sau chấn thương",
+          "timeEnd": "14:30"
         },
         {
-          "time": "12-04-2024 10:30",
-          "description": "Khám và điều trị"
+          "timeBegin": "12-04-2024 10:30",
+          "description": "Khám và điều trị",
+          "timeEnd": "14:30"
         }
       ]
     },
@@ -841,7 +901,8 @@
       "id": 11,
       "position": "Y tá",
       "citizenID": "925081736492",
-      "name": "Trần Thị Minh",
+      "firstName": "Minh",
+      "lastMiddleName": "Trần Thị",
       "gender": "Nữ",
       "dateOfBirth": "15-09-1970",
       "email": "TranThiM@gmail.com",
@@ -861,13 +922,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ Sinh"
+      "specialty": "Hộ Sinh",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 12,
       "position": "Y tá",
       "citizenID": "847129056234",
-      "name": "Trần Thị Giang Hà",
+      "firstName": "Hà",
+      "lastMiddleName": "Trần Thị Giang",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1979",
       "email": "TranThiG@gmail.com",
@@ -887,13 +969,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng"
+      "specialty": "Điều dưỡng",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 13,
       "position": "Y tá",
       "citizenID": "681245097836",
-      "name": "Nguyễn Thị Nhi",
+      "firstName": "Nhi",
+      "lastMiddleName": "Nguyễn Thị",
       "gender": "Nữ",
       "dateOfBirth": "12-10-1979",
       "email": "nguyenThiN@gmail.com",
@@ -913,13 +1016,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức"
+      "specialty": "Gây mê hồi sức",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 14,
       "position": "Y tá",
       "citizenID": "530279416785",
-      "name": "Nguyễn Thị Thảo",
+      "firstName": "Thảo",
+      "lastMiddleName": "Nguyễn Thị",
       "gender": "Nữ",
       "dateOfBirth": "16-10-1989",
       "email": "NguyenThiT@gmail.com",
@@ -939,13 +1063,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ Sinh"
+      "specialty": "Hộ Sinh",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 15,
       "position": "Y tá",
       "citizenID": "490328157642",
-      "name": "Đinh Nguyễn Xuân Nhã",
+      "firstName": "Nhã",
+      "lastMiddleName": "Đinh Nguyễn Xuân",
       "gender": "Nam",
       "dateOfBirth": "25-01-1995",
       "email": "DinhNguyenX@gmail.com",
@@ -965,13 +1110,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng"
+      "specialty": "Điều dưỡng",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 16,
       "position": "Y tá",
       "citizenID": "816490235781",
-      "name": "Đinh Thị Lan Hương",
+      "firstName": "Hương",
+      "lastMiddleName": "Đinh Thị Lan",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1992",
       "email": "DinhThiL@gmail.com",
@@ -991,13 +1157,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức"
+      "specialty": "Gây mê hồi sức",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 17,
       "position": "Y tá",
       "citizenID": "243809517826",
-      "name": "Hà Tuyết Nhi",
+      "firstName": "Nhi",
+      "lastMiddleName": "Hà Tuyết",
       "gender": "Nữ",
       "dateOfBirth": "29-02-1988",
       "email": "HaTuyeN@gmail.com",
@@ -1017,13 +1204,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ sinh"
+      "specialty": "Hộ sinh",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 18,
       "position": "Y tá",
       "citizenID": "765024913287",
-      "name": "Nguyen Thi Thương",
+      "firstName": "Thương",
+      "lastMiddleName": "Nguyen Thi",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1994",
       "email": "DinhThiL@gmail.com",
@@ -1043,13 +1251,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng"
+      "specialty": "Điều dưỡng",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 19,
       "position": "Y tá",
       "citizenID": "978032165794",
-      "name": "Lê Trúc Hòa",
+      "firstName": "Hòa",
+      "lastMiddleName": "Lê Trúc",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1986",
       "email": "LeTrucH@gmail.com",
@@ -1069,13 +1298,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức"
+      "specialty": "Gây mê hồi sức",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 20,
       "position": "Y tá",
       "citizenID": "587401239865",
-      "name": "Lê Thị Phương",
+      "firstName": "Phương",
+      "lastMiddleName": "Lê Thị",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1974",
       "email": "LeThiP@gmail.com",
@@ -1095,13 +1345,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ sinh"
+      "specialty": "Hộ sinh",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 21,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "925081736492",
-      "name": "Trần Thị Minh",
+      "firstName": "Minh",
+      "lastMiddleName": "Trần Thị",
       "gender": "Nữ",
       "dateOfBirth": "15-09-1970",
       "email": "TranThiM@gmail.com",
@@ -1121,13 +1392,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ Sinh"
+      "specialty": "Hộ Sinh",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 22,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "847129056234",
-      "name": "Trần Thị Giang Hà",
+      "firstName": "Hà",
+      "lastMiddleName": "Trần Thị Giang",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1979",
       "email": "TranThiG@gmail.com",
@@ -1147,13 +1439,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng"
+      "specialty": "Điều dưỡng",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 23,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "681245097836",
-      "name": "Nguyễn Thị Nhi",
+      "firstName": "Nhi",
+      "lastMiddleName": "Nguyễn Thị",
       "gender": "Nữ",
       "dateOfBirth": "12-10-1979",
       "email": "nguyenThiN@gmail.com",
@@ -1173,13 +1486,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức"
+      "specialty": "Gây mê hồi sức",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 24,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "530279416785",
-      "name": "Nguyễn Thị Thảo",
+      "firstName": "Thảo",
+      "lastMiddleName": "Nguyễn Thị",
       "gender": "Nữ",
       "dateOfBirth": "16-10-1989",
       "email": "NguyenThiT@gmail.com",
@@ -1199,13 +1533,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ Sinh"
+      "specialty": "Hộ Sinh",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 25,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "490328157642",
-      "name": "Đinh Nguyễn Xuân Nhã",
+      "firstName": "Nhã",
+      "lastMiddleName": "Đinh Nguyễn Xuân",
       "gender": "Nam",
       "dateOfBirth": "25-01-1995",
       "email": "DinhNguyenX@gmail.com",
@@ -1225,13 +1580,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng"
+      "specialty": "Điều dưỡng",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 26,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "816490235781",
-      "name": "Đinh Thị Lan Hương",
+      "firstName": "Hương",
+      "lastMiddleName": "Đinh Thị Lan",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1992",
       "email": "DinhThiL@gmail.com",
@@ -1251,13 +1627,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức"
+      "specialty": "Gây mê hồi sức",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 27,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "243809517826",
-      "name": "Hà Tuyết Nhi",
+      "firstName": "Nhi",
+      "lastMiddleName": "Hà Tuyết",
       "gender": "Nữ",
       "dateOfBirth": "29-02-1988",
       "email": "HaTuyeN@gmail.com",
@@ -1277,13 +1674,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ sinh"
+      "specialty": "Hộ sinh",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 28,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "765024913287",
-      "name": "Nguyen Thi Thương",
+      "firstName": "Thương",
+      "lastMiddleName": "Nguyen Thi",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1994",
       "email": "DinhThiL@gmail.com",
@@ -1303,13 +1721,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng"
+      "specialty": "Điều dưỡng",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 29,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "978032165794",
-      "name": "Lê Trúc Hòa",
+      "firstName": "Hòa",
+      "lastMiddleName": "Lê Trúc",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1986",
       "email": "LeTrucH@gmail.com",
@@ -1329,13 +1768,34 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức"
+      "specialty": "Gây mê hồi sức",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     },
     {
       "id": 30,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "587401239865",
-      "name": "Lê Thị Phương",
+      "firstName": "Phương",
+      "lastMiddleName": "Lê Thị",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1974",
       "email": "LeThiP@gmail.com",
@@ -1355,7 +1815,27 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ sinh"
+      "specialty": "Hộ sinh",
+      "schedule": [
+        {
+          "date": "22-03-2024",
+          "timeBegin": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân",
+          "timeEnd": "11:00"
+        },
+        {
+          "date": "25-03-2024 ",
+          "timeBegin": "10:30",
+          "description": "Điều trị bệnh nhân",
+          "timeEnd": "12:30"
+        },
+        {
+          "date": "29-03-2024",
+          "timeBegin": "10:30",
+          "description": "Họp",
+          "timeEnd": "12:30"
+        }
+      ]
     }
   ]
 }
