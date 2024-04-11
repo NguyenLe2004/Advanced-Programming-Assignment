@@ -21,8 +21,7 @@
           "room": "H3-102",
           "title": "Truyền máu",
           "description": "Bệnh nhân đã được thực hiện quá trình truyền máu nhằm cung cấp máu mới và khắc phục tình trạng thiếu máu. Loại máu được sử dụng trong quá trình truyền là máu loại A+. Đã truyền tổng cộng 2 đơn vị máu cho bệnh nhân.",
-          "medicalStaffID": "1",
-          "id": 1
+          "medicalStaffID": "1"
         },
         {
           "dateBegin": "10-04-2024",
@@ -32,8 +31,7 @@
           "room": "H3-102",
           "title": "Phẫu thuật Gan",
           "description": "Sắp tiến hành",
-          "medicalStaffID": "1",
-          "id": 2
+          "medicalStaffID": "1"
         },
         {
           "dateBegin": "10-03-2024",
@@ -43,8 +41,7 @@
           "room": "H1-101",
           "title": "Khám tổng quát và bổ sung thuốc",
           "description": "bệnh nhân đã được tiến hành khám tổng quát và bổ sung thuốc. Trong quá trình khám, bác sĩ đã kiểm tra các chỉ số y tế quan trọng của bệnh nhân như huyết áp, nhịp tim, nhiệt độ cơ thể và đánh giá tổng quan về tình trạng sức khỏe đồng thời bổ sung thuốc theo chỉ định của bác sĩ và theo dõi tình trạng",
-          "medicalStaffID": "1",
-          "id": 3
+          "medicalStaffID": "1"
         },
         {
           "title": "Xét nghiệm máu",
@@ -54,8 +51,7 @@
           "dateEnd": "10-03-2024",
           "timeBegin": "10:45",
           "timeEnd": "12:30",
-          "medicalStaffID": "1",
-          "id": 4
+          "medicalStaffID": "1"
         },
         {
           "title": "Xét nghiệm nước tiểu",
@@ -65,16 +61,13 @@
           "dateEnd": "10-03-2024",
           "timeBegin": "12:00",
           "timeEnd": "13:45",
-          "medicalStaffID": "1",
-          "id": 5
+          "medicalStaffID": "1"
         }
       ],
       "medHistory": "Từng bị trĩ",
       "symptoms": "Suy nhược cơ thể",
       "diagnosis": "Thiếu máu, xơ gan",
-      "id": 1,
-      "lastMidleName": "Nguyễn Văn",
-      "bloodType": "A"
+      "id": 1
     },
     {
       "id": 2,
@@ -103,11 +96,9 @@
           "room": "H3-102",
           "title": "Kiểm tra EKG",
           "description": "Lịch kiểm tra điện tâm đồ được đặt cho bệnh nhân để đánh giá chức năng tim.",
-          "medicalStaffID": "2",
-          "id": 1
+          "medicalStaffID": "2"
         }
-      ],
-      "bloodType": "O"
+      ]
     },
     {
       "id": 3,
@@ -136,11 +127,9 @@
           "room": "H3-102",
           "title": "Phiên tập vận hành",
           "description": "Phiên tập vận hành đã được lên lịch để phục hồi chức năng.",
-          "medicalStaffID": "2",
-          "id": 1
+          "medicalStaffID": "2"
         }
-      ],
-      "bloodType": "A"
+      ]
     },
     {
       "id": 4,
@@ -169,8 +158,7 @@
           "room": "H1-101",
           "title": "Tư vấn dinh dưỡng",
           "description": "Cuộc hẹn với chuyên gia dinh dưỡng để hướng dẫn và đánh giá chế độ dinh dưỡng.",
-          "medicalStaffID": "3",
-          "id": 1
+          "medicalStaffID": "3"
         },
         {
           "dateBegin": "20-04-2024",
@@ -180,11 +168,9 @@
           "room": "H3-101",
           "title": "Quét MRI",
           "description": "Cuộc hẹn quét MRI được lên lịch để có hình ảnh chi tiết về các cơ quan nội tạng.",
-          "medicalStaffID": "3",
-          "id": 2
+          "medicalStaffID": "3"
         }
-      ],
-      "bloodType": "AB"
+      ]
     },
     {
       "id": 5,
@@ -193,7 +179,7 @@
       "lastMiddleName": "Phó Tuấn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "20-11-1990",
+      "dateOfBirth": "11-01-1990",
       "height": "175",
       "weight": "65",
       "email": "thanh.photuan@gmail.com",
@@ -213,11 +199,9 @@
           "room": "H3-101",
           "title": "Khám siêu âm",
           "description": "Cuộc hẹn siêu âm để chẩn đoán mục đích.",
-          "medicalStaffID": "3",
-          "id": 1
+          "medicalStaffID": "3"
         }
-      ],
-      "bloodType": "B"
+      ]
     },
     {
       "id": 6,
@@ -226,7 +210,7 @@
       "lastMiddleName": "Hoàng Văn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "27-04-1993",
+      "dateOfBirth": "04-02-1993",
       "height": "158",
       "weight": "48",
       "email": "thanh.hoangvan@gmail.com",
@@ -246,8 +230,7 @@
           "room": "H3-102",
           "title": "Phiên tập nghề nghiệp",
           "description": "Phiên tập nghề nghiệp đã được lên lịch để phục hồi chức năng.",
-          "medicalStaffID": "4",
-          "id": 1
+          "medicalStaffID": "4"
         },
         {
           "dateBegin": "05-05-2024",
@@ -257,11 +240,9 @@
           "room": "H1-101",
           "title": "Kiểm tra nha khoa",
           "description": "Cuộc hẹn kiểm tra nha khoa định kỳ để đánh giá sức khỏe miệng.",
-          "medicalStaffID": "4",
-          "id": 2
+          "medicalStaffID": "4"
         }
-      ],
-      "bloodType": "O"
+      ]
     },
     {
       "id": 7,
@@ -290,8 +271,7 @@
           "room": "H3-102",
           "title": "Phiên tập nói",
           "description": "Phiên tập nói đã được lên lịch để phục hồi chức năng ngôn ngữ.",
-          "medicalStaffID": "4",
-          "id": 1
+          "medicalStaffID": "4"
         },
         {
           "dateBegin": "15-05-2024",
@@ -301,11 +281,9 @@
           "room": "H3-101",
           "title": "Đánh giá tình trạng trí óc",
           "description": "Cuộc hẹn để đánh giá và đánh giá chức năng trí óc.",
-          "medicalStaffID": "5",
-          "id": 2
+          "medicalStaffID": "5"
         }
-      ],
-      "bloodType": "A"
+      ]
     },
     {
       "id": 8,
@@ -314,7 +292,7 @@
       "lastMiddleName": "Trần Văn",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "14-02-1989",
+      "dateOfBirth": "02-08-1989",
       "height": "163",
       "weight": "56",
       "email": "dung.tranvan@gmail.com",
@@ -334,11 +312,9 @@
           "room": "H3-101",
           "title": "Tư vấn di truyền học",
           "description": "Cuộc hẹn để tư vấn di truyền học và đánh giá rủi ro.",
-          "medicalStaffID": "5",
-          "id": 1
+          "medicalStaffID": "5"
         }
-      ],
-      "bloodType": "AB"
+      ]
     },
     {
       "id": 9,
@@ -367,11 +343,9 @@
           "room": "H3-101",
           "title": "Kiểm tra mắt",
           "description": "Cuộc hẹn để kiểm tra mắt và kiểm tra thị lực chi tiết.",
-          "medicalStaffID": "5",
-          "id": 1
+          "medicalStaffID": "5"
         }
-      ],
-      "bloodType": "B"
+      ]
     },
     {
       "id": 10,
@@ -380,7 +354,7 @@
       "lastMiddleName": "Hoàng Minh",
       "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "18-08-1997",
+      "dateOfBirth": "08-08-1997",
       "height": "171",
       "weight": "64",
       "email": "tuanhoangminh@gmail.com",
@@ -400,8 +374,7 @@
           "room": "H3-102",
           "title": "Kiểm tra thính lực",
           "description": "Cuộc hẹn để đánh giá thính lực và kiểm tra thính lực.",
-          "medicalStaffID": "6",
-          "id": 1
+          "medicalStaffID": "6"
         },
         {
           "dateBegin": "05-06-2024",
@@ -411,11 +384,40 @@
           "room": "H3-102",
           "title": "Kiểm tra sức khỏe tổng quát",
           "description": "Cuộc hẹn kiểm tra sức khỏe tổng quát định kỳ cho đánh giá sức khỏe chung.",
-          "medicalStaffID": "6",
-          "id": 2
+          "medicalStaffID": "6"
+        }
+      ]
+    },
+    {
+      "lastMiddleName": "Nguyen",
+      "firstName": "Nguyen Le Quang",
+      "gender": "Nam",
+      "phoneNum": "0395645763",
+      "email": "nguyenlequangdt@gmail.com",
+      "citizenID": "sdfgdf",
+      "dateOfBirth": "20-04-2001",
+      "address": "Le Duc Tho",
+      "hometown": "Ho Chi Minh",
+      "height": "183",
+      "weight": "63",
+      "bloodType": "AB",
+      "medHistory": "dsfasf",
+      "symtoms": "dfasf",
+      "diagnosis": "Chưa được chẩn đoán",
+      "medicalStaffID": "1",
+      "treatProcess": [
+        {
+          "dateBegin": "10-06-2024",
+          "dateEnd": "11-06-2024",
+          "timeBegin": "08:15",
+          "timeEnd": "09:45",
+          "room": "H3-102",
+          "title": "Theo dõi huyết áp",
+          "description": "Cuộc hẹn để theo dõi và quản lý huyết áp.",
+          "medicalStaffID": "6"
         }
       ],
-      "bloodType": "B"
+      "id": 11
     }
   ],
   "MedicalStaff": [
@@ -459,21 +461,18 @@
       "schedule": [
         {
           "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "time": "09:00",
+          "description": "Kiểm tra và đánh giá bệnh nhân"
         },
         {
           "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "time": "10:30",
+          "description": "Điều trị bệnh nhân"
         },
         {
           "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
+          "time": "10:30",
+          "description": "Họp"
         }
       ]
     },
@@ -507,15 +506,13 @@
       "schedule": [
         {
           "date": "19-03-2024",
-          "timeBegin": "09:30",
-          "description": "Khám bệnh",
-          "timeEnd": "11:30"
+          "time": "09:30",
+          "description": "Khám bệnh"
         },
         {
           "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Đo điện tâm đồ",
-          "timeEnd": "12:30"
+          "time": "10:30",
+          "description": "Đo điện tâm đồ"
         }
       ]
     },
@@ -553,19 +550,16 @@
       "specialty": "khoa nội",
       "schedule": [
         {
-          "timeBegin": "19-02-2024 09:00",
-          "description": "Xét nghiệm hóa sinh",
-          "timeEnd": "21:00"
+          "time": "19-02-2024 09:00",
+          "description": "Xét nghiệm hóa sinh"
         },
         {
-          "timeBegin": "02-03-2024 8:30",
-          "description": "Hội chuẩn bệnh tim",
-          "timeEnd": "04:30"
+          "time": "02-03-2024 8:30",
+          "description": "Hội chuẩn bệnh tim"
         },
         {
-          "timeBegin": "22-03-2024 8:30",
-          "description": "Điều trị hở van tim",
-          "timeEnd": "00:30"
+          "time": "22-03-2024 8:30",
+          "description": "Điều trị hở van tim"
         }
       ]
     },
@@ -573,7 +567,7 @@
       "id": 4,
       "position": "Bác sĩ",
       "citizenID": "421789056312",
-      "firstName": "Dương",
+      "fileName": "Dương",
       "lastMiddleName": "Lý",
       "gender": "Nam",
       "dateOfBirth": "10-12-1964",
@@ -599,21 +593,18 @@
       "schedule": [
         {
           "date": "18-03-2024",
-          "timeBegin": "09:00",
-          "description": "Nội soi tai mũi họng",
-          "timeEnd": "11:00"
+          "time": "09:00",
+          "description": "Nội soi tai mũi họng"
         },
         {
           "date": "21-03-2024",
-          "timeBegin": "11:30",
-          "description": "Khám bệnh",
-          "timeEnd": "13:30"
+          "time": "11:30",
+          "description": "Khám bệnh"
         },
         {
           "date": "29-03-2024",
-          "timeBegin": " 11:30",
-          "description": "Chuẩn đoán và điều trị viêm xoang",
-          "timeEnd": "13:30"
+          "time": " 11:30",
+          "description": "Chuẩn đoán và điều trị viêm xoang"
         }
       ]
     },
@@ -651,19 +642,16 @@
       "specialty": "khoa Da liễu",
       "schedule": [
         {
-          "timeBegin": "01-03-2024 010:00",
-          "description": "Xét nghiệm mô tế bào",
-          "timeEnd": "03:00"
+          "time": "01-03-2024 010:00",
+          "description": "Xét nghiệm mô tế bào"
         },
         {
-          "timeBegin": "02-03-2024 10:30",
-          "description": "Hội nghị Da liễu thành phố",
-          "timeEnd": "04:30"
+          "time": "02-03-2024 10:30",
+          "description": "Hội nghị Da liễu thành phố"
         },
         {
-          "timeBegin": "12-03-2024 8:30",
-          "description": "Điều trị chuyên sâu về da liễu",
-          "timeEnd": "14:30"
+          "time": "12-03-2024 8:30",
+          "description": "Điều trị chuyên sâu về da liễu"
         }
       ]
     },
@@ -696,19 +684,16 @@
       "specialty": "khoa ngoại",
       "schedule": [
         {
-          "timeBegin": "02-03-2024 09:00",
-          "description": "Phẫu thuật nội soi viêm ruột thừa",
-          "timeEnd": "04:00"
+          "time": "02-03-2024 09:00",
+          "description": "Phẫu thuật nội soi viêm ruột thừa"
         },
         {
-          "timeBegin": "12-03-2024 10:30",
-          "description": "Phẫu thuật cắt túi sỏi mật",
-          "timeEnd": "14:30"
+          "time": "12-03-2024 10:30",
+          "description": "Phẫu thuật cắt túi sỏi mật"
         },
         {
-          "timeBegin": "21-03-2024 10:30",
-          "description": "Nội soi bao tử",
-          "timeEnd": "23:30"
+          "time": "21-03-2024 10:30",
+          "description": "Nội soi bao tử"
         }
       ]
     },
@@ -741,19 +726,16 @@
       "specialty": "khoa răng hàm mặt",
       "schedule": [
         {
-          "timeBegin": "15-03-2024 08:30",
-          "description": "Khám bệnh và tư vấn trồn răng",
-          "timeEnd": "17:30"
+          "time": "15-03-2024 08:30",
+          "description": "Khám bệnh và tư vấn trồn răng"
         },
         {
-          "timeBegin": "27-03-2024 11:30",
-          "description": "Trồng răng implant",
-          "timeEnd": "Invalid date"
+          "time": "27-03-2024 11:30",
+          "description": "Trồng răng implant"
         },
         {
-          "timeBegin": "29-03-2024 11:30",
-          "description": "Trồng răng sứ",
-          "timeEnd": "Invalid date"
+          "time": "29-03-2024 11:30",
+          "description": "Trồng răng sứ"
         }
       ]
     },
@@ -786,19 +768,16 @@
       "specialty": "khoa Xét nghiệm",
       "schedule": [
         {
-          "timeBegin": "19-03-2024 09:00",
-          "description": "Xét nghiệm huyết học tế bào",
-          "timeEnd": "21:00"
+          "time": "19-03-2024 09:00",
+          "description": "Xét nghiệm huyết học tế bào"
         },
         {
-          "timeBegin": "22-03-2024 8:30",
-          "description": "Xét nghiệm sinh hóa đường",
-          "timeEnd": "00:30"
+          "time": "22-03-2024 8:30",
+          "description": "Xét nghiệm sinh hóa đường"
         },
         {
-          "timeBegin": "29-03-2024 8:30",
-          "description": "Xét nghiệm máu",
-          "timeEnd": "Invalid date"
+          "time": "29-03-2024 8:30",
+          "description": "Xét nghiệm máu"
         }
       ]
     },
@@ -836,19 +815,16 @@
       "specialty": "khoa sản",
       "schedule": [
         {
-          "timeBegin": "19-03-2024 09:00",
-          "description": "Chăm sóc thai nghén",
-          "timeEnd": "21:00"
+          "time": "19-03-2024 09:00",
+          "description": "Chăm sóc thai nghén"
         },
         {
-          "timeBegin": "22-03-2024 11:30",
-          "description": "Chăm sóc khám thai định kì",
-          "timeEnd": "00:30"
+          "time": "22-03-2024 11:30",
+          "description": "Chăm sóc khám thai định kì"
         },
         {
-          "timeBegin": "29-04-2024 11:30",
-          "description": "Chăm sóc khám thai định kì",
-          "timeEnd": "Invalid date"
+          "time": "29-04-2024 11:30",
+          "description": "Chăm sóc khám thai định kì"
         }
       ]
     },
@@ -881,19 +857,16 @@
       "specialty": "khoa Y học cổ truyền",
       "schedule": [
         {
-          "timeBegin": "19-02-2024 10:00",
-          "description": "Châm cứu tứ chi",
-          "timeEnd": "21:00"
+          "time": "19-02-2024 10:00",
+          "description": "Châm cứu tứ chi"
         },
         {
-          "timeBegin": "12-03-2024 10:30",
-          "description": "Hồi phục sau chấn thương",
-          "timeEnd": "14:30"
+          "time": "12-03-2024 10:30",
+          "description": "Hồi phục sau chấn thương"
         },
         {
-          "timeBegin": "12-04-2024 10:30",
-          "description": "Khám và điều trị",
-          "timeEnd": "14:30"
+          "time": "12-04-2024 10:30",
+          "description": "Khám và điều trị"
         }
       ]
     },
@@ -922,27 +895,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ Sinh",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Hộ Sinh"
     },
     {
       "id": 12,
@@ -969,27 +922,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Điều dưỡng"
     },
     {
       "id": 13,
@@ -1016,27 +949,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Gây mê hồi sức"
     },
     {
       "id": 14,
@@ -1063,27 +976,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ Sinh",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Hộ Sinh"
     },
     {
       "id": 15,
@@ -1110,27 +1003,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Điều dưỡng"
     },
     {
       "id": 16,
@@ -1157,27 +1030,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Gây mê hồi sức"
     },
     {
       "id": 17,
@@ -1204,27 +1057,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ sinh",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Hộ sinh"
     },
     {
       "id": 18,
@@ -1251,27 +1084,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Điều dưỡng"
     },
     {
       "id": 19,
@@ -1298,27 +1111,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Gây mê hồi sức"
     },
     {
       "id": 20,
@@ -1345,27 +1138,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ sinh",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Hộ sinh"
     },
     {
       "id": 21,
@@ -1392,27 +1165,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ Sinh",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Hộ Sinh"
     },
     {
       "id": 22,
@@ -1439,27 +1192,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Điều dưỡng"
     },
     {
       "id": 23,
@@ -1486,27 +1219,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Gây mê hồi sức"
     },
     {
       "id": 24,
@@ -1533,27 +1246,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ Sinh",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Hộ Sinh"
     },
     {
       "id": 25,
@@ -1580,27 +1273,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Điều dưỡng"
     },
     {
       "id": 26,
@@ -1627,27 +1300,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Gây mê hồi sức"
     },
     {
       "id": 27,
@@ -1674,27 +1327,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ sinh",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Hộ sinh"
     },
     {
       "id": 28,
@@ -1721,27 +1354,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Điều dưỡng",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Điều dưỡng"
     },
     {
       "id": 29,
@@ -1768,27 +1381,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Gây mê hồi sức"
     },
     {
       "id": 30,
@@ -1815,27 +1408,7 @@
           "organization": "Bộ y tế"
         }
       ],
-      "specialty": "Hộ sinh",
-      "schedule": [
-        {
-          "date": "22-03-2024",
-          "timeBegin": "09:00",
-          "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
-        },
-        {
-          "date": "25-03-2024 ",
-          "timeBegin": "10:30",
-          "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
-        },
-        {
-          "date": "29-03-2024",
-          "timeBegin": "10:30",
-          "description": "Họp",
-          "timeEnd": "12:30"
-        }
-      ]
+      "specialty": "Hộ sinh"
     }
   ]
 }
