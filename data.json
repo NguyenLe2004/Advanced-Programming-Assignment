@@ -73,8 +73,8 @@
       "symptoms": "Suy nhược cơ thể",
       "diagnosis": "Thiếu máu, xơ gan",
       "id": 1,
-      "lastMidleName": "Nguyễn Văn",
-      "bloodType": "A"
+      "bloodType": "A",
+      "job": "Lập trình viên"
     },
     {
       "id": 2,
@@ -89,7 +89,7 @@
       "email": "hung.buiphu123@gmail.com",
       "phoneNum": "0963 789 012",
       "hometown": "Quảng Phong, Cửa Lò, Nghệ An",
-      "job": "Xe ôm",
+      "job": "Lập trình viên",
       "Doctor_ID ": "",
       "medHistory": "Không có",
       "symptoms": "Thường xuyên chóng mặt",
@@ -122,7 +122,7 @@
       "email": "an.phamxuam86@gmail.com",
       "phoneNum": "0912 345 678",
       "hometown": "Phước Hưng, Vị Thanh, Hậu Giang",
-      "job": "Thợ may",
+      "job": "Lập trình viên",
       "Doctor_ID ": "",
       "medHistory": "Không có",
       "symptoms": "Đau vùng thái dương trái",
@@ -155,7 +155,7 @@
       "email": "thanh.photuan@gmail.com",
       "phoneNum": "0908 456 789",
       "hometown": "Hồng Kỳ, Bến Lức, Long An",
-      "job": "Giáo viên",
+      "job": "Lập trình viên",
       "Doctor_ID ": "#N-A",
       "medHistory": "Không có",
       "symptoms": "Cảm giác đau hoặc nặng ở phía dưới bụng",
@@ -199,7 +199,7 @@
       "email": "thanh.photuan@gmail.com",
       "phoneNum": "0908 456 789",
       "hometown": "Phú Điền, Phú Vang, Thừa Thiên Huế",
-      "job": "Công nhân",
+      "job": "Lập trình viên",
       "Doctor_ID ": "",
       "medHistory": "Thoái hóa đốt sống",
       "symptoms": "Ổn định",
@@ -232,7 +232,7 @@
       "email": "thanh.hoangvan@gmail.com",
       "phoneNum": "0921 234 567",
       "hometown": "Bình Yên, Lập Thạch, Vĩnh Phúc",
-      "job": "Thợ sửa ống nước",
+      "job": "Lập trình viên",
       "Doctor_ID ": "",
       "medHistory": "Không có",
       "symptoms": "Tiểu chảy",
@@ -276,7 +276,7 @@
       "email": "ha.nguyenthithu@gmail.com",
       "phoneNum": "0998 765 432",
       "hometown": "Đắk Phú, Đắk Tô, Kon Tum",
-      "job": "Bác sĩ",
+      "job": "Lập trình viên",
       "Doctor_ID ": "",
       "medHistory": "Không có",
       "symptoms": "Tầm nhìn kém",
@@ -320,7 +320,7 @@
       "email": "dung.tranvan@gmail.com",
       "phoneNum": "0963 789 012",
       "hometown": "Hòa Thạch, Phú Thọ, Phú Thọ",
-      "job": "Cảnh sát",
+      "job": "Lập trình viên",
       "Doctor_ID ": "",
       "medHistory": "Không có",
       "symptoms": "Sốt",
@@ -353,7 +353,7 @@
       "email": "huong.lethi@gmail.com",
       "phoneNum": "0978 654 321",
       "hometown": "Bảo Tân, Lục Ngạn, Bắc Giang",
-      "job": "Nhân viên văn phòng",
+      "job": "Lập trình viên",
       "Doctor_ID ": "",
       "medHistory": "Không có",
       "symptoms": "Mệt mỏi, uể oải",
@@ -386,7 +386,7 @@
       "email": "tuanhoangminh@gmail.com",
       "phoneNum": "0945 321 678",
       "hometown": "Vĩnh Hải, Ninh Hải, Ninh Thuận",
-      "job": "Sinh viên",
+      "job": "Lập trình viên",
       "Doctor_ID ": "",
       "medHistory": "Không có",
       "symptoms": "Thường xuyên chóng mặt",
@@ -435,24 +435,28 @@
           "dateInterval": "20-08-1975-12-07-1981",
           "university": "Trường đại học y dược TP HCM",
           "major": "Y khoa",
-          "degree": "Cử nhân"
+          "degree": "Cử nhân",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "12-12-1982",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         },
         {
           "title": "chứng chỉ bác sĩ chuyên khoa 1",
           "date": "2-2-1984",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 2
         },
         {
           "title": "chứng chỉ bác sĩ chuyên khoa 2",
           "date": "3-5-1986",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 3
         }
       ],
       "specialty": "Tim mạch",
@@ -461,19 +465,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -493,29 +500,33 @@
           "dateInterval": "12-08-2004-19-07-2012",
           "university": "Trường đại học Phạm Ngọc Thạch TP HCM",
           "major": "Tuần hoàn",
-          "degree": "Thạc sĩ"
+          "degree": "Thạc sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "12-9-2013",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "khoa nội",
       "schedule": [
         {
-          "date": "19-03-2024",
-          "timeBegin": "09:30",
+          "date": "12-04-2024",
+          "timeBegin": "00:30",
           "description": "Khám bệnh",
-          "timeEnd": "11:30"
+          "timeEnd": "11:30",
+          "id": 1
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Đo điện tâm đồ",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         }
       ]
     },
@@ -535,37 +546,46 @@
           "dateInterval": "12-09-1990-20-07-1999",
           "university": "Trường đại học Y dược TP HCM",
           "major": "Tuần hoàn",
-          "degree": "Tiến sĩ"
+          "degree": "Tiến sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "02-09-2000",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         },
         {
           "title": "Bác sĩ cao cấp (hạng I)",
           "date": "02-09-2008",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 2
         }
       ],
       "specialty": "khoa nội",
       "schedule": [
         {
-          "timeBegin": "19-02-2024 09:00",
+          "date": "19-02-2024",
+          "timeBegin": "09:00",
           "description": "Xét nghiệm hóa sinh",
-          "timeEnd": "21:00"
+          "timeEnd": "21:00",
+          "id": 1
         },
         {
-          "timeBegin": "02-03-2024 8:30",
+          "date": "02-03-2024",
+          "timeBegin": "8:30",
           "description": "Hội chuẩn bệnh tim",
-          "timeEnd": "04:30"
+          "timeEnd": "04:30",
+          "id": 2
         },
         {
-          "timeBegin": "22-03-2024 8:30",
+          "date": "22-03-2024",
+          "timeBegin": "8:30",
           "description": "Điều trị hở van tim",
-          "timeEnd": "00:30"
+          "timeEnd": "00:30",
+          "id": 3
         }
       ]
     },
@@ -585,14 +605,16 @@
           "dateInterval": "02-08-1984-18-07-1990",
           "university": "Trường đại học Y Dược Huế",
           "major": "Hô hấp",
-          "degree": "Tiến sĩ"
+          "degree": "Tiến sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "15-09-1991",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "khoa tai mũi họng",
@@ -601,19 +623,29 @@
           "date": "18-03-2024",
           "timeBegin": "09:00",
           "description": "Nội soi tai mũi họng",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "21-03-2024",
           "timeBegin": "11:30",
           "description": "Khám bệnh",
-          "timeEnd": "13:30"
+          "timeEnd": "13:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
-          "timeBegin": " 11:30",
+          "timeBegin": "11:30",
           "description": "Chuẩn đoán và điều trị viêm xoang",
-          "timeEnd": "13:30"
+          "timeEnd": "13:30",
+          "id": 3
+        },
+        {
+          "date": "12-04-2024",
+          "timeBegin": "00:30",
+          "description": "Nghỉ phép",
+          "timeEnd": "13:30",
+          "id": 4
         }
       ]
     },
@@ -633,37 +665,46 @@
           "dateInterval": "15-02-1999-20-08-2007",
           "university": "Trường Y khoa Yale-Đại học Yale",
           "major": "Da liễu",
-          "degree": "Tiến sĩ"
+          "degree": "Tiến sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "02-09-2008",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         },
         {
           "title": "Bác sĩ cao cấp (hạng II)",
           "date": "02-09-2010",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 2
         }
       ],
       "specialty": "khoa Da liễu",
       "schedule": [
         {
-          "timeBegin": "01-03-2024 010:00",
+          "date": "01-03-2024",
+          "timeBegin": "10:00",
           "description": "Xét nghiệm mô tế bào",
-          "timeEnd": "03:00"
+          "timeEnd": "03:00",
+          "id": 1
         },
         {
-          "timeBegin": "02-03-2024 10:30",
+          "date": "02-03-2024",
+          "timeBegin": "10:30",
           "description": "Hội nghị Da liễu thành phố",
-          "timeEnd": "04:30"
+          "timeEnd": "04:30",
+          "id": 2
         },
         {
-          "timeBegin": "12-03-2024 8:30",
+          "date": "12-03-2024",
+          "timeBegin": "8:30",
           "description": "Điều trị chuyên sâu về da liễu",
-          "timeEnd": "14:30"
+          "timeEnd": "14:30",
+          "id": 3
         }
       ]
     },
@@ -683,32 +724,40 @@
           "dateInterval": "20-08-1988-12-07-1996",
           "university": "Trường đại học y dược TP HCM",
           "major": "Y đa khoa",
-          "degree": "Thạc sĩ"
+          "degree": "Thạc sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "12-12-1985",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "khoa ngoại",
       "schedule": [
         {
-          "timeBegin": "02-03-2024 09:00",
+          "timeBegin": "09:00",
           "description": "Phẫu thuật nội soi viêm ruột thừa",
-          "timeEnd": "04:00"
+          "timeEnd": "04:00",
+          "id": 1,
+          "date": "02-03-2024"
         },
         {
-          "timeBegin": "12-03-2024 10:30",
+          "timeBegin": "10:30",
           "description": "Phẫu thuật cắt túi sỏi mật",
-          "timeEnd": "14:30"
+          "timeEnd": "14:30",
+          "id": 2,
+          "date": "12-03-2024"
         },
         {
-          "timeBegin": "21-03-2024 10:30",
+          "timeBegin": "10:30",
           "description": "Nội soi bao tử",
-          "timeEnd": "23:30"
+          "timeEnd": "23:30",
+          "id": 3,
+          "date": "21-03-2024"
         }
       ]
     },
@@ -728,32 +777,40 @@
           "dateInterval": "01-08-2004-08-02-2012",
           "university": "Trường đại học Phạm Ngọc Thạch TP HCM",
           "major": "Răng hàm mặt",
-          "degree": "Thạc sĩ"
+          "degree": "Thạc sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "02-08-2013",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "khoa răng hàm mặt",
       "schedule": [
         {
-          "timeBegin": "15-03-2024 08:30",
+          "timeBegin": "08:30",
           "description": "Khám bệnh và tư vấn trồn răng",
-          "timeEnd": "17:30"
+          "timeEnd": "17:30",
+          "id": 1,
+          "date": "15-03-2024"
         },
         {
-          "timeBegin": "27-03-2024 11:30",
+          "timeBegin": "11:30",
           "description": "Trồng răng implant",
-          "timeEnd": "Invalid date"
+          "timeEnd": "Invalid date",
+          "id": 2,
+          "date": "27-03-2024"
         },
         {
-          "timeBegin": "29-03-2024 11:30",
+          "timeBegin": "11:30",
           "description": "Trồng răng sứ",
-          "timeEnd": "Invalid date"
+          "timeEnd": "Invalid date",
+          "id": 3,
+          "date": "29-03-2024"
         }
       ]
     },
@@ -773,32 +830,40 @@
           "dateInterval": "10-08-1990-20-07-1997",
           "university": "Trường đại học Y dược TP HCM",
           "major": "Kĩ thuật xét nghiệm y học",
-          "degree": "Thạc sĩ"
+          "degree": "Thạc sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "02-09-2000",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "khoa Xét nghiệm",
       "schedule": [
         {
-          "timeBegin": "19-03-2024 09:00",
+          "timeBegin": "09:00",
           "description": "Xét nghiệm huyết học tế bào",
-          "timeEnd": "21:00"
+          "timeEnd": "21:00",
+          "id": 1,
+          "date": "19-03-2024"
         },
         {
-          "timeBegin": "22-03-2024 8:30",
+          "timeBegin": "8:30",
           "description": "Xét nghiệm sinh hóa đường",
-          "timeEnd": "00:30"
+          "timeEnd": "00:30",
+          "id": 2,
+          "date": "22-03-2024"
         },
         {
-          "timeBegin": "29-03-2024 8:30",
+          "timeBegin": "8:30",
           "description": "Xét nghiệm máu",
-          "timeEnd": "Invalid date"
+          "timeEnd": "Invalid date",
+          "id": 3,
+          "date": "29-03-2024"
         }
       ]
     },
@@ -818,37 +883,46 @@
           "dateInterval": "02-08-1984-18-07-1990",
           "university": "Trường đại học Y Dược Thai Nguyên",
           "major": "Hộ sinh",
-          "degree": "Thạc sĩ"
+          "degree": "Thạc sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "12-8-1991",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         },
         {
           "title": "Bác sĩ cao cấp (hạng I)",
           "date": "12-8-1996",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 2
         }
       ],
       "specialty": "khoa sản",
       "schedule": [
         {
-          "timeBegin": "19-03-2024 09:00",
+          "timeBegin": "09:00",
           "description": "Chăm sóc thai nghén",
-          "timeEnd": "21:00"
+          "timeEnd": "21:00",
+          "id": 1,
+          "date": "19-03-2024"
         },
         {
-          "timeBegin": "22-03-2024 11:30",
+          "timeBegin": "11:30",
           "description": "Chăm sóc khám thai định kì",
-          "timeEnd": "00:30"
+          "timeEnd": "00:30",
+          "id": 2,
+          "date": "22-03-2024"
         },
         {
-          "timeBegin": "29-04-2024 11:30",
+          "timeBegin": "11:30",
           "description": "Chăm sóc khám thai định kì",
-          "timeEnd": "Invalid date"
+          "timeEnd": "Invalid date",
+          "id": 3,
+          "date": "29-04-2024"
         }
       ]
     },
@@ -868,32 +942,40 @@
           "dateInterval": "15-04-1999-29-08-2007",
           "university": "Trường Y khoa Hà Nội",
           "major": "Y học cổ truyền",
-          "degree": "Tiến sĩ"
+          "degree": "Tiến sĩ",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "date": "02-09-2008",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "khoa Y học cổ truyền",
       "schedule": [
         {
-          "timeBegin": "19-02-2024 10:00",
+          "timeBegin": "10:00",
           "description": "Châm cứu tứ chi",
-          "timeEnd": "21:00"
+          "timeEnd": "21:00",
+          "id": 1,
+          "date": "19-02-2024"
         },
         {
-          "timeBegin": "12-03-2024 10:30",
+          "timeBegin": "10:30",
           "description": "Hồi phục sau chấn thương",
-          "timeEnd": "14:30"
+          "timeEnd": "14:30",
+          "id": 2,
+          "date": "12-03-2024"
         },
         {
-          "timeBegin": "12-04-2024 10:30",
+          "timeBegin": "10:30",
           "description": "Khám và điều trị",
-          "timeEnd": "14:30"
+          "timeEnd": "14:30",
+          "id": 3,
+          "date": "12-04-2024"
         }
       ]
     },
@@ -912,14 +994,16 @@
         {
           "dateInterval": "20-08-1988-12-07-1994",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi"
+          "major": "Khoa Nhi",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Hộ Sinh",
@@ -928,19 +1012,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -959,14 +1046,16 @@
         {
           "dateInterval": "20-08-1997-12-07-2006",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Điều dưỡng",
@@ -975,19 +1064,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1006,14 +1098,16 @@
         {
           "dateInterval": "20-08-1979-12-07-1985",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Gây mê hồi sức",
@@ -1022,19 +1116,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1053,14 +1150,16 @@
         {
           "dateInterval": "20-08-2007-12-07-2015",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi"
+          "major": "Khoa Nhi",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Hộ Sinh",
@@ -1069,19 +1168,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1100,14 +1202,16 @@
         {
           "dateInterval": "20-08-2013-12-07-2018",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Điều dưỡng",
@@ -1116,19 +1220,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1147,14 +1254,16 @@
         {
           "dateInterval": "20-08-2010-12-07-2018",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Gây mê hồi sức",
@@ -1163,19 +1272,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1194,14 +1306,16 @@
         {
           "dateInterval": "20-08-2009-12-07-2015",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi"
+          "major": "Khoa Nhi",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Hộ sinh",
@@ -1210,19 +1324,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1241,14 +1358,16 @@
         {
           "dateInterval": "20-08-2012-12-07-2017",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Điều dưỡng",
@@ -1257,19 +1376,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1288,14 +1410,16 @@
         {
           "dateInterval": "20-08-2004-12-07-2009",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Gây mê hồi sức",
@@ -1304,19 +1428,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1335,14 +1462,16 @@
         {
           "dateInterval": "20-08-1992-12-07-2000",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi"
+          "major": "Khoa Nhi",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Hộ sinh",
@@ -1351,19 +1480,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1382,14 +1514,16 @@
         {
           "dateInterval": "20-08-1988-12-07-1994",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi"
+          "major": "Khoa Nhi",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Hộ Sinh",
@@ -1398,19 +1532,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1429,14 +1566,16 @@
         {
           "dateInterval": "20-08-1997-12-07-2006",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Điều dưỡng",
@@ -1445,19 +1584,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1476,14 +1618,16 @@
         {
           "dateInterval": "20-08-1979-12-07-1985",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Gây mê hồi sức",
@@ -1492,19 +1636,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1523,14 +1670,16 @@
         {
           "dateInterval": "20-08-2007-12-07-2015",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi"
+          "major": "Khoa Nhi",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Hộ Sinh",
@@ -1539,19 +1688,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1570,14 +1722,16 @@
         {
           "dateInterval": "20-08-2013-12-07-2018",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Điều dưỡng",
@@ -1586,19 +1740,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1617,14 +1774,16 @@
         {
           "dateInterval": "20-08-2010-12-07-2018",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Gây mê hồi sức",
@@ -1633,19 +1792,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1664,14 +1826,16 @@
         {
           "dateInterval": "20-08-2009-12-07-2015",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi"
+          "major": "Khoa Nhi",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Hộ sinh",
@@ -1680,19 +1844,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1711,14 +1878,16 @@
         {
           "dateInterval": "20-08-2012-12-07-2017",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Điều dưỡng",
@@ -1727,19 +1896,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1758,14 +1930,16 @@
         {
           "dateInterval": "20-08-2004-12-07-2009",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng"
+          "major": "Điều dưỡng",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Gây mê hồi sức",
@@ -1774,19 +1948,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     },
@@ -1805,14 +1982,16 @@
         {
           "dateInterval": "20-08-1992-12-07-2000",
           "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi"
+          "major": "Khoa Nhi",
+          "id": 1
         }
       ],
       "cert": [
         {
           "title": "Chứng chỉ hành nghề",
           "Date": "1-10-2018",
-          "organization": "Bộ y tế"
+          "organization": "Bộ y tế",
+          "id": 1
         }
       ],
       "specialty": "Hộ sinh",
@@ -1821,19 +2000,22 @@
           "date": "22-03-2024",
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00"
+          "timeEnd": "11:00",
+          "id": 1
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 2
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
-          "timeEnd": "12:30"
+          "timeEnd": "12:30",
+          "id": 3
         }
       ]
     }
