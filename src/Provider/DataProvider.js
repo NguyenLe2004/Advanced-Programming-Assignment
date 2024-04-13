@@ -1,21 +1,25 @@
 import React, { createContext, useState } from 'react'
 const dataPatientContext = createContext();
-const dataSpecialistContext = createContext();
-
+const dataMedicalStaffContext = createContext();
+const specialtyContext = createContext()
 const DataProvider = ({children}) => {
     const [dataPatient,setDataPatient] = useState([]);
-    const [dataSpecialist, setDataSpecialist] = useState([]);
+    const [dataMedicalStaff, setDataMedicalStaff] = useState([]);
+    const [specialty, setSpecialty] = useState([  "Tim mạch","Sản","Não","Tiêu hoá","Hô Hấp","Tâm thần"])
   return (
     <dataPatientContext.Provider value={{dataPatient,setDataPatient}} >
-      <dataSpecialistContext.Provider value={{dataSpecialist,setDataSpecialist}}>
+      <dataMedicalStaffContext.Provider value={{dataMedicalStaff,setDataMedicalStaff}}>
+        <specialtyContext.Provider value={{specialty,setSpecialty}} >
         {children}
-      </dataSpecialistContext.Provider>
+        </specialtyContext.Provider>
+      </dataMedicalStaffContext.Provider>
     </dataPatientContext.Provider>
   )
 }
 
 export {
     dataPatientContext,
-    dataSpecialistContext,
+    dataMedicalStaffContext,
+    specialtyContext,
     DataProvider
 }

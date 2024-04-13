@@ -8,10 +8,6 @@ import axios  from 'axios';
 import "./AddPatientMedInfoForm.css"
 const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
     const [validated, setValidated] = useState(false);
-    const [specialty, setSpecialty] = useState("");
-    const [position, setPosition] = useState("");
-    const [medStaffID, setMedStaffID] = useState(0);
-    const [medStaffData, setMedStaffData] = useState([]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -19,7 +15,6 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
-            console.log("med ",medStaffID)
             const data= {
                 ...personalInfo,
                 height: form.elements.height.value,
@@ -28,7 +23,6 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
                 medHistory : form.elements.medHistory.value,
                 symtoms : form.elements.symtoms.value,
                 diagnosis : form.elements.diagnosis.value,
-                medicalStaffID : medStaffID,
                 treatProcess : []
             }
             try {
@@ -40,20 +34,6 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
         }
         setValidated(true);
         };
-    const handleDisplayMedStaff = () => {
-        let queryStr="";
-        if (specialty!=="") queryStr ="specialty="+specialty;
-        if (position!=="") queryStr += queryStr? "&position="+position :"position="+position;
-        const getMedStaff = async () => {
-            try {
-              const response = await axios.get("http://localhost:3000/MedicalStaff?" + queryStr ) ;
-              setMedStaffData(response.data);
-            } catch (error) {
-              console.log(error); 
-            }
-          };
-        getMedStaff();
-    }
   return (
     <Form style={{padding:"2vh 1vw"}} noValidate validated={validated} onSubmit={handleSubmit}>
     <Row className="mb-3" ><h3>Thông tin y tế</h3></Row>
@@ -73,7 +53,6 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
         </Form.Control.Feedback>
     </InputGroup>
     </Form.Group>
-
     <Form.Group as={Col} md="4" controlId="weight">
     <Form.Label>Cân nặng</Form.Label>
     <InputGroup hasValidation>
@@ -114,6 +93,8 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
             />
 
         </Form.Group>
+        </Row>
+        <Row className="mb-3">
         <Form.Group as={Col}  controlId="symtoms">
             <Form.Label>Triệu chứng bệnh</Form.Label>
             <Form.Control
@@ -133,46 +114,6 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
             defaultValue={"Chưa được chẩn đoán"}
             />
         </Form.Group>
-    </Row>
-    <Row className='mb-3'>
-        <h5>Phân công nhân viên y tế</h5>
-        <Form>
-            <Row className='mb-3'>
-                <Form.Group as={Col} md="3">
-                    <Form.Label>Chuyên khoa</Form.Label>
-                    <Form.Select onChange={(event) => setSpecialty(event.target.value)} >
-                        <option>{""}</option>
-                        <option>Tim mạch</option>
-                        <option>Sản</option>
-                        <option>Não</option>
-                        <option>Tiêu hoá</option>
-                        <option>Hô Hấp</option>
-                        <option>Tâm thần</option>
-                    </Form.Select>
-                </Form.Group>
-                <Form.Group as={Col} md="3">
-                    <Form.Label>Vị trí</Form.Label>
-                    <Form.Select onChange={(event)=>setPosition(event.target.value)} >
-                        <option>{""}</option>
-                        <option>Y tá</option>
-                        <option>Bác sĩ</option>
-                        <option>Nhân viên hỗ trợ</option>
-
-                    </Form.Select>
-                </Form.Group>
-                <Form.Group as={Col} md="5" controlId="diagnosis" required>
-                    <Form.Label>Chọn nhân viên</Form.Label>
-                    <Form.Select required onClick={handleDisplayMedStaff} onChange={(event) => setMedStaffID(event.target.value)}>
-                        <option>{""}</option>
-                        {medStaffData&&
-                         medStaffData.map((obj,index) => {
-                            return <option key={index} value={obj.id} > {obj.name} </option>
-                        })}
-                    </Form.Select>
-                </Form.Group>
-            </Row>
-        </Form>
-
     </Row>
     <Button onClick={() => setIsSlide(false)}> Quay lại</Button>
     <Button style={{position:"absolute",left:'75%',transform:"translateX(-50%)"}} type="submit" > Thêm bệnh nhân</Button>

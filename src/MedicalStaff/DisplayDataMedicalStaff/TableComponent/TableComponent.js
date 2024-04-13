@@ -6,11 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "./TableComponent.css";
 
-const TableComponent = ({dataSpecialistDisplay,setDataSpecialistDisplay}) => {
+const TableComponent = ({dataMedicalStaffDisplay,setDataMedicalStaffDisplay}) => {
   const rowsPerPage = 9;
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPage, setTotalPage] = useState(Object.keys(dataSpecialistDisplay).length / rowsPerPage);
+  const [totalPage, setTotalPage] = useState(Object.keys(dataMedicalStaffDisplay).length / rowsPerPage);
   const [currentID,setCurrentID] = useState("");
   const [sortColumn, setSortColumn] = useState("");
   const [sortDirect, setSortDirect] = useState("desc");
@@ -32,11 +32,11 @@ const TableComponent = ({dataSpecialistDisplay,setDataSpecialistDisplay}) => {
     }
   };
 
-  const getSpecialistStatusClass = (status) => {
+  const getMedicalStaffStatusClass = (status) => {
     switch (status) {
-      case "Đang điều trị" : 
+      case "Đang làm việc" : 
         return "treating";
-      case "Hoàn thành điều trị" :
+      case "Sẵn sàng" :
         return "complete-treat";
       default :
         return "no-treat"
@@ -46,7 +46,6 @@ const TableComponent = ({dataSpecialistDisplay,setDataSpecialistDisplay}) => {
 
 
   const  handleClickRow = (id) => {
-    console.log("here" , id)
     setCurrentID(id);
     handleShow();
   }
@@ -61,22 +60,25 @@ const TableComponent = ({dataSpecialistDisplay,setDataSpecialistDisplay}) => {
   }
 
   useEffect(() => {
-    if (!dataSpecialistDisplay || !sortColumn) {
+    if (!dataMedicalStaffDisplay || !sortColumn) {
       return;
     }
-    const arr = Object.entries(dataSpecialistDisplay);
+    const arr = Object.entries(dataMedicalStaffDisplay);
     arr.sort((a, b) => {
       const sortValueA = a[1][sortColumn];
       const sortValueB = b[1][sortColumn];
+      if (sortColumn === "age") {
+        return sortDirect === "desc" ?sortValueB - sortValueA: sortValueA - sortValueB
+      }
       return sortDirect === "desc" ? sortValueB.localeCompare(sortValueA) : sortValueA.localeCompare(sortValueB);
     });
     console.log("sorted arr" , arr);
-    console.log(dataSpecialistDisplay)
+    console.log(dataMedicalStaffDisplay)
     let sortedArr = [];
     arr.forEach(item => {
       sortedArr.push(item[1]);
     })
-    setDataSpecialistDisplay(sortedArr);
+    setDataMedicalStaffDisplay(sortedArr);
   }, [sortColumn, sortDirect]);
 
   useEffect(() => {
@@ -85,21 +87,21 @@ const TableComponent = ({dataSpecialistDisplay,setDataSpecialistDisplay}) => {
 
   const startIndex = (currentPage - 1) * rowsPerPage;
   const endIndex = currentPage * rowsPerPage;
-  const currentPageDataSpecialist = dataSpecialistDisplay.slice(startIndex,endIndex);
+  const currentPageDataMedicalStaff = dataMedicalStaffDisplay.slice(startIndex,endIndex);
   return (
     <div>
-      <DisplayMoreInfo show = {show} handleClose = {handleClose} dataMoreInfo = {dataSpecialistDisplay[currentID]} />
+      <DisplayMoreInfo show = {show} handleClose = {handleClose} dataMoreInfo = {dataMedicalStaffDisplay[currentID]} />
       <div className='outer-table'>
         <table>
           <thead>
             <tr>
               <th>ID </th>
-              <th className='sort-col'  onClick={() => handleSort('lastMidleName')}>
+              <th className='sort-col'  onClick={() => handleSort('lastMiddleName')}>
                 <span>Họ và tên đệm</span>
                 <span className='sort-icon'>
                   <FontAwesomeIcon
                       icon={
-                        sortColumn === 'lastMidleName'
+                        sortColumn === 'lastMiddleName'
                           ? sortDirect === 'asc'
                             ? faSortUp
                             : faSortDown
@@ -149,27 +151,37 @@ const TableComponent = ({dataSpecialistDisplay,setDataSpecialistDisplay}) => {
                     />
               </span>
               </th>
-              <th>Chẩn đoán</th>
+              <th>Chuyên khoa</th>
 
               <th className='sort-col' onClick={() => handleSort('status')} >
                 <span>Trạng thái</span>
-                <span className='sort-icon'><FontAwesomeIcon icon={faSort} /></span>
+                <span className='sort-icon'>
+                <FontAwesomeIcon
+                      icon={
+                        sortColumn === 'status'
+                          ? sortDirect === 'asc'
+                            ? faSortUp
+                            : faSortDown
+                          : faSort
+                      }
+                    />
+              </span>
               </th>
             </tr>
           </thead>
           <tbody>
-            {currentPageDataSpecialist.map((obj,index) => (
+            {currentPageDataMedicalStaff.map((obj,index) => (
               <tr key={obj.citizenID} onClick={() => handleClickRow(
                 currentPage > 1 ? index + rowsPerPage*(currentPage-1) : index
               )} >
-                <td className='Specialist-id'>{obj.citizenID}</td>
-                <td className='Specialist-name'>{obj.lastMidleName}</td>
+                <td className='MedicalStaff-id'>{obj.citizenID}</td>
+                <td className='MedicalStaff-name'>{obj.lastMiddleName}</td>
                 <td >{obj.firstName}</td>
                 <td>{obj.gender}</td>
                 <td>{obj.age}</td>
-                <td>{obj.diagnosis}</td>
+                <td>{obj.specialty}</td>
                 <td className='status-block' >
-                  <div className={`status ${getSpecialistStatusClass(obj.status)}`}>
+                  <div className={`status ${getMedicalStaffStatusClass(obj.status)}`}>
                     {obj.status}
                   </div>
                 </td>

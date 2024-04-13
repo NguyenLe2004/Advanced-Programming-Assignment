@@ -2,17 +2,16 @@ import React, { useState, useRef,useEffect, useContext} from 'react';
 import Alert from 'react-bootstrap/Alert';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
-import "./DisplayDataSpecialist.css"
+import "./DisplayDataMedicalStaff.css"
 import TableComponent from './TableComponent/TableComponent';
-// import StatusStat from './StatusStat/StatusStat';
+import StatusStat from './StatusStat/StatusStat';
 
-const DisplayDataSpecialist = ({dataSpecialist}) => {
-  const [dataSpecialistDisplay, setDataSpecialistDisplay] = useState("");
+const DisplayDataMedicalStaff = ({dataMedicalStaff,position}) => {
+  const [dataMedicalStaffDisplay, setDataMedicalStaffDisplay] = useState("");
   const [isClicked, setIsClicked] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [searchError, setSearchError] = useState("");
   const searchBlockRef = useRef(null);
-  console.log(dataSpecialist)
   const handleIconClick = () => {
     setIsClicked(true);
     submitSearch();
@@ -32,13 +31,13 @@ const DisplayDataSpecialist = ({dataSpecialist}) => {
   const submitSearch = () => {
     hideError();
     if (inputValue === ""){
-      setDataSpecialistDisplay(dataSpecialist);
+      setDataMedicalStaffDisplay(dataMedicalStaff);
       return;
     }
     if (inputValue.length === 12 && /^\d+$/.test(inputValue)) {
-      const searchID = Object.keys(dataSpecialist).find(key => dataSpecialist[key].citizenID == inputValue);
+      const searchID = Object.keys(dataMedicalStaff).find(key => dataMedicalStaff[key].citizenID == inputValue);
       if (searchID) {
-        setDataSpecialistDisplay({[searchID] : dataSpecialist[searchID]});
+        setDataMedicalStaffDisplay({[searchID] : dataMedicalStaff[searchID]});
       }
       else{
         setInputValue("");
@@ -62,12 +61,12 @@ const DisplayDataSpecialist = ({dataSpecialist}) => {
   }, []);
 
   useEffect(() => {
-    setDataSpecialistDisplay(dataSpecialist);
-  },[dataSpecialist]);
+    setDataMedicalStaffDisplay(dataMedicalStaff);
+  },[dataMedicalStaff]);
 
   return (
         <div className='main-page'>
-          {/* <StatusStat treatProcess = {Object.values(dataSpecialist).map(Specialist =>  Specialist.treatProcess)}/> */}
+          <StatusStat schedule = {Object.values(dataMedicalStaff).map(MedicalStaff =>  MedicalStaff.schedule)} position={position}/>
             <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
               <input 
                 placeholder='Nhập số căn cước công dân' 
@@ -88,8 +87,8 @@ const DisplayDataSpecialist = ({dataSpecialist}) => {
           {searchError}
         </Alert>
         )}
-        {Object.keys(dataSpecialistDisplay).length !== 0 ? (
-            <TableComponent dataSpecialistDisplay = {dataSpecialistDisplay} setDataSpecialistDisplay={setDataSpecialistDisplay}  />
+        {Object.keys(dataMedicalStaffDisplay).length !== 0 ? (
+            <TableComponent dataMedicalStaffDisplay = {dataMedicalStaffDisplay} setDataMedicalStaffDisplay={setDataMedicalStaffDisplay}  />
           ):(
             <div> NO DATA AVAILABLE </div>
           )}
@@ -99,4 +98,4 @@ const DisplayDataSpecialist = ({dataSpecialist}) => {
   );
 };
 
-export default DisplayDataSpecialist;
+export default DisplayDataMedicalStaff;

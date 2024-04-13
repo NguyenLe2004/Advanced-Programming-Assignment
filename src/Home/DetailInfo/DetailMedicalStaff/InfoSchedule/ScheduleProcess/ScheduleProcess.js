@@ -7,8 +7,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { faKitMedical,faMicroscope, faPen, faXmark} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "./TreatProcess.css"
-const TreatProcess = ({patient}) => {
+import "./ScheduleProcess.css"
+const ScheduleProcess = ({medicalStaff}) => {
     const [medStaff, setMedStaff] = useState([]);
     const [isUpdate , setIsUpdate] = useState(null);
     const [validated, setValidated] = useState(false);
@@ -27,7 +27,7 @@ const TreatProcess = ({patient}) => {
       } else{
         const datetimeBegin = moment(dateBegin);
         const datetimeEnd = moment(dateEnd);
-        const newTreatProcess = {
+        const newScheduleProcess = {
           dateBegin: datetimeBegin.format("DD-MM-YYYY"),
           dateEnd:datetimeEnd.format("DD-MM-YYYY"),
           timeBegin:datetimeBegin.format("HH:mm"),
@@ -37,14 +37,13 @@ const TreatProcess = ({patient}) => {
           description: form.elements.description.value,
           medicalStaffID : medStaffID
         }
-        const updateTreatProcessData = [
-          ...patient.treatProcess,
-          newTreatProcess
+        const updateScheduleProcessData = [
+          ...medicalStaff.schedule,
+          newScheduleProcess
         ]
-        console.log(patient.treatProcess)
-        console.log(updateTreatProcessData);
-        const addTreatProcess = async () => {
-            axios.patch("http://localhost:3000/Patient/" + patient.id, {treatProcess : updateTreatProcessData} )
+        console.log(updateScheduleProcessData);
+        const addScheduleProcess = async () => {
+            axios.patch("http://localhost:3000/medicalStaff/" + medicalStaff.id, {schedule : updateScheduleProcessData} )
             .then(response => {
               window.location.reload();
             })
@@ -52,7 +51,7 @@ const TreatProcess = ({patient}) => {
               console.error('Lỗi cập nhật thông tin', error);
             });
         }
-        addTreatProcess();
+        addScheduleProcess();
       }
       setValidated(true);
     };
@@ -91,10 +90,10 @@ const TreatProcess = ({patient}) => {
         getMedStaff();
       }
     useEffect(() => {
-        if(!patient) return;
-        if(!patient.treatProcess) return;
+        if(!medicalStaff) return;
+        if(!medicalStaff.schedule) return;
         const uniqueDoctorIds = new Set();
-        patient.treatProcess.forEach(obj => {
+        medicalStaff.schedule.forEach(obj => {
             uniqueDoctorIds.add(obj.medicalStaffID);
         });
         const queryString = Array.from(uniqueDoctorIds) 
@@ -111,8 +110,8 @@ const TreatProcess = ({patient}) => {
               }
         }
         getMedStaff();
-    },[patient.treatProcess])
-    if (!patient.treatProcess) return;
+    },[medicalStaff.schedule])
+    if (!medicalStaff.schedule) return;
     const getMedStaffByID = (id) => {
         if (!medStaff) return null;
         let medStaffName = null;
@@ -130,32 +129,27 @@ const TreatProcess = ({patient}) => {
     }
   return (
     <div>
-      {patient.treatProcess.map((treatment, index) => (
+      {medicalStaff.schedule.map((schedule, index) => (
         <div className='treat-circle-block'> 
             <div className={`circle circle-${
-              moment(treatment.dateEnd,"DD-MM-YYYY") < moment() ? ( index===0 ? "complete":"complete-task") : "on-going"
+              moment(schedule.dateEnd,"DD-MM-YYYY") < moment() ? ( index===0 ? "complete":"complete-task") : "on-going"
             }`}> 
-            {!treatment.title.includes("Xét nghiệm") ? (
-              <FontAwesomeIcon className='icon' icon={faKitMedical} />
-            ):(
               <FontAwesomeIcon className='icon' icon={faMicroscope} />
-            ) }
             </div>
             <div key={index} className='treat-block'>
               <div className={`icon-in-treatform ${index === isUpdate? "close":null}`}><FontAwesomeIcon icon={index === isUpdate? faXmark:faPen} onClick={() => setIsUpdate(isUpdate === index ? null : index)}/> </div>
               {!(index===isUpdate) ? (
                 <div> 
                   <div className='room-date'> 
-                    <div className='date'>{treatment.dateBegin.split('-').join('/')} {treatment.timeBegin}  -  {treatment.dateEnd.split('-').join('/')} {treatment.timeEnd}</div>
-                    <div className='room'>{treatment.room}</div> 
+                    <div className='date'>{schedule.date.split('-').join('/')} {schedule.timeBegin}  -  {schedule.timeEnd}</div>
                   </div>
-                  <div className='title'>{treatment.title}</div>
+                  <div className='title'>{schedule.title}</div>
                   <div className='specialist'>
-                    <span>{getMedStaffByID(treatment.medicalStaffID).medStaffPosition +": "}</span> 
-                    <span><a href={`/MedicalStaff/${treatment.medicalStaffID}`}>{getMedStaffByID(treatment.medicalStaffID).medStaffName}</a></span>
+                    <span>{getMedStaffByID(schedule.medicalStaffID).medStaffPosition +": "}</span> 
+                    <span><a href={`/MedicalStaff/${schedule.medicalStaffID}`}>{getMedStaffByID(schedule.medicalStaffID).medStaffName}</a></span>
                   </div>
                   <div> 
-                    <div className='description'> {treatment.description} </div>
+                    <div className='description'> {schedule.description} </div>
                   </div>
                 </div>
               ):(
@@ -168,7 +162,7 @@ const TreatProcess = ({patient}) => {
                         required
                         onChange={(event) => setDateBegin(event.target.value)}
                         type="datetime-local"
-                        defaultValue={moment(treatment.dateBegin + " " + treatment.timeBegin,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
+                        defaultValue={moment(schedule.dateBegin + " " + schedule.timeBegin,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
                     </Form.Group> 
                     <Form.Group as={Col} md="4" controlId="dateEnd">
@@ -177,7 +171,7 @@ const TreatProcess = ({patient}) => {
                         required 
                         type="datetime-local"
                         onChange={(event) => setDateEnd(event.target.value)}
-                        defaultValue={moment(treatment.dateEnd + " " + treatment.timeEnd,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
+                        defaultValue={moment(schedule.dateEnd + " " + schedule.timeEnd,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="room">
@@ -186,7 +180,7 @@ const TreatProcess = ({patient}) => {
                           type="text"
                           placeholder="Phòng"
                           aria-describedby="inputGroupPrepend"
-                          defaultValue={treatment.room}
+                          defaultValue={schedule.room}
                           required
                         />
                     </Form.Group>
@@ -198,19 +192,19 @@ const TreatProcess = ({patient}) => {
                         <Form.Control
                          type="text"
                           placeholder="Điều trị"
-                          defaultValue={treatment.title}
+                          defaultValue={schedule.title}
                          required />
                         <Form.Control.Feedback type="invalid">
                           Please provide a valid city.
                         </Form.Control.Feedback>
                       </Form.Group>
                       <Form.Group as={Col} md="3" controlId="room">
-                      <Form.Label>{getMedStaffByID(treatment.medicalStaffID).medStaffPosition}</Form.Label>
+                      <Form.Label>{getMedStaffByID(schedule.medicalStaffID).medStaffPosition}</Form.Label>
                         <Form.Control
                           type="text"
                           placeholder="Phòng"
                           aria-describedby="inputGroupPrepend"
-                          defaultValue={getMedStaffByID(treatment.medicalStaffID).medStaffName}
+                          defaultValue={getMedStaffByID(schedule.medicalStaffID).medStaffName}
                           disabled
                         />
                     </Form.Group>
@@ -221,7 +215,7 @@ const TreatProcess = ({patient}) => {
                         <Form.Control 
                         type="text" 
                         placeholder="Mô tả" 
-                        defaultValue={treatment.description} 
+                        defaultValue={schedule.description} 
                         required />
                         <Form.Control.Feedback type="invalid">
                           Please provide a valid city.
@@ -232,7 +226,7 @@ const TreatProcess = ({patient}) => {
                   <Row className="mb-3">
                     <Form.Group as={Col} md={4} controlId="specialty">
                         <Form.Label>Chuyên khoa</Form.Label>
-                        <Form.Select onChange={(event) => setSpecialty(event.target.value)} defaultValue={treatment.specialty} >
+                        <Form.Select onChange={(event) => setSpecialty(event.target.value)} defaultValue={schedule.specialty} >
                           <option>{""}</option>
                           <option>Tim mạch</option>
                           <option>Sản</option>
@@ -247,7 +241,7 @@ const TreatProcess = ({patient}) => {
                       </Form.Group>
                       <Form.Group as={Col} md={4} controlId="position">
                         <Form.Label>Vị trí</Form.Label>
-                        <Form.Select onChange={(event) => setPosition(event.target.value)} defaultValue={treatment.position} >
+                        <Form.Select onChange={(event) => setPosition(event.target.value)} defaultValue={schedule.position} >
                           <option>{""}</option>
                           <option>Y tá</option>
                           <option>Bác sĩ</option>
@@ -287,4 +281,4 @@ const TreatProcess = ({patient}) => {
   )
 }
 
-export default TreatProcess;
+export default ScheduleProcess;

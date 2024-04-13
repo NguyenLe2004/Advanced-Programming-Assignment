@@ -19,6 +19,7 @@ const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
             gender: form.elements.gender.value,
             phoneNum: form.elements.phoneNum.value,
             email: form.elements.email.value,
+            job: form.elements.job.value,
             citizenID: form.elements.citizenID.value,
             dateOfBirth: form.elements.dateOfBirth.value,
             address: form.elements.address.value,
@@ -81,16 +82,23 @@ const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
     </Form.Group>
     </Row>
     <Row className='mb-3' >
-        <Form.Group as={Col} md="6" controlId = "phoneNum">
+        <Form.Group as={Col} md="4" controlId = "phoneNum">
             <Form.Label>Số điện thoại</Form.Label>
-            <Form.Control type="text" placeholder="Số điện thoại" required />
+            <Form.Control type="tel" placeholder="Số điện thoại" required />
             <Form.Control.Feedback type="invalid">
             Please provide a valid city.
             </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="6" controlId = "email">
+        <Form.Group as={Col} md="4" controlId = "email">
             <Form.Label>Email</Form.Label>
             <Form.Control type="email" placeholder="Email" required />
+            <Form.Control.Feedback type="invalid">
+            Please provide a valid city.
+            </Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group as={Col} md="4" controlId = "job">
+            <Form.Label>Nghề nghiệp</Form.Label>
+            <Form.Control type="text" placeholder="Nghề nghiệm" required />
             <Form.Control.Feedback type="invalid">
             Please provide a valid city.
             </Form.Control.Feedback>

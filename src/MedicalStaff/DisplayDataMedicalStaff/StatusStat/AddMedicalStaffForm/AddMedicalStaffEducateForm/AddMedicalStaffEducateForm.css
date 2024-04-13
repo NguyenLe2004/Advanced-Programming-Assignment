@@ -1,0 +1,7 @@
+.icon-xmark-educate{
+    margin-left: 10px;
+}
+.icon-xmark-educate:hover{
+    cursor: pointer;
+    color: gray;
+}

@@ -1,0 +1,38 @@
+.medicalStaff-info{
+    margin-top: 2vh;
+}
+.medicalStaff-label{
+    padding-left: 2vw;
+}
+.medicalStaff-value {
+    padding-right: 2vw;
+}
+.medicalStaff-img{
+    width: 40%;
+}
+.all-status{
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+}
+.status-on-going{
+    background-color: rgb(253,167,40,0.3);
+    color: rgb(214, 129, 2);
+}
+.status-not{
+    background-color: rgb(237,81,80,0.3);
+    color: rgb(237,81,80);
+}
+.status-complete{
+    background-color: #48b3ff4d;
+    color: rgb(0, 149, 255);
+}
+.medicalStaff-value{
+    color: rgb(74, 74, 74);
+}

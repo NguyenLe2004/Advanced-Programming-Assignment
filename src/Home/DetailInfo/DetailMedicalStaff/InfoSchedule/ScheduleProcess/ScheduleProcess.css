@@ -1,0 +1,92 @@
+.treat-block{
+    /* margin-left: 3vw;
+    margin-top: 5vh; */
+    width: 50vw;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 2vh 1vw;
+    background-color: white;
+    border: 3px rgb(0, 136, 255,0.5) solid ;
+}
+.circle{
+    position: relative;
+    top: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px rgb(0, 136, 255,0.5) solid;
+    background-color: white;
+}
+.treat-circle-block{
+    margin-top: 3vh;
+    display:flex;
+    position: relative;
+    align-items:center;
+}
+.treat-circle-block:first-child{
+    margin-top: 0;
+}
+.room-date{
+    display: flex;
+}
+.room-date div{
+    width: fit-content;
+    font-weight: bold;
+    border-radius: 100px;
+    padding:5px 5px 5px 5px;
+    height: fit-content;
+    width: fit-content;
+    border: 3px rgb(128, 128, 128,0.5) solid ;
+    color: rgb(128, 128, 128);
+}
+.room-date .room{
+    margin-left: 2vw;
+}
+.treat-circle-block .title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.treat-circle-block .icon{
+    color: rgb(97, 97, 97);
+    position: relative;
+    font-size: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.treat-circle-block  .specialist{
+    font-size: 15px;
+}
+.treat-circle-block  .specialist a{
+    font-size: 15px;
+}
+.specialist, .title, .description {
+    margin-top: 1vh;
+}
+.circle-complete{
+    background-color: rgb(164, 213, 255);
+}
+.circle-on-going{
+    background-color: rgb(255, 226, 98);;
+}
+.circle-complete-task{
+    background-color: rgb(173, 255, 173)
+}
+.icon-in-treatform{
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    font-size: 20px;
+}
+.icon-in-treatform:hover{
+    cursor: pointer;
+    color: gray;
+}
+.close{
+    font-size: 25px;
+    color: rgb(255, 66, 66);
+}
+.close:hover{
+    color: rgb(255, 166, 166);
+}

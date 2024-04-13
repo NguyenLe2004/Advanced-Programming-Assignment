@@ -1,7 +1,38 @@
 import React, { useState } from 'react'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import axios from 'axios'
 import "./MedInfoBlock.css"
-import { Container,Row, Col, Button } from 'react-bootstrap'
+import { Container,Row, Col, Button,Form, InputGroup } from 'react-bootstrap'
 const MedInfoBlock = ({patient}) => {
+    const [isUpdate, setIsUpdate] = useState(false)
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit =  (event) => {
+      const form = event.currentTarget;
+      event.preventDefault();
+      if (form.checkValidity() === false) {
+        event.stopPropagation();
+      } else{
+        const updateData = {
+            height:form.elements.height,
+            weight:form.elements.weight,
+            bloodType:form.elements.bloodType,
+            medHistory:form.elements.medHistory,
+            symtoms:form.elements.symtoms,
+            diagnosis:form.elements.diagnosis,
+        }
+        axios.patch("http://localhost:3000/Patient/" + patient.id,updateData)
+            .then((response) => {
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error(error);
+            })
+      } 
+  
+      setValidated(true);
+    };
     const handleScroll = () => {
         window.scrollTo({
             top: window.innerHeight,
@@ -11,14 +42,16 @@ const MedInfoBlock = ({patient}) => {
   return (
     <div>
         <div className='med-info-block' >
+        <div className='pen-to-square-icon-med' ><FontAwesomeIcon icon={faPenToSquare} style={{position:"relative"}} onClick={() => setIsUpdate((prevState) => !prevState)} /></div>
         <h3 className='title-med-info'>Thông tin y tế</h3>
+        {!isUpdate ? (
         <Container >
             <Row className='mb-3'>
                 <Col md='4'>
                     Chiều cao:
                 </Col>
                 <Col>
-                    {patient.height}
+                    {patient.height} cm
                 </Col>
             </Row>
             <Row className='mb-3'>
@@ -26,7 +59,7 @@ const MedInfoBlock = ({patient}) => {
                     Cân nặng:
                 </Col>
                 <Col>
-                    {patient.weight}
+                    {patient.weight} kg
                 </Col>
             </Row>
             <Row className='mb-3'>
@@ -61,11 +94,95 @@ const MedInfoBlock = ({patient}) => {
                     {patient.diagnosis}
                 </Col>
             </Row>
-        </Container>
-        <Button style={{marginLeft:"50%",transform:"translateX(-50%)"}} onClick={handleScroll}>Xem tiến trình điều trị</Button>
+        </Container> 
+        ):(
+            <Form noValidate validated={validated} onSubmit={handleSubmit} >
+                <Row className="mb-3">
+                    <Form.Group as={Col} md="4" controlId="height">
+                    <Form.Label>Chiều cao</Form.Label>
+                    <InputGroup hasValidation>
+                        <Form.Control
+                        type="text"
+                        placeholder="Chiều cao"
+                        aria-describedby="inputGroupPrepend"
+                        defaultValue={patient.height}
+                        required
+                        />
+                        <Form.Control.Feedback type="invalid">
+                        Please choose a username.
+                        </Form.Control.Feedback>
+                        <InputGroup.Text id="inputGroupPrepend">cm</InputGroup.Text>
+                    </InputGroup>
+                    
+                    </Form.Group>
+                    <Form.Group as={Col} md="4" controlId="weight">
+                    <Form.Label> Cân nặng</Form.Label>
+                    <InputGroup hasValidation>
+                        <Form.Control
+                        type="text"
+                        placeholder="Cân nặng"
+                        aria-describedby="inputGroupPrepend"
+                        defaultValue={patient.weight}
+                        required
+                        />
+                        <Form.Control.Feedback type="invalid">
+                        Please choose a username.
+                        </Form.Control.Feedback>
+                        <InputGroup.Text id="inputGroupPrepend">kg</InputGroup.Text>
+                    </InputGroup>
+                    </Form.Group>
+                    <Form.Group as={Col} md="4" controlId="bloodType">
+                    <Form.Label>Nhóm máu</Form.Label>
+                    <Form.Select required defaultValue={patient.bloodType}>
+                        <option>{""}</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>AB</option>
+                        <option>O</option>
+                        <option>Chưa rõ </option>
+                    </Form.Select>
+                    <Form.Control.Feedback type="invalid">
+                    Please provide a valid city.
+                    </Form.Control.Feedback>
+                </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <Form.Group controlId="validationCustom03">
+                    <Form.Label>Lịch sử bệnh án</Form.Label>
+                    <Form.Control type="text" placeholder="Lịch sử bệnh án" defaultValue={patient.medHistory} required />
+                    <Form.Control.Feedback type="invalid">
+                        Please provide a valid city.
+                    </Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <Form.Group controlId="validationCustom03">
+                    <Form.Label>Triệu chứng bệnh</Form.Label>
+                    <Form.Control type="text" placeholder="Triệu chứng bệnh" defaultValue={patient.symptoms} required />
+                    <Form.Control.Feedback type="invalid">
+                        Please provide a valid city.
+                    </Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <Form.Group controlId="validationCustom03">
+                    <Form.Label>Chẩn đoán</Form.Label>
+                    <Form.Control type="text" placeholder="Chẩn đoán" defaultValue={patient.diagnosis} required />
+                    <Form.Control.Feedback type="invalid">
+                        Please provide a valid city.
+                    </Form.Control.Feedback>
+                    </Form.Group>
+                    
+                </Row>
+                <Button type="submit" style={{marginLeft:"50%",transform:"translateX(-50%)"}}>Submit form</Button>
+                </Form>
+        )}
+        {!isUpdate &&
+            <Button style={{marginLeft:"50%",transform:"translateX(-50%)"}} onClick={handleScroll}>Xem tiến trình điều trị</Button>}
     </div>
     </div>
   )
 }
 
 export default MedInfoBlock
+

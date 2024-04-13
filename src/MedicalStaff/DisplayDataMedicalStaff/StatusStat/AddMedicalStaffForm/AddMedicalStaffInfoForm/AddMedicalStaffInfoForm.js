@@ -1,12 +1,13 @@
-import React,{useState,useRef} from 'react'
+import React,{useState,useContext} from 'react'
+import { specialtyContext } from '../../../../../Provider/DataProvider';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import "./AddPatientInfoForm.css"
-const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
+// import "./AddMedicalStaffInfoForm.css"
+const AddMedicalStaffInfoForm = ({setIsSlide1,setPersonalInfo}) => {
     const [validated, setValidated] = useState(false);
-    
+    const {specialty} = useContext(specialtyContext)
     const handleSubmit  = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -15,6 +16,7 @@ const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
     } else {
         setPersonalInfo({
             lastMidleName: form.elements.lastMidleName.value,
+            specialty : form.elements.specialty.value,
             firstName: form.elements.firstName.value,
             gender: form.elements.gender.value,
             phoneNum: form.elements.phoneNum.value,
@@ -24,7 +26,7 @@ const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
             address: form.elements.address.value,
             hometown: form.elements.hometown.value
         });
-        setIsSlide(true)
+        setIsSlide1(true)
     }
     setValidated(true);
     };
@@ -32,7 +34,7 @@ const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
     <Form style={{padding:"2vh 1vw"}} noValidate validated={validated} onSubmit={handleSubmit}>
     <Row className="mb-3" ><h3>Thông tin cá nhân</h3></Row>
     <Row className="mb-3">
-    <Form.Group as={Col} md="6" controlId="lastMidleName">
+    <Form.Group as={Col} md="5" controlId="lastMidleName">
         <Form.Label>Họ và tên đệm</Form.Label>
         <Form.Control
         required
@@ -40,13 +42,24 @@ const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
         placeholder="Họ và tên đệm"
         />
     </Form.Group>
-    <Form.Group as={Col} md="5" controlId="firstName">
+    <Form.Group as={Col} md="3" controlId="firstName">
         <Form.Label>Tên</Form.Label>
         <Form.Control
         required
         type="text"
         placeholder="Tên"
         />
+    </Form.Group>
+    <Form.Group as={Col} md="4" controlId="specialty">
+        <Form.Label >Chuyên Môn</Form.Label>
+        <Form.Select required >
+            <option>{""}</option>
+            {specialty.map((element, index) => {
+                return (
+                    <option key={index} >{element}</option>
+                )
+            })}
+        </Form.Select>
     </Form.Group>
     </Row>
     <Row className="mb-3">
@@ -83,7 +96,7 @@ const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
     <Row className='mb-3' >
         <Form.Group as={Col} md="6" controlId = "phoneNum">
             <Form.Label>Số điện thoại</Form.Label>
-            <Form.Control type="text" placeholder="Số điện thoại" required />
+            <Form.Control type="tel" placeholder="Số điện thoại" required />
             <Form.Control.Feedback type="invalid">
             Please provide a valid city.
             </Form.Control.Feedback>
@@ -124,4 +137,4 @@ const AddPatientInfoForm = ({setIsSlide,setPersonalInfo}) => {
   )
 }
 
-export default AddPatientInfoForm;
+export default AddMedicalStaffInfoForm;

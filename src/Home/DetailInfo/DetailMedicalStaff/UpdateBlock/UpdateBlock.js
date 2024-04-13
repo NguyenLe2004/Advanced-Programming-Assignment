@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import { InputGroup } from 'react-bootstrap';
 import moment from 'moment';
@@ -6,10 +6,11 @@ import axios from 'axios';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import { specialtyContext } from '../../../../Provider/DataProvider';
 import "./UpdateBlock.css"
-const UpdateBlock = ({patient}) => {
+const UpdateBlock = ({medicalStaff}) => {
     const [validated, setValidated] = useState(false);
-
+    const {specialty} = useContext(specialtyContext)
     const handleSubmit = (event) => {
       const form = event.currentTarget;
       event.preventDefault();
@@ -24,6 +25,7 @@ const UpdateBlock = ({patient}) => {
           height: form.elements.height.value,
           weight: form.elements.weight.value,
           phoneNum: form.elements.phoneNum.value,
+          specialty : form.elements.specialty.value,
           email: form.elements.email.value,
           citizenID: form.elements.citizenID.value,
           dateOfBirth: formatDate(form.elements.dateOfBirth.value),
@@ -31,7 +33,7 @@ const UpdateBlock = ({patient}) => {
           hometown: form.elements.hometown.value
 
         };
-        axios.patch(`http://localhost:3000/patient/${patient.id}`, updatedData)
+        axios.patch(`http://localhost:3000/medicalStaff/${medicalStaff.id}`, updatedData)
         .then(response => {
           console.log('Cập nhật thông tin thành công', response.data);
           window.location.reload();
@@ -59,7 +61,7 @@ const UpdateBlock = ({patient}) => {
             required
             type="text"
             placeholder="Họ và tên đệm"
-            defaultValue={patient.lastMiddleName}
+            defaultValue={medicalStaff.lastMiddleName}
           />
         </Form.Group>
         <Form.Group as={Col} controlId = "firstName"> 
@@ -68,14 +70,14 @@ const UpdateBlock = ({patient}) => {
             required
             type="text"
             placeholder="Tên"
-            defaultValue={patient.firstName}
+            defaultValue={medicalStaff.firstName}
           />
         </Form.Group>
       </Row>
       <Row className="mb-3" >
       <Form.Group as={Col} md ='4'  controlId = "gender" >
           <Form.Label>Giới tính</Form.Label>
-          <Form.Select defaultValue={patient.gender}>
+          <Form.Select defaultValue={medicalStaff.gender}>
             <option>Nam</option>
             <option>Nữ</option>
           </Form.Select>
@@ -85,7 +87,7 @@ const UpdateBlock = ({patient}) => {
           <Form.Control 
             type='tel'
             placeholder='Số điện thoại'
-            defaultValue={patient.phoneNum}
+            defaultValue={medicalStaff.phoneNum}
            required />
         </Form.Group>
 
@@ -98,16 +100,21 @@ const UpdateBlock = ({patient}) => {
           <Form.Control 
           type = "email"
           placeholder='Email'
-          defaultValue={patient.email}
+          defaultValue={medicalStaff.email}
            required />
         </Form.Group>
-        <Form.Group as={Col} md='5' controlId = "job" >
-          <Form.Label>Nghề nghiệp</Form.Label>
-          <Form.Control 
-          type = "text"
-          placeholder='Nghề nghiệp'
-          defaultValue={patient.job}
-           required />
+        <Form.Group as={Col} md='5' controlId = "specialty" >
+          <Form.Label>Chuyên môn</Form.Label>
+          <Form.Select 
+          defaultValue={medicalStaff.specialty}
+           required >
+            <option>{""}</option>
+            {specialty.map((element,index) => {
+              return (
+                <option key={index} > {element}</option>
+              )
+            })}
+           </Form.Select>
         </Form.Group>
       </Row>
       <Row className="mb-3">
@@ -116,21 +123,21 @@ const UpdateBlock = ({patient}) => {
           <Form.Control 
             type='text'
             placeholder='Căn cước công dân'
-            defaultValue={patient.citizenID}
+            defaultValue={medicalStaff.citizenID}
            required />
         </Form.Group>
         <Form.Group as={Col} md='5' controlId = "dateOfBirth" >
           <Form.Label>Ngày sinh</Form.Label>
           <Form.Control 
           type="date"
-          defaultValue={moment(patient.dateOfBirth,"DD-MM-YYYY").format("YYYY-MM-DD")}
+          defaultValue={moment(medicalStaff.dateOfBirth,"DD-MM-YYYY").format("YYYY-MM-DD")}
            required />
         </Form.Group>
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col}  controlId = "address" >
           <Form.Label>Địa chỉ</Form.Label>
-          <Form.Control type="text" placeholder="Địa chỉ" defaultValue={patient.address} required />
+          <Form.Control type="text" placeholder="Địa chỉ" defaultValue={medicalStaff.address} required />
           <Form.Control.Feedback type="invalid">
             Hãy nhập địa chỉ hợp lệ
           </Form.Control.Feedback>
@@ -139,7 +146,7 @@ const UpdateBlock = ({patient}) => {
       <Row className="mb-3">
         <Form.Group as={Col}  controlId = "hometown" >
           <Form.Label>Quê quán</Form.Label>
-          <Form.Control type="text" placeholder="Quê quán" defaultValue={patient.hometown} required />
+          <Form.Control type="text" placeholder="Quê quán" defaultValue={medicalStaff.hometown} required />
           <Form.Control.Feedback type="invalid">
             Hãy nhập quê quán hợp lệ
           </Form.Control.Feedback>

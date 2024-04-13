@@ -2,17 +2,17 @@ import React from 'react'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Button, Container,Row, Col } from 'react-bootstrap';
 import "./DisplayMoreInfo.css"
+import {useParams} from 'react-router-dom'
 import axios from 'axios';
 
 const DisplayMoreInfo = (props) => {
+  const {position} = useParams()
   const data = props.dataMoreInfo;
   if (!data ||data.citizenID ==='' || data.citizenID==null) return;
 
-  const deletePatient = () =>{
-    console.log("call api here");
-    axios.delete("http://localhost:3000/Patient/" + data.id)
+  const deleteMedicalStaff = () =>{
+    axios.delete("http://localhost:3000/MedicalStaff/" + data.id)
       .then(response => {
-        console.log("success")
         window.location.reload();
       })
       .catch(error => {
@@ -26,12 +26,12 @@ const DisplayMoreInfo = (props) => {
           <Offcanvas.Title>Thông tin bệnh nhân</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        <div><Button href={`Patient/${data.id}`}> Thông tin chi tiết </Button></div>
+        <div><Button href={`/medicalStaff/${position}/${data.id}`}> Thông tin chi tiết </Button></div>
         <Container>
           <Row className='detail-info-row'>
             <Col>
               <div className='detail-label'> Họ và Tên đệm</div>
-              <div>{data.lastMidleName} </div>
+              <div>{data.lastMiddleName} </div>
             </Col>
             <Col>
               <div className='detail-label'>Tên</div>
@@ -62,7 +62,7 @@ const DisplayMoreInfo = (props) => {
             </Col>
           </Row>
         </Container>
-        <Button variant='danger' onClick={deletePatient}>Xoá bệnh nhân</Button>
+        <Button variant='danger' onClick={deleteMedicalStaff}>Xoá bệnh nhân</Button>
 
         </Offcanvas.Body>
       </Offcanvas>

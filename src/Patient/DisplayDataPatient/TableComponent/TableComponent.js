@@ -67,6 +67,9 @@ const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
     arr.sort((a, b) => {
       const sortValueA = a[1][sortColumn];
       const sortValueB = b[1][sortColumn];
+      if (sortColumn === "age") {
+        return sortDirect === "desc" ?sortValueB - sortValueA: sortValueA - sortValueB
+      }
       return sortDirect === "desc" ? sortValueB.localeCompare(sortValueA) : sortValueA.localeCompare(sortValueB);
     });
     console.log("sorted arr" , arr);
@@ -93,12 +96,12 @@ const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
           <thead>
             <tr>
               <th>ID </th>
-              <th className='sort-col'  onClick={() => handleSort('lastMidleName')}>
+              <th className='sort-col'  onClick={() => handleSort('lastMiddleName')}>
                 <span>Họ và tên đệm</span>
                 <span className='sort-icon'>
                   <FontAwesomeIcon
                       icon={
-                        sortColumn === 'lastMidleName'
+                        sortColumn === 'lastMiddleName'
                           ? sortDirect === 'asc'
                             ? faSortUp
                             : faSortDown
@@ -152,7 +155,17 @@ const TableComponent = ({dataPatientDisplay,setDataPatientDisplay}) => {
 
               <th className='sort-col' onClick={() => handleSort('status')} >
                 <span>Trạng thái</span>
-                <span className='sort-icon'><FontAwesomeIcon icon={faSort} /></span>
+                <span className='sort-icon'>
+                <FontAwesomeIcon
+                      icon={
+                        sortColumn === 'status'
+                          ? sortDirect === 'asc'
+                            ? faSortUp
+                            : faSortDown
+                          : faSort
+                      }
+                    />
+              </span>
               </th>
             </tr>
           </thead>

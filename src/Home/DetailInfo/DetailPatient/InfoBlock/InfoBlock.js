@@ -37,18 +37,10 @@ const InfoBlock = ({patient}) => {
           </Row>
           <Row  > 
             <Col className='patient-info patient-label'>
-              <span>Chiều cao </span>
+              <span>Nghề nghiệp </span>
             </Col>
             <Col className='patient-info patient-value' xs={7}>
-              <span >{patient.height +" cm"}</span>
-            </Col>
-          </Row>
-          <Row  > 
-            <Col className='patient-info patient-label'>
-              <span>Cân nặng </span>
-            </Col>
-            <Col className='patient-info patient-value' xs={7}>
-              <span >{patient.weight + " kg"}</span>
+              <span >{patient.job}</span>
             </Col>
           </Row>
           <Row  > 

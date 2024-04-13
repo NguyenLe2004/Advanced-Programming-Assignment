@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import InfoBlock from './InfoBlock/InfoBlock';
@@ -64,8 +63,7 @@ const DetailPatient = () => {
     <div className='main-page-detail'>
       <div className='info-block'>
         <span className='info'>
-        {!isUpdate && 
-          <span className='pen-to-square-icon' ><FontAwesomeIcon onClick={handleClickUpdateIcon} icon={faPenToSquare} /></span>}
+          <span className='pen-to-square-icon' ><FontAwesomeIcon onClick={() => setIsUpdate((prevState) => !prevState)} icon={faPenToSquare} /></span>
           <div className='avatar' >{patient.firstName? patient.firstName.charAt(0) + patient.lastMiddleName.charAt(0) : null}</div>
           {isUpdate?  
             <UpdateBlock patient = {patient} /> : 

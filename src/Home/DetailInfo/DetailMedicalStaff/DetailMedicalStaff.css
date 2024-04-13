@@ -30,14 +30,14 @@
 }
 .info{
     background-color: white;
-    width: 35vw;
+    width: 30vw;
     border-radius: 10px;
 }
 .med-info{
     position: relative;
-    margin-left: 10vw;
+    margin-left: 15vw;
     border-radius: 10px;
-    width: 60%;
+    width: 40%;
 }
 .pen-to-square-icon {
     font-weight: bold;

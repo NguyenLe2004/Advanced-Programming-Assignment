@@ -25,27 +25,27 @@ const NavigatorBar = () => {
               <div className='label'>Trang chủ</div>
             </li>
             <li className='icon-block'>
-              <a href='/Patient'><FontAwesomeIcon icon={faUser}/></a>
+              <a href='/patient'><FontAwesomeIcon icon={faUser}/></a>
               <div className='label'>Bệnh nhân</div>
             </li>
             <li className='icon-block'>
-              <a href='/Specialist'><FontAwesomeIcon icon={faUserDoctor} /></a>
+              <a href='/medicalStaff/specialist'><FontAwesomeIcon icon={faUserDoctor} /></a>
               <div className='label'>Bác sĩ</div>
             </li>
             <li className='icon-block'>
-              <a href='/Nurse'><FontAwesomeIcon icon={faUserNurse} /></a>
+              <a href='/medicalStaff/nurse'><FontAwesomeIcon icon={faUserNurse} /></a>
               <div className='label'>Y tá</div>
             </li>
             <li className='icon-block'>
-              <a href='/Support'><FontAwesomeIcon icon={faHeadset} /></a>
+              <a href='/medicalStaff/support'><FontAwesomeIcon icon={faHeadset} /></a>
               <div className='label'>Hỗ trợ</div>
             </li>
             <li className='icon-block'>
-              <a href='/Medicine'><FontAwesomeIcon icon={faPills} /></a>
+              <a href='/medicine'><FontAwesomeIcon icon={faPills} /></a>
               <div className='label'> Thuốc</div>
             </li>
             <li className='icon-block'>
-              <a href='/Equipment'><FontAwesomeIcon icon={faScrewdriverWrench} /></a>
+              <a href='/equipment'><FontAwesomeIcon icon={faScrewdriverWrench} /></a>
               <div className='label'>thiết bị</div>
             </li>
           </ul>
