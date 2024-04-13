@@ -420,6 +420,14 @@
   ],
   "MedicalStaff": [
     {
+      "0": {
+        "university": "Trường đại học y dược TP HCM",
+        "major": "Y khoa",
+        "degree": "Cử nhân",
+        "id": 1,
+        "dateBegin": "20-08-1975",
+        "dateEnd": "12-07-1981"
+      },
       "id": "1",
       "position": "Bác sĩ",
       "citizenID": "768240953126",
@@ -432,11 +440,12 @@
       "hometown": "Thanh Trạch, Bố Trạch, Quảng Bình",
       "education": [
         {
-          "dateInterval": "20-08-1975-12-07-1981",
           "university": "Trường đại học y dược TP HCM",
           "major": "Y khoa",
           "degree": "Cử nhân",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1975",
+          "dateEnd": "12-07-1981"
         }
       ],
       "cert": [
@@ -482,7 +491,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": "2",
@@ -497,11 +507,12 @@
       "hometown": "An Lạc, Phú Xuyên, Hà Nội",
       "education": [
         {
-          "dateInterval": "12-08-2004-19-07-2012",
           "university": "Trường đại học Phạm Ngọc Thạch TP HCM",
           "major": "Tuần hoàn",
           "degree": "Thạc sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "12-08-2004",
+          "dateEnd": "19-07-2012"
         }
       ],
       "cert": [
@@ -528,7 +539,8 @@
           "timeEnd": "12:30",
           "id": 2
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 3,
@@ -543,11 +555,12 @@
       "hometown": "Nam Đồng, Đại Lộc, Quảng Nam",
       "education": [
         {
-          "dateInterval": "12-09-1990-20-07-1999",
           "university": "Trường đại học Y dược TP HCM",
           "major": "Tuần hoàn",
           "degree": "Tiến sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "12-09-1990",
+          "dateEnd": "20-07-1999"
         }
       ],
       "cert": [
@@ -587,7 +600,8 @@
           "timeEnd": "00:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 4,
@@ -602,11 +616,12 @@
       "hometown": "Trường Sơn, Hương Sơn, Hà Tĩnh",
       "education": [
         {
-          "dateInterval": "02-08-1984-18-07-1990",
           "university": "Trường đại học Y Dược Huế",
           "major": "Hô hấp",
           "degree": "Tiến sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "02-08-1984",
+          "dateEnd": "18-07-1990"
         }
       ],
       "cert": [
@@ -647,7 +662,8 @@
           "timeEnd": "13:30",
           "id": 4
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 5,
@@ -662,11 +678,12 @@
       "hometown": "Điện Lâm, Điện Bàn, Quảng Nam",
       "education": [
         {
-          "dateInterval": "15-02-1999-20-08-2007",
           "university": "Trường Y khoa Yale-Đại học Yale",
           "major": "Da liễu",
           "degree": "Tiến sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "15-02-1999",
+          "dateEnd": "20-08-2007"
         }
       ],
       "cert": [
@@ -706,7 +723,8 @@
           "timeEnd": "14:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 6,
@@ -721,11 +739,12 @@
       "hometown": "Hoà Hội, Hoà Vang, Đà Nẵng",
       "education": [
         {
-          "dateInterval": "20-08-1988-12-07-1996",
           "university": "Trường đại học y dược TP HCM",
           "major": "Y đa khoa",
           "degree": "Thạc sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1988",
+          "dateEnd": "12-07-1996"
         }
       ],
       "cert": [
@@ -759,7 +778,8 @@
           "id": 3,
           "date": "21-03-2024"
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 7,
@@ -774,11 +794,12 @@
       "hometown": "An Lợi, Bình Đại, Bến Tre",
       "education": [
         {
-          "dateInterval": "01-08-2004-08-02-2012",
           "university": "Trường đại học Phạm Ngọc Thạch TP HCM",
           "major": "Răng hàm mặt",
           "degree": "Thạc sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "01-08-2004",
+          "dateEnd": "08-02-2012"
         }
       ],
       "cert": [
@@ -812,7 +833,8 @@
           "id": 3,
           "date": "29-03-2024"
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 8,
@@ -827,11 +849,12 @@
       "hometown": "Lam Đồng, Di Linh, Lâm Đồng",
       "education": [
         {
-          "dateInterval": "10-08-1990-20-07-1997",
           "university": "Trường đại học Y dược TP HCM",
           "major": "Kĩ thuật xét nghiệm y học",
           "degree": "Thạc sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "10-08-1990",
+          "dateEnd": "20-07-1997"
         }
       ],
       "cert": [
@@ -865,7 +888,8 @@
           "id": 3,
           "date": "29-03-2024"
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 9,
@@ -880,11 +904,12 @@
       "hometown": "Phước Kiền, Hòa Vang, Đà Nẵng",
       "education": [
         {
-          "dateInterval": "02-08-1984-18-07-1990",
           "university": "Trường đại học Y Dược Thai Nguyên",
           "major": "Hộ sinh",
           "degree": "Thạc sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "02-08-1984",
+          "dateEnd": "18-07-1990"
         }
       ],
       "cert": [
@@ -924,7 +949,8 @@
           "id": 3,
           "date": "29-04-2024"
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 10,
@@ -939,11 +965,12 @@
       "hometown": "Phước Ninh, Ninh Phước, Ninh Thuận",
       "education": [
         {
-          "dateInterval": "15-04-1999-29-08-2007",
           "university": "Trường Y khoa Hà Nội",
           "major": "Y học cổ truyền",
           "degree": "Tiến sĩ",
-          "id": 1
+          "id": 1,
+          "dateBegin": "15-04-1999",
+          "dateEnd": "29-08-2007"
         }
       ],
       "cert": [
@@ -977,7 +1004,8 @@
           "id": 3,
           "date": "12-04-2024"
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 11,
@@ -992,10 +1020,11 @@
       "hometown": "Tràng An, Hoa Lư, Ninh Bình",
       "education": [
         {
-          "dateInterval": "20-08-1988-12-07-1994",
           "university": "Trường đại học y dược TP HCM",
           "major": "Khoa Nhi",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1988",
+          "dateEnd": "12-07-1994"
         }
       ],
       "cert": [
@@ -1029,7 +1058,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 12,
@@ -1044,10 +1074,11 @@
       "hometown": "Bình Nghi, Bình Sơn, Quảng Ngãi",
       "education": [
         {
-          "dateInterval": "20-08-1997-12-07-2006",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1997",
+          "dateEnd": "12-07-2006"
         }
       ],
       "cert": [
@@ -1081,7 +1112,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 13,
@@ -1096,10 +1128,11 @@
       "hometown": "An Mỹ, Tuy An, Phú Yên",
       "education": [
         {
-          "dateInterval": "20-08-1979-12-07-1985",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1979",
+          "dateEnd": "12-07-1985"
         }
       ],
       "cert": [
@@ -1133,7 +1166,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 14,
@@ -1148,10 +1182,11 @@
       "hometown": "Hội An, Tuy Hòa, Phú Yên",
       "education": [
         {
-          "dateInterval": "20-08-2007-12-07-2015",
           "university": "Trường đại học y dược TP HCM",
           "major": "Khoa Nhi",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2007",
+          "dateEnd": "12-07-2015"
         }
       ],
       "cert": [
@@ -1185,7 +1220,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 15,
@@ -1200,10 +1236,11 @@
       "hometown": "Bình An, Long Mỹ, Hậu Giang",
       "education": [
         {
-          "dateInterval": "20-08-2013-12-07-2018",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2013",
+          "dateEnd": "12-07-2018"
         }
       ],
       "cert": [
@@ -1237,7 +1274,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 16,
@@ -1252,10 +1290,11 @@
       "hometown": "An Hòa, Tân Biên, Tây Ninh",
       "education": [
         {
-          "dateInterval": "20-08-2010-12-07-2018",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2010",
+          "dateEnd": "12-07-2018"
         }
       ],
       "cert": [
@@ -1289,7 +1328,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 17,
@@ -1304,10 +1344,11 @@
       "hometown": "Phước Hưng, Đồng Phú, Bình Phước",
       "education": [
         {
-          "dateInterval": "20-08-2009-12-07-2015",
           "university": "Trường đại học y dược TP HCM",
           "major": "Khoa Nhi",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2009",
+          "dateEnd": "12-07-2015"
         }
       ],
       "cert": [
@@ -1341,7 +1382,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 18,
@@ -1356,10 +1398,11 @@
       "hometown": "Hòa Phú, Tân Yên, Bắc Giang",
       "education": [
         {
-          "dateInterval": "20-08-2012-12-07-2017",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2012",
+          "dateEnd": "12-07-2017"
         }
       ],
       "cert": [
@@ -1393,7 +1436,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 19,
@@ -1408,10 +1452,11 @@
       "hometown": "Thạch Thắng, Thạch An, Cao Bằng",
       "education": [
         {
-          "dateInterval": "20-08-2004-12-07-2009",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2004",
+          "dateEnd": "12-07-2009"
         }
       ],
       "cert": [
@@ -1445,7 +1490,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 20,
@@ -1460,10 +1506,11 @@
       "hometown": "Lạc Hồng, Thanh Trì, Hà Nội",
       "education": [
         {
-          "dateInterval": "20-08-1992-12-07-2000",
           "university": "Trường đại học y dược TP HCM",
           "major": "Khoa Nhi",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1992",
+          "dateEnd": "12-07-2000"
         }
       ],
       "cert": [
@@ -1497,7 +1544,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 21,
@@ -1512,10 +1560,11 @@
       "hometown": "Tràng An, Hoa Lư, Ninh Bình",
       "education": [
         {
-          "dateInterval": "20-08-1988-12-07-1994",
           "university": "Trường đại học y dược TP HCM",
           "major": "Khoa Nhi",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1988",
+          "dateEnd": "12-07-1994"
         }
       ],
       "cert": [
@@ -1549,7 +1598,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 22,
@@ -1564,10 +1614,11 @@
       "hometown": "Bình Nghi, Bình Sơn, Quảng Ngãi",
       "education": [
         {
-          "dateInterval": "20-08-1997-12-07-2006",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1997",
+          "dateEnd": "12-07-2006"
         }
       ],
       "cert": [
@@ -1601,7 +1652,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 23,
@@ -1616,10 +1668,11 @@
       "hometown": "An Mỹ, Tuy An, Phú Yên",
       "education": [
         {
-          "dateInterval": "20-08-1979-12-07-1985",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1979",
+          "dateEnd": "12-07-1985"
         }
       ],
       "cert": [
@@ -1653,7 +1706,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 24,
@@ -1668,10 +1722,11 @@
       "hometown": "Hội An, Tuy Hòa, Phú Yên",
       "education": [
         {
-          "dateInterval": "20-08-2007-12-07-2015",
           "university": "Trường đại học y dược TP HCM",
           "major": "Khoa Nhi",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2007",
+          "dateEnd": "12-07-2015"
         }
       ],
       "cert": [
@@ -1705,7 +1760,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 25,
@@ -1720,10 +1776,11 @@
       "hometown": "Bình An, Long Mỹ, Hậu Giang",
       "education": [
         {
-          "dateInterval": "20-08-2013-12-07-2018",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2013",
+          "dateEnd": "12-07-2018"
         }
       ],
       "cert": [
@@ -1757,7 +1814,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 26,
@@ -1772,10 +1830,11 @@
       "hometown": "An Hòa, Tân Biên, Tây Ninh",
       "education": [
         {
-          "dateInterval": "20-08-2010-12-07-2018",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2010",
+          "dateEnd": "12-07-2018"
         }
       ],
       "cert": [
@@ -1809,7 +1868,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 27,
@@ -1824,10 +1884,11 @@
       "hometown": "Phước Hưng, Đồng Phú, Bình Phước",
       "education": [
         {
-          "dateInterval": "20-08-2009-12-07-2015",
           "university": "Trường đại học y dược TP HCM",
           "major": "Khoa Nhi",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2009",
+          "dateEnd": "12-07-2015"
         }
       ],
       "cert": [
@@ -1861,7 +1922,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 28,
@@ -1876,10 +1938,11 @@
       "hometown": "Hòa Phú, Tân Yên, Bắc Giang",
       "education": [
         {
-          "dateInterval": "20-08-2012-12-07-2017",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2012",
+          "dateEnd": "12-07-2017"
         }
       ],
       "cert": [
@@ -1913,7 +1976,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 29,
@@ -1928,10 +1992,11 @@
       "hometown": "Thạch Thắng, Thạch An, Cao Bằng",
       "education": [
         {
-          "dateInterval": "20-08-2004-12-07-2009",
           "university": "Trường đại học y dược TP HCM",
           "major": "Điều dưỡng",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-2004",
+          "dateEnd": "12-07-2009"
         }
       ],
       "cert": [
@@ -1965,7 +2030,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 30,
@@ -1980,10 +2046,11 @@
       "hometown": "Lạc Hồng, Thanh Trì, Hà Nội",
       "education": [
         {
-          "dateInterval": "20-08-1992-12-07-2000",
           "university": "Trường đại học y dược TP HCM",
           "major": "Khoa Nhi",
-          "id": 1
+          "id": 1,
+          "dateBegin": "20-08-1992",
+          "dateEnd": "12-07-2000"
         }
       ],
       "cert": [
@@ -2017,7 +2084,8 @@
           "timeEnd": "12:30",
           "id": 3
         }
-      ]
+      ],
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     }
   ]
 }
