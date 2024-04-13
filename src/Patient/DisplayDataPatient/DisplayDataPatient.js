@@ -7,7 +7,7 @@ import TableComponent from './TableComponent/TableComponent';
 import StatusStat from './StatusStat/StatusStat';
 
 const DisplayDataPatient = ({dataPatient}) => {
-  const [dataPatientDisplay, setDataPatientDisplay] = useState("");
+  const [dataPatientDisplay, setDataPatientDisplay] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [searchError, setSearchError] = useState("");
@@ -38,7 +38,8 @@ const DisplayDataPatient = ({dataPatient}) => {
     if (inputValue.length === 12 && /^\d+$/.test(inputValue)) {
       const searchID = Object.keys(dataPatient).find(key => dataPatient[key].citizenID == inputValue);
       if (searchID) {
-        setDataPatientDisplay({[searchID] : dataPatient[searchID]});
+        console.log(dataPatient[searchID])
+        setDataPatientDisplay([dataPatient[searchID]]);
       }
       else{
         setInputValue("");

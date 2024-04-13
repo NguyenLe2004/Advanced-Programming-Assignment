@@ -23,7 +23,7 @@ return (
         style={{ position: "absolute", right: "1vw", top: "1vh", fontSize: "20px", padding: "0",zIndex:"22" }}
         onClick={handleClosebtn}
       />
-      <div className={`outer-form-add ${isSlide1 ? "slide_1" : ""} ${isSlide2 ? "slide_2" : ""}`}>
+      <div className={`outer-form-add-medcialStaff ${isSlide1 ? "slide_1" : ""} ${isSlide2 ? "slide_2" : ""}`}>
             <Row>
               <Col className='col-6' style={{width:"40vw" }}>
                 <AddMedicalStaffInfoForm setIsSlide1={setIsSlide1} setPersonalInfo={setPersonalInfo} />

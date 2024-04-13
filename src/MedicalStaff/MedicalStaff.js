@@ -4,6 +4,7 @@ import moment from 'moment'
 import DisplayDataMedicalStaff from './DisplayDataMedicalStaff/DisplayDataMedicalStaff'
 import {useParams} from 'react-router-dom'
 import TimeLine from './TimeLine/TimeLine'
+import "./MedicalStaff.css"
 import { dataMedicalStaffContext } from '../Provider/DataProvider'
 const MedicalStaff = () => {
   const {position} = useParams();
@@ -66,7 +67,7 @@ const MedicalStaff = () => {
     <div>
       <DisplayDataMedicalStaff dataMedicalStaff = {dataMedicalStaff} position = {position}/>
       <div style={{height:"100vh",marginTop:"45%"}}>
-        <div style={{}}>
+        <div className="time-line">
         <TimeLine dataMedicalStaff = {dataMedicalStaff} />
         </div>
       </div>

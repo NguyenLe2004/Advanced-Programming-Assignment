@@ -10,7 +10,7 @@ const InfoSchedule = ({medicalStaff}) => {
   
   useEffect(() => {
     const handleScroll = () => {
-      if(medicalStaff.status === "Hoàn thành điều trị") return;
+      if(medicalStaff.status === "Nghỉ phép") return;
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
 
@@ -28,7 +28,7 @@ const InfoSchedule = ({medicalStaff}) => {
   }, []);
   return (
     <div >
-        <div className='schedule-title'>Tiến trình điều trị</div>
+        <div className='schedule-title'>Lịch làm việc</div>
 
         <div className='add-schedule-block'>
           <div>
@@ -37,7 +37,7 @@ const InfoSchedule = ({medicalStaff}) => {
                 <FontAwesomeIcon style={{fontSize:"20px"}} icon={faPlus} />
               </span>
               <span>
-                Thêm lịch điều trị
+                Thêm lịch trình
               </span>
             </button>
           </div>

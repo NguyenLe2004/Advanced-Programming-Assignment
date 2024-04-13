@@ -98,7 +98,7 @@ const AddMedicalStaffEducateForm = ({setIsSlide1,setIsSlide2,education, setEduca
       setIsSlide1(false);
     }}> Quay lại</Button>
     <Button type='submit' > Thêm học vấn </Button>
-    <Button disabled={!education.length} onClick={() => {
+    <Button onClick={() => {
         setIsSlide2(true);
     }}>
       Tiếp tục 

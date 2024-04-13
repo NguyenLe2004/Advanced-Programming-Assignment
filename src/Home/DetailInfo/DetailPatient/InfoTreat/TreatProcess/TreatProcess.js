@@ -70,7 +70,6 @@ const TreatProcess = ({patient}) => {
       });
       return status;
     }
-  
     const handleDisplayMedStaff = () =>{
       let queryStr="";
       if (specialty!=="") queryStr ="specialty="+specialty;
@@ -127,6 +126,14 @@ const TreatProcess = ({patient}) => {
           medStaffName : medStaffName,
           medStaffPosition : medStaffPosition
         }
+    }
+    const handleDeleteTreatProcess = (index) => {
+      let newTreatProcess = [...patient.treatProcess];
+      newTreatProcess.splice(index,1);
+      axios.patch("http://localhost:3000/Patient/"+patient.id, {
+        treatProcess: newTreatProcess
+      }).then(() => window.location.reload())
+      .catch((error) => console.error(error))
     }
   return (
     <div>
@@ -275,7 +282,8 @@ const TreatProcess = ({patient}) => {
                         </Form.Control.Feedback>
                       </Form.Group>
                   </Row>
-                  <Button type="submit">Submit form</Button>
+                  <Button type="submit">Đổi thông tin lịch trình</Button>
+                  <Button style={{position:"absolute",right:"1vw"}} onClick={() => handleDeleteTreatProcess(index)} variant='danger'>Xoá tiến trình này</Button>
                 </Form>
                 </div>
               )}

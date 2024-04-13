@@ -13,7 +13,7 @@ const TimeLine = ({dataMedicalStaff}) => {
             id : count_1,
             title : obj.lastMiddleName + " " + obj.firstName,
             stackItems: true,
-            height: 35
+            height: 50
         })
         obj.schedule.forEach(schedule => {
             items.push({
@@ -23,7 +23,7 @@ const TimeLine = ({dataMedicalStaff}) => {
                 start_time: moment(schedule.date + " " + schedule.timeBegin,"DD-MM-YYYY HH:mm"),
                 end_time : moment(schedule.date + " " + schedule.timeEnd,"DD-MM-YYYY HH:mm") 
             })
-        })
+        }) 
  
         count_1++;
     });

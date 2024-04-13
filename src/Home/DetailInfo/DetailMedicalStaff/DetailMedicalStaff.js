@@ -6,6 +6,7 @@ import InfoBlock from './InfoBlock/InfoBlock';
 import UpdateBlock from './UpdateBlock/UpdateBlock';
 import EducateInfoBlock from './EducateInfoBlock/EducateInfoBlock';
 import InfoSchedule from './InfoSchedule/InfoSchedule';
+import CertInfoBlock from './CertInfoBlock/CertInfoBlock';
 import moment from 'moment';
 import axios from 'axios';
 import "./DetailMedicalStaff.css"
@@ -45,15 +46,16 @@ const DetailMedicalStaff = () => {
           schedule.sort((a, b) => {
             const dateA = moment(a.date, "DD-MM-YYYY");
             const dateB = moment(b.date, "DD-MM-YYYY");
+            console.log("a and b : ",dateA, dateB)
             if (dateA.isSame(dateB)) {
-              return moment(a.timeBegin, "HH-mm") - moment(b.timeBegin, "HH-mm");
+              return moment(a.timeBegin, "HH:mm") - moment(b.timeBegin, "HH:mm");
             }
             return dateA - dateB;
           });
           const status = getMedicalStaffStatus(schedule);
           return {...item ,status,schedule};
         })
-        console.log(medicalStaffDataWithStatus);
+        console.log("after sort",medicalStaffDataWithStatus);
         setMedicalStaff(medicalStaffDataWithStatus[0]);
       } catch (error) {
         console.log(error); 
@@ -73,6 +75,7 @@ const DetailMedicalStaff = () => {
         </span>
         <span className='med-info'>
             <EducateInfoBlock medicalStaff={medicalStaff}/>
+            <CertInfoBlock medicalStaff={medicalStaff} />
         </span> 
       </div>
       <div className='treat-page'>

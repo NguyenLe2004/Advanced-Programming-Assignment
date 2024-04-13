@@ -10,12 +10,13 @@
     z-index: 35;
 
 }
-.outer-form-add{
+.outer-form-add-medcialStaff{
     position: relative;
     height: fit-content;
     width:150vw;
     z-index: 21;  
     transition: all 0.7s ease-in-out;
+    background-color: white;
 }
 
 .slide_1{

@@ -3,14 +3,14 @@ import { faPenToSquare, faXmark,faAnglesLeft,faAnglesRight, faPlus } from '@fort
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
 import moment from 'moment'
-import "./EducateInfoBlock.css"
+import "./CertInfoBlock.css"
 import { Row, Col, Button,Form } from 'react-bootstrap'
-const EducateInfoBlock = ({medicalStaff}) => {
+const CertInfoBlock = ({medicalStaff}) => {
     const [isUpdate, setIsUpdate] = useState(false)
     const [isAdd, setIsAdd] = useState(false);
     const [validated, setValidated] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const educations = medicalStaff.education;
+    const educations = medicalStaff.cert;
     if (!educations) return;
     const totalPage = educations.length;
 
@@ -18,7 +18,7 @@ const EducateInfoBlock = ({medicalStaff}) => {
         let newEducates = [...educations];
         newEducates.splice(currentPage-1,1);
         const updateData = {
-            education : newEducates
+            cert : newEducates
         }
         axios.patch("http://localhost:3000/MedicalStaff/"+ medicalStaff.id,updateData)
         .then(() => window.location.reload()) 
@@ -30,7 +30,7 @@ const EducateInfoBlock = ({medicalStaff}) => {
       if (form.checkValidity() === false) {
         event.stopPropagation();
       } else{
-        let updateData = [...medicalStaff.education];
+        let updateData = [...medicalStaff.cert];
         if (isUpdate) {
             updateData[currentPage-1] = {
                 degree : form.elements.degree.value,
@@ -50,7 +50,7 @@ const EducateInfoBlock = ({medicalStaff}) => {
         }
         if(isUpdate) {
             axios.patch("http://localhost:3000/medicalStaff/" + medicalStaff.id,{
-                education : updateData
+                cert : updateData
             })
             .then((response) => {
                 window.location.reload();
@@ -60,7 +60,7 @@ const EducateInfoBlock = ({medicalStaff}) => {
             })
         } else{
             axios.patch("http://localhost:3000/medicalStaff/" + medicalStaff.id,{
-                education:updateData
+                cert:updateData
             })
             .then((response) => {
                 window.location.reload();
@@ -76,21 +76,21 @@ const EducateInfoBlock = ({medicalStaff}) => {
     };
   return (
     <div>
-        <div className='med-info-block' >
+        <div className='cert-info-block' >
         <div className='pen-to-square-icon-med' ><FontAwesomeIcon icon={faPenToSquare} style={{position:"relative"}} onClick={() => setIsUpdate((prevState) => !prevState)} /></div>
-        <h3 className='title-med-info'>Thông tin học vấn</h3>
+        <h3 className='title-med-info'>Thông tin Chứng chỉ</h3>
         {(!isUpdate && !isAdd)? (
             <div>
                 {educations &&
                     <div style={{textAlign:"center"}}>
                     <Row className='mt-3 mb-3'>
-                        <h4>{educations[currentPage-1].degree} {educations[currentPage-1].major}</h4>
+                        <h4>{educations[currentPage-1].title}</h4>
                     </Row>
                     <Row className='mt-3 mb-3'>
-                        <div>{educations[currentPage-1].university}</div>
+                        <div>{educations[currentPage-1].organization}</div>
                     </Row>
                     <Row className='mt-3 mb-3'>
-                        <div style={{color:"gray"}}>Từ {educations[currentPage-1].dateBegin} đến {educations[currentPage-1].dateEnd}</div>
+                        <div style={{color:"gray"}}>{educations[currentPage-1].date}</div>
                     </Row>
                     <Button variant='outline-danger' onClick={handleDelete} style={{position:"absolute",right:"1vw",top:"10vh"}} ><FontAwesomeIcon icon={faXmark} /></Button>
                     <Button variant='outline-primary' onClick={()=>setIsAdd(true)} style={{position:"absolute",left:"1vw",top:"10vh"}} ><FontAwesomeIcon icon={faPlus} /></Button>
@@ -115,43 +115,25 @@ const EducateInfoBlock = ({medicalStaff}) => {
         ):(
             <Form noValidate validated={validated} onSubmit={handleSubmit} >
                 <Row className="mb-3">
-                    <Form.Group as={Col} md="5" controlId="degree">
-                    <Form.Label>Loại bằng</Form.Label>
-                    <Form.Select defaultValue={isAdd? "": educations[currentPage-1].degree} required>
-                        <option>{""}</option>
-                        <option>Cử nhân</option>
-                        <option>Thạc sĩ</option>
-                        <option>Tiến sĩ</option>
-                    </Form.Select>
-                    </Form.Group>
-                    <Form.Group as={Col} md="5" controlId="major">
-                    <Form.Label>Ngành</Form.Label>
-                    <Form.Control type='text' required defaultValue={isAdd? "": educations[currentPage-1].major}  />
+                    <Form.Group  controlId="title">
+                    <Form.Label>Tên chứng chỉ</Form.Label>
+                    <Form.Control type='text' placeholder="Tên chứng chỉ" required defaultValue={isAdd? "": educations[currentPage-1].title}  />
                     <Form.Control.Feedback type="invalid">
                     Please provide a valid city.
                     </Form.Control.Feedback>
                 </Form.Group>
                 </Row>
                 <Row className="mb-3">
-                    <Form.Group controlId="university">
-                    <Form.Label>Trường</Form.Label>
-                    <Form.Control type="text" placeholder="Trường" defaultValue={isAdd? "":educations[currentPage-1].university} required />
+                    <Form.Group as={Col} md="8" controlId="university">
+                    <Form.Label>tổ chức</Form.Label>
+                    <Form.Control type="text" placeholder="tổ chức" defaultValue={isAdd? "":educations[currentPage-1].organization} required />
                     <Form.Control.Feedback type="invalid">
                         Please provide a valid city.
                     </Form.Control.Feedback>
                     </Form.Group>
-                </Row>
-                <Row className="mb-3">
-                    <Form.Group as={Col} controlId="dateBegin">
-                    <Form.Label>Ngày bắt đầu</Form.Label>
-                    <Form.Control type="date"  defaultValue={isAdd ? "":moment(educations[currentPage-1].dateBegin,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
-                    <Form.Control.Feedback type="invalid">
-                        Please provide a valid city.
-                    </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group as={Col}  controlId="dateEnd">
-                    <Form.Label>Ngày kết thúc</Form.Label>
-                    <Form.Control type="date"  defaultValue={isAdd ? "":moment(educations[currentPage-1].dateEnd,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
+                    <Form.Group as={Col} md="4" controlId="dateBegin">
+                    <Form.Label>Ngày cấp</Form.Label>
+                    <Form.Control type="date" placeholder="Ngày cấp" defaultValue={isAdd ? "":moment(educations[currentPage-1].date,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
                     <Form.Control.Feedback type="invalid">
                         Please provide a valid city.
                     </Form.Control.Feedback>
@@ -169,5 +151,5 @@ const EducateInfoBlock = ({medicalStaff}) => {
   )
 }
 
-export default EducateInfoBlock
+export default CertInfoBlock
 
