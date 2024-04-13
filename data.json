@@ -475,21 +475,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -530,14 +533,16 @@
           "timeBegin": "00:30",
           "description": "Khám bệnh",
           "timeEnd": "11:30",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Đo điện tâm đồ",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -584,21 +589,24 @@
           "timeBegin": "09:00",
           "description": "Xét nghiệm hóa sinh",
           "timeEnd": "21:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "02-03-2024",
           "timeBegin": "8:30",
           "description": "Hội chuẩn bệnh tim",
           "timeEnd": "04:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "22-03-2024",
           "timeBegin": "8:30",
           "description": "Điều trị hở van tim",
           "timeEnd": "00:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -639,28 +647,32 @@
           "timeBegin": "09:00",
           "description": "Nội soi tai mũi họng",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "21-03-2024",
           "timeBegin": "11:30",
           "description": "Khám bệnh",
           "timeEnd": "13:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "11:30",
           "description": "Chuẩn đoán và điều trị viêm xoang",
           "timeEnd": "13:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         },
         {
           "date": "12-04-2024",
           "timeBegin": "00:30",
           "description": "Nghỉ phép",
           "timeEnd": "13:30",
-          "id": 4
+          "id": 4,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -707,21 +719,24 @@
           "timeBegin": "10:00",
           "description": "Xét nghiệm mô tế bào",
           "timeEnd": "03:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "02-03-2024",
           "timeBegin": "10:30",
           "description": "Hội nghị Da liễu thành phố",
           "timeEnd": "04:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "12-03-2024",
           "timeBegin": "8:30",
           "description": "Điều trị chuyên sâu về da liễu",
           "timeEnd": "14:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -762,21 +777,24 @@
           "description": "Phẫu thuật nội soi viêm ruột thừa",
           "timeEnd": "04:00",
           "id": 1,
-          "date": "02-03-2024"
+          "date": "02-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "10:30",
           "description": "Phẫu thuật cắt túi sỏi mật",
           "timeEnd": "14:30",
           "id": 2,
-          "date": "12-03-2024"
+          "date": "12-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "10:30",
           "description": "Nội soi bao tử",
           "timeEnd": "23:30",
           "id": 3,
-          "date": "21-03-2024"
+          "date": "21-03-2024",
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -817,21 +835,24 @@
           "description": "Khám bệnh và tư vấn trồn răng",
           "timeEnd": "17:30",
           "id": 1,
-          "date": "15-03-2024"
+          "date": "15-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "11:30",
           "description": "Trồng răng implant",
           "timeEnd": "Invalid date",
           "id": 2,
-          "date": "27-03-2024"
+          "date": "27-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "11:30",
           "description": "Trồng răng sứ",
           "timeEnd": "Invalid date",
           "id": 3,
-          "date": "29-03-2024"
+          "date": "29-03-2024",
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -872,21 +893,24 @@
           "description": "Xét nghiệm huyết học tế bào",
           "timeEnd": "21:00",
           "id": 1,
-          "date": "19-03-2024"
+          "date": "19-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "8:30",
           "description": "Xét nghiệm sinh hóa đường",
           "timeEnd": "00:30",
           "id": 2,
-          "date": "22-03-2024"
+          "date": "22-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "8:30",
           "description": "Xét nghiệm máu",
           "timeEnd": "Invalid date",
           "id": 3,
-          "date": "29-03-2024"
+          "date": "29-03-2024",
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -933,21 +957,24 @@
           "description": "Chăm sóc thai nghén",
           "timeEnd": "21:00",
           "id": 1,
-          "date": "19-03-2024"
+          "date": "19-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "11:30",
           "description": "Chăm sóc khám thai định kì",
           "timeEnd": "00:30",
           "id": 2,
-          "date": "22-03-2024"
+          "date": "22-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "11:30",
           "description": "Chăm sóc khám thai định kì",
           "timeEnd": "Invalid date",
           "id": 3,
-          "date": "29-04-2024"
+          "date": "29-04-2024",
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -988,21 +1015,24 @@
           "description": "Châm cứu tứ chi",
           "timeEnd": "21:00",
           "id": 1,
-          "date": "19-02-2024"
+          "date": "19-02-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "10:30",
           "description": "Hồi phục sau chấn thương",
           "timeEnd": "14:30",
           "id": 2,
-          "date": "12-03-2024"
+          "date": "12-03-2024",
+          "room": "H7-302"
         },
         {
           "timeBegin": "10:30",
           "description": "Khám và điều trị",
           "timeEnd": "14:30",
           "id": 3,
-          "date": "12-04-2024"
+          "date": "12-04-2024",
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1042,21 +1072,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1096,21 +1129,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1150,21 +1186,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1204,21 +1243,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1258,21 +1300,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1312,21 +1357,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1366,21 +1414,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1420,21 +1471,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1474,21 +1528,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1528,21 +1585,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1582,21 +1642,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1636,21 +1699,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1690,21 +1756,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1744,21 +1813,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1798,21 +1870,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1852,21 +1927,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1906,21 +1984,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1960,21 +2041,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -2014,21 +2098,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -2068,21 +2155,24 @@
           "timeBegin": "09:00",
           "description": "Kiểm tra và đánh giá bệnh nhân",
           "timeEnd": "11:00",
-          "id": 1
+          "id": 1,
+          "room": "H7-302"
         },
         {
           "date": "25-03-2024 ",
           "timeBegin": "10:30",
           "description": "Điều trị bệnh nhân",
           "timeEnd": "12:30",
-          "id": 2
+          "id": 2,
+          "room": "H7-302"
         },
         {
           "date": "29-03-2024",
           "timeBegin": "10:30",
           "description": "Họp",
           "timeEnd": "12:30",
-          "id": 3
+          "id": 3,
+          "room": "H7-302"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
