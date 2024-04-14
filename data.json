@@ -2252,7 +2252,7 @@
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     }
   ],
-  "Medicine" :[
+  "Medicine": [
     {
       "id": 1,
       "name": "Paracetamol",
@@ -2266,7 +2266,7 @@
     {
       "id": 2,
       "name": "Aspirin",
-      "departureTime": "7:00",
+      "departureTime": "07:00",
       "expireDate": "04-10-2029",
       "amount": "10000",
       "arrivalDate": "25-03-2024",
@@ -2286,8 +2286,8 @@
     {
       "id": 4,
       "name": "Ibuprofen",
-      "departureTime": "7:00",
-      "expireDate": "02-03-2029",
+      "departureTime": "07:00",
+      "expireDate": "15-04-2024",
       "amount": "2000",
       "arrivalDate": "25-03-2024",
       "arrivalTime": "09:00",
@@ -2298,7 +2298,7 @@
       "name": "Diphenoxylate",
       "departureTime": "10:00",
       "expireDate": "10-11-2028",
-      "amount": "5000",
+      "amount": "0",
       "arrivalDate": "30-01-2024",
       "arrivalTime": "15:00",
       "departureDate": "12-02-2024"
@@ -2306,7 +2306,7 @@
     {
       "id": 6,
       "name": "Chloramphenicol",
-      "departureTime": "13:00",
+      "departureTime": "14:00",
       "expireDate": "10-11-2028",
       "amount": "2500",
       "arrivalDate": "03-01-2024",
@@ -2316,7 +2316,7 @@
     {
       "id": 7,
       "name": "Thiamphenicol",
-      "departureTime": "13:0",
+      "departureTime": "13:00",
       "expireDate": "10-11-2028",
       "amount": "2500",
       "arrivalDate": "03-01-2024",
@@ -2326,19 +2326,9 @@
     {
       "id": 8,
       "name": "Heparin",
-      "departureTime": "13:0",
-      "expireDate": "02-11-2028",
-      "amount": "3500",
-      "arrivalDate": "05-05-2024",
-      "arrivalTime": "8:00",
-      "departureDate": "07-07-2024"
-    },
-    {
-      "id": 9,
-      "name": "Ternafast 60",
       "departureTime": "13:00",
       "expireDate": "02-11-2028",
-      "amount": "1500",
+      "amount": "3500",
       "arrivalDate": "05-05-2024",
       "arrivalTime": "8:00",
       "departureDate": "07-07-2024"
@@ -2354,7 +2344,7 @@
       "departureDate": "20-03-2024"
     }
   ],
-  "Equipment" : [
+  "Equipment": [
     {
       "id": 1,
       "name": "Máy siêu âm",
