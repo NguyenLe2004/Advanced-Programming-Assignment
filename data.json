@@ -6,7 +6,7 @@
       "gender": "Nam",
       "height": "165",
       "weight": "55",
-      "phoneNum": "0931 234 567",
+      "phoneNum": "0931234567",
       "email": "nguyenvana@gmail.com",
       "citizenID": "911034398097",
       "dateOfBirth": "11-12-2002",
@@ -74,7 +74,8 @@
       "diagnosis": "Thiếu máu, xơ gan",
       "id": 1,
       "bloodType": "A",
-      "job": "Lập trình viên"
+      "job": "Lập trình viên",
+      "lastMidleName": "Nguyễn Văn"
     },
     {
       "id": 2,
@@ -428,7 +429,7 @@
       "gender": "Nữ",
       "dateOfBirth": "15-09-1954",
       "email": "lehoaanh@gmail.com",
-      "phoneNum": "09317654321",
+      "phoneNum": "0931765432",
       "hometown": "Thanh Trạch, Bố Trạch, Quảng Bình",
       "education": [
         {
@@ -449,13 +450,13 @@
         },
         {
           "title": "chứng chỉ bác sĩ chuyên khoa 1",
-          "date": "2-2-1984",
+          "date": "02-02-1984",
           "organization": "Bộ y tế",
           "id": 2
         },
         {
           "title": "chứng chỉ bác sĩ chuyên khoa 2",
-          "date": "3-5-1986",
+          "date": "03-05-1986",
           "organization": "Bộ y tế",
           "id": 3
         }
@@ -480,7 +481,8 @@
           "description": "nostrud tempor ex consectetur exercitation eiusmod minim. tempor ex consectetur exercitation eiusmod minim veniam, et ipsum ad consequat. sed elit,. ex consectetur exercitation eiusmod minim. consectetur exercitation eiusmod minim veniam, et ipsum ad consequat. sed. exercitation eiusmod minim veniam, et ipsum."
         }
       ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh",
+      "lastMidleName": "Lê Hòa"
     },
     {
       "id": "2",
@@ -2248,6 +2250,558 @@
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
+    }
+  ],
+  "Medicine" :[
+    {
+      "id": 1,
+      "medName": "Paracetamol",
+      "departureTime": "7:00",
+      "Expire date": "5/12/2029",
+      "Amount": "10000",
+      "arrivalDate": "25/3/2024",
+      "arrivalTime": "9:00",
+      "departureDate": "1/4/2024"
+    },
+    {
+      "id": 2,
+      "medName": "Aspirin",
+      "departureTime": "7:00",
+      "Expire date": "4/10/2029",
+      "Amount": "10000",
+      "arrivalDate": "25/3/2024",
+      "arrivalTime": "9:00",
+      "departureDate": "1/4/2024"
+    },
+    {
+      "id": 3,
+      "medName": "Phosphalugel",
+      "departureTime": "7:00",
+      "Expire date": "2/3/2029",
+      "Amount": "5000",
+      "arrivalDate": "25/3/2024",
+      "arrivalTime": "9:00",
+      "departureDate": "1/4/2024"
+    },
+    {
+      "id": 4,
+      "medName": "Ibuprofen",
+      "departureTime": "7:00",
+      "Expire date": "2/3/2029",
+      "Amount": "2000",
+      "arrivalDate": "25/3/2024",
+      "arrivalTime": "9:00",
+      "departureDate": "1/4/2024"
+    },
+    {
+      "id": 5,
+      "medName": "Diphenoxylate",
+      "departureTime": "10:0",
+      "Expire date": "10/11/2028",
+      "Amount": "5000",
+      "arrivalDate": "30/1/2024",
+      "arrivalTime": "15:0",
+      "departureDate": "12/2/2024"
+    },
+    {
+      "id": 6,
+      "medName": "Chloramphenicol",
+      "departureTime": "13:0",
+      "Expire date": "10/11/2028",
+      "Amount": "2500",
+      "arrivalDate": "3/1/2024",
+      "arrivalTime": "8:00",
+      "departureDate": "17/7/2024"
+    },
+    {
+      "id": 7,
+      "medName": "Thiamphenicol",
+      "departureTime": "13:0",
+      "Expire date": "10/11/2028",
+      "Amount": "2500",
+      "arrivalDate": "3/1/2024",
+      "arrivalTime": "8:00",
+      "departureDate": "17/7/2024"
+    },
+    {
+      "id": 8,
+      "medName": "Heparin",
+      "departureTime": "13:0",
+      "Expire date": "2/11/2028",
+      "Amount": "3500",
+      "arrivalDate": "5/5/2024",
+      "arrivalTime": "8:00",
+      "departureDate": "7/7/2024"
+    },
+    {
+      "id": 9,
+      "medName": "Ternafast 60",
+      "departureTime": "13:0",
+      "Expire date": "2/11/2028",
+      "Amount": "1500",
+      "arrivalDate": "5/5/2024",
+      "arrivalTime": "8:00",
+      "departureDate": "7/7/2024"
+    },
+    {
+      "id": 10,
+      "medName": "Acetylcystein",
+      "departureTime": "7:00",
+      "Expire date": "19/8/2027",
+      "Amount": "8000",
+      "arrivalDate": "15/3/2024",
+      "arrivalTime": "15:0",
+      "departureDate": "20/3/2024"
+    }
+  ],
+  "Equipment" : [
+    {
+      "id": 1,
+      "name": "Máy siêu âm",
+      "usageHistory": [
+        {
+          "room": "Phòng siêu âm số 01",
+          "id": 1,
+          "date": "27-03-2024",
+          "time": "09:00"
+        },
+        {
+          "room": "Phòng siêu âm số 01",
+          "id": 2,
+          "date": "30-03-2024",
+          "time": "11:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Máy đo điện tâm đồ",
+      "usageHistory": [
+        {
+          "room": "Phòng tim mạch 07",
+          "id": 1,
+          "date": "21-03-2024",
+          "time": "09:00"
+        },
+        {
+          "room": "Phòng tim mạch số 01",
+          "id": 2,
+          "date": "21-03-2024",
+          "time": "11:00"
+        },
+        {
+          "room": "Phòng tim mạch 07",
+          "id": 3,
+          "date": "22-03-2024",
+          "time": "09:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Máy chụp CT Scan",
+      "usageHistory": [
+        {
+          "room": "Phòng chụp CT số 01",
+          "id": 1,
+          "date": "23-03-2024",
+          "time": "08:00"
+        },
+        {
+          "room": "Phòng chụp CT số 01",
+          "id": 2,
+          "date": "23-03-2024",
+          "time": "11:00"
+        },
+        {
+          "room": "Phòng chụp CT số 01",
+          "id": 3,
+          "date": "24-03-2024",
+          "time": "15:00"
+        },
+        {
+          "room": "Phòng chụp CT số 02",
+          "id": 4,
+          "date": "24-03-2024",
+          "time": "15:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Máy thở y tế",
+      "usageHistory": [
+        {
+          "room": "Phòng hồi sức cấp cứu số 01",
+          "id": 1,
+          "date": "22-03-2024",
+          "time": "21:00"
+        },
+        {
+          "room": "Phòng hồi sức cấp cứu số 01",
+          "id": 2,
+          "date": "22-03-2024",
+          "time": "11:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Máy lọc máu",
+      "usageHistory": [
+        {
+          "room": "Phòng cấp cứu số 01",
+          "id": 1,
+          "date": "19-04-2024",
+          "time": "07:00"
+        },
+        {
+          "room": "Phòng cấp cứu số 01",
+          "id": 2,
+          "date": "20-04-2024",
+          "time": "11:00"
+        },
+        {
+          "room": "Phòng cấp cứu số 03",
+          "id": 3,
+          "date": "20-04-2024",
+          "time": "15:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Máy lọc thận",
+      "usageHistory": [
+        {
+          "room": "Phòng cấp cứu số 01",
+          "id": 1,
+          "date": "25-05-2024",
+          "time": "09:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Giường cho bệnh nhân",
+      "usageHistory": [
+        {
+          "room": "Phòng hồi sức số 01",
+          "id": 1,
+          "date": "22-08-2024",
+          "time": "09:00"
+        },
+        {
+          "room": "Phòng hồi sức số 02",
+          "id": 2,
+          "date": "22-08-2024",
+          "time": "09:00"
+        },
+        {
+          "room": "Phòng hồi sức số 02",
+          "id": 3,
+          "date": "22-08-2024",
+          "time": "11:00"
+        },
+        {
+          "room": "Phòng hồi sức số 03",
+          "id": 4,
+          "date": "22-08-2024",
+          "time": "11:00"
+        },
+        {
+          "room": "Phòng hồi sức số 01",
+          "id": 5,
+          "date": "23-08-2024",
+          "time": "12:00"
+        },
+        {
+          "room": "Phòng hồi sức số 01",
+          "id": 6,
+          "date": "23-08-2024",
+          "time": "15:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Máy chụp X-quang",
+      "usageHistory": [
+        {
+          "room": "Phòng chụp X-quang",
+          "id": 1,
+          "date": "02-02-2024",
+          "time": "08:00"
+        },
+        {
+          "room": " Phòng chụp X-quang ",
+          "id": 2,
+          "date": "02-02-2024",
+          "time": "10:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Máy tim phổi",
+      "usageHistory": [
+        {
+          "room": "Phòng cấp cứu số 01",
+          "id": 1,
+          "date": "30-04-2024",
+          "time": "00:00"
+        },
+        {
+          "room": "Phòng siêu âm số 03",
+          "id": 2,
+          "date": "30-04-2024",
+          "time": "01:00"
+        },
+        {
+          "room": "Phòng siêu âm số 01",
+          "id": 3,
+          "date": "2-05-2024",
+          "time": "22:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Máy laze y tế",
+      "usageHistory": [
+        {
+          "room": "Phòng cấp mổ 01",
+          "id": 1,
+          "date": "27-04-2024",
+          "time": "00:00"
+        },
+        {
+          "room": "Phòng mổ số 01",
+          "id": 2,
+          "date": "30-04-2024",
+          "time": "01:00"
+        }
+      ],
+      "regularMaintenance": [
+        {
+          "id": 1,
+          "date": "10-01-2023",
+          "description": "Cập nhập thêm chức năng"
+        },
+        {
+          "id": 2,
+          "date": "10-07-2023",
+          "description": "Bảo trì"
+        },
+        {
+          "id": 3,
+          "date": "10-01-2024",
+          "description": "Nâng cấp chất liệu"
+        },
+        {
+          "id": 4,
+          "date": "10-07-2024",
+          "description": "Bảo trì"
+        }
+      ]
     }
   ]
 }
