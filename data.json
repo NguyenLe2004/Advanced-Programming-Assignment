@@ -2255,103 +2255,103 @@
   "Medicine" :[
     {
       "id": 1,
-      "medName": "Paracetamol",
-      "departureTime": "7:00",
-      "Expire date": "5/12/2029",
-      "Amount": "10000",
-      "arrivalDate": "25/3/2024",
-      "arrivalTime": "9:00",
-      "departureDate": "1/4/2024"
+      "name": "Paracetamol",
+      "departureTime": "07:00",
+      "expireDate": "05-12-2029",
+      "amount": "10000",
+      "arrivalDate": "25-03-2024",
+      "arrivalTime": "09:00",
+      "departureDate": "01-04-2024"
     },
     {
       "id": 2,
-      "medName": "Aspirin",
+      "name": "Aspirin",
       "departureTime": "7:00",
-      "Expire date": "4/10/2029",
-      "Amount": "10000",
-      "arrivalDate": "25/3/2024",
-      "arrivalTime": "9:00",
-      "departureDate": "1/4/2024"
+      "expireDate": "04-10-2029",
+      "amount": "10000",
+      "arrivalDate": "25-03-2024",
+      "arrivalTime": "09:00",
+      "departureDate": "01-04-2024"
     },
     {
       "id": 3,
-      "medName": "Phosphalugel",
-      "departureTime": "7:00",
-      "Expire date": "2/3/2029",
-      "Amount": "5000",
-      "arrivalDate": "25/3/2024",
-      "arrivalTime": "9:00",
-      "departureDate": "1/4/2024"
+      "name": "Phosphalugel",
+      "departureTime": "07:00",
+      "expireDate": "02-03-2029",
+      "amount": "5000",
+      "arrivalDate": "25-03-2024",
+      "arrivalTime": "09:00",
+      "departureDate": "01-04-2024"
     },
     {
       "id": 4,
-      "medName": "Ibuprofen",
+      "name": "Ibuprofen",
       "departureTime": "7:00",
-      "Expire date": "2/3/2029",
-      "Amount": "2000",
-      "arrivalDate": "25/3/2024",
-      "arrivalTime": "9:00",
-      "departureDate": "1/4/2024"
+      "expireDate": "02-03-2029",
+      "amount": "2000",
+      "arrivalDate": "25-03-2024",
+      "arrivalTime": "09:00",
+      "departureDate": "01-04-2024"
     },
     {
       "id": 5,
-      "medName": "Diphenoxylate",
-      "departureTime": "10:0",
-      "Expire date": "10/11/2028",
-      "Amount": "5000",
-      "arrivalDate": "30/1/2024",
-      "arrivalTime": "15:0",
-      "departureDate": "12/2/2024"
+      "name": "Diphenoxylate",
+      "departureTime": "10:00",
+      "expireDate": "10-11-2028",
+      "amount": "5000",
+      "arrivalDate": "30-01-2024",
+      "arrivalTime": "15:00",
+      "departureDate": "12-02-2024"
     },
     {
       "id": 6,
-      "medName": "Chloramphenicol",
-      "departureTime": "13:0",
-      "Expire date": "10/11/2028",
-      "Amount": "2500",
-      "arrivalDate": "3/1/2024",
-      "arrivalTime": "8:00",
-      "departureDate": "17/7/2024"
+      "name": "Chloramphenicol",
+      "departureTime": "13:00",
+      "expireDate": "10-11-2028",
+      "amount": "2500",
+      "arrivalDate": "03-01-2024",
+      "arrivalTime": "08:00",
+      "departureDate": "17-07-2024"
     },
     {
       "id": 7,
-      "medName": "Thiamphenicol",
+      "name": "Thiamphenicol",
       "departureTime": "13:0",
-      "Expire date": "10/11/2028",
-      "Amount": "2500",
-      "arrivalDate": "3/1/2024",
-      "arrivalTime": "8:00",
-      "departureDate": "17/7/2024"
+      "expireDate": "10-11-2028",
+      "amount": "2500",
+      "arrivalDate": "03-01-2024",
+      "arrivalTime": "08:00",
+      "departureDate": "17-07-2024"
     },
     {
       "id": 8,
-      "medName": "Heparin",
+      "name": "Heparin",
       "departureTime": "13:0",
-      "Expire date": "2/11/2028",
-      "Amount": "3500",
-      "arrivalDate": "5/5/2024",
+      "expireDate": "02-11-2028",
+      "amount": "3500",
+      "arrivalDate": "05-05-2024",
       "arrivalTime": "8:00",
-      "departureDate": "7/7/2024"
+      "departureDate": "07-07-2024"
     },
     {
       "id": 9,
-      "medName": "Ternafast 60",
-      "departureTime": "13:0",
-      "Expire date": "2/11/2028",
-      "Amount": "1500",
-      "arrivalDate": "5/5/2024",
+      "name": "Ternafast 60",
+      "departureTime": "13:00",
+      "expireDate": "02-11-2028",
+      "amount": "1500",
+      "arrivalDate": "05-05-2024",
       "arrivalTime": "8:00",
-      "departureDate": "7/7/2024"
+      "departureDate": "07-07-2024"
     },
     {
       "id": 10,
-      "medName": "Acetylcystein",
-      "departureTime": "7:00",
-      "Expire date": "19/8/2027",
-      "Amount": "8000",
-      "arrivalDate": "15/3/2024",
-      "arrivalTime": "15:0",
-      "departureDate": "20/3/2024"
+      "name": "Acetylcystein",
+      "departureTime": "07:00",
+      "expireDate": "19-08-2027",
+      "amount": "8000",
+      "arrivalDate": "15-03-2024",
+      "arrivalTime": "15:00",
+      "departureDate": "20-03-2024"
     }
   ],
   "Equipment" : [
