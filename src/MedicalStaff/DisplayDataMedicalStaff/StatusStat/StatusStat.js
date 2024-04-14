@@ -53,7 +53,7 @@ const StatusStat = ({schedule,position}) => {
                             <div className='stat-total total'>
                                 {schedule.length}
                             </div>
-                            <div>Bệnh nhân</div>
+                            <div>{position==="specialist" ? "Bác sĩ" : position==="nurse" ? "Y tá" : "Nhân viên hỗ trợ" }</div>
                         </Col>
                         <Col className='stat-col'>
                             <div className='stat-total done'>

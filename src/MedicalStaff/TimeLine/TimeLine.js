@@ -19,7 +19,7 @@ const TimeLine = ({dataMedicalStaff}) => {
             items.push({
                 id : count_2++,
                 group : count_1,
-                title: schedule.description,
+                title: schedule.title,
                 start_time: moment(schedule.date + " " + schedule.timeBegin,"DD-MM-YYYY HH:mm"),
                 end_time : moment(schedule.date + " " + schedule.timeEnd,"DD-MM-YYYY HH:mm") 
             })

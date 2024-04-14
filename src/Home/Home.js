@@ -5,6 +5,8 @@ import Body from './Body/Body'
 import Footer from './Footer/Footer'
 import Patient from '../Patient/Patient'
 import MedicalStaff from '../MedicalStaff/MedicalStaff'
+import Medicine from '../Medicine/Medicine'
+import Equipment from '../Equipment/Equipment'
 import { Routes, Route } from 'react-router-dom';
 import { displaySignInFormContext } from '../Provider/DisplaySignInProvider'
 import DetailPatient from './DetailInfo/DetailPatient/DetailPatient'
@@ -32,8 +34,8 @@ const Home = () => {
           <Route path='/medicalStaff/:position/:id' element ={<DetailMedicalStaff/>}/>
           <Route path = '/patient/:id' element={<DetailPatient/>} />
           <Route path='/medicalStaff/:position' element ={<MedicalStaff/>}/>
-          <Route path='/medicine' element ={<div> medicine here</div>}/>
-          <Route path='/equipment' element ={<div> equipment here</div>}/>
+          <Route path='/medicine' element ={<Medicine />}/>
+          <Route path='/equipment' element ={<Equipment/>}/>
         </Routes>
         {/* <Footer/> */}
       </div>

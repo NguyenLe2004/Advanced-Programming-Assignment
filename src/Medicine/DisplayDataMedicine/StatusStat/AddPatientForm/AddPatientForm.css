@@ -1,0 +1,24 @@
+.center-page{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    overflow: hidden; 
+    width: 40%;
+    height: fit-content;
+    transform: translate(-50%,-50%);
+    z-index: 30;
+
+}
+.outer-form-add{
+    position: relative;
+    width: 200%;
+    height: fit-content;
+    z-index: 21;
+    background-color: white;
+    transition: all 0.7s ease-in-out;
+}
+
+.slide{
+    transform: translateX(-50%);
+}
