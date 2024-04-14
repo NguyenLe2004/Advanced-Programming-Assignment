@@ -92,7 +92,7 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
           <Form.Label>CCCD</Form.Label>
           <Form.Control
             required
-            pattern="   "
+            pattern="\d{12}"
             type="text"
             placeholder="CCCD"
           />

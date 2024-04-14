@@ -3,16 +3,23 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import moment from "moment";
+import { Alert } from "react-bootstrap";
 import "./AddPatientInfoForm.css";
 const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
   const [validated, setValidated] = useState(false);
-
-  const handleSubmit = async (event) => {
+  const [error, setError] = useState("");
+  const [dateOfBirth,setDateOfBirth]  = useState("")
+  const handleSubmit =  (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else {
+      if(moment(dateOfBirth).isAfter(moment())) {
+        setError("jsdbfjkasfjknsdjk"); 
+        return;
+      }
       setPersonalInfo({
         lastMidleName: form.elements.lastMidleName.value,
         firstName: form.elements.firstName.value,
@@ -25,6 +32,7 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
         address: form.elements.address.value,
         hometown: form.elements.hometown.value,
       });
+      setError("")
       setIsSlide(true);
     }
     setValidated(true);
@@ -38,6 +46,8 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
     >
       <Row className="mb-3">
         <h3>Thông tin cá nhân</h3>
+        {error && 
+        <div >{error}</div>}
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} md="6" controlId="lastMidleName">
@@ -76,7 +86,7 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="dateOfBirth">
           <Form.Label>Ngày sinh</Form.Label>
-          <Form.Control type="date" required />
+          <Form.Control type="date" required onChange={(event) => setDateOfBirth(event.target.value)} /> 
         </Form.Group>
         <Form.Group as={Col} md="5" controlId="citizenID">
           <Form.Label>CCCD</Form.Label>
@@ -121,7 +131,7 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
           <Form.Label>Nghề nghiệp</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Nghề nghiệm"
+            placeholder="Nghề nghiệp"
             required
             pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
           />

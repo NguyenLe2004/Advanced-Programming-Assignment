@@ -22,8 +22,6 @@ const UpdateBlock = ({medicalStaff}) => {
           lastMidleName: form.elements.lastMidleName.value,
           firstName: form.elements.firstName.value,
           gender: form.elements.gender.value,
-          height: form.elements.height.value,
-          weight: form.elements.weight.value,
           phoneNum: form.elements.phoneNum.value,
           specialty : form.elements.specialty.value,
           email: form.elements.email.value,
