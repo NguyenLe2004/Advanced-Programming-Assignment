@@ -93,7 +93,9 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
       
 <Button onClick={() => setIsSlide2(false)}> Quay lại</Button>
 <Button style={{position:"absolute",left:'75%',transform:"translateX(-50%)"}} type="submit" > Thêm chứng chỉ</Button>
-<Button disabled={!cert.length} onClick={handleAddMedicalStaff} > Thêm Bác sĩ </Button>
+<Button disabled={!cert.length} onClick={handleAddMedicalStaff} > 
+Thêm {position==="specialist" ? "Bác sĩ" : position==="nurse" ? "y tá" : "nhân viên hỗ trợ"}
+</Button>
 
 </Form>
 
