@@ -8,7 +8,6 @@ import "./MedicalStaff.css"
 import { dataMedicalStaffContext } from '../Provider/DataProvider'
 const MedicalStaff = () => {
   const {position} = useParams();
-  console.log("position",position);
   const {dataMedicalStaff,setDataMedicalStaff} = useContext(dataMedicalStaffContext);
   const getMedicalStaffStatus = (schedule) => {
     const curDate = moment(moment().format("DD-MM-YYYY"),"DD-MM-YYYY");

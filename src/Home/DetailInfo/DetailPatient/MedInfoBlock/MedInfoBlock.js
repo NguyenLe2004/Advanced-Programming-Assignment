@@ -19,7 +19,7 @@ const MedInfoBlock = ({ patient }) => {
         weight: form.elements.weight,
         bloodType: form.elements.bloodType,
         medHistory: form.elements.medHistory,
-        symtoms: form.elements.symtoms,
+        symptoms: form.elements.symptoms,
         diagnosis: form.elements.diagnosis,
       };
       axios

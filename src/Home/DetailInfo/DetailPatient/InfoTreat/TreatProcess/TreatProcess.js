@@ -159,7 +159,7 @@ const TreatProcess = ({patient}) => {
                   <div className='title'>{treatment.title}</div>
                   <div className='specialist'>
                     <span>{getMedStaffByID(treatment.medicalStaffID).medStaffPosition +": "}</span> 
-                    <span><a href={`/MedicalStaff/${treatment.medicalStaffID}`}>{getMedStaffByID(treatment.medicalStaffID).medStaffName}</a></span>
+                    <span><a href={`/MedicalStaff/${getMedStaffByID(treatment.medicalStaffID).medStaffPosition}/${treatment.medicalStaffID}`}>{getMedStaffByID(treatment.medicalStaffID).medStaffName}</a></span>
                   </div>
                   <div> 
                     <div className='description'> {treatment.description} </div>
@@ -197,7 +197,6 @@ const TreatProcess = ({patient}) => {
                           required
                         />
                     </Form.Group>
-                    
                     </Row>
                   <Row className="mb-3">
                     <Form.Group as={Col} md="8" controlId="title">

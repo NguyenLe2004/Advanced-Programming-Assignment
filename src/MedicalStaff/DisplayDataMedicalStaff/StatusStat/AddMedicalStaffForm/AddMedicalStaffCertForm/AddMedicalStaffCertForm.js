@@ -6,8 +6,10 @@ import Row from 'react-bootstrap/Row';
 import axios from 'axios'
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useParams } from 'react-router-dom';
 
 const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
+  const {position} = useParams()
   const [cert , setCert ] = useState([])
   const [validated, setValidated] = useState(false);
   const handleDeleteCert = async (index) => {
@@ -19,11 +21,13 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
     const data = {
       ...personalInfo,
       education: education,
-      certi : cert
+      cert : cert,
+      position: position,
+      schedule :[]
     }
     axios.post("http://localhost:3000/MedicalStaff",data)
       .then((response) => {
-        window.open(`http://localhost:4000/MedicalStaff/${response.data.id}`,'_blank')
+        window.open(`http://localhost:4000/medicalstaff/${position}/${response.data.id}`,'_blank')
       })
       .catch((error) => console.log(error))
   }
@@ -83,7 +87,6 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
                 <FontAwesomeIcon icon={faXmark} />
               </span>
             </div>
-
           )
         })}
       </Row>

@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import "./UpdateBlock.css"
 const UpdateBlock = ({patient}) => {
     const [validated, setValidated] = useState(false);
-
+    if(!patient) return;
     const handleSubmit = (event) => {
       const form = event.currentTarget;
       event.preventDefault();

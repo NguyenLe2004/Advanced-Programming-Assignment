@@ -15,7 +15,7 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
       event.stopPropagation();
     } else {
       setPersonalInfo({
-        lastMidleName: form.elements.lastMidleName.value,
+        lastMiddleName: form.elements.lastMiddleName.value,
         specialty: form.elements.specialty.value,
         firstName: form.elements.firstName.value,
         gender: form.elements.gender.value,
@@ -41,7 +41,7 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
         <h3>Thông tin cá nhân</h3>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="5" controlId="lastMidleName">
+        <Form.Group as={Col} md="5" controlId="lastMiddleName">
           <Form.Label>Họ và tên đệm</Form.Label>
           <Form.Control
             required

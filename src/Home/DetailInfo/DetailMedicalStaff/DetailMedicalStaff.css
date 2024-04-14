@@ -11,10 +11,12 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: fit-content;
+    width: 8vw;
+    height: 8vw;
+    text-align: center;
+    /* align-items: center; */
     font-weight: bold;
     font-size: 40px;
-    padding: 5vh 5vh 5vh 5vh;
     background-color: rgb(57, 113, 0);
     color: white;
     margin-top: 2vh;

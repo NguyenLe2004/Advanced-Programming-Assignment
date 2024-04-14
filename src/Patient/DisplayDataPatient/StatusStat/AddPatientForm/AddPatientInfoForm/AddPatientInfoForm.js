@@ -21,7 +21,7 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
         return;
       }
       setPersonalInfo({
-        lastMidleName: form.elements.lastMidleName.value,
+        lastMiddleName: form.elements.lastMiddleName.value,
         firstName: form.elements.firstName.value,
         gender: form.elements.gender.value,
         phoneNum: form.elements.phoneNum.value,
@@ -50,7 +50,7 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
         <div >{error}</div>}
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="6" controlId="lastMidleName">
+        <Form.Group as={Col} md="6" controlId="lastMiddleName">
           <Form.Label>Họ và tên đệm</Form.Label>
           <Form.Control
             required

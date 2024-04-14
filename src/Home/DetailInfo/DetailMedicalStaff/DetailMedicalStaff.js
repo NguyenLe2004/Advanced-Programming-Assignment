@@ -19,6 +19,7 @@ const DetailMedicalStaff = () => {
   const [isUpdate, setIsUpdate] = useState(false);
 
   const getMedicalStaffStatus = (schedule) => {
+    if (!schedule.length) return "Mới khởi tạo"
     const curDate = moment(moment().format("DD-MM-YYYY"),"DD-MM-YYYY");
     const curTime = moment(moment().format("HH-mm"),"HH:mm");
     let status="Sẵn sàng";
@@ -41,22 +42,21 @@ const DetailMedicalStaff = () => {
     const getMedicalStaff = async () => {
       try {
         const response = await axios.get("http://localhost:3000/MedicalStaff?id=" + id);
-          const medicalStaffDataWithStatus = response.data.map(item => {
-          const schedule = item.schedule;
-          schedule.sort((a, b) => {
-            const dateA = moment(a.date, "DD-MM-YYYY");
-            const dateB = moment(b.date, "DD-MM-YYYY");
-            console.log("a and b : ",dateA, dateB)
-            if (dateA.isSame(dateB)) {
-              return moment(a.timeBegin, "HH:mm") - moment(b.timeBegin, "HH:mm");
-            }
-            return dateA - dateB;
-          });
-          const status = getMedicalStaffStatus(schedule);
-          return {...item ,status,schedule};
-        })
-        console.log("after sort",medicalStaffDataWithStatus);
-        setMedicalStaff(medicalStaffDataWithStatus[0]);
+          let medicalStaffDataWithStatus = response.data[0]
+          if(medicalStaffDataWithStatus.schedule.length) {
+            medicalStaffDataWithStatus.schedule.sort((a, b) => {
+              const dateA = moment(a.date, "DD-MM-YYYY");
+              const dateB = moment(b.date, "DD-MM-YYYY");
+              if (dateA.isSame(dateB)) {
+                return moment(a.timeBegin, "HH:mm") - moment(b.timeBegin, "HH:mm");
+              }
+              return dateA - dateB;
+            });
+          }
+          medicalStaffDataWithStatus.status = getMedicalStaffStatus(medicalStaffDataWithStatus.schedule);
+        
+        setMedicalStaff(medicalStaffDataWithStatus);
+        console.log("here",medicalStaff)
       } catch (error) {
         console.log(error); 
       }
