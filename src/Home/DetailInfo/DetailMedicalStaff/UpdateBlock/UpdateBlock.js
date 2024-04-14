@@ -62,6 +62,7 @@ const UpdateBlock = ({medicalStaff}) => {
             type="text"
             placeholder="Họ và tên đệm"
             defaultValue={medicalStaff.lastMiddleName}
+            pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
           />
         </Form.Group>
         <Form.Group as={Col} controlId = "firstName"> 
@@ -71,6 +72,7 @@ const UpdateBlock = ({medicalStaff}) => {
             type="text"
             placeholder="Tên"
             defaultValue={medicalStaff.firstName}
+            pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
           />
         </Form.Group>
       </Row>
@@ -88,6 +90,7 @@ const UpdateBlock = ({medicalStaff}) => {
             type='tel'
             placeholder='Số điện thoại'
             defaultValue={medicalStaff.phoneNum}
+            pattern="^\d{10}"
            required />
         </Form.Group>
 
@@ -100,6 +103,7 @@ const UpdateBlock = ({medicalStaff}) => {
           <Form.Control 
           type = "email"
           placeholder='Email'
+          pattern=".+@.+\.[A-Za-z]+$"
           defaultValue={medicalStaff.email}
            required />
         </Form.Group>
@@ -124,7 +128,8 @@ const UpdateBlock = ({medicalStaff}) => {
             type='text'
             placeholder='Căn cước công dân'
             defaultValue={medicalStaff.citizenID}
-           required />
+           required 
+           pattern="^\d{12}"/>
         </Form.Group>
         <Form.Group as={Col} md='5' controlId = "dateOfBirth" >
           <Form.Label>Ngày sinh</Form.Label>

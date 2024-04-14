@@ -60,7 +60,11 @@ const UpdateBlock = ({patient}) => {
             type="text"
             placeholder="Họ và tên đệm"
             defaultValue={patient.lastMiddleName}
+            pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
           />
+          <Form.Control.Feedback type="invalid">
+            Họ và tên đệm không hợp lệ
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} controlId = "firstName"> 
           <Form.Label>Tên</Form.Label>
@@ -69,7 +73,11 @@ const UpdateBlock = ({patient}) => {
             type="text"
             placeholder="Tên"
             defaultValue={patient.firstName}
+            pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
           />
+          <Form.Control.Feedback type="invalid">
+            Tên không hợp lệ
+          </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3" >
@@ -86,7 +94,11 @@ const UpdateBlock = ({patient}) => {
             type='tel'
             placeholder='Số điện thoại'
             defaultValue={patient.phoneNum}
+            pattern="^\d{10}"
            required />
+           <Form.Control.Feedback type="invalid">
+            Số điện thoại không hợp lệ
+          </Form.Control.Feedback>
         </Form.Group>
 
 
@@ -99,7 +111,11 @@ const UpdateBlock = ({patient}) => {
           type = "email"
           placeholder='Email'
           defaultValue={patient.email}
+          pattern=".+@.+\.[A-Za-z]+$"
            required />
+           <Form.Control.Feedback type="invalid">
+           Email không hợp lệ.
+         </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md='5' controlId = "job" >
           <Form.Label>Nghề nghiệp</Form.Label>
@@ -107,7 +123,11 @@ const UpdateBlock = ({patient}) => {
           type = "text"
           placeholder='Nghề nghiệp'
           defaultValue={patient.job}
+          pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
            required />
+           <Form.Control.Feedback type="invalid">
+           Nghề nghiệp không hợp lệ.
+          </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
@@ -117,6 +137,7 @@ const UpdateBlock = ({patient}) => {
             type='text'
             placeholder='Căn cước công dân'
             defaultValue={patient.citizenID}
+            pattern="^\d{12}"
            required />
         </Form.Group>
         <Form.Group as={Col} md='5' controlId = "dateOfBirth" >
@@ -125,6 +146,9 @@ const UpdateBlock = ({patient}) => {
           type="date"
           defaultValue={moment(patient.dateOfBirth,"DD-MM-YYYY").format("YYYY-MM-DD")}
            required />
+           <Form.Control.Feedback type="invalid">
+            Ngày sinh không hợp lệ.
+          </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
@@ -132,7 +156,7 @@ const UpdateBlock = ({patient}) => {
           <Form.Label>Địa chỉ</Form.Label>
           <Form.Control type="text" placeholder="Địa chỉ" defaultValue={patient.address} required />
           <Form.Control.Feedback type="invalid">
-            Hãy nhập địa chỉ hợp lệ
+            Địa chỉ không hợp lệ.
           </Form.Control.Feedback>
         </Form.Group>
       </Row>
@@ -141,7 +165,7 @@ const UpdateBlock = ({patient}) => {
           <Form.Label>Quê quán</Form.Label>
           <Form.Control type="text" placeholder="Quê quán" defaultValue={patient.hometown} required />
           <Form.Control.Feedback type="invalid">
-            Hãy nhập quê quán hợp lệ
+            Hãy nhập quê quán hợp lệ.
           </Form.Control.Feedback>
         </Form.Group>
       </Row>
