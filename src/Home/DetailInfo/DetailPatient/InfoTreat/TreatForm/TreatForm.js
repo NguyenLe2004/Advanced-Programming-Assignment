@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./TreatForm.css"
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
@@ -7,8 +7,9 @@ import Form from 'react-bootstrap/Form';
 import moment from 'moment';
 import axios from 'axios'
 import Row from 'react-bootstrap/Row';
+import { specialtyContext } from '../../../../../Provider/DataProvider';
 const TreatForm = ({patient}) => {
-
+  const {allSpecialty} = useContext(specialtyContext);
   const [validated, setValidated] = useState(false);
   const [dateBegin, setDateBegin] = useState("");
   const [dateEnd, setDateEnd] = useState("");
@@ -39,8 +40,6 @@ const TreatForm = ({patient}) => {
         ...patient.treatProcess,
         newTreatProcess
       ]
-      console.log(patient.treatProcess)
-      console.log(updateTreatProcessData);
       const addTreatProcess = async () => {
           axios.patch("http://localhost:3000/Patient/" + patient.id, {treatProcess : updateTreatProcessData} )
           .then(response => {
@@ -137,27 +136,32 @@ const TreatForm = ({patient}) => {
             </Form.Group>
         </Row>
         <Row className="mb-3">
-          <Form.Group as={Col} md={4} controlId="specialty">
-              <Form.Label>Chuyên khoa</Form.Label>
-              <Form.Select onChange={(event) => setSpecialty(event.target.value)} >
-                <option>{""}</option>
-                <option>Tim mạch</option>
-                <option>Sản</option>
-                <option>Não</option>
-                <option>Tiêu hoá</option>
-                <option>Hô Hấp</option>
-                <option>Tâm thần</option>
-              </Form.Select>
-              <Form.Control.Feedback type="invalid">
-                Please provide a valid city.
-              </Form.Control.Feedback>
-            </Form.Group>
+        <Form.Group as={Col} md={4} controlId="specialty">
+          <Form.Label>Chuyên khoa</Form.Label>
+          <Form.Select onChange={(event) => setSpecialty(event.target.value)} >
+            <option>{""}</option>
+            {position? (
+              allSpecialty[position].map((specialty,index) => {
+                return <option key={index} >{specialty}</option>
+              })
+            ) : (
+              Object.values(allSpecialty).flatMap((specialties, index) =>
+                specialties.map((specialty, subIndex) => (
+                  <option key={`${index}-${subIndex}`}>{specialty}</option>
+                ))
+              )
+            )} 
+          </Form.Select>
+          <Form.Control.Feedback type="invalid">
+            Please provide a valid city.
+          </Form.Control.Feedback>
+        </Form.Group>
             <Form.Group as={Col} md={4} controlId="position">
               <Form.Label>Vị trí</Form.Label>
               <Form.Select onChange={(event) => setPosition(event.target.value)} >
                 <option>{""}</option>
-                <option>Y tá</option>
                 <option>Bác sĩ</option>
+                <option>Y tá</option>
                 <option>Nhân viên hỗ trợ</option>
               </Form.Select>
               <Form.Control.Feedback type="invalid">

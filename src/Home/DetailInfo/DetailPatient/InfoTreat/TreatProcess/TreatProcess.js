@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios';
 import moment from 'moment';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import { specialtyContext } from '../../../../../Provider/DataProvider';
 import { faKitMedical,faMicroscope, faPen, faXmark} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./TreatProcess.css"
@@ -19,7 +20,7 @@ const TreatProcess = ({patient}) => {
     const [medStaffID, setMedStaffID] = useState("");
     const [medStaffData, setMedStaffData] = useState([]);
     const [updateIndex, setUpdateIndex] = useState(0) // can change if use sub collect
-  
+    const {allSpecialty} = useContext(specialtyContext);
     const handleSubmit = async (event) => {
       const form = event.currentTarget;
       event.preventDefault();
@@ -239,12 +240,17 @@ const TreatProcess = ({patient}) => {
                         <Form.Label>Chuyên khoa</Form.Label>
                         <Form.Select onChange={(event) => setSpecialty(event.target.value)} defaultValue={treatment.specialty} >
                           <option>{""}</option>
-                          <option>Tim mạch</option>
-                          <option>Sản</option>
-                          <option>Não</option>
-                          <option>Tiêu hoá</option>
-                          <option>Hô Hấp</option>
-                          <option>Tâm thần</option>
+                          {position? (
+                            allSpecialty[position].map((specialty,index) => {
+                              return <option key={index} >{specialty}</option>
+                            })
+                          ) : (
+                            Object.values(allSpecialty).flatMap((specialties, index) =>
+                              specialties.map((specialty, subIndex) => (
+                                <option key={`${index}-${subIndex}`}>{specialty}</option>
+                              ))
+                            )
+                          )} 
                         </Form.Select>
                         <Form.Control.Feedback type="invalid">
                           Please provide a valid city.
@@ -254,9 +260,9 @@ const TreatProcess = ({patient}) => {
                         <Form.Label>Vị trí</Form.Label>
                         <Form.Select onChange={(event) => setPosition(event.target.value)} defaultValue={treatment.position} >
                           <option>{""}</option>
-                          <option>Y tá</option>
-                          <option>Bác sĩ</option>
-                          <option>Nhân viên hỗ trợ</option>
+                          <option value={"Y tá"}>Y tá</option>
+                          <option value={"Bác sĩ"}>Bác sĩ</option>
+                          <option value={"Nhân viên hỗ trợ"}>Nhân viên hỗ trợ</option>
                         </Form.Select>
                         <Form.Control.Feedback type="invalid">
                           Please provide a valid city.
