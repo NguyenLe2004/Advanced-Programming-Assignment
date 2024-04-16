@@ -18,6 +18,7 @@ const TreatProcess = ({patient}) => {
     const [specialty, setSpecialty] = useState("");
     const [medStaffID, setMedStaffID] = useState("");
     const [medStaffData, setMedStaffData] = useState([]);
+    const [updateIndex, setUpdateIndex] = useState(0) // can change if use sub collect
   
     const handleSubmit = async (event) => {
       const form = event.currentTarget;
@@ -25,24 +26,23 @@ const TreatProcess = ({patient}) => {
       if (form.checkValidity() === false) {
         event.stopPropagation();
       } else{
-        const datetimeBegin = moment(dateBegin);
-        const datetimeEnd = moment(dateEnd);
+        const datetimeBegin = form.elements.dateBegin.value;
+        const datetimeEnd = form.elements.dateEnd.value;
         const newTreatProcess = {
-          dateBegin: datetimeBegin.format("DD-MM-YYYY"),
-          dateEnd:datetimeEnd.format("DD-MM-YYYY"),
-          timeBegin:datetimeBegin.format("HH:mm"),
-          timeEnd:datetimeEnd.format("HH:mm"),
+          dateBegin: moment(datetimeBegin).format("DD-MM-YYYY"),
+          dateEnd:moment(datetimeEnd).format("DD-MM-YYYY"),
+          timeBegin:moment(datetimeBegin).format("HH:mm"),
+          timeEnd:moment(datetimeEnd).format("HH:mm"),
           room:form.elements.room.value,
           title:form.elements.title.value,
           description: form.elements.description.value,
-          medicalStaffID : medStaffID
+          medicalStaffID : medStaffID ? medStaffID : patient.treatProcess[updateIndex].medicalStaffID
         }
-        const updateTreatProcessData = [
+        let updateTreatProcessData = [
           ...patient.treatProcess,
-          newTreatProcess
         ]
-        console.log(patient.treatProcess)
-        console.log(updateTreatProcessData);
+        updateTreatProcessData[updateIndex]  = newTreatProcess;
+  
         const addTreatProcess = async () => {
             axios.patch("http://localhost:3000/Patient/" + patient.id, {treatProcess : updateTreatProcessData} )
             .then(response => {
@@ -210,11 +210,10 @@ const TreatProcess = ({patient}) => {
                           Please provide a valid city.
                         </Form.Control.Feedback>
                       </Form.Group>
-                      <Form.Group as={Col} md="3" controlId="room">
+                      <Form.Group as={Col} md="3">
                       <Form.Label>{getMedStaffByID(treatment.medicalStaffID).medStaffPosition}</Form.Label>
                         <Form.Control
                           type="text"
-                          placeholder="Phòng"
                           aria-describedby="inputGroupPrepend"
                           defaultValue={getMedStaffByID(treatment.medicalStaffID).medStaffName}
                           disabled
@@ -269,7 +268,7 @@ const TreatProcess = ({patient}) => {
                          disabled={!(dateBegin && dateEnd)} 
                          onClick={handleDisplayMedStaff} 
                          onChange={(event)=> setMedStaffID(event.target.value)} 
-                         required>
+                         >
                           <option>{""}</option>
                           {medStaffData&&
                             medStaffData.map((obj,index) => {
@@ -281,7 +280,7 @@ const TreatProcess = ({patient}) => {
                         </Form.Control.Feedback>
                       </Form.Group>
                   </Row>
-                  <Button type="submit">Đổi thông tin lịch trình</Button>
+                  <Button onClick={() => setUpdateIndex(index)} type="submit" >Đổi thông tin lịch trình</Button>
                   <Button style={{position:"absolute",right:"1vw"}} onClick={() => handleDeleteTreatProcess(index)} variant='danger'>Xoá tiến trình này</Button>
                 </Form>
                 </div>
