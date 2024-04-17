@@ -14,17 +14,6 @@
       "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
       "treatProcess": [
         {
-          "dateBegin": "01-04-2024",
-          "dateEnd": "02-04-2024",
-          "timeBegin": "07:00",
-          "timeEnd": "08:30",
-          "room": "H3-102",
-          "title": "Truyền máu",
-          "description": "Bệnh nhân đã được thực hiện quá trình truyền máu nhằm cung cấp máu mới và khắc phục tình trạng thiếu máu. Loại máu được sử dụng trong quá trình truyền là máu loại A+. Đã truyền tổng cộng 2 đơn vị máu cho bệnh nhân.",
-          "medicalStaffID": "1",
-          "id": 1
-        },
-        {
           "dateBegin": "10-04-2024",
           "dateEnd": "11-04-2024",
           "timeBegin": "08:15",
@@ -33,7 +22,18 @@
           "title": "Phẫu thuật Gan",
           "description": "Sắp tiến hành",
           "medicalStaffID": "1",
-          "id": 2
+          "id": "2"
+        },
+        {
+          "dateBegin": "01-04-2024",
+          "dateEnd": "02-04-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "08:30",
+          "room": "H3-102",
+          "title": "Truyền máu",
+          "description": "Bệnh nhân đã được thực hiện quá trình truyền máu nhằm cung cấp máu mới và khắc phục tình trạng thiếu máu. Loại máu được sử dụng trong quá trình truyền là máu loại A+. Đã truyền tổng cộng 2 đơn vị máu cho bệnh nhân.",
+          "medicalStaffID": "13",
+          "id": "1"
         },
         {
           "dateBegin": "10-03-2024",
@@ -44,7 +44,7 @@
           "title": "Khám tổng quát và bổ sung thuốc",
           "description": "bệnh nhân đã được tiến hành khám tổng quát và bổ sung thuốc. Trong quá trình khám, bác sĩ đã kiểm tra các chỉ số y tế quan trọng của bệnh nhân như huyết áp, nhịp tim, nhiệt độ cơ thể và đánh giá tổng quan về tình trạng sức khỏe đồng thời bổ sung thuốc theo chỉ định của bác sĩ và theo dõi tình trạng",
           "medicalStaffID": "1",
-          "id": 3
+          "id": "3"
         },
         {
           "title": "Xét nghiệm máu",
@@ -91,7 +91,6 @@
       "phoneNum": "0963 789 012",
       "hometown": "Quảng Phong, Cửa Lò, Nghệ An",
       "job": "Lập trình viên",
-      "Doctor_ID ": "",
       "medHistory": "Không có",
       "symptoms": "Thường xuyên chóng mặt",
       "diagnosis": "Thiếu máu, xơ gan",
@@ -104,7 +103,7 @@
           "room": "H3-102",
           "title": "Kiểm tra EKG",
           "description": "Lịch kiểm tra điện tâm đồ được đặt cho bệnh nhân để đánh giá chức năng tim.",
-          "medicalStaffID": "2",
+          "medicalStaffID": 2,
           "id": 1
         }
       ],
@@ -137,7 +136,7 @@
           "room": "H3-102",
           "title": "Phiên tập vận hành",
           "description": "Phiên tập vận hành đã được lên lịch để phục hồi chức năng.",
-          "medicalStaffID": "2",
+          "medicalStaffID": 2,
           "id": 1
         }
       ],
@@ -163,17 +162,6 @@
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "15-04-2024",
-          "dateEnd": "16-04-2024",
-          "timeBegin": "09:30",
-          "timeEnd": "11:00",
-          "room": "H1-101",
-          "title": "Tư vấn dinh dưỡng",
-          "description": "Cuộc hẹn với chuyên gia dinh dưỡng để hướng dẫn và đánh giá chế độ dinh dưỡng.",
-          "medicalStaffID": "3",
-          "id": 1
-        },
-        {
           "dateBegin": "20-04-2024",
           "dateEnd": "21-04-2024",
           "timeBegin": "10:45",
@@ -181,8 +169,18 @@
           "room": "H3-101",
           "title": "Quét MRI",
           "description": "Cuộc hẹn quét MRI được lên lịch để có hình ảnh chi tiết về các cơ quan nội tạng.",
-          "medicalStaffID": "3",
-          "id": 2
+          "medicalStaffID": 3
+        },
+        {
+          "dateBegin": "15-04-2024",
+          "dateEnd": "16-04-2024",
+          "timeBegin": "09:30",
+          "timeEnd": "11:00",
+          "room": "H1-101",
+          "title": "Tư vấn dinh dưỡng",
+          "description": "Cuộc hẹn với chuyên gia dinh dưỡng để hướng dẫn và đánh giá chế độ dinh dưỡng.",
+          "medicalStaffID": 3,
+          "id": 1
         }
       ],
       "bloodType": "AB"
@@ -214,7 +212,7 @@
           "room": "H3-101",
           "title": "Khám siêu âm",
           "description": "Cuộc hẹn siêu âm để chẩn đoán mục đích.",
-          "medicalStaffID": "3",
+          "medicalStaffID": 3,
           "id": 1
         }
       ],
@@ -247,7 +245,7 @@
           "room": "H3-102",
           "title": "Phiên tập nghề nghiệp",
           "description": "Phiên tập nghề nghiệp đã được lên lịch để phục hồi chức năng.",
-          "medicalStaffID": "4",
+          "medicalStaffID": 4,
           "id": 1
         },
         {
@@ -258,7 +256,7 @@
           "room": "H1-101",
           "title": "Kiểm tra nha khoa",
           "description": "Cuộc hẹn kiểm tra nha khoa định kỳ để đánh giá sức khỏe miệng.",
-          "medicalStaffID": "4",
+          "medicalStaffID": 4,
           "id": 2
         }
       ],
@@ -291,7 +289,7 @@
           "room": "H3-102",
           "title": "Phiên tập nói",
           "description": "Phiên tập nói đã được lên lịch để phục hồi chức năng ngôn ngữ.",
-          "medicalStaffID": "4",
+          "medicalStaffID": 4,
           "id": 1
         },
         {
@@ -302,7 +300,7 @@
           "room": "H3-101",
           "title": "Đánh giá tình trạng trí óc",
           "description": "Cuộc hẹn để đánh giá và đánh giá chức năng trí óc.",
-          "medicalStaffID": "5",
+          "medicalStaffID": 5,
           "id": 2
         }
       ],
@@ -335,7 +333,7 @@
           "room": "H3-101",
           "title": "Tư vấn di truyền học",
           "description": "Cuộc hẹn để tư vấn di truyền học và đánh giá rủi ro.",
-          "medicalStaffID": "5",
+          "medicalStaffID": 5,
           "id": 1
         }
       ],
@@ -368,7 +366,7 @@
           "room": "H3-101",
           "title": "Kiểm tra mắt",
           "description": "Cuộc hẹn để kiểm tra mắt và kiểm tra thị lực chi tiết.",
-          "medicalStaffID": "5",
+          "medicalStaffID": 5,
           "id": 1
         }
       ],
@@ -401,7 +399,7 @@
           "room": "H3-102",
           "title": "Kiểm tra thính lực",
           "description": "Cuộc hẹn để đánh giá thính lực và kiểm tra thính lực.",
-          "medicalStaffID": "6",
+          "medicalStaffID": 6,
           "id": 1
         },
         {
@@ -412,7 +410,7 @@
           "room": "H3-102",
           "title": "Kiểm tra sức khỏe tổng quát",
           "description": "Cuộc hẹn kiểm tra sức khỏe tổng quát định kỳ cho đánh giá sức khỏe chung.",
-          "medicalStaffID": "6",
+          "medicalStaffID": 6,
           "id": 2
         }
       ],
@@ -421,7 +419,7 @@
   ],
   "MedicalStaff": [
     {
-      "id": "1",
+      "id": 1,
       "position": "Bác sĩ",
       "citizenID": "768240953126",
       "firstName": "Anh",
@@ -485,7 +483,7 @@
       "lastMidleName": "Lê Hòa"
     },
     {
-      "id": "2",
+      "id": 2,
       "position": "Bác sĩ",
       "citizenID": "509431276845",
       "firstName": "Bình",
