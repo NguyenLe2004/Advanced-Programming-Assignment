@@ -22,12 +22,13 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
       ...personalInfo,
       education: education,
       cert : cert,
-      position: position,
+      position: position ==="specialist" ? "Bác sĩ" : position === "nurse" ? "Y tá"  : "Nhân viên hỗ trợ",
       schedule :[]
     }
     axios.post("http://localhost:3000/MedicalStaff",data)
       .then((response) => {
         window.open(`http://localhost:4000/medicalstaff/${position}/${response.data.id}`,'_blank')
+        window.location.reload();
       })
       .catch((error) => console.log(error))
   }

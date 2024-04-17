@@ -28,6 +28,7 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
             try {
                 const response = await axios.post('http://localhost:3000/Patient',data);
                 window.open(`http://localhost:4000/Patient/${response.data.id}`, '_blank');
+                window.location.reload();
               } catch (error) {
                 console.error(error);
               }
