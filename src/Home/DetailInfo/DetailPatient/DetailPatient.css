@@ -8,10 +8,14 @@
     background-color: rgb(204, 230, 255,0.3);
 }
 .avatar{
+    display: flex;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: fit-content;
+    text-align: center;
+    align-items: center;
+    width: 15vh;
+    height:15vh;
     font-weight: bold;
     font-size: 40px;
     padding: 5vh 5vh 5vh 5vh;

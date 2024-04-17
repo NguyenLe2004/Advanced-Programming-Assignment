@@ -24,13 +24,13 @@ const TreatForm = ({patient}) => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else{
-      const datetimeBegin = moment(dateBegin);
-      const datetimeEnd = moment(dateEnd);
+      const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
+      const [dateEnd, timeEnd] = form.elements.datetimeBegin.value.split("T")
       const newTreatProcess = {
-        dateBegin: datetimeBegin.format("DD-MM-YYYY"),
-        dateEnd:datetimeEnd.format("DD-MM-YYYY"),
-        timeBegin:datetimeBegin.format("HH:mm"),
-        timeEnd:datetimeEnd.format("HH:mm"),
+        dateBegin: dateBegin,
+        dateEnd:dateEnd,
+        timeBegin:timeBegin,
+        timeEnd:timeEnd,
         room:form.elements.room.value,
         title:form.elements.title.value,
         description: form.elements.description.value,
@@ -42,13 +42,34 @@ const TreatForm = ({patient}) => {
       ]
       const addTreatProcess = async () => {
           axios.patch("http://localhost:3000/Patient/" + patient.id, {treatProcess : updateTreatProcessData} )
-          .then(response => {
-            window.location.reload();
+          .then(() => {
+            
+            // window.location.reload();
           })
           .catch(error => {
             console.error('Lỗi cập nhật thông tin', error);
           });
       }
+
+      const addSchedule = async ( ) => {
+        const response = await axios.get("http://localhost:3000/MedicalStaff/"+medStaffID);
+        const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
+        const [dateEnd, timeEnd] = form.elements.datetimeBegin.value.split("T")
+        const newSchedule = [
+          ...response.data.schedule,
+          {
+            dateBegin: dateBegin,
+            dateEnd:dateEnd,
+            timeBegin:timeBegin,
+            timeEnd:timeEnd,
+            room:form.elements.room.value,
+            title : form.elements.medstaffTitle.value,
+            description : form.elements.medstaffDescription.value
+          }
+        ]
+        axios.patch("http://localhost:3000/medicalStaff/"+medStaffID, {schedule : newSchedule});
+      }
+      addSchedule();
       addTreatProcess();
     }
     setValidated(true);
@@ -59,8 +80,8 @@ const TreatForm = ({patient}) => {
     const end = moment(dateEnd,"DD-MM-YYYY HH:mm");
     for (let i=schedule.length-1;i>=0;i--){
       const curSchedule = schedule[i];
-      const curBegin = moment(curSchedule.date + " " + curSchedule.timeBegin,"DD-MM-YYYY HH:mm" )
-      const curEnd = moment(curSchedule.date + " " + curSchedule.timeEnd,"DD-MM-YYYY HH:mm" )
+      const curBegin = moment(curSchedule.dateBegin + " " + curSchedule.timeBegin,"DD-MM-YYYY HH:mm" )
+      const curEnd = moment(curSchedule.dateEnd + " " + curSchedule.timeEnd,"DD-MM-YYYY HH:mm" )
       if(begin.isAfter(curEnd)) return true;
       if(end.isBefore(curBegin)) continue;
       return false;
@@ -91,15 +112,15 @@ const TreatForm = ({patient}) => {
     <div className='form-block'>
 <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">
-          <Form.Group as={Col} xs="6" controlId="dateBegin">
-            <Form.Label>Ngày bắt đầu</Form.Label>
+          <Form.Group as={Col} xs="6" controlId="datetimeBegin">
+            <Form.Label>Thời điểm bắt đầu</Form.Label>
             <Form.Control
               required
               onChange={(event) => setDateBegin(moment(event.target.value).format("DD-MM-YYYY HH:mm"))}
               type="datetime-local"
             />
           </Form.Group>
-          <Form.Group as={Col} md="6" controlId="dateEnd">
+          <Form.Group as={Col} md="6" controlId="datetimeEnd">
             <Form.Label>Thời điểm kết thúc</Form.Label>
             <Form.Control 
               required 
@@ -181,7 +202,35 @@ const TreatForm = ({patient}) => {
                 Please provide a valid city.
               </Form.Control.Feedback>
             </Form.Group>
-        </Row>
+             </Row>
+              {medStaffID && 
+                    <Row className='mb-3'>
+                      <Row className="mb-3">
+                        <Form.Group controlId="medstaffTitle">
+                            <Form.Label>Công việc</Form.Label>
+                            <Form.Control
+                            type="text"
+                              placeholder="Công việc"
+                            required />
+                            <Form.Control.Feedback type="invalid">
+                              Please provide a valid city.
+                            </Form.Control.Feedback>
+                          </Form.Group>
+                      </Row>
+                      <Row className="mb-3">
+                        <Form.Group controlId="medstaffDescription">
+                            <Form.Label>Mô tả</Form.Label>
+                            <Form.Control 
+                            type="text" 
+                            placeholder="Mô tả" 
+                            required />
+                            <Form.Control.Feedback type="invalid">
+                              Please provide a valid city.
+                            </Form.Control.Feedback>
+                          </Form.Group>
+                      </Row>
+                    </Row>
+                  }
         <Button type="submit">Submit form</Button>
       </Form>
     </div>

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import axios from 'axios';
+import axios, { all } from 'axios';
 import moment from 'moment';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -105,7 +105,7 @@ const TreatProcess = ({patient}) => {
         const getMedStaff = async () => {
             try {
                 const response = await axios.get("http://localhost:3000/MedicalStaff?" + queryString);
-                console.log("api call",response.data)
+                // console.log("api call",response.data)
                 setMedStaff(response.data);
               } catch (error) {
                 console.log(error); 
@@ -122,12 +122,13 @@ const TreatProcess = ({patient}) => {
             if (obj.id === parseInt(id)) {
               medStaffName = obj.lastMiddleName + " "+obj.firstName;
               medStaffPosition = obj.position;
+              return;
             }
         });
         // console.log(medStaffName,medStaffPosition)
         return {
           medStaffName : medStaffName,
-          medStaffPosition : medStaffPosition
+          medStaffPosition : medStaffPosition,
         }
     }
     const handleDeleteTreatProcess = (index) => {
@@ -218,7 +219,7 @@ const TreatProcess = ({patient}) => {
                     </Row>
                   <Row className="mb-3">
                     <Form.Group as={Col} md="8" controlId="title">
-                        <Form.Label>Điều trị</Form.Label>
+                        <Form.Label>Công việc</Form.Label>
                         <Form.Control
                          type="text"
                           placeholder="Điều trị"
@@ -304,32 +305,22 @@ const TreatProcess = ({patient}) => {
                         </Form.Control.Feedback>
                       </Form.Group>
                   </Row>
-                  {medStaffID && 
+                  {/* {medStaffID && 
                     <Row className='mb-3'>
                       <Row className="mb-3">
-                        <Form.Group as={Col} md="8" controlId="title">
-                            <Form.Label>Điều trị</Form.Label>
+                        <Form.Group controlId="medstaff-title">
+                            <Form.Label>Công việc</Form.Label>
                             <Form.Control
                             type="text"
-                              placeholder="Điều trị"
-                              defaultValue={treatment.title}
+                              placeholder="Công việc"
                             required />
                             <Form.Control.Feedback type="invalid">
                               Please provide a valid city.
                             </Form.Control.Feedback>
                           </Form.Group>
-                          <Form.Group as={Col} md="3">
-                          <Form.Label>{getMedStaffByID(treatment.medicalStaffID).medStaffPosition}</Form.Label>
-                            <Form.Control
-                              type="text"
-                              aria-describedby="inputGroupPrepend"
-                              defaultValue={getMedStaffByID(treatment.medicalStaffID).medStaffName}
-                              disabled
-                            />
-                        </Form.Group>
                       </Row>
                       <Row className="mb-3">
-                        <Form.Group controlId="description">
+                        <Form.Group controlId="medstaff-description">
                             <Form.Label>Mô tả</Form.Label>
                             <Form.Control 
                             type="text" 
@@ -342,7 +333,7 @@ const TreatProcess = ({patient}) => {
                           </Form.Group>
                       </Row>
                     </Row>
-                  }
+                  } */}
                   <Button onClick={() => setUpdateIndex(index)} type="submit" >Đổi thông tin lịch trình</Button>
                   <Button style={{position:"absolute",right:"1vw"}} onClick={() => handleDeleteTreatProcess(index)} variant='danger'>Xoá tiến trình này</Button>
                 </Form>
