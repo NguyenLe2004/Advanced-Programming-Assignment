@@ -17,7 +17,7 @@ const TreatProcess = ({patient}) => {
     const [dateEnd, setDateEnd] = useState("a");
     const [position, setPosition] = useState("");
     const [specialty, setSpecialty] = useState("");
-    const [medStaffID, setMedStaffID] = useState("");
+    const [medStaffID, setMedStaffID] = useState(0);
     const [medStaffData, setMedStaffData] = useState([]);
     const [updateIndex, setUpdateIndex] = useState(0) // can change if use sub collect
     const {allSpecialty} = useContext(specialtyContext);
@@ -37,7 +37,8 @@ const TreatProcess = ({patient}) => {
           room:form.elements.room.value,
           title:form.elements.title.value,
           description: form.elements.description.value,
-          medicalStaffID : medStaffID ? medStaffID : patient.treatProcess[updateIndex].medicalStaffID
+          medicalStaffID : medStaffID ? medStaffID : patient.treatProcess[updateIndex].medicalStaffID,
+          id :  patient.treatProcess[updateIndex].id
         }
         let updateTreatProcessData = [
           ...patient.treatProcess,
@@ -93,14 +94,13 @@ const TreatProcess = ({patient}) => {
     useEffect(() => {
         if(!patient) return;
         if(!patient.treatProcess) return;
-        const uniqueDoctorIds = new Set();
+        const uniqueMedicalStaffIds = new Set();
         patient.treatProcess.forEach(obj => {
-            uniqueDoctorIds.add(obj.medicalStaffID);
+            uniqueMedicalStaffIds.add(obj.medicalStaffID);
         });
-        const queryString = Array.from(uniqueDoctorIds) 
+        const queryString = Array.from(uniqueMedicalStaffIds) 
             .map(id => `id=${id}`)
             .join('&')
-        console.log("string query here",queryString)
         const getMedStaff = async () => {
             try {
                 const response = await axios.get("http://localhost:3000/MedicalStaff?" + queryString);
@@ -118,11 +118,12 @@ const TreatProcess = ({patient}) => {
         let medStaffName = null;
         let medStaffPosition = null;
         medStaff.forEach((obj) => {
-            if (obj.id === id) {
+            if (obj.id === parseInt(id)) {
               medStaffName = obj.lastMiddleName + " "+obj.firstName;
               medStaffPosition = obj.position;
             }
         });
+        // console.log(medStaffName,medStaffPosition)
         return {
           medStaffName : medStaffName,
           medStaffPosition : medStaffPosition
