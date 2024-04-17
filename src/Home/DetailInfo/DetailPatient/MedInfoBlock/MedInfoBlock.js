@@ -153,7 +153,6 @@ const MedInfoBlock = ({ patient }) => {
                   placeholder="Triệu chứng bệnh"
                   defaultValue={patient.symptoms}
                   required
-                  pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
                 />
                 <Form.Control.Feedback type="invalid">
                   Triệu chứng không hợp lệ.
