@@ -65,8 +65,8 @@ const TreatProcess = ({patient}) => {
       for (let i=schedule.length-1;i>=0;i--){
         const curSchedule = schedule[i];
         // console.log("schedule here" , schedule)
-        const curBegin = moment(curSchedule.date + " " + curSchedule.timeBegin,"DD-MM-YYYY HH:mm" )
-        const curEnd = moment(curSchedule.date + " " + curSchedule.timeEnd,"DD-MM-YYYY HH:mm" )
+        const curBegin = moment(curSchedule.dateBegin + " " + curSchedule.timeBegin,"DD-MM-YYYY HH:mm" )
+        const curEnd = moment(curSchedule.dateEnd + " " + curSchedule.timeEnd,"DD-MM-YYYY HH:mm" )
         if(begin.isAfter(curEnd)) return true;
         if(end.isBefore(curBegin)) continue;
         return false;
@@ -82,8 +82,6 @@ const TreatProcess = ({patient}) => {
             const response = await axios.get("http://localhost:3000/MedicalStaff?" + queryStr ) ;
             let data = response.data;
             data = data.filter(obj => {
-              console.log(obj.firstName)
-              console.log("status: " ,isMedicalStaffAvailable(obj.schedule))
               return( isMedicalStaffAvailable(obj.schedule));
             });
             console.log("data,here" , data)
@@ -308,7 +306,41 @@ const TreatProcess = ({patient}) => {
                   </Row>
                   {medStaffID && 
                     <Row className='mb-3'>
-                      bruh 
+                      <Row className="mb-3">
+                        <Form.Group as={Col} md="8" controlId="title">
+                            <Form.Label>Điều trị</Form.Label>
+                            <Form.Control
+                            type="text"
+                              placeholder="Điều trị"
+                              defaultValue={treatment.title}
+                            required />
+                            <Form.Control.Feedback type="invalid">
+                              Please provide a valid city.
+                            </Form.Control.Feedback>
+                          </Form.Group>
+                          <Form.Group as={Col} md="3">
+                          <Form.Label>{getMedStaffByID(treatment.medicalStaffID).medStaffPosition}</Form.Label>
+                            <Form.Control
+                              type="text"
+                              aria-describedby="inputGroupPrepend"
+                              defaultValue={getMedStaffByID(treatment.medicalStaffID).medStaffName}
+                              disabled
+                            />
+                        </Form.Group>
+                      </Row>
+                      <Row className="mb-3">
+                        <Form.Group controlId="description">
+                            <Form.Label>Mô tả</Form.Label>
+                            <Form.Control 
+                            type="text" 
+                            placeholder="Mô tả" 
+                            defaultValue={treatment.description} 
+                            required />
+                            <Form.Control.Feedback type="invalid">
+                              Please provide a valid city.
+                            </Form.Control.Feedback>
+                          </Form.Group>
+                      </Row>
                     </Row>
                   }
                   <Button onClick={() => setUpdateIndex(index)} type="submit" >Đổi thông tin lịch trình</Button>
