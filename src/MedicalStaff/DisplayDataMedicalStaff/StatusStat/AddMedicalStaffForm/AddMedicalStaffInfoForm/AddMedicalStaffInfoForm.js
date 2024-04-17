@@ -4,10 +4,12 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import { useParams } from "react-router-dom";
 // import "./AddMedicalStaffInfoForm.css"
 const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
+  const {position } = useParams();
   const [validated, setValidated] = useState(false);
-  const { specialty } = useContext(specialtyContext);
+  const { allSpecialty } = useContext(specialtyContext);
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -69,7 +71,7 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
           <Form.Label>Chuyên Môn</Form.Label>
           <Form.Select required>
             <option>{""}</option>
-            {specialty.map((element, index) => {
+            {allSpecialty[position === "specialist" ? "Bác sĩ" : position === "nurse" ? "Y tá" : "Nhân viên hỗ trợ"].map((element, index) => {
               return <option key={index}>{element}</option>;
             })}
           </Form.Select>
