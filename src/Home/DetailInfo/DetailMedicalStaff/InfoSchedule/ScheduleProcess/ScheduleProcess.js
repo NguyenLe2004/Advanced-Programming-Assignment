@@ -29,10 +29,13 @@ const ScheduleProcess = ({medicalStaff}) => {
         event.stopPropagation();
       } else{
         let schedule = [...medicalStaff.schedule];
+        const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
+        const [dateEnd, timeEnd] = form.elements.datetimeEnd.value.split("T");
         schedule[scheduleID] = {
-          date: form.elements.date.value.split("-")[2]+"-" + form.elements.date.value.split("-")[1]+"-" + form.elements.date.value.split("-")[0],
-          timeBegin:form.elements.timeBegin.value,
-          timeEnd:form.elements.timeEnd.value,
+          dateBegin : dateBegin,
+          timeBegin : timeBegin,
+          dateEnd : dateEnd,
+          timeEnd : timeEnd,
           room:form.elements.room.value,
           title:form.elements.title.value,
           description: form.elements.description.value
@@ -68,8 +71,8 @@ const ScheduleProcess = ({medicalStaff}) => {
       {medicalStaff.schedule.map((schedule, index) => (
         <div className='treat-circle-block'> 
             <div className={`circle circle-${
-            (  moment(schedule.date+" "+schedule.timeBegin,"DD-MM-YYYY HH:mm") < moment() &&
-              moment(schedule.date+" "+schedule.timeEnd,"DD-MM-YYYY HH:mm") < moment()
+            (  moment(schedule.dateBegin+" "+schedule.timeBegin,"DD-MM-YYYY HH:mm") < moment() &&
+              moment(schedule.dateEnd+" "+schedule.timeEnd,"DD-MM-YYYY HH:mm") < moment()
             ) ?  "complete": "on-going"
             }`}> 
               <FontAwesomeIcon className='icon' icon={setIcon(schedule.title.toLowerCase())} />
@@ -79,7 +82,7 @@ const ScheduleProcess = ({medicalStaff}) => {
               {!(index===isUpdate) ? (
                 <div> 
                   <div className='room-date'> 
-                    <div className='date'>{schedule.date.split('-').join('/')} {schedule.timeBegin} - {schedule.timeEnd}</div>
+                    <div className='date'>{schedule.dateBegin.split('-').join('/')} {schedule.timeBegin} - {schedule.dateEnd.split('-').join('/')} {schedule.timeEnd}</div>
                     <div className='room'>{schedule.room}</div>
 
                   </div>
@@ -93,28 +96,20 @@ const ScheduleProcess = ({medicalStaff}) => {
                 <div> 
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                   <Row className="mb-3">
-                    <Form.Group as={Col} xs="3" controlId="date">
-                      <Form.Label>Ngày</Form.Label>
-                      <Form.Control
-                        required
-                        type="date"
-                        defaultValue={moment(schedule.date,"DD-MM-YYYY").format("YYYY-MM-DD")}
-                      />
-                    </Form.Group> 
-                    <Form.Group as={Col} md="3" controlId="timeBegin">
-                      <Form.Label>Giờ bắt đầu</Form.Label>
+                    <Form.Group as={Col} md="4" controlId="datetimeBegin">
+                      <Form.Label>Thời điểm bắt đầu</Form.Label>
                       <Form.Control 
                         required 
-                        type="time"
-                        defaultValue={moment(schedule.timeBegin,"HH:mm").format("HH:mm")}
+                        type="datetime-local"
+                        defaultValue={moment(schedule.dateBegin + " " + schedule.timeBegin, "DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
                     </Form.Group>
-                    <Form.Group as={Col} md="3" controlId="timeEnd">
-                      <Form.Label>Giờ kết thúc</Form.Label>
+                    <Form.Group as={Col} md="4" controlId="datetimeEnd">
+                      <Form.Label>Thời điểm kết thúc</Form.Label>
                       <Form.Control 
                         required 
-                        type="time"
-                        defaultValue={moment(schedule.timeEnd,"HH:mm").format("HH:mm")}
+                        type="datetime-local"
+                        defaultValue={moment(schedule.dateEnd + " " + schedule.timeEnd, "DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="room">

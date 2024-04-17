@@ -17,12 +17,15 @@ const ScheduleForm = ({medicalStaff}) => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else{
+      const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
+      const [dateEnd, timeEnd] = form.elements.datetimeEnd.value.split("T");
       const newSchedule = [
         ...medicalStaff.schedule,
         {
-          date: form.elements.date.value.split("-")[2]+"-" + form.elements.date.value.split("-")[1]+"-" + form.elements.date.value.split("-")[0],
-          timeBegin:form.elements.timeBegin.value,
-          timeEnd:form.elements.timeEnd.value,
+          dateBegin : dateBegin,
+          timeBegin : timeBegin,
+          dateEnd : dateEnd,
+          timeEnd : timeEnd,
           room:form.elements.room.value,
           title:form.elements.title.value,
           description: form.elements.description.value,
@@ -43,29 +46,22 @@ const ScheduleForm = ({medicalStaff}) => {
   return (
     <div className='form-block'>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
-          <Row className="mb-3">
-            <Form.Group as={Col} xs="4" controlId="date">
-              <Form.Label>Ngày</Form.Label>
-              <Form.Control
-                required
-                type="date"
-              />
-            </Form.Group> 
-            <Form.Group as={Col} md="4" controlId="timeBegin">
-              <Form.Label>Giờ bắt đầu</Form.Label>
-              <Form.Control 
-                required 
-                type="time"
-              />
-            </Form.Group>
-            <Form.Group as={Col} md="4" controlId="timeEnd">
-              <Form.Label>Giờ kết thúc</Form.Label>
-              <Form.Control 
-                required 
-                type="time"
-              />
-            </Form.Group>
-            </Row>
+        <Row className="mb-3">
+          <Form.Group as={Col} md="5" controlId="datetimeBegin">
+            <Form.Label>Thời điểm bắt đầu</Form.Label>
+            <Form.Control 
+              required 
+              type="datetime-local"
+            />
+          </Form.Group>
+          <Form.Group as={Col} md="5" controlId="datetimeEnd">
+            <Form.Label>Thời điểm kết thúc</Form.Label>
+            <Form.Control 
+              required 
+              type="datetime-local"
+            />
+          </Form.Group>
+          </Row>
             <Row className="mb-3">
             <Form.Group as={Col} md="8" controlId="title">
               <Form.Label>Công việc</Form.Label>
