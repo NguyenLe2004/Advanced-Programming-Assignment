@@ -54,18 +54,18 @@ const TreatForm = ({patient}) => {
     setValidated(true);
   };
 
-  const getSpecialistStatus = (schedule) => {
-    const curDate = moment().format("DD-MM-YYYY");
-    const curTime = moment().format("HH-mm");
-    let status="Sẵn sàng";
-    schedule.forEach(obj => {
-      const date = moment(obj.date,"DD-MM-YYYY");
-      if(date < curDate) return status;
-      if(date === curDate && schedule.timeBegin <= curTime && schedule.timeEnd>=curTime ) {
-        return "Đang làm việc";
-      }
-    });
-    return status;
+  const isMedicalStaffAvailable = (schedule) => {
+    const begin = moment(dateBegin,"DD-MM-YYYY HH:mm");
+    const end = moment(dateEnd,"DD-MM-YYYY HH:mm");
+    for (let i=schedule.length-1;i>=0;i--){
+      const curSchedule = schedule[i];
+      const curBegin = moment(curSchedule.date + " " + curSchedule.timeBegin,"DD-MM-YYYY HH:mm" )
+      const curEnd = moment(curSchedule.date + " " + curSchedule.timeEnd,"DD-MM-YYYY HH:mm" )
+      if(begin.isAfter(curEnd)) return true;
+      if(end.isBefore(curBegin)) continue;
+      return false;
+    }
+    return true;
   }
 
   const handleDisplayMedStaff = () =>{
@@ -75,10 +75,10 @@ const TreatForm = ({patient}) => {
     const getMedStaff = async () => {
         try {
           const response = await axios.get("http://localhost:3000/MedicalStaff?" + queryStr ) ;
-          const data = response.data;
-          data.filter(obj => {
-            const status = getSpecialistStatus(obj.schedule);
-            return status !== "Đang làm việc"
+          let data = response.data;
+          // console.log("data heeee" , data)
+          data = data.filter(obj => {
+            return isMedicalStaffAvailable(obj.schedule);
           });
           setMedStaffData(data);
         } catch (error) {
@@ -95,7 +95,7 @@ const TreatForm = ({patient}) => {
             <Form.Label>Ngày bắt đầu</Form.Label>
             <Form.Control
               required
-              onChange={(event) => setDateBegin(event.target.value)}
+              onChange={(event) => setDateBegin(moment(event.target.value).format("DD-MM-YYYY HH:mm"))}
               type="datetime-local"
             />
           </Form.Group>
@@ -104,7 +104,7 @@ const TreatForm = ({patient}) => {
             <Form.Control 
               required 
               type="datetime-local"
-              onChange={(event) => setDateEnd(event.target.value)}
+              onChange={(event) => setDateEnd(moment(event.target.value).format("DD-MM-YYYY HH:mm"))}
             />
           </Form.Group>
           </Row>

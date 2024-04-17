@@ -6,18 +6,18 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { specialtyContext } from '../../../../../Provider/DataProvider';
-import { faKitMedical,faMicroscope, faPen, faXmark} from '@fortawesome/free-solid-svg-icons';
+import { faKitMedical,faMicroscope, faPen, faXmark, faSyringe} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./TreatProcess.css"
 const TreatProcess = ({patient}) => {
     const [medStaff, setMedStaff] = useState([]);
     const [isUpdate , setIsUpdate] = useState(null);
     const [validated, setValidated] = useState(false);
-    const [dateBegin, setDateBegin] = useState("a");
-    const [dateEnd, setDateEnd] = useState("a");
+    const [dateBegin, setDateBegin] = useState("");
+    const [dateEnd, setDateEnd] = useState("");
     const [position, setPosition] = useState("");
     const [specialty, setSpecialty] = useState("");
-    const [medStaffID, setMedStaffID] = useState(0);
+    const [medStaffID, setMedStaffID] = useState("");
     const [medStaffData, setMedStaffData] = useState([]);
     const [updateIndex, setUpdateIndex] = useState(0) // can change if use sub collect
     const {allSpecialty} = useContext(specialtyContext);
@@ -58,19 +58,20 @@ const TreatProcess = ({patient}) => {
       }
       setValidated(true);
     };
-  
-    const getSpecialistStatus = (schedule) => {
-      const curDate = moment().format("DD-MM-YYYY");
-      const curTime = moment().format("HH-mm");
-      let status="Sẵn sàng";
-      schedule.forEach(obj => {
-        const date = moment(obj.date,"DD-MM-YYYY");
-        if(date < curDate) return status;
-        if(date === curDate && schedule.timeBegin <= curTime && schedule.timeEnd>=curTime ) {
-          return "Đang làm việc";
-        }
-      });
-      return status;
+    const isMedicalStaffAvailable = (schedule) => {
+      const begin = moment(dateBegin,"DD-MM-YYYY HH:mm");
+      const end = moment(dateEnd,"DD-MM-YYYY HH:mm");
+      // console.log("here",begin)
+      for (let i=schedule.length-1;i>=0;i--){
+        const curSchedule = schedule[i];
+        // console.log("schedule here" , schedule)
+        const curBegin = moment(curSchedule.date + " " + curSchedule.timeBegin,"DD-MM-YYYY HH:mm" )
+        const curEnd = moment(curSchedule.date + " " + curSchedule.timeEnd,"DD-MM-YYYY HH:mm" )
+        if(begin.isAfter(curEnd)) return true;
+        if(end.isBefore(curBegin)) continue;
+        return false;
+      }
+      return true;
     }
     const handleDisplayMedStaff = () =>{
       let queryStr="";
@@ -79,11 +80,13 @@ const TreatProcess = ({patient}) => {
         const getMedStaff = async () => {
           try {
             const response = await axios.get("http://localhost:3000/MedicalStaff?" + queryStr ) ;
-            const data = response.data;
-            data.filter(obj => {
-              const status = getSpecialistStatus(obj.schedule);
-              return status !== "Đang làm việc"
+            let data = response.data;
+            data = data.filter(obj => {
+              console.log(obj.firstName)
+              console.log("status: " ,isMedicalStaffAvailable(obj.schedule))
+              return( isMedicalStaffAvailable(obj.schedule));
             });
+            console.log("data,here" , data)
             setMedStaffData(data);
           } catch (error) {
             console.log(error); 
@@ -137,6 +140,15 @@ const TreatProcess = ({patient}) => {
       }).then(() => window.location.reload())
       .catch((error) => console.error(error))
     }
+    const setIcon = (title) =>{
+      if(title.includes("xét nghiệm")) {
+        return faMicroscope;
+      }
+      if(title.includes("phẫu thuật")){
+        return faSyringe;
+      }
+      return faKitMedical
+     }
   return (
     <div>
       {patient.treatProcess.map((treatment, index) => (
@@ -144,14 +156,14 @@ const TreatProcess = ({patient}) => {
             <div className={`circle circle-${
               moment(treatment.dateEnd,"DD-MM-YYYY") < moment() ? ( index===0 ? "complete":"complete-task") : "on-going"
             }`}> 
-            {!treatment.title.includes("Xét nghiệm") ? (
-              <FontAwesomeIcon className='icon' icon={faKitMedical} />
-            ):(
-              <FontAwesomeIcon className='icon' icon={faMicroscope} />
-            ) }
+              <FontAwesomeIcon className='icon' icon={setIcon(treatment.title.toLowerCase())} />
             </div>
             <div key={index} className='treat-block'>
-              <div className={`icon-in-treatform ${index === isUpdate? "close":null}`}><FontAwesomeIcon icon={index === isUpdate? faXmark:faPen} onClick={() => setIsUpdate(isUpdate === index ? null : index)}/> </div>
+              <div className={`icon-in-treatform ${index === isUpdate? "close":null}`}><FontAwesomeIcon icon={index === isUpdate? faXmark:faPen} onClick={() => {
+                setIsUpdate(isUpdate === index ? null : index);
+                setDateBegin(treatment.dateBegin + " " + treatment.timeBegin);
+                setDateEnd(treatment.dateEnd + " " + treatment.timeEnd);
+              }}/> </div>
               {!(index===isUpdate) ? (
                 <div> 
                   <div className='room-date'> 
@@ -172,10 +184,13 @@ const TreatProcess = ({patient}) => {
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                   <Row className="mb-3">
                     <Form.Group as={Col} xs="4" controlId="dateBegin">
-                      <Form.Label>Ngày bắt đầu</Form.Label>
+                      <Form.Label>Thời điểm bắt đầu</Form.Label>
                       <Form.Control
                         required
-                        onChange={(event) => setDateBegin(event.target.value)}
+                        onChange={(event) => {
+                          setDateBegin(moment(event.target.value).format("DD-MM-YYYY HH:mm"));
+                          setMedStaffID("");
+                        }}
                         type="datetime-local"
                         defaultValue={moment(treatment.dateBegin + " " + treatment.timeBegin,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
@@ -185,7 +200,10 @@ const TreatProcess = ({patient}) => {
                       <Form.Control 
                         required 
                         type="datetime-local"
-                        onChange={(event) => setDateEnd(event.target.value)}
+                        onChange={(event) => {
+                          setDateEnd(moment(event.target.value ).format("DD-MM-YYYY HH:mm"));
+                          setMedStaffID("");
+                        }}
                         defaultValue={moment(treatment.dateEnd + " " + treatment.timeEnd,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
                     </Form.Group>
@@ -275,8 +293,9 @@ const TreatProcess = ({patient}) => {
                          disabled={!(dateBegin && dateEnd)} 
                          onClick={handleDisplayMedStaff} 
                          onChange={(event)=> setMedStaffID(event.target.value)} 
+                         value={medStaffID}
                          >
-                          <option>{""}</option>
+                          <option value={""}>{""}</option>
                           {medStaffData&&
                             medStaffData.map((obj,index) => {
                               return <option key={index} value={obj.id} > {obj.lastMiddleName +" "+obj.firstName} </option>
@@ -287,6 +306,11 @@ const TreatProcess = ({patient}) => {
                         </Form.Control.Feedback>
                       </Form.Group>
                   </Row>
+                  {medStaffID && 
+                    <Row className='mb-3'>
+                      bruh 
+                    </Row>
+                  }
                   <Button onClick={() => setUpdateIndex(index)} type="submit" >Đổi thông tin lịch trình</Button>
                   <Button style={{position:"absolute",right:"1vw"}} onClick={() => handleDeleteTreatProcess(index)} variant='danger'>Xoá tiến trình này</Button>
                 </Form>

@@ -64,7 +64,7 @@ const DetailMedicalStaff = () => {
     getMedicalStaff();
   }, []);
   return (
-    <div className='main-page-detail'>
+    <div className='main-page-detail'> 
       <div className='info-block'>
         <span className='info'>
           <span className='pen-to-square-icon' ><FontAwesomeIcon onClick={() => setIsUpdate((prevState) => !prevState)} icon={faPenToSquare} /></span>
