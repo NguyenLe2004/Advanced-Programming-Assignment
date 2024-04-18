@@ -6,6 +6,7 @@ import CloseButton from 'react-bootstrap/CloseButton';
 import { Form,InputGroup,Button } from 'react-bootstrap';
 import axios from 'axios'
 import "./AddMedicineForm.css"
+import moment from 'moment';
 const AddMedicineForm = ({setShowAddMedicineForm}) => {
     const [validated, setValidated] = useState(false);
 
@@ -15,22 +16,19 @@ const AddMedicineForm = ({setShowAddMedicineForm}) => {
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
-            // const data= {
-            //     ...personalInfo,
-            //     height: form.elements.height.value,
-            //     weight: form.elements.weight.value,
-            //     bloodType : form.elements.bloodType.value,
-            //     medHistory : form.elements.medHistory.value,
-            //     symtoms : form.elements.symtoms.value,
-            //     diagnosis : form.elements.diagnosis.value,
-            //     treatProcess : []
-            // }
-            // try {
-            //     const response = await axios.post('http://localhost:3000/Patient',data);
-            //     window.open(`http://localhost:4000/Patient/${response.data.id}`, '_blank');
-            //   } catch (error) {
-            //     console.error(error);
-            //   }
+            const [arrivalDate , arrivalTime] = form.elements.arrivalDatetime.split("T");
+            const [departureDate , departureTime] = form.elements.arrivalDatetime.split("T");
+            const data = {
+                arrivalDate : moment(arrivalDate).format("DD-MM-YYYY"),
+                arrivalTime : arrivalTime,
+                departureDate : moment(departureDate).format("DD-MM-YYYY"),
+                departureTime : departureTime,
+                name : form.elements.name.value,
+                amount : form.elements.amount.value
+            }
+            axios.post("http://localhost:3000/Medicine" , data)
+            .then(()=> window.location.reload())
+            .catch(error => console.error(error));
         }
         setValidated(true);
         };
@@ -41,7 +39,6 @@ const AddMedicineForm = ({setShowAddMedicineForm}) => {
 return (
     <div>
         <div className='center-page-medicine'>
-        {}
             <CloseButton 
                 style={{position:"absolute",right:"1vw",top:"1vh",fontSize:"20px",zIndex:"30"}}
                 onClick={handleClosebtn}
@@ -51,7 +48,7 @@ return (
                     <Form style={{padding:"2vh 1vw"}} noValidate validated={validated} onSubmit={handleSubmit}>
                         <Row className="mb-3" ><h3>Thông tin thuốc</h3></Row>
                         <Row className="mb-3">
-                        <Form.Group controlId="height">
+                        <Form.Group controlId="name">
                         <Form.Label>Tên thuốc</Form.Label>
                             <Form.Control
                             type="text"
@@ -65,7 +62,7 @@ return (
                         </Form.Group>
                         </Row>
                         <Row className='mb-3'>
-                            <Form.Group as={Col} controlId="medHistory">
+                            <Form.Group as={Col} controlId="arrivalDatetime">
                                 <Form.Label>Thời điểm nhập kho</Form.Label>
                                 <Form.Control
                                 required
@@ -74,7 +71,7 @@ return (
                                 />
 
                             </Form.Group>
-                            <Form.Group as={Col} controlId="medHistory">
+                            <Form.Group as={Col} controlId="departureDatetime">
                                 <Form.Label>Thời điểm xuất kho</Form.Label>
                                 <Form.Control
                                 required
@@ -86,7 +83,7 @@ return (
 
                         </Row>
                         <Row className="mb-3" >
-                            <Form.Group as={Col}  controlId="medHistory">
+                            <Form.Group as={Col}  controlId="expireDate">
                                 <Form.Label>Hạn sử dụng</Form.Label>
                                 <Form.Control
                                 required
@@ -95,7 +92,7 @@ return (
                                 />
 
                             </Form.Group>
-                            <Form.Group as={Col} controlId="bloodType">
+                            <Form.Group as={Col} controlId="amount">
                                 <Form.Label> Số lượng</Form.Label>
                                 <Form.Control 
                                 type='number'
@@ -106,7 +103,7 @@ return (
                                 </Form.Control.Feedback>
                             </Form.Group>
                         </Row>
-                        <Button style={{left:'75%'}} type="submit" > Thêm bệnh nhân</Button>
+                        <Button style={{left:'75%'}} type="submit" > Thêm Thuốc</Button>
                     </Form>
                 </Container>
             </div>

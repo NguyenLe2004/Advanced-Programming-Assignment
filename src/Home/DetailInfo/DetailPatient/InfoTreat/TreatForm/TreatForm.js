@@ -27,8 +27,8 @@ const TreatForm = ({patient}) => {
       const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
       const [dateEnd, timeEnd] = form.elements.datetimeBegin.value.split("T")
       const newTreatProcess = {
-        dateBegin: dateBegin,
-        dateEnd:dateEnd,
+        dateBegin: moment(dateBegin,"YYYY-MM-DD").format("DD-MM-YYYY"),
+        dateEnd:moment(dateEnd,"YYYY-MM-DD").format("DD-MM-YYYY"),
         timeBegin:timeBegin,
         timeEnd:timeEnd,
         room:form.elements.room.value,
