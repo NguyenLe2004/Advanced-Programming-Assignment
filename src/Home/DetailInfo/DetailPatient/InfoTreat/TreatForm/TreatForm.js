@@ -43,33 +43,32 @@ const TreatForm = ({patient}) => {
       const addTreatProcess = async () => {
           axios.patch("http://localhost:3000/Patient/" + patient.id, {treatProcess : updateTreatProcessData} )
           .then(() => {
-            
-            // window.location.reload();
+            window.location.reload();
           })
           .catch(error => {
             console.error('Lỗi cập nhật thông tin', error);
           });
       }
 
-      const addSchedule = async ( ) => {
-        const response = await axios.get("http://localhost:3000/MedicalStaff/"+medStaffID);
-        const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
-        const [dateEnd, timeEnd] = form.elements.datetimeBegin.value.split("T")
-        const newSchedule = [
-          ...response.data.schedule,
-          {
-            dateBegin: dateBegin,
-            dateEnd:dateEnd,
-            timeBegin:timeBegin,
-            timeEnd:timeEnd,
-            room:form.elements.room.value,
-            title : form.elements.medstaffTitle.value,
-            description : form.elements.medstaffDescription.value
-          }
-        ]
-        axios.patch("http://localhost:3000/medicalStaff/"+medStaffID, {schedule : newSchedule});
-      }
-      addSchedule();
+      // const addSchedule = async ( ) => {
+      //   const response = await axios.get("http://localhost:3000/MedicalStaff/"+medStaffID);
+      //   const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
+      //   const [dateEnd, timeEnd] = form.elements.datetimeBegin.value.split("T")
+      //   const newSchedule = [
+      //     ...response.data.schedule,
+      //     {
+      //       dateBegin: dateBegin,
+      //       dateEnd:dateEnd,
+      //       timeBegin:timeBegin,
+      //       timeEnd:timeEnd,
+      //       room:form.elements.room.value,
+      //       title : form.elements.medstaffTitle.value,
+      //       description : form.elements.medstaffDescription.value
+      //     }
+      //   ]
+      //   axios.patch("http://localhost:3000/medicalStaff/"+medStaffID, {schedule : newSchedule});
+      // }
+      // addSchedule();
       addTreatProcess();
     }
     setValidated(true);
@@ -203,7 +202,7 @@ const TreatForm = ({patient}) => {
               </Form.Control.Feedback>
             </Form.Group>
              </Row>
-              {medStaffID && 
+              {/* {medStaffID && 
                     <Row className='mb-3'>
                       <Row className="mb-3">
                         <Form.Group controlId="medstaffTitle">
@@ -230,7 +229,7 @@ const TreatForm = ({patient}) => {
                           </Form.Group>
                       </Row>
                     </Row>
-                  }
+                  } */}
         <Button type="submit">Submit form</Button>
       </Form>
     </div>

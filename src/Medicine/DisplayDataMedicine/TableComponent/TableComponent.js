@@ -1,5 +1,4 @@
 import React, {  useEffect, useState } from 'react';
-import DisplayMoreInfo from './DisplayMoreInfo/DisplayMoreInfo';
 import { Button } from 'react-bootstrap';
 import { faAnglesLeft, faAnglesRight,faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,11 +14,6 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
   const [currentID,setCurrentID] = useState("");
   const [sortColumn, setSortColumn] = useState("");
   const [sortDirect, setSortDirect] = useState("desc");
-
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   const goToPreviousPage = () => {
     console.log("cur page",currentPage);
     if (currentPage > 1) {
@@ -45,11 +39,6 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
   }
 
 
-
-  const  handleClickRow = (id) => {
-    setCurrentID(id);
-    handleShow();
-  }
 
   const handleSort = (colName) => {
     if (colName === sortColumn) {
@@ -102,7 +91,6 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
   const currentPageDataMedicine = dataMedicineDisplay.slice(startIndex,endIndex);
   return (
     <div>
-      <DisplayMoreInfo show = {show} handleClose = {handleClose} dataMoreInfo = {dataMedicineDisplay[currentID]} />
       <div className='outer-table'>
         <table>
           <thead>
@@ -192,9 +180,7 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
           </thead>
           <tbody>
             {currentPageDataMedicine.map((obj,index) => (
-              <tr key={obj.citizenID} onClick={() => handleClickRow(
-                currentPage > 1 ? index + rowsPerPage*(currentPage-1) : index
-              )} >
+              <tr key={obj.citizenID}>
                 <td>{obj.name}</td>
                 <td >{obj.arrivalDate} {obj.arrivalTime}</td>
                 <td>{obj.departureDate} {obj.departureTime}</td>

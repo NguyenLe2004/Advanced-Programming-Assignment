@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Container,Row, Col, Button } from 'react-bootstrap'
-import AddPatientForm from './AddPatientForm/AddPatientForm'
+import AddMedicineForm from './AddMedicineForm/AddMedicineForm'
 import moment from 'moment'
 import "./StatusStat.css"
 
 const StatusStat = ({dataMedicine}) => {
-    const [showAddPatientForm, setShowAddPatientForm] = useState(false);
+    const [showAddMedicineForm, setShowAddMedicineForm] = useState(false);
     const handleClickAddBtn = () =>{
-        setShowAddPatientForm(true);
+        setShowAddMedicineForm(true);
     }
     const frequencyCount = {
         "Hết thuốc" : 0,
@@ -20,10 +20,10 @@ const StatusStat = ({dataMedicine}) => {
     });
   return (
         <div>
-            {showAddPatientForm && 
+            {showAddMedicineForm && 
                 <div>   
                     <div className='background'> </div>
-                    <AddPatientForm setShowAddPatientForm={setShowAddPatientForm} />
+                    <AddMedicineForm setShowAddMedicineForm={setShowAddMedicineForm} />
                 </div>
             }
             <div className='stat-block'>

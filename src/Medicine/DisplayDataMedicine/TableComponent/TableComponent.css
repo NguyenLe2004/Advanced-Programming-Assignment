@@ -87,9 +87,6 @@ tbody tr:hover{
   margin: 0 2% 0 2%;
   height: 3vh;
 }
-.sort-col{
-  /* border: 1px red solid; */
-}
 .sort-col:hover{
   cursor: pointer;
   color: rgb(0, 149, 255);

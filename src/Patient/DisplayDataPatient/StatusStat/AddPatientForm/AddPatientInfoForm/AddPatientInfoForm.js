@@ -82,11 +82,17 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
             <option>{""}</option>
             <option>Nam</option>
             <option>Nữ</option>
-          </Form.Select>
+          </Form.Select>          
+          <Form.Control.Feedback type="invalid">
+            Giới tính không hợp lệ.
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="dateOfBirth">
           <Form.Label>Ngày sinh</Form.Label>
           <Form.Control type="date" required onChange={(event) => setDateOfBirth(event.target.value)} /> 
+          <Form.Control.Feedback type="invalid">
+            Ngày sinh không hợp lệ.
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="5" controlId="citizenID">
           <Form.Label>CCCD</Form.Label>

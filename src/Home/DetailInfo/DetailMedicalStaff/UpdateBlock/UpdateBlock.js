@@ -7,10 +7,12 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { specialtyContext } from '../../../../Provider/DataProvider';
+import { useParams } from 'react-router-dom';
 import "./UpdateBlock.css"
 const UpdateBlock = ({medicalStaff}) => {
+    const {position} = useParams()
     const [validated, setValidated] = useState(false);
-    const {specialty} = useContext(specialtyContext)
+    const {allSpecialty} = useContext(specialtyContext)
     const handleSubmit = (event) => {
       const form = event.currentTarget;
       event.preventDefault();
@@ -111,7 +113,7 @@ const UpdateBlock = ({medicalStaff}) => {
           defaultValue={medicalStaff.specialty}
            required >
             <option>{""}</option>
-            {specialty.map((element,index) => {
+            {allSpecialty[position === "specialist" ? "Bác sĩ"  : position === "nurse" ? "Y tá" : "Nhân viên hỗ trợ"].map((element,index) => {
               return (
                 <option key={index} > {element}</option>
               )
