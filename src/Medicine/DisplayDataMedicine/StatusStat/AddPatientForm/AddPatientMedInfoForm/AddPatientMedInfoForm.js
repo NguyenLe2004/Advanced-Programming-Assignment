@@ -46,6 +46,7 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
         placeholder="Chiều cao"
         aria-describedby="inputGroupPrepend"
         required
+        pattern="[0-9]{1,3}"
         />
         <InputGroup.Text id="inputGroupPrepend">cm</InputGroup.Text>
         <Form.Control.Feedback type="invalid">
@@ -61,6 +62,7 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
         placeholder="Cân nặng"
         aria-describedby="inputGroupPrepend"
         required
+        pattern="[0-9]{1,3}"
         />
         <InputGroup.Text id="inputGroupPrepend">kg</InputGroup.Text>
         <Form.Control.Feedback type="invalid">
