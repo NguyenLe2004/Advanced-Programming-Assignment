@@ -22,9 +22,9 @@ const ScheduleForm = ({medicalStaff}) => {
       const newSchedule = [
         ...medicalStaff.schedule,
         {
-          dateBegin : moment(dateBegin,"YYYY-MM-DD").format("DD-MM-YYYY"),
+          dateBegin : moment(dateBegin).format("DD-MM-YYYY"),
           timeBegin : timeBegin,
-          dateEnd : moment(dateEnd,"YYYY-MM-DD").format("DD-MM-YYYY"),
+          dateEnd : moment(dateEnd).format("DD-MM-YYYY"),
           timeEnd : timeEnd,
           room:form.elements.room.value,
           title:form.elements.title.value,

@@ -16,12 +16,13 @@ const AddMedicineForm = ({setShowAddMedicineForm}) => {
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
-            const [arrivalDate , arrivalTime] = form.elements.arrivalDatetime.split("T");
-            const [departureDate , departureTime] = form.elements.arrivalDatetime.split("T");
+            const [arrivalDate , arrivalTime] = form.elements.arrivalDatetime.value.split("T");
+            const [departureDate , departureTime] = form.elements.departureDatetime.value.split("T");
             const data = {
                 arrivalDate : moment(arrivalDate).format("DD-MM-YYYY"),
                 arrivalTime : arrivalTime,
                 departureDate : moment(departureDate).format("DD-MM-YYYY"),
+                expireDate : moment(form.elements.expireDate.value).format("DD-MM-YYYY"),
                 departureTime : departureTime,
                 name : form.elements.name.value,
                 amount : form.elements.amount.value
