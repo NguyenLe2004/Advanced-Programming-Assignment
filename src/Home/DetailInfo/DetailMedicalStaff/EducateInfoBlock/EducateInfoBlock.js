@@ -123,12 +123,15 @@ const EducateInfoBlock = ({medicalStaff}) => {
                         <option>Thạc sĩ</option>
                         <option>Tiến sĩ</option>
                     </Form.Select>
+                    <Form.Control.Feedback type="invalid">
+                    Thông tin không hợp lệ
+                    </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="5" controlId="major">
                     <Form.Label>Ngành</Form.Label>
                     <Form.Control type='text' required defaultValue={isAdd? "": educations[currentPage-1].major}  />
                     <Form.Control.Feedback type="invalid">
-                    Please provide a valid city.
+                    Thông tin không hợp lệ
                     </Form.Control.Feedback>
                 </Form.Group>
                 </Row>
@@ -137,7 +140,7 @@ const EducateInfoBlock = ({medicalStaff}) => {
                     <Form.Label>Trường</Form.Label>
                     <Form.Control type="text" placeholder="Trường" defaultValue={isAdd? "":educations[currentPage-1].university} required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid city.
+                    Thông tin không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                 </Row>
@@ -146,14 +149,14 @@ const EducateInfoBlock = ({medicalStaff}) => {
                     <Form.Label>Ngày bắt đầu</Form.Label>
                     <Form.Control type="date"  defaultValue={isAdd ? "":moment(educations[currentPage-1].dateBegin,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid city.
+                    Thông tin không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col}  controlId="dateEnd">
                     <Form.Label>Ngày kết thúc</Form.Label>
                     <Form.Control type="date"  defaultValue={isAdd ? "":moment(educations[currentPage-1].dateEnd,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid city.
+                    Thông tin không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                 </Row>

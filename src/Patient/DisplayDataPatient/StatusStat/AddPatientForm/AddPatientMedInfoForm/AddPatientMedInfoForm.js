@@ -51,7 +51,7 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
         />
         <InputGroup.Text id="inputGroupPrepend">cm</InputGroup.Text>
         <Form.Control.Feedback type="invalid">
-        Please choose a username.
+        Chiều cao không hợp lệ
         </Form.Control.Feedback>
     </InputGroup>
     </Form.Group>
@@ -67,7 +67,7 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
         />
         <InputGroup.Text id="inputGroupPrepend">kg</InputGroup.Text>
         <Form.Control.Feedback type="invalid">
-        Please choose a username.
+        Cân nặng không hợp lệ
         </Form.Control.Feedback>
     </InputGroup>
     </Form.Group>
@@ -82,7 +82,7 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
             <option>Chưa rõ </option>
         </Form.Select>
         <Form.Control.Feedback type="invalid">
-        Please provide a valid city.
+        Nhóm máu không hợp lệ
         </Form.Control.Feedback>
     </Form.Group>
     </Row>
@@ -94,7 +94,9 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
             type="text"
             placeholder="Lịch sử bệnh án"
             />
-
+        <Form.Control.Feedback type="invalid">
+        Lịch sử bệnh án không hợp lệ
+        </Form.Control.Feedback>
         </Form.Group>
         </Row>
         <Row className="mb-3">
@@ -105,6 +107,9 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
             type="text"
             placeholder="Triệu chứng bệnh"
             />
+        <Form.Control.Feedback type="invalid">
+        Triệu chứng không hợp lệ
+        </Form.Control.Feedback>
         </Form.Group>
     </Row>
     <Row className='mb-3'>
@@ -116,7 +121,11 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
             placeholder="Chẩn đoán"
             defaultValue={"Chưa được chẩn đoán"}
             />
+        <Form.Control.Feedback type="invalid">
+        Chẩn đoán không hợp lệ
+        </Form.Control.Feedback>  
         </Form.Group>
+ 
     </Row>
     <Button onClick={() => setIsSlide(false)}> Quay lại</Button>
     <Button style={{position:"absolute",left:'75%',transform:"translateX(-50%)"}} type="submit" > Thêm bệnh nhân</Button>

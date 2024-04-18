@@ -103,6 +103,9 @@ const ScheduleProcess = ({medicalStaff}) => {
                         type="datetime-local"
                         defaultValue={moment(schedule.dateBegin + " " + schedule.timeBegin, "DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
+                    <Form.Control.Feedback type="invalid">
+                    Thông tin không hợp lệ
+                    </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="4" controlId="datetimeEnd">
                       <Form.Label>Thời điểm kết thúc</Form.Label>
@@ -111,6 +114,9 @@ const ScheduleProcess = ({medicalStaff}) => {
                         type="datetime-local"
                         defaultValue={moment(schedule.dateEnd + " " + schedule.timeEnd, "DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
+                    <Form.Control.Feedback type="invalid">
+                    Thông tin không hợp lệ
+                    </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="room">
                       <Form.Label>Phòng</Form.Label>
@@ -121,6 +127,9 @@ const ScheduleProcess = ({medicalStaff}) => {
                           defaultValue={schedule.room}
                           required
                         />
+                    <Form.Control.Feedback type="invalid">
+                    Thông tin không hợp lệ
+                    </Form.Control.Feedback>
                     </Form.Group>
                     </Row>
                   <Row className="mb-3">
@@ -132,7 +141,7 @@ const ScheduleProcess = ({medicalStaff}) => {
                         defaultValue={schedule.title} 
                         required />
                         <Form.Control.Feedback type="invalid">
-                          Please provide a valid city.
+                         Công việc không hợp lệ
                         </Form.Control.Feedback>
                       </Form.Group>
                   </Row>
@@ -144,9 +153,9 @@ const ScheduleProcess = ({medicalStaff}) => {
                         placeholder="Mô tả" 
                         defaultValue={schedule.description} 
                         required />
-                        <Form.Control.Feedback type="invalid">
-                          Please provide a valid city.
-                        </Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                    Thông tin không hợp lệ
+                    </Form.Control.Feedback>
                       </Form.Group>
                   </Row>
                   <Button type="submit" onClick={() => setScheduleID(index)}>Đổi thông tin lịch</Button>

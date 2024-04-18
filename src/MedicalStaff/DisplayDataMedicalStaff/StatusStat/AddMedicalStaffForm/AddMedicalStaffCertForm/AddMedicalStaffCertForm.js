@@ -62,10 +62,16 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
             placeholder="Tên chứng chỉ"
             required
            />
+          <Form.Control.Feedback type="invalid">
+          Chứng chỉ không hợp lệ
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="date" >
           <Form.Label>Ngày cấp</Form.Label>
           <Form.Control type="date"  required/>
+          <Form.Control.Feedback type="invalid">
+          Thông tin không hợp lệ
+          </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
@@ -73,7 +79,7 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
             <Form.Label>Tổ chức cấp</Form.Label>
             <Form.Control type="text" placeholder='Tổ chức cấp' required />
             <Form.Control.Feedback type="invalid">
-            Please provide a valid city.
+            Thông tin không hợp lệ.
             </Form.Control.Feedback>
         </Form.Group>
       </Row>

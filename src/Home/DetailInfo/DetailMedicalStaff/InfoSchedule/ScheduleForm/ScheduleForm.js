@@ -53,6 +53,9 @@ const ScheduleForm = ({medicalStaff}) => {
               required 
               type="datetime-local"
             />
+          <Form.Control.Feedback type="invalid">
+            Thông tin không hợp lệ
+          </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="5" controlId="datetimeEnd">
             <Form.Label>Thời điểm kết thúc</Form.Label>
@@ -60,6 +63,9 @@ const ScheduleForm = ({medicalStaff}) => {
               required 
               type="datetime-local"
             />
+          <Form.Control.Feedback type="invalid">
+            Thông tin không hợp lệ
+          </Form.Control.Feedback>
           </Form.Group>
           </Row>
             <Row className="mb-3">
@@ -71,6 +77,9 @@ const ScheduleForm = ({medicalStaff}) => {
                   aria-describedby="inputGroupPrepend"
                   required
                 />
+          <Form.Control.Feedback type="invalid">
+            Công việc không hợp lệ
+          </Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="room">
               <Form.Label>Phòng</Form.Label>
@@ -80,6 +89,9 @@ const ScheduleForm = ({medicalStaff}) => {
                   aria-describedby="inputGroupPrepend"
                   required
                 />
+          <Form.Control.Feedback type="invalid">
+            Thông tin không hợp lệ
+          </Form.Control.Feedback>
             </Form.Group>
             </Row>
           <Row className="mb-3">
@@ -90,7 +102,7 @@ const ScheduleForm = ({medicalStaff}) => {
                 placeholder="Mô tả" 
                 required />
                 <Form.Control.Feedback type="invalid">
-                  Please provide a valid city.
+                Thông tin không hợp lệ
                 </Form.Control.Feedback>
               </Form.Group>
           </Row>

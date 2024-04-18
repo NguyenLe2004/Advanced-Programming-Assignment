@@ -71,7 +71,7 @@ const UpdateBlock = ({patient}) => {
             type="text"
             placeholder="Tên"
             defaultValue={patient.firstName}
-            pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
+            pattern="[a-zA-ZÀ-Ỹà-ỹ']+"         
           />
           <Form.Control.Feedback type="invalid">
             Tên không hợp lệ
@@ -137,6 +137,9 @@ const UpdateBlock = ({patient}) => {
             defaultValue={patient.citizenID}
             pattern="^\d{12}"
            required />
+          <Form.Control.Feedback type="invalid">
+          CCCD không hợp lệ
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md='5' controlId = "dateOfBirth" >
           <Form.Label>Ngày sinh</Form.Label>
@@ -163,7 +166,7 @@ const UpdateBlock = ({patient}) => {
           <Form.Label>Quê quán</Form.Label>
           <Form.Control type="text" placeholder="Quê quán" defaultValue={patient.hometown} required />
           <Form.Control.Feedback type="invalid">
-            Hãy nhập quê quán hợp lệ.
+            Quê quán không hợp lệ
           </Form.Control.Feedback>
         </Form.Group>
       </Row>

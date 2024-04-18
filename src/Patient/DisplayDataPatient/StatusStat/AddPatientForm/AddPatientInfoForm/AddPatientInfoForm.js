@@ -68,7 +68,7 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
             required
             type="text"
             placeholder="Tên"
-            pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
+            pattern="[a-zA-ZÀ-Ỹà-ỹ']+"         
           />
           <Form.Control.Feedback type="invalid">
             Tên không hợp lệ.

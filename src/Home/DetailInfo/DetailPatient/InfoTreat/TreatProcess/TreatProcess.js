@@ -193,6 +193,9 @@ const TreatProcess = ({patient}) => {
                         type="datetime-local"
                         defaultValue={moment(treatment.dateBegin + " " + treatment.timeBegin,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
+                       <Form.Control.Feedback type="invalid">
+                        Thông tin không hợp lệ
+                      </Form.Control.Feedback>
                     </Form.Group> 
                     <Form.Group as={Col} md="4" controlId="dateEnd">
                       <Form.Label>Thời điểm kết thúc</Form.Label>
@@ -205,6 +208,9 @@ const TreatProcess = ({patient}) => {
                         }}
                         defaultValue={moment(treatment.dateEnd + " " + treatment.timeEnd,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")}
                       />
+                      <Form.Control.Feedback type="invalid">
+                        Thông tin không hợp lệ
+                      </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="room">
                       <Form.Label>Phòng</Form.Label>
@@ -215,6 +221,9 @@ const TreatProcess = ({patient}) => {
                           defaultValue={treatment.room}
                           required
                         />
+                      <Form.Control.Feedback type="invalid">
+                      Thông tin không hợp lệ
+                      </Form.Control.Feedback>
                     </Form.Group>
                     </Row>
                   <Row className="mb-3">
@@ -226,7 +235,7 @@ const TreatProcess = ({patient}) => {
                           defaultValue={treatment.title}
                          required />
                         <Form.Control.Feedback type="invalid">
-                          Please provide a valid city.
+                          Công việc không hợp lệ
                         </Form.Control.Feedback>
                       </Form.Group>
                       <Form.Group as={Col} md="3">
@@ -248,7 +257,7 @@ const TreatProcess = ({patient}) => {
                         defaultValue={treatment.description} 
                         required />
                         <Form.Control.Feedback type="invalid">
-                          Please provide a valid city.
+                          Thông tin không hợp lệ
                         </Form.Control.Feedback>
                       </Form.Group>
                   </Row>
@@ -270,9 +279,6 @@ const TreatProcess = ({patient}) => {
                             )
                           )} 
                         </Form.Select>
-                        <Form.Control.Feedback type="invalid">
-                          Please provide a valid city.
-                        </Form.Control.Feedback>
                       </Form.Group>
                       <Form.Group as={Col} md={4} controlId="position">
                         <Form.Label>Vị trí</Form.Label>
@@ -282,9 +288,6 @@ const TreatProcess = ({patient}) => {
                           <option value={"Bác sĩ"}>Bác sĩ</option>
                           <option value={"Nhân viên hỗ trợ"}>Nhân viên hỗ trợ</option>
                         </Form.Select>
-                        <Form.Control.Feedback type="invalid">
-                          Please provide a valid city.
-                        </Form.Control.Feedback>
                       </Form.Group>
                       <Form.Group as={Col} md={4}  controlId="validationCustom03">
                         <Form.Label>Nhân viên y tế</Form.Label>
@@ -300,9 +303,6 @@ const TreatProcess = ({patient}) => {
                               return <option key={index} value={obj.id} > {obj.lastMiddleName +" "+obj.firstName} </option>
                           })}
                         </Form.Select>
-                        <Form.Control.Feedback type="invalid">
-                          Please provide a valid city.
-                        </Form.Control.Feedback>
                       </Form.Group>
                   </Row>
                   {/* {medStaffID && 

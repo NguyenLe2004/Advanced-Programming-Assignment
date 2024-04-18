@@ -118,6 +118,9 @@ const TreatForm = ({patient}) => {
               onChange={(event) => setDateBegin(moment(event.target.value).format("DD-MM-YYYY HH:mm"))}
               type="datetime-local"
             />
+            <Form.Control.Feedback type="invalid">
+            Thông tin không hợp lệ
+            </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="6" controlId="datetimeEnd">
             <Form.Label>Thời điểm kết thúc</Form.Label>
@@ -126,6 +129,9 @@ const TreatForm = ({patient}) => {
               type="datetime-local"
               onChange={(event) => setDateEnd(moment(event.target.value).format("DD-MM-YYYY HH:mm"))}
             />
+            <Form.Control.Feedback type="invalid">
+            Thông tin không hợp lệ
+            </Form.Control.Feedback>
           </Form.Group>
           </Row>
         <Row className="mb-3">
@@ -133,7 +139,7 @@ const TreatForm = ({patient}) => {
               <Form.Label>Điều trị</Form.Label>
               <Form.Control type="text" placeholder="Điều trị" required />
               <Form.Control.Feedback type="invalid">
-                Please provide a valid city.
+                Thông tin không hợp lệ
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md={3} controlId="room">
@@ -144,6 +150,9 @@ const TreatForm = ({patient}) => {
                 aria-describedby="inputGroupPrepend"
                 required
               />
+              <Form.Control.Feedback type="invalid">
+              Thông tin không hợp lệ
+              </Form.Control.Feedback>
           </Form.Group>
         </Row>
         <Row className="mb-3">
@@ -151,7 +160,7 @@ const TreatForm = ({patient}) => {
               <Form.Label>Mô tả</Form.Label>
               <Form.Control type="text" placeholder="Mô tả" defaultValue={"Đang thực hiện"} required />
               <Form.Control.Feedback type="invalid">
-                Please provide a valid city.
+                Thông tin không hợp lệ
               </Form.Control.Feedback>
             </Form.Group>
         </Row>
@@ -172,9 +181,6 @@ const TreatForm = ({patient}) => {
               )
             )} 
           </Form.Select>
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid city.
-          </Form.Control.Feedback>
         </Form.Group>
             <Form.Group as={Col} md={4} controlId="position">
               <Form.Label>Vị trí</Form.Label>
@@ -184,9 +190,6 @@ const TreatForm = ({patient}) => {
                 <option>Y tá</option>
                 <option>Nhân viên hỗ trợ</option>
               </Form.Select>
-              <Form.Control.Feedback type="invalid">
-                Please provide a valid city.
-              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md={4}  controlId="validationCustom03">
               <Form.Label>Nhân viên y tế</Form.Label>
@@ -198,7 +201,7 @@ const TreatForm = ({patient}) => {
                 })}
               </Form.Select>
               <Form.Control.Feedback type="invalid">
-                Please provide a valid city.
+                thông tin không hợp lệ
               </Form.Control.Feedback>
             </Form.Group>
              </Row>

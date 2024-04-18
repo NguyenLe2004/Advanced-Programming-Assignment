@@ -61,7 +61,7 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
             required
             type="text"
             placeholder="Tên"
-            pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
+            pattern="[a-zA-ZÀ-Ỹà-ỹ']+"         
           />
           <Form.Control.Feedback type="invalid">
             Tên không hợp lệ.
@@ -75,6 +75,9 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
               return <option key={index}>{element}</option>;
             })}
           </Form.Select>
+          <Form.Control.Feedback type="invalid">
+          Chuyên Môn không hợp lệ
+          </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
@@ -85,10 +88,16 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
             <option>Nam</option>
             <option>Nữ</option>
           </Form.Select>
+          <Form.Control.Feedback type="invalid">
+          Giới tính không hợp lệ
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="dateOfBirth">
           <Form.Label>Ngày sinh</Form.Label>
           <Form.Control type="date" required />
+          <Form.Control.Feedback type="invalid">
+            Ngày sinh không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="5" controlId="citizenID">
           <Form.Label>CCCD</Form.Label>

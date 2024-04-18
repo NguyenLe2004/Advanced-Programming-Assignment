@@ -46,6 +46,9 @@ const AddMedicalStaffEducateForm = ({setIsSlide1,setIsSlide2,education, setEduca
                 placeholder="Trường"
                 required
                />
+          <Form.Control.Feedback type="invalid">
+          Thông tin không hợp lệ
+          </Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="degree" >
               <Form.Label>Loại bằng</Form.Label>
@@ -55,6 +58,9 @@ const AddMedicalStaffEducateForm = ({setIsSlide1,setIsSlide2,education, setEduca
                 <option>Thạc sĩ</option>
                 <option>Tiến sĩ</option>
               </Form.Select>
+            <Form.Control.Feedback type="invalid">
+            Thông tin không hợp lệ
+            </Form.Control.Feedback>
             </Form.Group>
           </Row>
           <Row className="mb-3">
@@ -62,21 +68,21 @@ const AddMedicalStaffEducateForm = ({setIsSlide1,setIsSlide2,education, setEduca
                 <Form.Label>Ngày bắt đầu</Form.Label>
                 <Form.Control type="date" required />
                 <Form.Control.Feedback type="invalid">
-                Please provide a valid city.
+                Thông tin không hợp lệ
                 </Form.Control.Feedback>
             </Form.Group>
               <Form.Group as={Col} md="4" controlId="dateEnd">
                 <Form.Label>Ngày kết thúc</Form.Label>
                 <Form.Control type="date" required />
                 <Form.Control.Feedback type="invalid" required>
-                Please provide a valid city.
+                Thông tin không hợp lệ
                 </Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="major">
                 <Form.Label>Ngành</Form.Label>
                 <Form.Control type="text" placeholder="Ngành"  required/>
                 <Form.Control.Feedback type="invalid">
-                Please provide a valid city.
+                Thông tin không hợp lệ
                 </Form.Control.Feedback>
             </Form.Group>
             <Row className="mt-3 mb-3">

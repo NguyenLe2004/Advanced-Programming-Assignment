@@ -119,7 +119,7 @@ const CertInfoBlock = ({medicalStaff}) => {
                     <Form.Label>Tên chứng chỉ</Form.Label>
                     <Form.Control type='text' placeholder="Tên chứng chỉ" required defaultValue={isAdd? "": educations[currentPage-1].title}  />
                     <Form.Control.Feedback type="invalid">
-                    Please provide a valid city.
+                    Thông tin không hợp lệ
                     </Form.Control.Feedback>
                 </Form.Group>
                 </Row>
@@ -128,14 +128,14 @@ const CertInfoBlock = ({medicalStaff}) => {
                     <Form.Label>tổ chức</Form.Label>
                     <Form.Control type="text" placeholder="tổ chức" defaultValue={isAdd? "":educations[currentPage-1].organization} required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid city.
+                    Thông tin không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="4" controlId="dateBegin">
                     <Form.Label>Ngày cấp</Form.Label>
                     <Form.Control type="date" placeholder="Ngày cấp" defaultValue={isAdd ? "":moment(educations[currentPage-1].date,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid city.
+                    Thông tin không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                 </Row>

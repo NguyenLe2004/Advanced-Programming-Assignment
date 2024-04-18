@@ -64,6 +64,9 @@ const UpdateBlock = ({medicalStaff}) => {
             defaultValue={medicalStaff.lastMiddleName}
             pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
           />
+           <Form.Control.Feedback type="invalid">
+            Họ và tên đệm không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} controlId = "firstName"> 
           <Form.Label>Tên</Form.Label>
@@ -72,8 +75,11 @@ const UpdateBlock = ({medicalStaff}) => {
             type="text"
             placeholder="Tên"
             defaultValue={medicalStaff.firstName}
-            pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
+            pattern="[a-zA-ZÀ-Ỹà-ỹ']+"         
           />
+           <Form.Control.Feedback type="invalid">
+            Tên không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3" >
@@ -83,6 +89,9 @@ const UpdateBlock = ({medicalStaff}) => {
             <option>Nam</option>
             <option>Nữ</option>
           </Form.Select>
+          <Form.Control.Feedback type="invalid">
+            Giới tính không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md='5' controlId = "phoneNum" >
           <Form.Label>Số điện thoại</Form.Label>
@@ -92,6 +101,9 @@ const UpdateBlock = ({medicalStaff}) => {
             defaultValue={medicalStaff.phoneNum}
             pattern="^\d{10}"
            required />
+            <Form.Control.Feedback type="invalid">
+            Số điện thoại không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
 
 
@@ -106,6 +118,9 @@ const UpdateBlock = ({medicalStaff}) => {
           pattern=".+@.+\.[A-Za-z]+$"
           defaultValue={medicalStaff.email}
            required />
+            <Form.Control.Feedback type="invalid">
+            Email không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md='5' controlId = "specialty" >
           <Form.Label>Chuyên môn</Form.Label>
@@ -119,6 +134,9 @@ const UpdateBlock = ({medicalStaff}) => {
               )
             })}
            </Form.Select>
+           <Form.Control.Feedback type="invalid">
+            Chuyên môn không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
@@ -130,6 +148,9 @@ const UpdateBlock = ({medicalStaff}) => {
             defaultValue={medicalStaff.citizenID}
            required 
            pattern="^\d{12}"/>
+            <Form.Control.Feedback type="invalid">
+            CCCD không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md='5' controlId = "dateOfBirth" >
           <Form.Label>Ngày sinh</Form.Label>
@@ -137,6 +158,9 @@ const UpdateBlock = ({medicalStaff}) => {
           type="date"
           defaultValue={moment(medicalStaff.dateOfBirth,"DD-MM-YYYY").format("YYYY-MM-DD")}
            required />
+            <Form.Control.Feedback type="invalid">
+            Ngày sinh không hợp lệ
+            </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
@@ -144,7 +168,7 @@ const UpdateBlock = ({medicalStaff}) => {
           <Form.Label>Địa chỉ</Form.Label>
           <Form.Control type="text" placeholder="Địa chỉ" defaultValue={medicalStaff.address} required />
           <Form.Control.Feedback type="invalid">
-            Hãy nhập địa chỉ hợp lệ
+            Địa chỉ không hợp lệ
           </Form.Control.Feedback>
         </Form.Group>
       </Row>
@@ -153,7 +177,7 @@ const UpdateBlock = ({medicalStaff}) => {
           <Form.Label>Quê quán</Form.Label>
           <Form.Control type="text" placeholder="Quê quán" defaultValue={medicalStaff.hometown} required />
           <Form.Control.Feedback type="invalid">
-            Hãy nhập quê quán hợp lệ
+            Quê quán không hợp lệ
           </Form.Control.Feedback>
         </Form.Group>
       </Row>

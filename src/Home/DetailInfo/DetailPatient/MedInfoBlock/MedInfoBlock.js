@@ -141,7 +141,7 @@ const MedInfoBlock = ({ patient }) => {
                   pattern="[a-zA-ZÀ-Ỹà-ỹ\s']+"
                 />
                 <Form.Control.Feedback type="invalid">
-                  Thông tin không hợp lệ.
+                  Lịch sử bệnh án không hợp lệ.
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
@@ -169,7 +169,7 @@ const MedInfoBlock = ({ patient }) => {
                   required
                 />
                 <Form.Control.Feedback type="invalid">
-                  Chuẩn đoán không hợp lệ.
+                  Chẩn đoán không hợp lệ.
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>
