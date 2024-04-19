@@ -65,7 +65,7 @@ const DisplayDataMedicine = ({dataMedicine}) => {
     setDataMedicineDisplay(dataMedicine);
   },[dataMedicine]);
 
-  return (
+  return ( 
         <div className='main-page'>
           <StatusStat dataMedicine ={dataMedicine} />
             <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
@@ -73,7 +73,7 @@ const DisplayDataMedicine = ({dataMedicine}) => {
                 placeholder='Nhập tên thuốc' 
                 className={`searchInput ${isClicked ? 'active' : ''}`} 
                 value={inputValue}
-                onChange={(event) => setInputValue(event.target.value.replace(/\s/g, ""))}
+                onChange={(event) => setInputValue(event.target.value)}
                 onKeyDown={handleKeyPress}
               />
               <FontAwesomeIcon

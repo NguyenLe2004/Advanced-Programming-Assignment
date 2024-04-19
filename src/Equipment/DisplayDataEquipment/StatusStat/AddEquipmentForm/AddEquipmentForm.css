@@ -10,9 +10,8 @@
     z-index: 30;
 
 }
-.outer-form-add{
+.outer-form-add-equipment{
     position: relative;
-    width: 200%;
     height: fit-content;
     z-index: 21;
     background-color: white;

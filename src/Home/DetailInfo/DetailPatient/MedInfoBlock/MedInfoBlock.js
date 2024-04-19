@@ -131,7 +131,7 @@ const MedInfoBlock = ({ patient }) => {
               </Form.Group>
             </Row>
             <Row className="mb-3">
-              <Form.Group controlId="validationCustom03">
+              <Form.Group controlId="medHistory">
                 <Form.Label>Lịch sử bệnh án</Form.Label>
                 <Form.Control
                   type="text"
@@ -146,7 +146,7 @@ const MedInfoBlock = ({ patient }) => {
               </Form.Group>
             </Row>
             <Row className="mb-3">
-              <Form.Group controlId="validationCustom03">
+              <Form.Group controlId="symptoms">
                 <Form.Label>Triệu chứng bệnh</Form.Label>
                 <Form.Control
                   type="text"
@@ -160,7 +160,7 @@ const MedInfoBlock = ({ patient }) => {
               </Form.Group>
             </Row>
             <Row className="mb-3">
-              <Form.Group controlId="validationCustom03">
+              <Form.Group controlId="diagnosis">
                 <Form.Label>Chẩn đoán</Form.Label>
                 <Form.Control
                   type="text"

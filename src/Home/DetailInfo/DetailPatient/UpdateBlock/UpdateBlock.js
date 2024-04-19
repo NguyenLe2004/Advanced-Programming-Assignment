@@ -23,6 +23,7 @@ const UpdateBlock = ({patient}) => {
           gender: form.elements.gender.value,
           phoneNum: form.elements.phoneNum.value,
           email: form.elements.email.value,
+          job: form.elements.job.value,
           citizenID: form.elements.citizenID.value,
           dateOfBirth: formatDate(form.elements.dateOfBirth.value),
           address: form.elements.address.value,

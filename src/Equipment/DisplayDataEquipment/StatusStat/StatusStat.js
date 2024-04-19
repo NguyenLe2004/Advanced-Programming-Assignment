@@ -1,47 +1,29 @@
 import React, { useState } from 'react'
 import { Container,Row, Col, Button } from 'react-bootstrap'
-import AddPatientForm from './AddPatientForm/AddPatientForm'
+import AddEquipmentForm from './AddEquipmentForm/AddEquipmentForm'
 import moment from 'moment'
 import "./StatusStat.css"
 
-const StatusStat = ({treatProcess}) => {
-    const [showAddPatientForm, setShowAddPatientForm] = useState(false);
+const StatusStat = ({dataEquipment}) => {
+    const [showAddEquipmentForm, setShowAddEquipmentForm] = useState(false);
     const handleClickAddBtn = () =>{
-        setShowAddPatientForm(true);
+        setShowAddEquipmentForm(true);
     }
-    const getPatientStatus = (treatProcess) => {
-        const length = treatProcess.length;
-        if (length === 0) {
-            return "Chưa điều trị";
-        }
-        const currentDate = moment();
-        const lastTreatDay = moment(treatProcess[length-1].dateEnd, 'DD/MM/YYYY');
-        if (lastTreatDay < currentDate) {
-            return "Hoàn thành điều trị";
-        }
-        return "Đang điều trị";
-    }
-
     const frequencyCount = {
-        "Chưa điều trị" : 0,
-        "Hoàn thành điều trị" : 0,
-        "Đang điều trị" :0
+        "Đang sử dụng" : 0,
+        "Sẵn sàng" : 0,
+        "Đang bảo trì" :0
     };
 
-    treatProcess.forEach((item) => {
-        const status = getPatientStatus(item)
-      if (frequencyCount[status]) {
-        frequencyCount[status] += 1;
-      } else {
-        frequencyCount[status] = 1;
-      }
+    dataEquipment.forEach((item) => {
+        frequencyCount[item.status] ++;
     });
   return (
         <div>
-            {showAddPatientForm && 
+            {showAddEquipmentForm && 
                 <div>   
                     <div className='background'> </div>
-                    <AddPatientForm setShowAddPatientForm={setShowAddPatientForm} />
+                    <AddEquipmentForm setShowAddEquipmentForm={setShowAddEquipmentForm} />
                 </div>
             }
             <div className='stat-block'>
@@ -49,30 +31,30 @@ const StatusStat = ({treatProcess}) => {
                     <Row>
                         <Col className='stat-col'>
                             <div className='stat-total total'>
-                                {treatProcess.length}
+                                {dataEquipment.length}
                             </div>
-                            <div>Bệnh nhân</div>
+                            <div>Thiết bị</div>
                         </Col>
                         <Col className='stat-col'>
                             <div className='stat-total done'>
-                                {frequencyCount["Hoàn thành điều trị"]}
+                                {frequencyCount["Sẵn sàng"]}
                             </div>
-                            <div>Hoàn thành điều trị</div>
+                            <div>Sẵn sàng</div>
                         </Col>
                         <Col className='stat-col'>
                             <div className='stat-total on-going'>
-                                {frequencyCount["Đang điều trị"]}
+                                {frequencyCount["Đang sử dụng"]}
                             </div>
-                            <div>Đang điều trị</div>
+                            <div>Đang sử dụng</div>
                         </Col>               
                         <Col className='stat-col'>
                             <div className='stat-total none'>
-                                {frequencyCount["Chưa điều trị"]}
+                                {frequencyCount["Đang bảo trì"]}
                             </div>
-                            <div>Chưa điều trị</div>
+                            <div>Đang bảo trì</div>
                         </Col>
                         <Col className='stat-col'>
-                            <div className='more-stat-btn'><Button onClick={handleClickAddBtn}  > Thêm bệnh nhân</Button></div>
+                            <div className='more-stat-btn'><Button onClick={handleClickAddBtn}  > Thêm Thiết bị</Button></div>
                         </Col>
                     </Row>
                 </Container>

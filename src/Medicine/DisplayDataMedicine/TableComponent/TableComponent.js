@@ -1,7 +1,9 @@
 import React, {  useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { faAnglesLeft, faAnglesRight,faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesLeft, faAnglesRight,faSort, faSortUp, faSortDown, faTrashCan, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faSquare, faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 
 import "./TableComponent.css";
 import moment from 'moment';
@@ -14,8 +16,10 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
   const [currentID,setCurrentID] = useState("");
   const [sortColumn, setSortColumn] = useState("");
   const [sortDirect, setSortDirect] = useState("desc");
+  const [isDelete , setIsDelete] = useState(false);
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [isSelectAll , setIsSelectAll ] = useState(false);
   const goToPreviousPage = () => {
-    console.log("cur page",currentPage);
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
@@ -38,8 +42,6 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
     }
   }
 
-
-
   const handleSort = (colName) => {
     if (colName === sortColumn) {
       setSortDirect(sortDirect === 'asc' ? 'desc' : 'asc');
@@ -49,6 +51,17 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
     }
   }
 
+  const handleSelectAll = () =>{
+    setSelectedRows( !isSelectAll ? dataMedicineDisplay.map(obj => obj.id) : [])
+  }
+
+  const handleDelete = () =>{
+    selectedRows.forEach(id => {
+      axios.delete("http://localhost:3000/Medicine/"+id)
+      .catch(error=>console.error(error));
+    })
+    window.location.reload();
+  }
   useEffect(() => {
     if (!dataMedicineDisplay || !sortColumn) {
       return;
@@ -91,10 +104,31 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
   const currentPageDataMedicine = dataMedicineDisplay.slice(startIndex,endIndex);
   return (
     <div>
+      <div className='delete-group'>
+          {isDelete &&
+          <span style={{marginRight:"1vw"}} > 
+            <Button variant='danger' disabled={!selectedRows.length} onClick={handleDelete}> Xoá </Button>
+          </span>}
+        <i className='delete-icon' onClick={() => {
+          setSelectedRows([])
+          setIsDelete(prevState => !prevState)
+          setIsSelectAll(false);
+        }}><FontAwesomeIcon icon={isDelete ? faXmark : faTrashCan} /></i>
+      </div>
+
       <div className='outer-table'>
         <table>
           <thead>
             <tr>
+             {isDelete &&
+              <th > 
+             <i style={{fontSize:"20px",marginRight:"10px"}} onClick={() => {
+                handleSelectAll();
+                setIsSelectAll(prevState => !prevState);
+              }}>
+             <FontAwesomeIcon icon={isSelectAll ? faSquareCheck: faSquare}/>
+             </i> 
+             <span>Xoá </span> </th>}
               <th className='sort-col'  onClick={() => handleSort('name')}>
               <span>Tên</span>
               <span className='sort-icon'>
@@ -180,8 +214,19 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
           </thead>
           <tbody>
             {currentPageDataMedicine.map((obj,index) => (
-              <tr key={obj.citizenID}>
-                <td>{obj.name}</td>
+              <tr key={obj.id}>
+              {isDelete &&
+               <td className='square-icon' style={{fontSize:"25px",zIndex:"30"}} onClick={() => {
+                const updatedRows = [...selectedRows];
+                if (updatedRows.includes(obj.id)) {
+                  updatedRows.splice(updatedRows.indexOf(obj.id), 1);
+                } else {
+                  updatedRows.push(obj.id);
+                }
+                setSelectedRows(updatedRows);
+              }}>
+            <FontAwesomeIcon  icon={selectedRows.includes(obj.id) ? faSquareCheck : faSquare} /> </td>}
+                <td style={{color:"black"}}>{obj.name}</td>
                 <td >{obj.arrivalDate} {obj.arrivalTime}</td>
                 <td>{obj.departureDate} {obj.departureTime}</td>
                 <td>{obj.expireDate}</td>

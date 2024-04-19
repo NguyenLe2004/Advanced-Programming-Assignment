@@ -1,10 +1,11 @@
 import React, {  useEffect, useState } from 'react';
 import DisplayMoreInfo from './DisplayMoreInfo/DisplayMoreInfo';
 import { Button } from 'react-bootstrap';
-import { faAnglesLeft, faAnglesRight,faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesLeft, faAnglesRight,faSort, faSortUp, faSortDown,faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "./TableComponent.css";
+import moment from 'moment';
 
 const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay}) => {
   const rowsPerPage = 9;
@@ -20,7 +21,6 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay}) => {
   const handleShow = () => setShow(true);
 
   const goToPreviousPage = () => {
-    console.log("cur page",currentPage);
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
@@ -34,9 +34,9 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay}) => {
 
   const getEquipmentStatusClass = (status) => {
     switch (status) {
-      case "Đang điều trị" : 
+      case "Đang sử dụng" : 
         return "treating";
-      case "Hoàn thành điều trị" :
+      case "Sẵn sàng" :
         return "complete-treat";
       default :
         return "no-treat"
@@ -58,32 +58,33 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay}) => {
       setSortDirect('desc');
     }
   }
-
   useEffect(() => {
     if (!dataEquipmentDisplay || !sortColumn) {
       return;
     }
     const arr = Object.entries(dataEquipmentDisplay);
     arr.sort((a, b) => {
-      const sortValueA = a[1][sortColumn];
-      const sortValueB = b[1][sortColumn];
-      if (sortColumn === "age") {
-        return sortDirect === "desc" ?sortValueB - sortValueA: sortValueA - sortValueB
+      let sortValueA = a[1][sortColumn];
+      let sortValueB =  b[1][sortColumn];
+      const notAvailable = "01-01-1900"
+      if (sortColumn === "lastUsageDatetime") {
+        return sortDirect === "desc" ? moment(sortValueB,"DD-MM-YYYY HH:mm").diff(moment(sortValueA,"DD-MM-YYYY HH:mm")) 
+        : moment(sortValueA,"DD-MM-YYYY HH:mm").diff(moment(sortValueB,"DD-MM-YYYY HH:mm"));
+      }
+      if(sortColumn === "nextMaintain") {
+        if(sortValueA ==="Chưa có lịch bảo trì") sortValueA = notAvailable
+        if(sortValueB ==="Chưa có lịch bảo trì") sortValueB = notAvailable
+        return sortDirect === "desc" ? moment(sortValueB,"DD-MM-YYYY").diff(moment(sortValueA,"DD-MM-YYYY")) 
+        :  moment(sortValueA,"DD-MM-YYYY").diff(moment(sortValueB,"DD-MM-YYYY")) ;
       }
       return sortDirect === "desc" ? sortValueB.localeCompare(sortValueA) : sortValueA.localeCompare(sortValueB);
     });
-    console.log("sorted arr" , arr);
-    console.log(dataEquipmentDisplay)
     let sortedArr = [];
     arr.forEach(item => {
       sortedArr.push(item[1]);
     })
     setDataEquipmentDisplay(sortedArr);
   }, [sortColumn, sortDirect]);
-
-  useEffect(() => {
-    setCurrentID(""); // Reset the current ID when the page changes
-  }, [currentPage]);
 
   const startIndex = (currentPage - 1) * rowsPerPage;
   const endIndex = currentPage * rowsPerPage;
@@ -95,13 +96,12 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay}) => {
         <table>
           <thead>
             <tr>
-              <th>Tên</th>
-              <th className='sort-col'  onClick={() => handleSort('lastMiddleName')}>
-                <span>Họ và tên đệm</span>
-                <span className='sort-icon'>
+            <th className='sort-col'  onClick={() => handleSort('name')}>
+              <span>Tên</span>
+              <span className='sort-icon'>
                   <FontAwesomeIcon
                       icon={
-                        sortColumn === 'lastMiddleName'
+                        sortColumn === 'name'
                           ? sortDirect === 'asc'
                             ? faSortUp
                             : faSortDown
@@ -110,12 +110,26 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay}) => {
                     />
                 </span>
               </th>
-              <th className='sort-col'   onClick={() => handleSort('gender')}>
-                <span>Giới tính</span>
+              <th className='sort-col'  onClick={() => handleSort('lastUsageDatetime')}>
+                <span>Lần sử dụng cuối</span>
+                <span className='sort-icon'>
+                  <FontAwesomeIcon
+                      icon={
+                        sortColumn === 'lastUsageDatetime'
+                          ? sortDirect === 'asc'
+                            ? faSortUp
+                            : faSortDown
+                          : faSort
+                      }
+                    />
+                </span>
+              </th>
+              <th className='sort-col'   onClick={() => handleSort('lastUsageRoom')}>
+                <span>Phòng sử dụng cuối</span>
                 <span className='sort-icon'>                
                 <FontAwesomeIcon
                       icon={
-                        sortColumn === 'gender'
+                        sortColumn === 'lastUsageRoom'
                           ? sortDirect === 'asc'
                             ? faSortUp
                             : faSortDown
@@ -123,8 +137,19 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay}) => {
                       }
                     /></span>
               </th>
-              <th>Chẩn đoán</th>
-
+              <th className='sort-col'   onClick={() => handleSort('nextMaintain')}>
+                <span>Lịch bảo trì tiếp theo</span>
+                <span className='sort-icon'>                
+                <FontAwesomeIcon
+                      icon={
+                        sortColumn === 'nextMaintain'
+                          ? sortDirect === 'asc'
+                            ? faSortUp
+                            : faSortDown
+                          : faSort
+                      }
+                    /></span>
+              </th>
               <th className='sort-col' onClick={() => handleSort('status')} >
                 <span>Trạng thái</span>
                 <span className='sort-icon'>
@@ -146,14 +171,13 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay}) => {
               <tr key={obj.citizenID} onClick={() => handleClickRow(
                 currentPage > 1 ? index + rowsPerPage*(currentPage-1) : index
               )} >
-                <td>{obj.name}</td>
-                <td >{obj.arrivalDate} {obj.arrivalTime}</td>
-                <td>{obj.departureDate} {obj.departureTime}</td>
-                <td>{obj.expireDate}</td>
-                <td>{obj.amount}</td>
+                <td style={{color:"black"}}>{obj.name}</td>
+                <td >{obj.lastUsageDatetime}</td>
+                <td>{obj.lastUsageRoom}</td>
+                <td>{obj.nextMaintain}</td>
                 <td className='status-block' >
                   <div className={`status ${getEquipmentStatusClass(obj.status)}`}>
-                    bro bro bro
+                    {obj.status}
                   </div>
                 </td>
               </tr>

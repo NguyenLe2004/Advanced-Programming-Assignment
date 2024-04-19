@@ -129,3 +129,16 @@ tbody tr:hover{
   background-color: #48b3ff4d;
   color: rgb(0, 149, 255);
 }
+.delete-group {
+  font-size : 20px;
+  position:absolute;
+  right:10vw;
+  top:25vh;
+}
+.delete-icon:hover{
+  cursor: pointer;
+  color: gray;
+}
+.square-icon {
+  padding: 0;
+}

@@ -35,20 +35,16 @@ const DisplayDataEquipment = ({dataEquipment}) => {
       setDataEquipmentDisplay(dataEquipment);
       return;
     }
-    if (inputValue.length === 12 && /^\d+$/.test(inputValue)) {
-      const searchID = Object.keys(dataEquipment).find(key => dataEquipment[key].citizenID == inputValue);
-      if (searchID) {
-        console.log(dataEquipment[searchID])
-        setDataEquipmentDisplay([dataEquipment[searchID]]);
-      }
-      else{
-        setInputValue("");
-        setSearchError("Không tìm thấy bệnh nhân");
-      }
-      return;
+    const searchResults = Object.keys(dataEquipment)
+    .filter(key => dataEquipment[key].name === inputValue)
+    .map(key => dataEquipment[key]);
+    if (searchResults) {
+      setDataEquipmentDisplay(searchResults);
     }
-    setInputValue("");
-    setSearchError("Căn cước công dân không hợp lệ");
+    else{
+      setInputValue("");
+      setSearchError("Không tìm thấy")
+    }
   }
 
   const hideError = () => { 
@@ -68,13 +64,13 @@ const DisplayDataEquipment = ({dataEquipment}) => {
 
   return (
         <div className='main-page'>
-          {/* <StatusStat treatProcess = {Object.values(dataEquipment).map(Equipment =>  Equipment.treatProcess)}/> */}
+          <StatusStat dataEquipment ={dataEquipment}/>
             <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
               <input 
-                placeholder='Nhập số căn cước công dân' 
+                placeholder='Nhập tên thiết bị' 
                 className={`searchInput ${isClicked ? 'active' : ''}`} 
                 value={inputValue}
-                onChange={(event) => setInputValue(event.target.value.replace(/\s/g, ""))}
+                onChange={(event) => setInputValue(event.target.value)}
                 onKeyDown={handleKeyPress}
               />
               <FontAwesomeIcon
