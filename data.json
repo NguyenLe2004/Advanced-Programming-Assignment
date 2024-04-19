@@ -14,21 +14,10 @@
       "hometown": "Triệu Đại, Triệu Phong, Quảng Trị",
       "treatProcess": [
         {
-          "dateBegin": "10-04-2024",
-          "dateEnd": "11-04-2024",
-          "timeBegin": "08:15",
-          "timeEnd": "09:45",
-          "room": "H3-102",
-          "title": "Phẫu thuật Gan",
-          "description": "Sắp tiến hành",
-          "medicalStaffID": "1",
-          "id": "2"
-        },
-        {
-          "dateBegin": "10-03-2024",
-          "dateEnd": "11-03-2024",
-          "timeBegin": "09:30",
-          "timeEnd": "11:00",
+          "dateBegin": "03-05-2024",
+          "dateEnd": "03-05-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "10:00",
           "room": "H1-101",
           "title": "Khám tổng quát và bổ sung thuốc",
           "description": "bệnh nhân đã được tiến hành khám tổng quát và bổ sung thuốc. Trong quá trình khám, bác sĩ đã kiểm tra các chỉ số y tế quan trọng của bệnh nhân như huyết áp, nhịp tim, nhiệt độ cơ thể và đánh giá tổng quan về tình trạng sức khỏe đồng thời bổ sung thuốc theo chỉ định của bác sĩ và theo dõi tình trạng",
@@ -36,26 +25,37 @@
           "id": "3"
         },
         {
-          "title": "Xét nghiệm máu",
-          "description": "Chỉ số hồng cầu và bạch cầu trong phạm vi bình thường, hemoglobin và hematocrit thấp hơn so với giới hạn bình thường, các thông số MCV, MCH và MCHC nằm trong khoảng bình thường",
-          "room": "H3-101",
-          "dateBegin": "10-03-2024",
-          "dateEnd": "10-03-2024",
-          "timeBegin": "10:45",
-          "timeEnd": "12:30",
-          "medicalStaffID": "1",
-          "id": 4
+          "dateBegin": "10-04-2024",
+          "dateEnd": "10-04-2024",
+          "timeBegin": "08:00",
+          "timeEnd": "10:00",
+          "room": "H3-102",
+          "title": "Phẫu thuật Gan",
+          "description": "Phẫu thuật loại bỏ sán gan.",
+          "medicalStaffID": "6",
+          "id": "2"
         },
         {
-          "title": "Xét nghiệm nước tiểu",
-          "description": "ai đo gpt dùm với",
-          "room": "H3-101",
-          "dateBegin": "10-03-2024",
-          "dateEnd": "10-03-2024",
-          "timeBegin": "12:00",
-          "timeEnd": "13:45",
-          "medicalStaffID": "1",
+          "dateBegin": "08-04-2024",
+          "dateEnd": "08-04-2024",
+          "timeBegin": "14:00",
+          "timeEnd": "15:00",
+          "room": "H3-102",
+          "title": "Nội soi bao tử",
+          "description": "Đau bao tử, ói ra máu.",
+          "medicalStaffID": "6",
           "id": 5
+        },
+        {
+          "dateBegin": "10-04-2024",
+          "dateEnd": "10-04-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "07:30",
+          "room": "H3-102",
+          "title": "Xét nghiệm máu",
+          "description": "Chỉ số hồng cầu và bạch cầu trong phạm vi bình thường, hemoglobin và hematocrit thấp hơn so với giới hạn bình thường, các thông số MCV, MCH và MCHC nằm trong khoảng bình thường",
+          "medicalStaffID": "8",
+          "id": 4
         }
       ],
       "medHistory": "Từng bị trĩ",
@@ -113,6 +113,16 @@
           "title": "Trồng răng sứ",
           "description": "Trồng răng sứ nguyên hàm trên.",
           "medicalStaffID": "7"
+        },
+        {
+          "dateBegin": "19-04-2024",
+          "dateEnd": "19-04-2024",
+          "timeBegin": "10:00",
+          "timeEnd": "10:00",
+          "room": "H7-308",
+          "title": "Xét nghiệm huyết học tế bào",
+          "description": "Kiểm tra máu toàn diện",
+          "medicalStaffID": "8"
         }
       ],
       "bloodType": "O"
@@ -120,15 +130,15 @@
     {
       "id": 3,
       "citizenID": "470704891087",
-      "firstName": "An",
+      "firstName": "Ngọc",
       "lastMiddleName": "Phạm Xuân",
-      "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
+      "address": "435 Đường 7, phường 10, quận 1, thành phố Hồ Chí Minh",
       "gender": "Nữ",
       "dateOfBirth": "05-02-1986",
       "height": "160",
       "weight": "50",
       "email": "an.phamxuam86@gmail.com",
-      "phoneNum": "0912 345 678",
+      "phoneNum": "0912345678",
       "hometown": "Phước Hưng, Vị Thanh, Hậu Giang",
       "job": "Lập trình viên",
       "Doctor_ID ": "",
@@ -145,6 +155,16 @@
           "title": "Viêm xoang cấp",
           "description": "Nghẹt mũi, mất vị giác.",
           "medicalStaffID": "4"
+        },
+        {
+          "dateBegin": "31-12-2024",
+          "dateEnd": "31-12-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "14:00",
+          "room": "H6-102",
+          "title": "Hộ sinh",
+          "description": "Hỗ trợ trợ sản",
+          "medicalStaffID": "20"
         },
         {
           "dateBegin": "21-05-2024",
@@ -167,6 +187,16 @@
           "medicalStaffID": "4"
         },
         {
+          "dateBegin": "04-05-2024",
+          "dateEnd": "04-05-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "10:00",
+          "room": "H3-209",
+          "title": "Siêu âm dạ con",
+          "description": "Tình trạng chậm kinh, nghi ngờ mang thai",
+          "medicalStaffID": "20"
+        },
+        {
           "dateBegin": "11-05-0224",
           "dateEnd": "11-05-2024",
           "timeBegin": "08:15",
@@ -178,7 +208,8 @@
           "id": 1
         }
       ],
-      "bloodType": "A"
+      "bloodType": "A",
+      "lastMidleName": "Phạm Xuân"
     },
     {
       "id": 4,
@@ -201,13 +232,13 @@
       "treatProcess": [
         {
           "dateBegin": "20-04-2024",
-          "dateEnd": "21-04-2024",
+          "dateEnd": "20-04-2024",
           "timeBegin": "10:45",
           "timeEnd": "12:30",
-          "room": "H3-101",
-          "title": "Quét MRI",
-          "description": "Cuộc hẹn quét MRI được lên lịch để có hình ảnh chi tiết về các cơ quan nội tạng.",
-          "medicalStaffID": 3
+          "room": "H3-106",
+          "title": "Phẫu thuật nội soi viêm ruột thừa",
+          "description": "Cuộc tiểu phẫu loại bỏ ổ viêm.",
+          "medicalStaffID": "6"
         },
         {
           "dateBegin": "02-04-2024",
@@ -235,16 +266,16 @@
     },
     {
       "id": 5,
-      "citizenID": "829329507883",
-      "firstName": "Thành",
+      "citizenID": "829329507812",
+      "firstName": "Huy",
       "lastMiddleName": "Phó Tuấn",
-      "address": "435 Điện Biên Phủ, phường 11, quận 1, thành phố Hồ Chí Minh",
+      "address": "42 Điện Biên Phủ, phường 11, quận 8, thành phố Hồ Chí Minh",
       "gender": "Nam",
-      "dateOfBirth": "20-11-1990",
+      "dateOfBirth": "20-11-1987",
       "height": "175",
       "weight": "65",
-      "email": "thanh.photuan@gmail.com",
-      "phoneNum": "0908 456 789",
+      "email": "thanh.pho@gmail.com",
+      "phoneNum": "0908125987",
       "hometown": "Phú Điền, Phú Vang, Thừa Thiên Huế",
       "job": "Lập trình viên",
       "Doctor_ID ": "",
@@ -294,7 +325,8 @@
           "medicalStaffID": "1"
         }
       ],
-      "bloodType": "B"
+      "bloodType": "B",
+      "lastMidleName": "Phó Thành"
     },
     {
       "id": 6,
@@ -316,6 +348,17 @@
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
+          "dateBegin": "27-05-2024",
+          "dateEnd": "27-05-2024",
+          "timeBegin": "07:30",
+          "timeEnd": "00:00",
+          "room": "H7-309",
+          "title": "Trồng răng implant",
+          "description": "Trồng răng impant 4 răng cửa chính.",
+          "medicalStaffID": "7",
+          "id": 1
+        },
+        {
           "dateBegin": "05-05-2024",
           "dateEnd": "05-05-2024",
           "timeBegin": "09:00",
@@ -327,15 +370,24 @@
           "id": 2
         },
         {
-          "dateBegin": "27-05-2024",
-          "dateEnd": "27-05-2024",
-          "timeBegin": "07:30",
-          "timeEnd": "00:00",
-          "room": "H7-309",
-          "title": "Trồng răng implant",
-          "description": "Trồng răng impant 4 răng cửa chính.",
-          "medicalStaffID": "7",
-          "id": 1
+          "dateBegin": "15-03-2024",
+          "dateEnd": "15-03-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "11:00",
+          "room": "H2-202",
+          "title": "Châm cứu tứ chi",
+          "description": "Thực hiện châm cứu tứ chi, hỗ trợ tuần hoàn máu.",
+          "medicalStaffID": "10"
+        },
+        {
+          "dateBegin": "12-03-2024",
+          "dateEnd": "12-03-2024",
+          "timeBegin": "10:30",
+          "timeEnd": "10:30",
+          "room": "H1-208",
+          "title": "Hồi phục sau chấn thương",
+          "description": "Phục hồi chức năng di chuyển.",
+          "medicalStaffID": "10"
         }
       ],
       "bloodType": "O"
@@ -413,6 +465,36 @@
           "description": "Cuộc hẹn để tư vấn di truyền học và đánh giá rủi ro.",
           "medicalStaffID": 5,
           "id": 1
+        },
+        {
+          "dateBegin": "29-04-2024",
+          "dateEnd": "05-05-2024",
+          "timeBegin": "08:30",
+          "timeEnd": "08:30",
+          "room": "H4-302",
+          "title": "Sốt xuất huyết",
+          "description": "Bệnh nhân viêm họng, sốt không hạ, ho, thiếu nước. ",
+          "medicalStaffID": "3"
+        },
+        {
+          "dateBegin": "29-04-2024",
+          "dateEnd": "29-04-2024",
+          "timeBegin": "00:00",
+          "timeEnd": "02:00",
+          "room": "H4-302",
+          "title": "Truyền nước biển",
+          "description": "Truyền nước biển, bổ sung nước. Truyền thuốc hạ sốt khẩn cấp.",
+          "medicalStaffID": "13"
+        },
+        {
+          "dateBegin": "06-05-2024",
+          "dateEnd": "06-05-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "09:00",
+          "room": "H4-302",
+          "title": "Quan sát, chăm sóc bệnh nhân",
+          "description": "Bệnh nhân viêm họng, sốt không hạ, ho, thiếu nước. ",
+          "medicalStaffID": "13"
         }
       ],
       "bloodType": "AB"
@@ -470,17 +552,6 @@
       "diagnosis": "Thiếu máu, xơ gan",
       "treatProcess": [
         {
-          "dateBegin": "30-05-2024",
-          "dateEnd": "31-05-2024",
-          "timeBegin": "17:15",
-          "timeEnd": "19:00",
-          "room": "H3-102",
-          "title": "Kiểm tra thính lực",
-          "description": "Cuộc hẹn để đánh giá thính lực và kiểm tra thính lực.",
-          "medicalStaffID": 6,
-          "id": 1
-        },
-        {
           "dateBegin": "05-06-2024",
           "dateEnd": "06-06-2024",
           "timeBegin": "07:00",
@@ -488,8 +559,39 @@
           "room": "H3-102",
           "title": "Kiểm tra sức khỏe tổng quát",
           "description": "Cuộc hẹn kiểm tra sức khỏe tổng quát định kỳ cho đánh giá sức khỏe chung.",
-          "medicalStaffID": 6,
+          "medicalStaffID": "3",
           "id": 2
+        },
+        {
+          "dateBegin": "30-04-2024",
+          "dateEnd": "30-04-2024",
+          "timeBegin": "17:15",
+          "timeEnd": "19:00",
+          "room": "H3-102",
+          "title": "Kiểm tra thính lực",
+          "description": "Cuộc hẹn để đánh giá thính lực và kiểm tra thính lực.",
+          "medicalStaffID": "3",
+          "id": 1
+        },
+        {
+          "dateBegin": "29-04-2024",
+          "dateEnd": "29-04-2024",
+          "timeBegin": "10:00",
+          "timeEnd": "11:30",
+          "room": "H2-102",
+          "title": "Châm cứu",
+          "description": "Châm cứu, bổ trợ tuần hoàn máu",
+          "medicalStaffID": "10"
+        },
+        {
+          "dateBegin": "22-03-2024",
+          "dateEnd": "22-03-2024",
+          "timeBegin": "08:03",
+          "timeEnd": "08:03",
+          "room": "H7-302",
+          "title": "Xét nghiệm sinh hóa đường",
+          "description": "Kiểm tra chuyên sâu về huyết thanh.",
+          "medicalStaffID": "8"
         }
       ],
       "bloodType": "B"
@@ -549,13 +651,22 @@
           "description": "Cho siêu âm tim, đo điện tâm đồ, quan sát cá triệu chứng để tiến hành điều trị"
         },
         {
-          "dateBegin": "2022-05-22",
+          "dateBegin": "2024-05-20",
           "timeBegin": "09:00",
-          "dateEnd": "2020-05-22",
+          "dateEnd": "2024-05-20",
           "timeEnd": "10:00",
           "room": "H7-301",
           "title": "Đo điện tâm đồ",
           "description": "Kiểm tra nhịp đập và tuần hoàn máu trong tim."
+        },
+        {
+          "dateBegin": "03-05-2024",
+          "timeBegin": "09:00",
+          "dateEnd": "03-05-2024",
+          "timeEnd": "10:00",
+          "room": "H1-101",
+          "title": "Khám tổng quát và bổ sung thuốc",
+          "description": "bệnh nhân đã được tiến hành khám tổng quát và bổ sung thuốc. Trong quá trình khám, bác sĩ đã kiểm tra các chỉ số y tế quan trọng của bệnh nhân như huyết áp, nhịp tim, nhiệt độ cơ thể và đánh giá tổng quan về tình trạng sức khỏe đồng thời bổ sung thuốc theo chỉ định của bác sĩ và theo dõi tình trạng"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh",
@@ -635,12 +746,11 @@
       "hometown": "Nam Đồng, Đại Lộc, Quảng Nam",
       "education": [
         {
-          "university": "Trường đại học Y dược TP HCM",
-          "major": "Tuần hoàn",
           "degree": "Tiến sĩ",
-          "id": 1,
-          "dateBegin": "12-09-1990",
-          "dateEnd": "20-07-1999"
+          "dateBegin": "1990-09-12",
+          "dateEnd": "1999-07-20",
+          "major": "Đa khoa",
+          "university": "Trường đại học Y dược TP HCM"
         }
       ],
       "cert": [
@@ -669,14 +779,31 @@
           "description": "Tư vấn chế độ dinh dưỡng lành mạnh, hạn chế ảnh hưởng tim mạch."
         },
         {
-          "timeBegin": "8:30",
-          "title": "Điều trị hở van tim",
-          "timeEnd": "00:30",
-          "id": 3,
-          "room": "H7-302",
-          "description": "consectetur magna consequat. exercitation minim. magna consequat. exercitation minim. consequat. exercitation minim ut commodo ullamco. exercitation minim ut commodo ullamco quis ut. minim ut commodo ullamco quis ut dolor dolore ea aliquip ipsum sed.",
-          "dateBegin": "22-03-2024",
-          "dateEnd": "22-03-2024"
+          "dateBegin": "2024-04-29",
+          "timeBegin": "08:30",
+          "dateEnd": "2024-05-05",
+          "timeEnd": "08:30",
+          "room": "H4-302",
+          "title": "Sốt xuất huyết",
+          "description": "Bệnh nhân viêm họng, sốt không hạ, ho, thiếu nước. "
+        },
+        {
+          "dateBegin": "2024-06-05",
+          "timeBegin": "07:00",
+          "dateEnd": "2024-06-06",
+          "timeEnd": "08:30",
+          "room": "H3-102",
+          "title": "Kiểm tra sức khỏe tổng quát",
+          "description": "Cuộc hẹn kiểm tra sức khỏe tổng quát định kỳ cho đánh giá sức khỏe chung."
+        },
+        {
+          "dateBegin": "2024-04-30",
+          "timeBegin": "17:15",
+          "dateEnd": "2024-04-30",
+          "timeEnd": "19:00",
+          "room": "H3-102",
+          "title": "Kiểm tra thính lực",
+          "description": "Cuộc hẹn để đánh giá thính lực và kiểm tra thính lực."
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -741,14 +868,13 @@
           "dateEnd": "29-03-2024"
         },
         {
+          "dateBegin": "2024-04-12",
           "timeBegin": "00:30",
+          "dateEnd": "2024-04-12",
+          "timeEnd": "17:30",
+          "room": "GD",
           "title": "Nghỉ phép",
-          "timeEnd": "13:30",
-          "id": 4,
-          "room": "H7-302",
-          "description": "incididunt ea sed ut adipiscing veniam, nostrud. ea sed ut adipiscing veniam, nostrud ullamco laboris Ut labore enim ex aliquip. sed ut adipiscing veniam, nostrud ullamco. ut adipiscing veniam, nostrud. adipiscing veniam, nostrud ullamco laboris Ut labore enim ex aliquip ipsum.",
-          "dateBegin": "12-04-2024",
-          "dateEnd": "12-04-2024"
+          "description": "Đi dự hội nghị tai mũi họng."
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -853,34 +979,31 @@
       "specialty": "khoa ngoại",
       "schedule": [
         {
-          "timeBegin": "09:00",
+          "dateBegin": "2024-04-20",
+          "timeBegin": "10:45",
+          "dateEnd": "2024-04-20",
+          "timeEnd": "00:30",
+          "room": "H3-106",
           "title": "Phẫu thuật nội soi viêm ruột thừa",
-          "timeEnd": "04:00",
-          "id": 1,
-          "room": "H7-302",
-          "description": "ullamco ut aliqua. quis enim. ut aliqua. quis enim ea consectetur exercitation sed veniam, aliquip. aliqua. quis enim ea consectetur exercitation sed veniam, aliquip elit, ut labore. quis enim ea consectetur exercitation sed veniam, aliquip elit, ut. enim ea consectetur exercitation sed veniam, aliquip elit, ut labore nostrud.",
-          "dateBegin": "02-03-2024",
-          "dateEnd": "02-03-2024"
+          "description": "Cuộc tiểu phẫu loại bỏ ổ viêm."
         },
         {
-          "timeBegin": "10:30",
-          "title": "Phẫu thuật cắt túi sỏi mật",
-          "timeEnd": "14:30",
-          "id": 2,
-          "room": "H7-302",
-          "description": "dolore ullamco enim amet, ut et aliqua. incididunt ea veniam, aliquip Ut. ullamco enim amet, ut et aliqua. incididunt ea veniam, aliquip Ut. enim amet, ut et aliqua. incididunt ea. amet, ut et aliqua. incididunt ea veniam, aliquip Ut labore nisi. ut et aliqua. incididunt ea veniam, aliquip Ut labore nisi ad commodo.",
-          "dateBegin": "12-03-2024",
-          "dateEnd": "12-03-2024"
+          "dateBegin": "2024-04-10",
+          "timeBegin": "08:00",
+          "dateEnd": "2024-04-10",
+          "timeEnd": "22:00",
+          "room": "H3-102",
+          "title": "Phẫu thuật Gan",
+          "description": "Phẫu thuật loại bỏ sán gan."
         },
         {
-          "timeBegin": "10:30",
+          "dateBegin": "2008-04-20",
+          "timeBegin": "14:00",
+          "dateEnd": "2008-04-20",
+          "timeEnd": "15:00",
+          "room": "H3-102",
           "title": "Nội soi bao tử",
-          "timeEnd": "23:30",
-          "id": 3,
-          "room": "H7-302",
-          "description": "minim elit, exercitation ut ullamco et adipiscing ad do Lorem laboris incididunt. elit, exercitation ut ullamco et adipiscing. exercitation ut ullamco et adipiscing ad do. ut ullamco et adipiscing ad do Lorem laboris incididunt veniam,. ullamco et adipiscing ad do Lorem laboris incididunt veniam, magna consectetur Ut nisi.",
-          "dateBegin": "21-03-2024",
-          "dateEnd": "21-03-2024"
+          "description": "Đau bao tử, ói ra máu."
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -978,34 +1101,31 @@
       "specialty": "khoa Xét nghiệm",
       "schedule": [
         {
-          "timeBegin": "09:00",
+          "dateBegin": "2024-04-19",
+          "timeBegin": "10:00",
+          "dateEnd": "2024-04-19",
+          "timeEnd": "23:00",
+          "room": "H7-308",
           "title": "Xét nghiệm huyết học tế bào",
-          "timeEnd": "21:00",
-          "id": 1,
-          "room": "H7-302",
-          "description": "nisi quis enim commodo Lorem adipiscing ut exercitation. quis enim commodo Lorem adipiscing ut exercitation do aliquip dolore ea ex. enim commodo Lorem adipiscing ut exercitation do aliquip. commodo Lorem adipiscing ut. Lorem adipiscing ut exercitation do aliquip dolore ea ex et minim sed nostrud.",
-          "dateBegin": "19-03-2024",
-          "dateEnd": "19-03-2024"
+          "description": "Kiểm tra máu toàn diện"
         },
         {
-          "timeBegin": "8:30",
-          "title": "Xét nghiệm sinh hóa đường",
+          "dateBegin": "2024-03-22",
+          "timeBegin": "08:30",
+          "dateEnd": "2024-03-22",
           "timeEnd": "00:30",
-          "id": 2,
           "room": "H7-302",
-          "description": "nostrud ut dolore sit Ut dolor. ut dolore sit Ut dolor ut veniam, consequat. commodo ex et exercitation enim. dolore sit Ut dolor ut veniam,. sit Ut dolor ut veniam, consequat. commodo ex et exercitation enim elit, magna. Ut dolor ut veniam, consequat..",
-          "dateBegin": "22-03-2024",
-          "dateEnd": "22-03-2024"
+          "title": "Xét nghiệm sinh hóa đường",
+          "description": "Kiểm tra chuyên sâu về huyết thanh."
         },
         {
-          "timeBegin": "8:30",
+          "dateBegin": "2024-04-10",
+          "timeBegin": "07:00",
+          "dateEnd": "2024-04-10",
+          "timeEnd": "07:30",
+          "room": "H3-102",
           "title": "Xét nghiệm máu",
-          "timeEnd": "Invalid date",
-          "id": 3,
-          "room": "H7-302",
-          "description": "aliquip ullamco enim ex dolor. ullamco enim ex dolor et ipsum Lorem nostrud ut eiusmod elit, ea. enim ex dolor et ipsum Lorem nostrud. ex dolor et ipsum Lorem nostrud ut eiusmod elit, ea aliqua.. dolor et ipsum Lorem nostrud ut eiusmod elit,.",
-          "dateBegin": "29-03-2024",
-          "dateEnd": "29-03-2024"
+          "description": "Chỉ số hồng cầu và bạch cầu trong phạm vi bình thường, hemoglobin và hematocrit thấp hơn so với giới hạn bình thường, các thông số MCV, MCH và MCHC nằm trong khoảng bình thường"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1112,34 +1232,31 @@
       "specialty": "khoa Y học cổ truyền",
       "schedule": [
         {
-          "timeBegin": "10:00",
+          "dateBegin": "2024-03-15",
+          "timeBegin": "09:00",
+          "dateEnd": "2024-03-15",
+          "timeEnd": "11:00",
+          "room": "H2-202",
           "title": "Châm cứu tứ chi",
-          "timeEnd": "21:00",
-          "id": 1,
-          "room": "H7-302",
-          "description": "dolor veniam, Lorem et labore adipiscing consectetur eiusmod amet, nostrud. veniam, Lorem et labore adipiscing consectetur eiusmod amet, nostrud laboris enim Ut. Lorem et labore adipiscing consectetur eiusmod amet,. et labore adipiscing consectetur eiusmod amet, nostrud laboris. labore adipiscing consectetur eiusmod amet, nostrud laboris enim Ut.",
-          "dateBegin": "19-02-2024",
-          "dateEnd": "19-02-2024"
+          "description": "Thực hiện châm cứu tứ chi, hỗ trợ tuần hoàn máu."
         },
         {
+          "dateBegin": "2010-03-12",
           "timeBegin": "10:30",
+          "dateEnd": "2010-03-12",
+          "timeEnd": "14:30",
+          "room": "H1-208",
           "title": "Hồi phục sau chấn thương",
-          "timeEnd": "14:30",
-          "id": 2,
-          "room": "H7-302",
-          "description": "et incididunt enim laboris tempor ex. incididunt enim laboris tempor ex eiusmod veniam, ut aliquip commodo consequat.. enim laboris tempor ex eiusmod veniam,. laboris tempor ex eiusmod veniam, ut. tempor ex eiusmod veniam, ut aliquip commodo consequat. nisi Ut exercitation sed sit.",
-          "dateBegin": "12-03-2024",
-          "dateEnd": "12-03-2024"
+          "description": "Phục hồi chức năng di chuyển."
         },
         {
-          "timeBegin": "10:30",
-          "title": "Khám và điều trị",
-          "timeEnd": "14:30",
-          "id": 3,
-          "room": "H7-302",
-          "description": "tempor nisi consequat. ullamco et exercitation magna incididunt minim elit,. nisi consequat. ullamco et. consequat. ullamco et exercitation magna incididunt. ullamco et exercitation magna incididunt minim elit, aliquip aliqua. Lorem Ut ut. et exercitation magna incididunt minim elit, aliquip aliqua..",
-          "dateBegin": "12-04-2024",
-          "dateEnd": "12-04-2024"
+          "dateBegin": "2024-04-29",
+          "timeBegin": "10:00",
+          "dateEnd": "2024-04-29",
+          "timeEnd": "11:30",
+          "room": "H2-102",
+          "title": "Châm cứu",
+          "description": "Châm cứu, bổ trợ tuần hoàn máu"
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1941,24 +2058,22 @@
           "dateEnd": "22-03-2024"
         },
         {
-          "timeBegin": "10:30",
-          "title": "Điều trị bệnh nhân",
-          "timeEnd": "12:30",
-          "id": 2,
-          "room": "H7-302",
-          "description": "consequat. ullamco do magna ut incididunt. ullamco do magna ut incididunt aliqua. laboris dolor ad aliquip sit. do magna ut incididunt aliqua. laboris dolor ad aliquip sit ut ipsum minim. magna ut incididunt aliqua. laboris dolor ad. ut incididunt aliqua. laboris.",
-          "dateBegin": "25-03-2024 ",
-          "dateEnd": "25-03-2024 "
+          "dateBegin": "2024-05-06",
+          "timeBegin": "09:00",
+          "dateEnd": "2024-05-06",
+          "timeEnd": "00:00",
+          "room": "H4-302",
+          "title": "Quan sát, chăm sóc bệnh nhân",
+          "description": "Bệnh nhân viêm họng, sốt không hạ, ho, thiếu nước. "
         },
         {
-          "timeBegin": "10:30",
-          "title": "Họp",
-          "timeEnd": "12:30",
-          "id": 3,
-          "room": "H7-302",
-          "description": "ipsum sed ad labore elit, Lorem minim magna. sed ad labore elit, Lorem minim magna do quis dolore. ad labore elit, Lorem minim magna do quis dolore. labore elit, Lorem minim magna do quis. elit, Lorem minim magna do quis dolore adipiscing.",
-          "dateBegin": "29-03-2024",
-          "dateEnd": "29-03-2024"
+          "dateBegin": "2024-04-29",
+          "timeBegin": "00:00",
+          "dateEnd": "2024-04-29",
+          "timeEnd": "14:00",
+          "room": "H4-302",
+          "title": "Truyền nước biển.",
+          "description": "Truyền nước biển, bổ sung nước. Truyền thuốc hạ sốt khẩn cấp."
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1994,34 +2109,22 @@
       "specialty": "Hộ Sinh",
       "schedule": [
         {
+          "dateBegin": "2024-05-04",
           "timeBegin": "09:00",
-          "title": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00",
-          "id": 1,
-          "room": "H7-302",
-          "description": "tempor sed veniam, ipsum sit commodo magna. sed veniam, ipsum sit commodo magna quis. veniam, ipsum sit commodo magna. ipsum sit commodo magna quis adipiscing. sit commodo magna quis.",
-          "dateBegin": "22-03-2024",
-          "dateEnd": "22-03-2024"
+          "dateEnd": "2024-05-04",
+          "timeEnd": "10:00",
+          "room": "H3-209",
+          "title": "Siêu âm dạ con",
+          "description": "Tình trạng chậm kinh, nghi ngờ mang thai"
         },
         {
+          "dateBegin": "2024-03-29",
           "timeBegin": "10:30",
-          "title": "Điều trị bệnh nhân",
+          "dateEnd": "2024-03-29",
           "timeEnd": "12:30",
-          "id": 2,
-          "room": "H7-302",
-          "description": "quis consequat. et aliquip minim nostrud sed Ut tempor elit, consectetur ipsum do. consequat. et aliquip minim nostrud sed Ut tempor elit, consectetur ipsum. et aliquip minim nostrud. aliquip minim nostrud sed Ut tempor elit, consectetur ipsum. minim nostrud sed Ut tempor elit, consectetur ipsum do Lorem eiusmod adipiscing magna.",
-          "dateBegin": "25-03-2024 ",
-          "dateEnd": "25-03-2024 "
-        },
-        {
-          "timeBegin": "10:30",
-          "title": "Họp",
-          "timeEnd": "12:30",
-          "id": 3,
-          "room": "H7-302",
-          "description": "magna incididunt consectetur dolore ipsum nisi commodo amet, enim exercitation. incididunt consectetur dolore ipsum nisi commodo amet, enim exercitation. consectetur dolore ipsum nisi commodo amet,. dolore ipsum nisi commodo amet, enim. ipsum nisi commodo amet, enim exercitation laboris sit.",
-          "dateBegin": "29-03-2024",
-          "dateEnd": "29-03-2024"
+          "room": "GD",
+          "title": "Họp bàn khoa sản",
+          "description": "Giao nhiệm vụ về khoa."
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -2371,14 +2474,13 @@
       "specialty": "Hộ sinh",
       "schedule": [
         {
-          "timeBegin": "09:00",
-          "title": "Kiểm tra và đánh giá bệnh nhân",
-          "timeEnd": "11:00",
-          "id": 1,
-          "room": "H7-302",
-          "description": "do ipsum nisi aliquip ea. ipsum nisi aliquip ea veniam, quis ut exercitation amet, aliqua. et. nisi aliquip ea veniam, quis ut exercitation amet,. aliquip ea veniam, quis ut exercitation amet, aliqua.. ea veniam, quis ut exercitation amet, aliqua..",
-          "dateBegin": "22-03-2024",
-          "dateEnd": "22-03-2024"
+          "dateBegin": "2024-12-31",
+          "timeBegin": "07:00",
+          "dateEnd": "2024-12-31",
+          "timeEnd": "14:00",
+          "room": "H6-102",
+          "title": "Hộ sinh",
+          "description": "Hỗ trợ trợ sản"
         },
         {
           "timeBegin": "10:30",
