@@ -15,12 +15,12 @@ const MedInfoBlock = ({ patient }) => {
       event.stopPropagation();
     } else {
       const updateData = {
-        height: form.elements.height,
-        weight: form.elements.weight,
-        bloodType: form.elements.bloodType,
-        medHistory: form.elements.medHistory,
-        symptoms: form.elements.symptoms,
-        diagnosis: form.elements.diagnosis,
+        height: form.elements.height.value,
+        weight: form.elements.weight.value,
+        bloodType: form.elements.bloodType.value,
+        medHistory: form.elements.medHistory.value,
+        symptoms: form.elements.symptoms.value,
+        diagnosis: form.elements.diagnosis.value,
       };
       axios
         .patch("http://localhost:3000/Patient/" + patient.id, updateData)

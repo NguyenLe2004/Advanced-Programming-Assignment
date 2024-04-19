@@ -18,7 +18,7 @@ const UpdateBlock = ({patient}) => {
       } 
       else {
         const updatedData = {
-          lastMidleName: form.elements.lastMidleName.value,
+          lastMidleName: form.elements.lastMiddleName.value,
           firstName: form.elements.firstName.value,
           gender: form.elements.gender.value,
           phoneNum: form.elements.phoneNum.value,
@@ -52,7 +52,7 @@ const UpdateBlock = ({patient}) => {
     <div>
     <Form noValidate validated={validated} onSubmit={handleSubmit} className='outer-form'>
       <Row className="mb-3">
-        <Form.Group as={Col} controlId="lastMidleName"  >
+        <Form.Group as={Col} controlId="lastMiddleName"  >
           <Form.Label>Họ và tên đệm</Form.Label>
           <Form.Control
             required
