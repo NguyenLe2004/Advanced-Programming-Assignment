@@ -9,17 +9,21 @@ import "./AddPatientInfoForm.css";
 const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
   const [validated, setValidated] = useState(false);
   const [error, setError] = useState("");
-  const [dateOfBirth,setDateOfBirth]  = useState("")
   const handleSubmit =  (event) => {
+
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
-    } else {
-      if(moment(dateOfBirth).isAfter(moment())) {
-        setError("jsdbfjkasfjknsdjk"); 
+    } else { 
+      // check condition 
+      const dateOfBirth = moment(form.elements.dateOfBirth.value); // YYYY-MM-DD
+      const curDate = moment();
+      if (dateOfBirth.isAfter(curDate)){
+        setError("Ngày sinh kh hợp lệ ......")
         return;
       }
+      //
       setPersonalInfo({
         lastMiddleName: form.elements.lastMiddleName.value,
         firstName: form.elements.firstName.value,
@@ -28,11 +32,10 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
         email: form.elements.email.value,
         job: form.elements.job.value,
         citizenID: form.elements.citizenID.value,
-        dateOfBirth: form.elements.dateOfBirth.value,
+        dateOfBirth: moment(form.elements.dateOfBirth.value).format("DD-MM-YYYY"),
         address: form.elements.address.value,
         hometown: form.elements.hometown.value,
       });
-      setError("")
       setIsSlide(true);
     }
     setValidated(true);
@@ -46,8 +49,11 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
     >
       <Row className="mb-3">
         <h3>Thông tin cá nhân</h3>
-        {error && 
-        <div >{error}</div>}
+        {error &&
+          <div>
+            {error}
+          </div>
+        }
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} md="6" controlId="lastMiddleName">
@@ -89,7 +95,7 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="dateOfBirth">
           <Form.Label>Ngày sinh</Form.Label>
-          <Form.Control type="date" required onChange={(event) => setDateOfBirth(event.target.value)} /> 
+          <Form.Control type="date" required /> 
           <Form.Control.Feedback type="invalid">
             Ngày sinh không hợp lệ.
           </Form.Control.Feedback>

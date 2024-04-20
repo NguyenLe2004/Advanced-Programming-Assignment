@@ -5,7 +5,7 @@
     margin-left: 50vw;
     transform: translateX(-50%);
     width: 80vw;
-    height: fit-content;
+    /* height: fit-content; */
     justify-content: center;
     align-items: center;
     border-radius: 10px;

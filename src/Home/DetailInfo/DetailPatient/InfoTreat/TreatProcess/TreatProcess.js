@@ -21,12 +21,19 @@ const TreatProcess = ({patient}) => {
     const [medStaffData, setMedStaffData] = useState([]);
     const [updateIndex, setUpdateIndex] = useState(0) // can change if use sub collect
     const {allSpecialty} = useContext(specialtyContext);
+    const [error, setError] = useState("")
+
+
     const handleSubmit = async (event) => {
       const form = event.currentTarget;
       event.preventDefault();
       if (form.checkValidity() === false) {
         event.stopPropagation();
       } else{
+        // check condition
+         // ngay ket thuc < ngay bd 
+         //setError ( ..... ) 
+        //
         const datetimeBegin = form.elements.dateBegin.value;
         const datetimeEnd = form.elements.dateEnd.value;
         const newTreatProcess = {
@@ -150,6 +157,8 @@ const TreatProcess = ({patient}) => {
      }
   return (
     <div>
+      {error && 
+      <div> {error} </div>}
       {patient.treatProcess.map((treatment, index) => (
         <div className='treat-circle-block'> 
             <div className={`circle circle-${

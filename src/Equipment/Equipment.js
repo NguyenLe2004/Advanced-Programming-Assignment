@@ -32,7 +32,7 @@ const Equipment = () => {
       if(curDatetime.isAfter(datetimeBegin) ) return "Đang sử dụng"
     }
     for (let i=equipment.regularMaintenance.length-1;i>=0;--i) {
-      const maintain = equipment.regularMaintenance[i]; 
+      const maintain = equipment.regularMaintenance[i];
       const dateBegin = moment(maintain.dateBegin,"DD-MM-YYYY");
       const dateEnd = moment(maintain.dateEnd ,"DD-MM-YYYY");
       if (curDatetime.isAfter(dateEnd)){

@@ -20,7 +20,7 @@ const AddPatientForm = ({setShowAddPatientForm}) => {
     }
 return (
     <div>
-        <div className='center-page'>
+        <div className='center-page-patient'>
             <CloseButton 
                 style={{position:"absolute",right:"1vw",top:"1vh",fontSize:"20px",zIndex:"30"}}
                 onClick={handleClosebtn}
