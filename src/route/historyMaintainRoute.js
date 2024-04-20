@@ -7,14 +7,14 @@ import { authMiddlewareRole, authMiddlewareLogin } from '../middleware/authMiddl
 const historyMaintainRouter = express.Router({ mergeParams: true });
 
 
-scheduleRouter.route('/')
+historyMaintainRouter.route('/')
   .get(historyMaintainController.getAllSchedule)
   .post(historyMaintainValidation.createNew, authMiddlewareLogin, authMiddlewareRole, historyMaintainController.createNew)
 
-scheduleRouter.route('/deleteMany')
+historyMaintainRouter.route('/deleteMany')
   .put(historyMaintainValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, historyMaintainController.deleteManyItems)
 
-scheduleRouter.route('/:id')
+historyMaintainRouter.route('/:id')
   .put(historyMaintainValidation.update, authMiddlewareLogin, authMiddlewareRole, historyMaintainController.update)
   .delete(historyMaintainValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, historyMaintainController.deleteAnItem)
 
