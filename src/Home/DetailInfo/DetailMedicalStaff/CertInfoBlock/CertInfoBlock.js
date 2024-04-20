@@ -30,29 +30,25 @@ const CertInfoBlock = ({medicalStaff}) => {
       if (form.checkValidity() === false) {
         event.stopPropagation();
       } 
-    //    const date = moment(form.elements.date.value)
-    //   const curDay = moment()
-    //     if(curDay.isBefore(date)){
-    //       setError("thời điểm không hợp lệ")
-    //       return;
-    //     }
+       const date = moment(form.elements.date.value)
+      const curDay = moment()
+        if(curDay.isBefore(date)){
+          setError("thời điểm không hợp lệ")
+          return;
+        }
       else{
         let updateData = [...medicalStaff.cert];
         if (isUpdate) {
             updateData[currentPage-1] = {
-                degree : form.elements.degree.value,
-                dateBegin : form.elements.dateBegin.value,
-                dateEnd : form.elements.dateEnd.value,
-                major : form.elements.major.value,
-                university: form.elements.university.value
+                date: form.elements.date.value,
+                organization : form.elements.organization.value,
+                title : form.elements.title.value
             }
         } else {
             updateData.push({
-                degree : form.elements.degree.value,
-                dateBegin : form.elements.dateBegin.value,
-                dateEnd : form.elements.dateEnd.value,
-                major : form.elements.major.value,
-                university: form.elements.university.value
+                date: form.elements.date.value,
+            organization : form.elements.organization.value,
+            title : form.elements.title.value
             })
         }
         if(isUpdate) {
@@ -146,14 +142,14 @@ const CertInfoBlock = ({medicalStaff}) => {
                 </Form.Group>
                 </Row>
                 <Row className="mb-3">
-                    <Form.Group as={Col} md="8" controlId="university">
+                    <Form.Group as={Col} md="8" controlId="organization">
                     <Form.Label>tổ chức</Form.Label>
                     <Form.Control type="text" placeholder="tổ chức" defaultValue={isAdd? "":educations[currentPage-1].organization} required />
                     <Form.Control.Feedback type="invalid">
                     Thông tin không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
-                    <Form.Group as={Col} md="4" controlId="dateBegin">
+                    <Form.Group as={Col} md="4" controlId="date">
                     <Form.Label>Ngày cấp</Form.Label>
                     <Form.Control type="date" placeholder="Ngày cấp" defaultValue={isAdd ? "":moment(educations[currentPage-1].date,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
                     <Form.Control.Feedback type="invalid">
