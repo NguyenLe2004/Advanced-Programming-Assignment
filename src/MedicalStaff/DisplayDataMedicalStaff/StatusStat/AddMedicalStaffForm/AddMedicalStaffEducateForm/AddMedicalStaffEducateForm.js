@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./AddMedicalStaffEducateForm.css";
+import moment from "moment";
 const AddMedicalStaffEducateForm = ({
   setIsSlide1,
   setIsSlide2,
@@ -13,7 +14,7 @@ const AddMedicalStaffEducateForm = ({
   setEducation,
 }) => {
   const [validated, setValidated] = useState(false);
-
+  const [error,setError] = useState("")
   const handleDeleteEducation = (index) => {
     setEducation((prevEducation) =>
       prevEducation.filter((_, i) => i !== index)
@@ -25,7 +26,19 @@ const AddMedicalStaffEducateForm = ({
     if (form.checkValidity() === false) {
       event.stopPropagation();
       setValidated(true);
-    } else {
+    } 
+    const Begin = moment(form.elements.dateBegin.value)
+    const End = moment(form.elements.dateEnd.value)
+    const curDay = moment()
+      if(curDay.isBefore(Begin)){
+        setError("thời điểm bắt đầu và kết thúc không hợp lệ")
+        return;
+      }
+      else if(Begin.isAfter(End)){
+        setError("thời điểm bắt đầu và kết thúc không hợp lệ")
+        return;
+      }
+    else {
       setEducation([
         ...education,
         {
@@ -51,6 +64,21 @@ const AddMedicalStaffEducateForm = ({
         <h3>Học vấn</h3>
       </Row>
       <Row className="mb-3">
+      {error &&
+    <div>
+      <style>
+        {`
+        .alert-danger {
+        font-size: 15px; /* Điều chỉnh kích thước phù hợp */
+        padding: 5px 10px;
+          }
+        `}
+      </style>       
+         <div class="alert alert-danger" role="alert">
+          {error}
+          </div>
+      </div>
+      }
         <Form.Group as={Col} md="8" controlId="university">
           <Form.Label>Trường</Form.Label>
           <Form.Control type="text" placeholder="Trường" required />

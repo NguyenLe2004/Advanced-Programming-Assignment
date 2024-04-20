@@ -7,11 +7,12 @@ import axios from 'axios'
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useParams } from 'react-router-dom';
-
+import moment from 'moment';
 const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
   const {position} = useParams()
   const [cert , setCert ] = useState([])
   const [validated, setValidated] = useState(false);
+  const [error,setError] = useState("")
   const handleDeleteCert = async (index) => {
     setCert((prevCert) =>
       prevCert.filter((_, i) => i !== index)
@@ -38,7 +39,14 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
       if (form.checkValidity() === false) {
           event.stopPropagation();
         setValidated(true);
-      } else {
+      } 
+      const date = moment(form.elements.date.value)
+      const curDay = moment()
+        if(curDay.isBefore(date)){
+          setError("thời điểm không hợp lệ")
+          return;
+        }
+      else {
         setCert([
           ...cert,
           {
@@ -55,6 +63,21 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
       <Form style={{padding:"2vh 1vw"}} noValidate validated={validated} onSubmit={handleSubmit}>
       <Row className="mb-3" ><h3>Chứng chỉ</h3></Row>
       <Row className="mb-3">
+      {error && (
+          <div>
+            <style>
+              {`
+                          .alert-danger {
+                          font-size: 15px; /* Điều chỉnh kích thước phù hợp */
+                          padding: 10px 15px;
+                            }
+                          `}
+            </style>
+            <div class="alert alert-danger" role="alert">
+              {error}
+            </div>
+          </div>
+        )}
         <Form.Group as={Col} md="8" controlId="title" >
           <Form.Label>Tên chứng chỉ</Form.Label>
           <Form.Control

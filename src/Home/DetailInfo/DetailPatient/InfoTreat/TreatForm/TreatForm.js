@@ -17,13 +17,26 @@ const TreatForm = ({patient}) => {
   const [specialty, setSpecialty] = useState("");
   const [medStaffID, setMedStaffID] = useState("");
   const [medStaffData, setMedStaffData] = useState([]);
-
+  const [error, setError] = useState("")
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
     event.preventDefault();
     if (form.checkValidity() === false) {
       event.stopPropagation();
-    } else{
+    }
+
+    const Begin = moment(form.elements.datetimeBegin.value)
+    const End = moment(form.elements.datetimeEnd.value)
+    const curDay = moment()
+      if(curDay.isAfter(Begin)){
+        setError("thời điểm bắt đầu và kết thúc không hợp lệ")
+        return;
+      }
+      else if(Begin.isAfter(End)){
+        setError("thời điểm bắt đầu và kết thúc không hợp lệ")
+        return;
+      }
+    else{
       const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
       const [dateEnd, timeEnd] = form.elements.datetimeBegin.value.split("T")
       const newTreatProcess = {
@@ -111,6 +124,21 @@ const TreatForm = ({patient}) => {
     <div className='form-block'>
 <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">
+    {error &&
+    <div>
+      <style>
+        {`
+        .alert-danger {
+        font-size: 15px; /* Điều chỉnh kích thước phù hợp */
+        padding: 5px 10px;
+          }
+        `}
+      </style>       
+         <div class="alert alert-danger" role="alert">
+          {error}
+          </div>
+      </div>
+      }
           <Form.Group as={Col} xs="6" controlId="datetimeBegin">
             <Form.Label>Thời điểm bắt đầu</Form.Label>
             <Form.Control

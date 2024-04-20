@@ -13,12 +13,19 @@ const UpdateBlock = ({medicalStaff}) => {
     const {position} = useParams()
     const [validated, setValidated] = useState(false);
     const {allSpecialty} = useContext(specialtyContext)
+    const[error,setError] = useState("")
     const handleSubmit = (event) => {
       const form = event.currentTarget;
       event.preventDefault();
       if (form.checkValidity() === false) {
         event.stopPropagation();
       } 
+      const dateOfBirth = moment(form.elements.dateOfBirth.value); // YYYY-MM-DD
+      const curDate = moment();
+      if (dateOfBirth.isAfter(curDate)) {
+        setError("Ngày sinh không hợp lệ");
+        return;
+      }
       else {
         const updatedData = {
           lastMidleName: form.elements.lastMidleName.value,
@@ -55,6 +62,21 @@ const UpdateBlock = ({medicalStaff}) => {
     <div>
     <Form noValidate validated={validated} onSubmit={handleSubmit} className='outer-form'>
       <Row className="mb-3">
+      {error && (
+          <div>
+            <style>
+              {`
+                          .alert-danger {
+                          font-size: 15px; /* Điều chỉnh kích thước phù hợp */
+                          padding: 10px 15px;
+                            }
+                          `}
+            </style>
+            <div class="alert alert-danger" role="alert">
+              {error}
+            </div>
+          </div>
+        )}
         <Form.Group as={Col} controlId="lastMidleName"  >
           <Form.Label>Họ và tên đệm</Form.Label>
           <Form.Control

@@ -10,15 +10,15 @@ const CertInfoBlock = ({medicalStaff}) => {
     const [isAdd, setIsAdd] = useState(false);
     const [validated, setValidated] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
+    const [error,setError] = useState("")
     const educations = medicalStaff.cert;
     if (!educations) return;
     const totalPage = educations.length;
-
     const handleDelete = () =>{
         let newEducates = [...educations];
         newEducates.splice(currentPage-1,1);
         const updateData = {
-            cert : newEducates
+            cert : newEducates 
         }
         axios.patch("http://localhost:3000/MedicalStaff/"+ medicalStaff.id,updateData)
         .then(() => window.location.reload()) 
@@ -29,7 +29,14 @@ const CertInfoBlock = ({medicalStaff}) => {
       event.preventDefault();
       if (form.checkValidity() === false) {
         event.stopPropagation();
-      } else{
+      } 
+    //    const date = moment(form.elements.date.value)
+    //   const curDay = moment()
+    //     if(curDay.isBefore(date)){
+    //       setError("thời điểm không hợp lệ")
+    //       return;
+    //     }
+      else{
         let updateData = [...medicalStaff.cert];
         if (isUpdate) {
             updateData[currentPage-1] = {
@@ -115,6 +122,21 @@ const CertInfoBlock = ({medicalStaff}) => {
         ):(
             <Form noValidate validated={validated} onSubmit={handleSubmit} >
                 <Row className="mb-3">
+                {error && (
+                <div>
+                  <style>
+                    {`
+                          .alert-danger {
+                          font-size: 15px; /* Điều chỉnh kích thước phù hợp */
+                          padding: 10px 15px;
+                            }
+                          `}
+                  </style>
+                  <div class="alert alert-danger" role="alert">
+                    {error}
+                  </div>
+                </div>
+              )}
                     <Form.Group  controlId="title">
                     <Form.Label>Tên chứng chỉ</Form.Label>
                     <Form.Control type='text' placeholder="Tên chứng chỉ" required defaultValue={isAdd? "": educations[currentPage-1].title}  />

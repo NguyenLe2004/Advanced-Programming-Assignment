@@ -4,18 +4,28 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import moment from "moment";
 import { useParams } from "react-router-dom";
 // import "./AddMedicalStaffInfoForm.css"
 const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
   const {position } = useParams();
   const [validated, setValidated] = useState(false);
   const { allSpecialty } = useContext(specialtyContext);
+  const [error,setError] = useState("")
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
-    } else {
+    } 
+      // check condition
+      const dateOfBirth = moment(form.elements.dateOfBirth.value); // YYYY-MM-DD
+      const curDate = moment();
+      if (dateOfBirth.isAfter(curDate)) {
+        setError("Ngày sinh không hợp lệ");
+        return;
+      }
+    else {
       setPersonalInfo({
         lastMiddleName: form.elements.lastMiddleName.value,
         specialty: form.elements.specialty.value,
@@ -43,6 +53,21 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
         <h3>Thông tin cá nhân</h3>
       </Row>
       <Row className="mb-3">
+      {error && (
+                      <div>
+                        <style>
+                          {`
+                          .alert-danger {
+                          font-size: 15px; /* Điều chỉnh kích thước phù hợp */
+                          padding: 5px 10px;
+                            }
+                          `}
+                        </style>
+                        <div class="alert alert-danger" role="alert">
+                          {error}
+                        </div>
+                      </div>
+                    )}
         <Form.Group as={Col} md="5" controlId="lastMiddleName">
           <Form.Label>Họ và tên đệm</Form.Label>
           <Form.Control
