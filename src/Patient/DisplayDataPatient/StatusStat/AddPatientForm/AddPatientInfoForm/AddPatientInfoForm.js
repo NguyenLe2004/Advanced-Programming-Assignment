@@ -22,7 +22,6 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
         setError("Ngày sinh không hợp lệ");
         return;
       }
-      //
       setPersonalInfo({
         lastMiddleName: form.elements.lastMiddleName.value,
         firstName: form.elements.firstName.value,
@@ -85,7 +84,7 @@ const AddPatientInfoForm = ({ setIsSlide, setPersonalInfo }) => {
             required
             type="text"
             placeholder="Tên"
-            pattern="[a-zA-ZÀ-Ỹà-ỹ']+"
+            pattern="^\s*?[a-zA-ZÀ-Ỹà-ỹ']+$"
           />
           <Form.Control.Feedback type="invalid">
             Tên không hợp lệ.

@@ -20,13 +20,13 @@ const UpdateBlock = ({medicalStaff}) => {
       if (form.checkValidity() === false) {
         event.stopPropagation();
       } 
-      const dateOfBirth = moment(form.elements.dateOfBirth.value); // YYYY-MM-DD
-      const curDate = moment();
-      if (dateOfBirth.isAfter(curDate)) {
-        setError("Ngày sinh không hợp lệ");
-        return;
-      }
       else {
+        const dateOfBirth = moment(form.elements.dateOfBirth.value); // YYYY-MM-DD
+        const curDate = moment();
+        if (dateOfBirth.isAfter(curDate)) {
+          setError("Ngày sinh không hợp lệ");
+          return;
+        }
         const updatedData = {
           lastMidleName: form.elements.lastMidleName.value,
           firstName: form.elements.firstName.value,
@@ -97,7 +97,7 @@ const UpdateBlock = ({medicalStaff}) => {
             type="text"
             placeholder="Tên"
             defaultValue={medicalStaff.firstName}
-            pattern="[a-zA-ZÀ-Ỹà-ỹ']+"         
+            pattern="^\s*?[a-zA-ZÀ-Ỹà-ỹ']+$"
           />
            <Form.Control.Feedback type="invalid">
             Tên không hợp lệ

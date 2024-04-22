@@ -8,12 +8,9 @@ import AddPatientMedInfoForm from './AddPatientMedInfoForm/AddPatientMedInfoForm
 import axios from 'axios'
 import "./AddPatientForm.css"
 const AddPatientForm = ({setShowAddPatientForm}) => {
-
-
     const [isSlide, setIsSlide] = useState(false);
     const slideRef = useRef(null);
     const [personalInfo,setPersonalInfo] = useState({})
-
     const handleClosebtn = () => {
         setIsSlide(false);
         setShowAddPatientForm(false);

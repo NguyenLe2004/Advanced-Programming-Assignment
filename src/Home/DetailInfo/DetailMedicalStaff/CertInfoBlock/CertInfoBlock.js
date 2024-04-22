@@ -30,13 +30,14 @@ const CertInfoBlock = ({medicalStaff}) => {
       if (form.checkValidity() === false) {
         event.stopPropagation();
       } 
-       const date = moment(form.elements.date.value)
-      const curDay = moment()
-        if(curDay.isBefore(date)){
-          setError("thời điểm không hợp lệ")
-          return;
-        }
+
       else{
+        const date = moment(form.elements.date.value)
+        const curDay = moment()
+          if(curDay.isBefore(date)){
+            setError("thời điểm không hợp lệ")
+            return;
+          }
         let updateData = [...medicalStaff.cert];
         if (isUpdate) {
             updateData[currentPage-1] = {
@@ -74,7 +75,6 @@ const CertInfoBlock = ({medicalStaff}) => {
         }
 
       } 
-  
       setValidated(true);
     };
   return (
@@ -161,6 +161,8 @@ const CertInfoBlock = ({medicalStaff}) => {
                 <Button style={{position:"absolute",right:"1vw"}} variant='danger' onClick={() => {
                     setIsAdd(false);
                     setIsUpdate(false);
+                    setError(false);
+                    setValidated(false);
                 }}>Huỷ</Button>
                 </Form>
         )}

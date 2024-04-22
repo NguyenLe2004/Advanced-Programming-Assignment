@@ -7,8 +7,6 @@ import AddMedicalStaffEducateForm from './AddMedicalStaffEducateForm/AddMedicalS
 import AddMedicalStaffCertForm from './AddMedicalStaffCertForm/AddMedicalStaffCertForm';
 import "./AddMedicalStaffForm.css"
 const AddMedicalStaffForm = ({setShowAddMedicalStaffForm}) => {
-
-
     const [isSlide1, setIsSlide1] = useState(false);
     const [isSlide2, setIsSlide2] = useState(false);
     const [personalInfo,setPersonalInfo] = useState({})

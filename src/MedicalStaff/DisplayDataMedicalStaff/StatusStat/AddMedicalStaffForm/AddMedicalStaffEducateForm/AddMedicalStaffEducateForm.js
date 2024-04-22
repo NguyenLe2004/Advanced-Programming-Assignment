@@ -27,18 +27,18 @@ const AddMedicalStaffEducateForm = ({
       event.stopPropagation();
       setValidated(true);
     } 
-    const Begin = moment(form.elements.dateBegin.value)
-    const End = moment(form.elements.dateEnd.value)
-    const curDay = moment()
-      if(curDay.isBefore(Begin)){
-        setError("thời điểm bắt đầu và kết thúc không hợp lệ")
-        return;
-      }
-      else if(Begin.isAfter(End)){
-        setError("thời điểm bắt đầu và kết thúc không hợp lệ")
-        return;
-      }
     else {
+      const Begin = moment(form.elements.dateBegin.value)
+      const End = moment(form.elements.dateEnd.value)
+      const curDay = moment()
+        if(curDay.isBefore(Begin)){
+          setError("thời điểm bắt đầu và kết thúc không hợp lệ")
+          return;
+        }
+        else if(Begin.isAfter(End)){
+          setError("thời điểm bắt đầu và kết thúc không hợp lệ")
+          return;
+        }
       setEducation([
         ...education,
         {

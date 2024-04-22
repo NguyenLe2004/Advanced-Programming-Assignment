@@ -98,8 +98,8 @@ const UpdateBlock = ({ patient }) => {
               type="text"
               placeholder="Tên"
               defaultValue={patient.firstName}
-              pattern="[a-zA-ZÀ-Ỹà-ỹ']+"
-            />
+              pattern="^\s*?[a-zA-ZÀ-Ỹà-ỹ']+$"
+              />
             <Form.Control.Feedback type="invalid">
               Tên không hợp lệ
             </Form.Control.Feedback>

@@ -40,13 +40,13 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
           event.stopPropagation();
         setValidated(true);
       } 
-      const date = moment(form.elements.date.value)
-      const curDay = moment()
-        if(curDay.isBefore(date)){
-          setError("thời điểm không hợp lệ")
-          return;
-        }
       else {
+        const date = moment(form.elements.date.value)
+        const curDay = moment()
+          if(curDay.isBefore(date)){
+            setError("thời điểm không hợp lệ")
+            return;
+          }
         setCert([
           ...cert,
           {

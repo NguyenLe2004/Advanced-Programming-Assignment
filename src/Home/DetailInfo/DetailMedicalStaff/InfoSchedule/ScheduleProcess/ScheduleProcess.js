@@ -37,13 +37,14 @@ const ScheduleProcess = ({ medicalStaff }) => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     }
-    const Begin = moment(form.elements.datetimeBegin.value);
-    const End = moment(form.elements.datetimeEnd.value);
-    const curDay = moment();
-    if (Begin.isAfter(End)) {
-      setError("thời điểm bắt đầu và kết thúc không hợp lệ");
-      return;
-    } else {
+ else {
+  const Begin = moment(form.elements.datetimeBegin.value);
+  const End = moment(form.elements.datetimeEnd.value);
+  const curDay = moment();
+  if (Begin.isAfter(End)) {
+    setError("thời điểm bắt đầu và kết thúc không hợp lệ");
+    return;
+  }
       let schedule = [...medicalStaff.schedule];
       const [dateBegin, timeBegin] =
         form.elements.datetimeBegin.value.split("T");

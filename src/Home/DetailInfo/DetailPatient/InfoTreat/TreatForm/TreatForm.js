@@ -24,19 +24,18 @@ const TreatForm = ({patient}) => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     }
-
-    const Begin = moment(form.elements.datetimeBegin.value)
-    const End = moment(form.elements.datetimeEnd.value)
-    const curDay = moment()
-      if(curDay.isAfter(Begin)){
-        setError("thời điểm bắt đầu và kết thúc không hợp lệ")
-        return;
-      }
-      else if(Begin.isAfter(End)){
-        setError("thời điểm bắt đầu và kết thúc không hợp lệ")
-        return;
-      }
     else{
+      const Begin = moment(form.elements.datetimeBegin.value)
+      const End = moment(form.elements.datetimeEnd.value)
+      const curDay = moment()
+        if(curDay.isAfter(Begin)){
+          setError("thời điểm bắt đầu và kết thúc không hợp lệ")
+          return;
+        }
+        else if(Begin.isAfter(End)){
+          setError("thời điểm bắt đầu và kết thúc không hợp lệ")
+          return;
+        }
       const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
       const [dateEnd, timeEnd] = form.elements.datetimeBegin.value.split("T")
       const newTreatProcess = {

@@ -18,14 +18,14 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } 
-      // check condition
-      const dateOfBirth = moment(form.elements.dateOfBirth.value); // YYYY-MM-DD
-      const curDate = moment();
-      if (dateOfBirth.isAfter(curDate)) {
-        setError("Ngày sinh không hợp lệ");
-        return;
-      }
     else {
+            // check condition
+            const dateOfBirth = moment(form.elements.dateOfBirth.value); // YYYY-MM-DD
+            const curDate = moment();
+            if (dateOfBirth.isAfter(curDate)) {
+              setError("Ngày sinh không hợp lệ");
+              return;
+            }
       setPersonalInfo({
         lastMiddleName: form.elements.lastMiddleName.value,
         specialty: form.elements.specialty.value,
@@ -86,7 +86,7 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
             required
             type="text"
             placeholder="Tên"
-            pattern="[a-zA-ZÀ-Ỹà-ỹ']+"         
+            pattern="^\s*?[a-zA-ZÀ-Ỹà-ỹ']+$"
           />
           <Form.Control.Feedback type="invalid">
             Tên không hợp lệ.

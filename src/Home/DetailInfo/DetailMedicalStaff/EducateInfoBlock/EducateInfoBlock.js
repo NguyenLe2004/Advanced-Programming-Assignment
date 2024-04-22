@@ -41,16 +41,17 @@ const EducateInfoBlock = ({ medicalStaff }) => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     }
-    const Begin = moment(form.elements.dateBegin.value);
-    const End = moment(form.elements.dateEnd.value);
-    const curDay = moment();
-    if (curDay.isBefore(Begin)) {
-      setError("thời điểm bắt đầu và kết thúc không hợp lệ");
-      return;
-    } else if (Begin.isAfter(End)) {
-      setError("thời điểm bắt đầu và kết thúc không hợp lệ");
-      return;
-    } else {
+ else {
+  const Begin = moment(form.elements.dateBegin.value);
+  const End = moment(form.elements.dateEnd.value);
+  const curDay = moment();
+  if (curDay.isBefore(Begin)) {
+    setError("thời điểm bắt đầu và kết thúc không hợp lệ");
+    return;
+  } else if (Begin.isAfter(End)) {
+    setError("thời điểm bắt đầu và kết thúc không hợp lệ");
+    return;
+  } 
       let updateData = [...medicalStaff.education];
       if (isUpdate) {
         updateData[currentPage - 1] = {
@@ -277,6 +278,8 @@ const EducateInfoBlock = ({ medicalStaff }) => {
               onClick={() => {
                 setIsAdd(false);
                 setIsUpdate(false);
+                setError(false);
+                setValidated(false);
               }}
             >
               Huỷ
