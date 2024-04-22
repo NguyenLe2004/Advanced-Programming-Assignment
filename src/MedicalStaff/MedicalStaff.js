@@ -38,7 +38,7 @@ const MedicalStaff = () => {
     const getAllMedicalStaff = async () => {
       try {
         const response = await axios.get(`http://localhost:3000/MedicalStaff?position=${
-          position==="specialist" ?  encodeURIComponent("Bác sĩ") : position ==="Nurse" ? encodeURIComponent("Y tá") : encodeURIComponent("Nhân viên hỗ trợ")
+          position==="specialist" ?  encodeURIComponent("Bác sĩ") : position ==="nurse" ? encodeURIComponent("Y tá") : encodeURIComponent("Nhân viên hỗ trợ")
         }`);
         const dataWithStatusAndAge = response.data.map(item => {
           const age = getMedicalStaffAge(item.dateOfBirth);
