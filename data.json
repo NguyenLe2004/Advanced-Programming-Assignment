@@ -935,14 +935,13 @@
           "description": "Dị ứng thực phẩm dẫn đến phù nề, phát ban."
         },
         {
-          "timeBegin": "8:30",
-          "title": "Điều trị chuyên sâu về da liễu",
+          "dateBegin": "2024-03-12",
+          "timeBegin": "08:30",
+          "dateEnd": "2024-03-12",
           "timeEnd": "14:30",
-          "id": 3,
           "room": "H7-302",
-          "description": "elit, consequat. dolor incididunt et amet,. consequat. dolor incididunt et amet, tempor. dolor incididunt et amet,. incididunt et amet, tempor ut aliquip do labore magna Lorem quis ex sit. et amet, tempor ut aliquip do labore magna Lorem.",
-          "dateBegin": "12-03-2024",
-          "dateEnd": "12-03-2024"
+          "title": "Điều trị chuyên sâu về da liễu",
+          "description": "Khám và đưa ra các tư vấn, lộ trình nâng cao về chăm sóc da."
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1168,34 +1167,31 @@
       "specialty": "khoa sản",
       "schedule": [
         {
+          "dateBegin": "2024-03-19",
           "timeBegin": "09:00",
-          "title": "Chăm sóc thai nghén",
+          "dateEnd": "2024-03-19",
           "timeEnd": "21:00",
-          "id": 1,
-          "room": "H7-302",
-          "description": "consequat. ipsum quis veniam, minim aliqua. nostrud et ullamco tempor nisi ut dolore. ipsum quis veniam, minim aliqua. nostrud et. quis veniam, minim aliqua. nostrud et ullamco tempor nisi ut dolore ad. veniam, minim aliqua. nostrud et ullamco tempor nisi. minim aliqua. nostrud et ullamco tempor nisi ut dolore ad enim amet, aliquip.",
-          "dateBegin": "19-03-2024",
-          "dateEnd": "19-03-2024"
+          "room": "H2-309",
+          "title": "Chăm sóc thai nghén",
+          "description": "Đưa ra chế độ ăn uống và cách chăm sóc thai phụ."
         },
         {
+          "dateBegin": "2024-03-22",
           "timeBegin": "11:30",
-          "title": "Chăm sóc khám thai định kì",
-          "timeEnd": "00:30",
-          "id": 2,
+          "dateEnd": "2024-03-22",
+          "timeEnd": "14:30",
           "room": "H7-302",
-          "description": "ex ad aliquip veniam, minim et sit commodo ut eiusmod ea ipsum Lorem. ad aliquip veniam, minim et sit commodo ut eiusmod ea ipsum. aliquip veniam, minim et sit commodo ut eiusmod ea ipsum Lorem. veniam, minim et sit commodo ut eiusmod ea ipsum Lorem. minim et sit commodo ut eiusmod ea ipsum Lorem incididunt dolor consectetur laboris.",
-          "dateBegin": "22-03-2024",
-          "dateEnd": "22-03-2024"
+          "title": "Chăm sóc khám thai định kì",
+          "description": "Siêu âm, xét nghiệm máu và đo lường các chỉ số thông thường."
         },
         {
+          "dateBegin": "2024-04-29",
           "timeBegin": "11:30",
-          "title": "Chăm sóc khám thai định kì",
-          "timeEnd": "Invalid date",
-          "id": 3,
+          "dateEnd": "2024-04-29",
+          "timeEnd": "14:00",
           "room": "H7-302",
-          "description": "ullamco quis enim nisi minim nostrud consequat.. quis enim nisi minim nostrud consequat. ex labore. enim nisi minim nostrud. nisi minim nostrud consequat.. minim nostrud consequat. ex labore veniam,.",
-          "dateBegin": "29-04-2024",
-          "dateEnd": "29-04-2024"
+          "title": "Chăm sóc khám thai định kì",
+          "description": "Đưa ra chế độ ăn uống và cách chăm sóc thai phụ."
         }
       ],
       "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
@@ -1919,7 +1915,7 @@
           "id": 1
         }
       ],
-      "specialty": "Hộ Sinh",
+      "specialty": "Tư vấn viên",
       "schedule": [
         {
           "dateBegin": "2022-03-20",
@@ -1949,7 +1945,8 @@
           "description": "Phân chia nhiệm vụ trực ban"
         }
       ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
+      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh",
+      "lastMidleName": "Trần Thị"
     },
     {
       "id": 22,
