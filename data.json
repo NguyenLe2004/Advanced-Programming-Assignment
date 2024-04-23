@@ -1858,50 +1858,217 @@
     {
       "id": 21,
       "position": "Nhân viên hỗ trợ",
-      "citizenID": "925081736492",
+      "citizenID": "925081736411",
       "firstName": "Minh",
-      "lastMiddleName": "Trần Thị",
-      "gender": "Nữ",
-      "dateOfBirth": "15-09-1970",
-      "email": "TranThiM@gmail.com",
-      "phoneNum": "0925374819",
+      "lastMiddleName": "Trần Văn Nhật",
+      "gender": "Nam",
+      "dateOfBirth": "15-09-1078",
+      "email": "Tranminhnhat@gmail.com",
+      "phoneNum": "0925374812",
       "hometown": "Tràng An, Hoa Lư, Ninh Bình",
       "education": [
         {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi",
-          "id": 1,
-          "dateBegin": "20-08-1988",
-          "dateEnd": "12-07-1994"
+          "degree": "Cử nhân",
+          "dateBegin": "1990-08-20",
+          "dateEnd": "1994-07-12",
+          "major": "Cơ điện lạnh",
+          "university": "Trường đại học Bách khoaTP HCM"
         }
       ],
       "cert": [
         {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
+          "date": "2004-05-05",
+          "organization": "Phòng đào tạo",
+          "title": "Chứng chỉ nghiệp vụ"
+        }
+      ],
+      "specialty": "Nhân viên sữa chữa",
+      "schedule": [
+        {
+          "dateBegin": "2020-03-20",
+          "timeBegin": "09:00",
+          "dateEnd": "2020-03-20",
+          "timeEnd": "11:00",
+          "room": "H2-302",
+          "title": "Sửa điều hòa.",
+          "description": "Điều hòa thiếu gas, không lạnh."
+        },
+        {
+          "dateBegin": "2025-03-20",
+          "timeBegin": "10:30",
+          "dateEnd": "2025-03-20",
+          "timeEnd": "12:30",
+          "room": "H7-302",
+          "title": "Sửa ống dẫn nước, máy nóng lạnh",
+          "description": "Bảo dưỡng máy nước nòng lạnh"
+        },
+        {
+          "dateBegin": "2020-03-20",
+          "timeBegin": "10:30",
+          "dateEnd": "2020-03-20",
+          "timeEnd": "12:30",
+          "room": "H4",
+          "title": "Bảo dưỡng máy lạnh",
+          "description": "Bảo dưỡng và làm sạch máy lạnh các phòng tòa H4, lầu 3."
+        }
+      ],
+      "address": "183 Lê Lai, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
+    },
+    {
+      "id": 22,
+      "position": "Nhân viên hỗ trợ",
+      "citizenID": "847129056211",
+      "firstName": "Ngọc",
+      "lastMiddleName": "Trần Giang",
+      "gender": "Nữ",
+      "dateOfBirth": "25-01-1987",
+      "email": "Tranngoc@gmail.com",
+      "phoneNum": "0925748111",
+      "hometown": "Bình Nghi, Bình Sơn, Quảng Ngãi",
+      "education": [
+        {
+          "degree": "Cử nhân",
+          "dateBegin": "2005-08-20",
+          "dateEnd": "2010-07-12",
+          "major": "Marketing",
+          "university": "Trường đại học Tài chính-Markettng TP HCM"
+        }
+      ],
+      "cert": [
+        {
+          "date": "2023-05-05",
+          "organization": "Hội đồng Anh (British Council) ",
+          "title": "Chứng chỉ ngoại ngữ"
         }
       ],
       "specialty": "Tư vấn viên",
       "schedule": [
         {
-          "dateBegin": "2022-03-20",
-          "timeBegin": "09:00",
-          "dateEnd": "2022-03-20",
+          "dateBegin": "2022-05-20",
+          "timeBegin": "07:00",
+          "dateEnd": "2022-05-20",
           "timeEnd": "11:00",
-          "room": "H2-302",
-          "title": "Quy trình xuất viện.",
-          "description": "Thực hiện và kiểm tra quy trình xuất viện cho bệnh nhân."
+          "room": "H1-101",
+          "title": "Tư vấn khám bệnh",
+          "description": "Phân luồng bệnh nhân BHYT"
         },
         {
-          "dateBegin": "2024-03-25",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-25",
+          "dateBegin": "2029-04-20",
+          "timeBegin": "07:30",
+          "dateEnd": "2029-04-20",
           "timeEnd": "12:30",
-          "room": "H7-302",
-          "title": "Chăm sóc bệnh nhân",
-          "description": "Phụ trách chăm sóc, quan sát bệnh nhân H7-302"
+          "room": "H3-301",
+          "title": "Hỗ trợ lễ tân.",
+          "description": "Tiếp nhận bệnh, đưa ra chỉ dẫn."
+        },
+        {
+          "dateBegin": "2029-03-20",
+          "timeBegin": "07:30",
+          "dateEnd": "2029-03-20",
+          "timeEnd": "12:30",
+          "room": "GD",
+          "title": "Tư vấn trực tuyến",
+          "description": "Trực tổng đài bệnh viện, đưa ra hướng dẫn thích hợp"
+        }
+      ],
+      "address": "18 Lê Lợi, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
+    },
+    {
+      "id": 23,
+      "position": "Nhân viên hỗ trợ",
+      "citizenID": "681245097888",
+      "firstName": "Mai",
+      "lastMiddleName": "Nguyễn Thị Ngọc",
+      "gender": "Nữ",
+      "dateOfBirth": "12-10-1979",
+      "email": "nguyenThimai@gmail.com",
+      "phoneNum": "0934780233",
+      "hometown": "An Mỹ, Tuy An, Phú Yên",
+      "education": [
+        {
+          "degree": "Cử nhân",
+          "dateBegin": "1999-08-20",
+          "dateEnd": "2004-07-12",
+          "major": "Marketing",
+          "university": "Trường đại học Tài chính-Markettng TP HCM"
+        }
+      ],
+      "cert": [
+        {
+          "date": "2022-06-06",
+          "organization": "Online",
+          "title": "Chứng chỉ giao tiếp"
+        }
+      ],
+      "specialty": "Tư vấn viên",
+      "schedule": [
+        {
+          "dateBegin": "2020-05-20",
+          "timeBegin": "07:00",
+          "dateEnd": "2020-05-20",
+          "timeEnd": "11:00",
+          "room": "GD",
+          "title": "Trực tổng đài",
+          "description": "Nhận tư vấn bệnh tình online, đặt lịch khám online."
+        },
+        {
+          "dateBegin": "2006-05-20",
+          "timeBegin": "07:00",
+          "dateEnd": "2006-05-20",
+          "timeEnd": "17:00",
+          "room": "H4-302",
+          "title": "Tư vấn trực tiếp",
+          "description": "Tư vấn và phân luồng bệnh nhân"
+        },
+        {
+          "dateBegin": "2029-04-20",
+          "timeBegin": "00:00",
+          "dateEnd": "2029-04-20",
+          "timeEnd": "14:00",
+          "room": "H4-302",
+          "title": "Tiếp quản hồ sơ bệnh nhân BHYT",
+          "description": "Hỗ trợ ghi nhận thông tin bảo hiểm y tế và tình trạng bệnh tình của bệnh nhân"
+        }
+      ],
+      "address": "18 Lê Thứ, phường 9, quận Tân Bình, thành phố Hồ Chí Minh"
+    },
+    {
+      "id": 24,
+      "position": "Nhân viên hỗ trợ",
+      "citizenID": "530279416799",
+      "firstName": "Lương",
+      "lastMiddleName": "Nguyễn Văn",
+      "gender": "Nam",
+      "dateOfBirth": "16-10-1989",
+      "email": "Nguyenluongvan@gmail.com",
+      "phoneNum": "0977881900",
+      "hometown": "Hội An, Tuy Hòa, Phú Yên",
+      "education": [
+        {
+          "degree": "Cử nhân",
+          "dateBegin": "2007-08-20",
+          "dateEnd": "2011-07-12",
+          "major": "Điện điện tử",
+          "university": "Trường đại học Bách khoa TP HCM"
+        }
+      ],
+      "cert": [
+        {
+          "date": "2011-07-12",
+          "organization": "Trường đại học",
+          "title": "Chứng chỉ Kĩ sư"
+        }
+      ],
+      "specialty": "Nhân viên sữa chữa",
+      "schedule": [
+        {
+          "dateBegin": "2004-05-20",
+          "timeBegin": "09:00",
+          "dateEnd": "2004-05-20",
+          "timeEnd": "10:00",
+          "room": "H3-209",
+          "title": "Sửa máy xét nghiệm máu",
+          "description": "Máy xét nghiệm máu MT2001 xảy xa hiện tưởng chập mạch."
         },
         {
           "dateBegin": "2029-03-20",
@@ -1909,230 +2076,117 @@
           "dateEnd": "2029-03-20",
           "timeEnd": "12:30",
           "room": "GD",
-          "title": "Họp",
-          "description": "Phân chia nhiệm vụ trực ban"
+          "title": "Sửa máy xông mũi",
+          "description": "Máy gặp trục trặc về thoát hơi, bị nhiễm điện."
         }
       ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
-    },
-    {
-      "id": 22,
-      "position": "Nhân viên hỗ trợ",
-      "citizenID": "847129056234",
-      "firstName": "Hà",
-      "lastMiddleName": "Trần Thị Giang",
-      "gender": "Nữ",
-      "dateOfBirth": "25-01-1979",
-      "email": "TranThiG@gmail.com",
-      "phoneNum": "0925748104",
-      "hometown": "Bình Nghi, Bình Sơn, Quảng Ngãi",
-      "education": [
-        {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng",
-          "id": 1,
-          "dateBegin": "20-08-1997",
-          "dateEnd": "12-07-2006"
-        }
-      ],
-      "cert": [
-        {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
-        }
-      ],
-      "specialty": "Điều dưỡng",
-      "schedule": [
-        {
-          "dateBegin": "2024-05-22",
-          "timeBegin": "09:00",
-          "dateEnd": "2024-05-22",
-          "timeEnd": "11:00",
-          "room": "H1-101",
-          "title": "Kiểm tra và quan sát tình trạng bệnh nhân",
-          "description": "Chăm sóc bệnh nhân sau khi phẫu thuật."
-        },
-        {
-          "dateBegin": "2024-04-29",
-          "timeBegin": "07:30",
-          "dateEnd": "2024-04-29",
-          "timeEnd": "12:30",
-          "room": "H3-301",
-          "title": "Hỗ trợ bác sĩ chính.",
-          "description": "Ghi chép thông tin khám chữa bệnh từ bác sĩ Hòa."
-        },
-        {
-          "dateBegin": "2024-03-29",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-29",
-          "timeEnd": "12:30",
-          "room": "GD",
-          "title": "Họp",
-          "description": "Phân chia nhiệm vụ trực ban"
-        }
-      ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
-    },
-    {
-      "id": 23,
-      "position": "Nhân viên hỗ trợ",
-      "citizenID": "681245097836",
-      "firstName": "Nhi",
-      "lastMiddleName": "Nguyễn Thị",
-      "gender": "Nữ",
-      "dateOfBirth": "12-10-1979",
-      "email": "nguyenThiN@gmail.com",
-      "phoneNum": "0934780292",
-      "hometown": "An Mỹ, Tuy An, Phú Yên",
-      "education": [
-        {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng",
-          "id": 1,
-          "dateBegin": "20-08-1979",
-          "dateEnd": "12-07-1985"
-        }
-      ],
-      "cert": [
-        {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
-        }
-      ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "dateBegin": "2024-05-20",
-          "timeBegin": "09:00",
-          "dateEnd": "2024-05-20",
-          "timeEnd": "11:00",
-          "room": "H3-102",
-          "title": "Trực phòng cấp cứu",
-          "description": "Phân chia luồng bệnh nhân."
-        },
-        {
-          "dateBegin": "2024-05-06",
-          "timeBegin": "09:00",
-          "dateEnd": "2024-05-06",
-          "timeEnd": "00:00",
-          "room": "H4-302",
-          "title": "Quan sát, chăm sóc bệnh nhân",
-          "description": "Bệnh nhân viêm họng, sốt không hạ, ho, thiếu nước. "
-        },
-        {
-          "dateBegin": "2024-04-29",
-          "timeBegin": "00:00",
-          "dateEnd": "2024-04-29",
-          "timeEnd": "14:00",
-          "room": "H4-302",
-          "title": "Truyền nước biển.",
-          "description": "Truyền nước biển, bổ sung nước. Truyền thuốc hạ sốt khẩn cấp."
-        }
-      ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
-    },
-    {
-      "id": 24,
-      "position": "Nhân viên hỗ trợ",
-      "citizenID": "530279416785",
-      "firstName": "Thảo",
-      "lastMiddleName": "Nguyễn Thị",
-      "gender": "Nữ",
-      "dateOfBirth": "16-10-1989",
-      "email": "NguyenThiT@gmail.com",
-      "phoneNum": "0977881902",
-      "hometown": "Hội An, Tuy Hòa, Phú Yên",
-      "education": [
-        {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi",
-          "id": 1,
-          "dateBegin": "20-08-2007",
-          "dateEnd": "12-07-2015"
-        }
-      ],
-      "cert": [
-        {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
-        }
-      ],
-      "specialty": "Hộ Sinh",
-      "schedule": [
-        {
-          "dateBegin": "2024-05-04",
-          "timeBegin": "09:00",
-          "dateEnd": "2024-05-04",
-          "timeEnd": "10:00",
-          "room": "H3-209",
-          "title": "Siêu âm dạ con",
-          "description": "Tình trạng chậm kinh, nghi ngờ mang thai"
-        },
-        {
-          "dateBegin": "2024-03-29",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-29",
-          "timeEnd": "12:30",
-          "room": "GD",
-          "title": "Họp bàn khoa sản",
-          "description": "Giao nhiệm vụ về khoa."
-        }
-      ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
+      "address": "183 Trần Hưng Đạo, phường 10, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 25,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "490328157642",
       "firstName": "Nhã",
-      "lastMiddleName": "Đinh Nguyễn Xuân",
+      "lastMiddleName": "Hà Lại Văn",
       "gender": "Nam",
       "dateOfBirth": "25-01-1995",
-      "email": "DinhNguyenX@gmail.com",
-      "phoneNum": "0929384619",
+      "email": "hanhavan@gmail.com",
+      "phoneNum": "0929384611",
       "hometown": "Bình An, Long Mỹ, Hậu Giang",
       "education": [
         {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng",
-          "id": 1,
-          "dateBegin": "20-08-2013",
-          "dateEnd": "12-07-2018"
+          "degree": "Cử nhân",
+          "dateBegin": "2013-08-20",
+          "dateEnd": "2018-07-12",
+          "major": "Xây dựng",
+          "university": "Trường đại học Sư phạm kĩ thuật TP HCM"
         }
       ],
       "cert": [
         {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
+          "date": "2018-08-08",
+          "organization": "Trường đại học",
+          "title": "Bằng cử nhân"
         }
       ],
-      "specialty": "Điều dưỡng",
+      "specialty": "Nhân viên bảo vệ",
       "schedule": [
         {
-          "dateBegin": "2024-05-22",
+          "dateBegin": "2022-05-20",
           "timeBegin": "09:00",
-          "dateEnd": "2024-05-22",
+          "dateEnd": "2022-05-20",
           "timeEnd": "17:00",
           "room": "H1-101",
           "title": "Trực phòng cấp cứu",
-          "description": "Sơ cứu ban đầu."
+          "description": "Hỗ trợ phòng cấp cứu"
         },
         {
-          "dateBegin": "2024-05-22",
+          "dateBegin": "2020-05-20",
           "timeBegin": "13:00",
-          "dateEnd": "2024-05-22",
-          "timeEnd": "13:30",
-          "room": "H7-209",
-          "title": "Siêu âm tim",
-          "description": "Siêu âm 4 chiều tim."
+          "dateEnd": "2020-05-20",
+          "timeEnd": "17:30",
+          "room": "Sảnh",
+          "title": "Trực cổng A của bệnh viện",
+          "description": "Giữ an ninh cổng A, giúp đỡ xe cứu thương di chuyển vào bệnh viện"
+        },
+        {
+          "dateBegin": "2020-03-20",
+          "timeBegin": "10:30",
+          "dateEnd": "2020-03-20",
+          "timeEnd": "12:30",
+          "room": "GD",
+          "title": "Trực cổng B của bệnh viện",
+          "description": "Giữ an ninh cổng B"
+        }
+      ],
+      "address": "183 Nguyễn Thị Định, quận Gò Vấp, thành phố Hồ Chí Minh"
+    },
+    {
+      "id": 26,
+      "position": "Nhân viên hỗ trợ",
+      "citizenID": "816490235711",
+      "firstName": "Hoàng",
+      "lastMiddleName": "Đinh Văn",
+      "gender": "Nam",
+      "dateOfBirth": "25-01-1992",
+      "email": "Dinhvanhoang@gmail.com",
+      "phoneNum": "0900882718",
+      "hometown": "An Hòa, Tân Biên, Tây Ninh",
+      "education": [
+        {
+          "degree": "Cử nhân",
+          "dateBegin": "2010-08-20",
+          "dateEnd": "2018-07-12",
+          "major": "GTVT",
+          "university": "Trường cao dẳng FPT"
+        }
+      ],
+      "cert": [
+        {
+          "date": "2018-08-08",
+          "organization": "Trường cao đẳng",
+          "title": "Bằng tốt nghiệp"
+        }
+      ],
+      "specialty": "Nhân viên vệ sinh",
+      "schedule": [
+        {
+          "dateBegin": "2020-03-20",
+          "timeBegin": "09:00",
+          "dateEnd": "2020-03-20",
+          "timeEnd": "11:00",
+          "room": "H2-402",
+          "title": "Dọn vệ sinh của kính lầu 4",
+          "description": "Lau chùi hệ thống cửa kính mặt trong lẫn ngoài"
+        },
+        {
+          "dateBegin": "2025-03-20",
+          "timeBegin": "10:30",
+          "dateEnd": "2025-03-20",
+          "timeEnd": "12:30",
+          "room": "H3-302",
+          "title": "Dọn phòng H3-302",
+          "description": "Dọn phòng ngay sau khi bệnh nhân xuất viện"
         },
         {
           "dateBegin": "2029-03-20",
@@ -2140,322 +2194,79 @@
           "dateEnd": "2029-03-20",
           "timeEnd": "12:30",
           "room": "GD",
-          "title": "Họp",
-          "description": "Phân chia nhiệm vụ trực ban"
+          "title": "Lau dọn hành lang",
+          "description": "Lau hành lang, dọn các thiết bị y tế không cần thiết."
         }
       ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
-    },
-    {
-      "id": 26,
-      "position": "Nhân viên hỗ trợ",
-      "citizenID": "816490235781",
-      "firstName": "Hương",
-      "lastMiddleName": "Đinh Thị Lan",
-      "gender": "Nữ",
-      "dateOfBirth": "25-01-1992",
-      "email": "DinhThiL@gmail.com",
-      "phoneNum": "0900882718",
-      "hometown": "An Hòa, Tân Biên, Tây Ninh",
-      "education": [
-        {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng",
-          "id": 1,
-          "dateBegin": "20-08-2010",
-          "dateEnd": "12-07-2018"
-        }
-      ],
-      "cert": [
-        {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
-        }
-      ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "dateBegin": "2024-03-22",
-          "timeBegin": "09:00",
-          "dateEnd": "2024-03-22",
-          "timeEnd": "11:00",
-          "room": "H2-202",
-          "title": "Cập nhật bệnh án",
-          "description": "Thống kê bệnh án và đưa hồ sơ vào kho dữ liệu"
-        },
-        {
-          "dateBegin": "2024-03-25",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-25",
-          "timeEnd": "12:30",
-          "room": "H3-302",
-          "title": "Chăm sóc bệnh nhân.",
-          "description": "Chăm sóc bệnh nhân sau khi phẫu thuật, đo lường các thông tin cơ bản về nhiệt độ, huyết áp."
-        },
-        {
-          "dateBegin": "2024-03-29",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-29",
-          "timeEnd": "12:30",
-          "room": "GD",
-          "title": "Họp",
-          "description": "Phân chia nhiệm vụ trực ban"
-        }
-      ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
-    },
-    {
-      "id": 27,
-      "position": "Nhân viên hỗ trợ",
-      "citizenID": "243809517826",
-      "firstName": "Nhi",
-      "lastMiddleName": "Hà Tuyết",
-      "gender": "Nữ",
-      "dateOfBirth": "29-02-1988",
-      "email": "HaTuyeN@gmail.com",
-      "phoneNum": "0915472984",
-      "hometown": "Phước Hưng, Đồng Phú, Bình Phước",
-      "education": [
-        {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi",
-          "id": 1,
-          "dateBegin": "20-08-2009",
-          "dateEnd": "12-07-2015"
-        }
-      ],
-      "cert": [
-        {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
-        }
-      ],
-      "specialty": "Hộ sinh",
-      "schedule": [
-        {
-          "dateBegin": "2024-03-22",
-          "timeBegin": "09:00",
-          "dateEnd": "2024-03-22",
-          "timeEnd": "11:00",
-          "room": "H5-302",
-          "title": "Phụ trách sau phẫu thuật",
-          "description": "Xử lí các thủ tục hậu phẫu thuật"
-        },
-        {
-          "dateBegin": "2024-03-25",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-25",
-          "timeEnd": "12:30",
-          "room": "H2-302",
-          "title": "Hỗ trợ bác sĩ",
-          "description": "Thu thập tình hình bệnh án cho bác sĩ chính"
-        },
-        {
-          "dateBegin": "2024-03-29",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-29",
-          "timeEnd": "12:30",
-          "room": "GD",
-          "title": "Họp",
-          "description": "Phân chia nhiệm vụ trực ban"
-        }
-      ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
+      "address": "183 LTrần Linh, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
     },
     {
       "id": 28,
       "position": "Nhân viên hỗ trợ",
       "citizenID": "765024913287",
-      "firstName": "Thương",
-      "lastMiddleName": "Nguyen Thi",
+      "firstName": "Thư",
+      "lastMiddleName": "Nguyễn Ngọc",
       "gender": "Nữ",
       "dateOfBirth": "25-01-1994",
-      "email": "DinhThiL@gmail.com",
-      "phoneNum": "0910284672",
+      "email": "nguyenngocthu@gmail.com",
+      "phoneNum": "0910284611",
       "hometown": "Hòa Phú, Tân Yên, Bắc Giang",
       "education": [
         {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng",
-          "id": 1,
-          "dateBegin": "20-08-2012",
-          "dateEnd": "12-07-2017"
+          "degree": "Cử nhân",
+          "dateBegin": "2012-08-20",
+          "dateEnd": "2017-07-12",
+          "major": "Thiết kế Vi mạch",
+          "university": "Trường đại học Bách khoa TP HCM"
         }
       ],
       "cert": [
         {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
+          "date": "2017-12-07",
+          "organization": "Trường đại học",
+          "title": "Bằng cử nhân"
         }
       ],
-      "specialty": "Điều dưỡng",
+      "specialty": "Nhân viên sữa chữa",
       "schedule": [
         {
-          "dateBegin": "2024-03-22",
+          "dateBegin": "2022-03-20",
           "timeBegin": "09:00",
-          "dateEnd": "2024-03-22",
+          "dateEnd": "2022-03-20",
           "timeEnd": "11:00",
           "room": "H2-309",
-          "title": "Hỗ trợ bác sĩ chính",
-          "description": "Hỗ trợ bác sĩ thăm khám "
+          "title": "Bàn giao và hướng dẫn cách sử dụng máy chụp MRA",
+          "description": "Thiết bị mới của bệnh viện"
         },
         {
-          "dateBegin": "2024-03-25",
+          "dateBegin": "2025-03-20",
           "timeBegin": "10:30",
-          "dateEnd": "2024-03-25",
+          "dateEnd": "2025-03-20",
           "timeEnd": "12:30",
-          "room": "H2-302",
-          "title": "Hỗ trợ bác sĩ chính",
-          "description": "Phụ trách 2 bệnh nhân của bác sĩ Alan."
+          "room": "Sảnh H1",
+          "title": "Sửa máy bấm phiếu tại sảnh",
+          "description": "Máy hư."
         },
         {
-          "dateBegin": "2024-03-29",
+          "dateBegin": "2029-03-20",
           "timeBegin": "10:30",
-          "dateEnd": "2024-03-29",
+          "dateEnd": "2029-03-20",
           "timeEnd": "12:30",
-          "room": "H7-300",
-          "title": "Tổng hợp dữ liệu phòng ban.",
-          "description": "Tổng hợp tiến trình điều trị và đưa về bác sĩ chính."
+          "room": "H7",
+          "title": "Kiểm tra hoạt động máy đo điện tâm đồ",
+          "description": "Bảo dưỡng hằng quý"
         },
         {
-          "dateBegin": "02-05-2024",
+          "dateBegin": "2024-05-02",
           "timeBegin": "07:00",
-          "dateEnd": "02-05-2025",
+          "dateEnd": "2025-05-02",
           "timeEnd": "14:00",
           "room": "H1-101",
-          "title": "Trực phòng cấp cứu",
-          "description": "Sơ cứu ban đầu."
+          "title": "Bảo dưỡng máy xét nghiệm máu.",
+          "description": "Kiểm tra tình trạng vận hành."
         }
       ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
-    },
-    {
-      "id": 29,
-      "position": "Nhân viên hỗ trợ",
-      "citizenID": "978032165794",
-      "firstName": "Hòa",
-      "lastMiddleName": "Lê Trúc",
-      "gender": "Nữ",
-      "dateOfBirth": "25-01-1986",
-      "email": "LeTrucH@gmail.com",
-      "phoneNum": "0947263819",
-      "hometown": "Thạch Thắng, Thạch An, Cao Bằng",
-      "education": [
-        {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Điều dưỡng",
-          "id": 1,
-          "dateBegin": "20-08-2004",
-          "dateEnd": "12-07-2009"
-        }
-      ],
-      "cert": [
-        {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
-        }
-      ],
-      "specialty": "Gây mê hồi sức",
-      "schedule": [
-        {
-          "dateBegin": "2024-03-22",
-          "timeBegin": "09:00",
-          "dateEnd": "2024-03-22",
-          "timeEnd": "11:00",
-          "room": "H3-302",
-          "title": "Kiểm tra và đánh giá bệnh nhân xuất viện",
-          "description": "Kiểm tra và làm thủ tục xuất viện cho bệnh nhân"
-        },
-        {
-          "dateBegin": "2024-03-25",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-25",
-          "timeEnd": "12:30",
-          "room": "H6-301",
-          "title": "Lấy mẫu xét nghiệm",
-          "description": "Lấy mẫu máu xét nghiệm cho các bệnh nhân."
-        },
-        {
-          "dateBegin": "2024-03-29",
-          "timeBegin": "10:30",
-          "dateEnd": "2024-03-29",
-          "timeEnd": "12:30",
-          "room": "GD",
-          "title": "Họp",
-          "description": "Phân chia nhiệm vụ trực ban"
-        }
-      ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
-    },
-    {
-      "id": 30,
-      "position": "Nhân viên hỗ trợ",
-      "citizenID": "587401239865",
-      "firstName": "Phương",
-      "lastMiddleName": "Lê Thị",
-      "gender": "Nữ",
-      "dateOfBirth": "25-01-1974",
-      "email": "LeThiP@gmail.com",
-      "phoneNum": "0947281937",
-      "hometown": "Lạc Hồng, Thanh Trì, Hà Nội",
-      "education": [
-        {
-          "university": "Trường đại học y dược TP HCM",
-          "major": "Khoa Nhi",
-          "id": 1,
-          "dateBegin": "20-08-1992",
-          "dateEnd": "12-07-2000"
-        }
-      ],
-      "cert": [
-        {
-          "title": "Chứng chỉ hành nghề",
-          "Date": "1-10-2018",
-          "organization": "Bộ y tế",
-          "id": 1
-        }
-      ],
-      "specialty": "Hộ sinh",
-      "schedule": [
-        {
-          "dateBegin": "2024-12-31",
-          "timeBegin": "07:00",
-          "dateEnd": "2024-12-31",
-          "timeEnd": "14:00",
-          "room": "H6-102",
-          "title": "Hộ sinh",
-          "description": "Hỗ trợ trợ sản"
-        },
-        {
-          "timeBegin": "10:30",
-          "title": "Điều trị bệnh nhân",
-          "timeEnd": "12:30",
-          "id": 2,
-          "room": "H7-302",
-          "description": "nisi tempor et dolore adipiscing incididunt aliquip. tempor et dolore adipiscing incididunt aliquip. et dolore adipiscing incididunt aliquip veniam, elit, enim consectetur nostrud. dolore adipiscing incididunt aliquip veniam, elit, enim consectetur nostrud ex. adipiscing incididunt aliquip veniam, elit, enim consectetur nostrud ex laboris.",
-          "dateBegin": "25-03-2024 ",
-          "dateEnd": "25-03-2024 "
-        },
-        {
-          "timeBegin": "10:30",
-          "title": "Họp",
-          "timeEnd": "12:30",
-          "id": 3,
-          "room": "H7-302",
-          "description": "amet, enim adipiscing laboris Lorem nisi Ut nostrud veniam, ea. enim adipiscing laboris Lorem nisi Ut nostrud veniam,. adipiscing laboris Lorem nisi. laboris Lorem nisi Ut nostrud veniam, ea elit,. Lorem nisi Ut nostrud veniam, ea elit, aliquip consectetur labore.",
-          "dateBegin": "29-03-2024",
-          "dateEnd": "29-03-2024"
-        }
-      ],
-      "address": "183 Lê Quang Định, phường 9, quận Gò Vấp, thành phố Hồ Chí Minh"
+      "address": "12 Lý Thường Kiệt, phường 10, quận 10, thành phố Hồ Chí Minh"
     }
   ],
   "Medicine": [
