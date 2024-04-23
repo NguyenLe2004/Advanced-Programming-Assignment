@@ -28,7 +28,7 @@ const UpdateBlock = ({medicalStaff}) => {
           return;
         }
         const updatedData = {
-          lastMidleName: form.elements.lastMidleName.value,
+          lastMiddleName: form.elements.lastMiddleName.value,
           firstName: form.elements.firstName.value,
           gender: form.elements.gender.value,
           phoneNum: form.elements.phoneNum.value,
@@ -77,7 +77,7 @@ const UpdateBlock = ({medicalStaff}) => {
             </div>
           </div>
         )}
-        <Form.Group as={Col} controlId="lastMidleName"  >
+        <Form.Group as={Col} controlId="lastMiddleName"  >
           <Form.Label>Họ và tên đệm</Form.Label>
           <Form.Control
             required

@@ -25,7 +25,7 @@ const UpdateBlock = ({ patient }) => {
         return;
       }
       const updatedData = {
-        lastMidleName: form.elements.lastMiddleName.value,
+        lastMiddleName: form.elements.lastMiddleName.value,
         firstName: form.elements.firstName.value,
         gender: form.elements.gender.value,
         phoneNum: form.elements.phoneNum.value,

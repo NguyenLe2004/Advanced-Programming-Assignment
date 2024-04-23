@@ -56,7 +56,6 @@ const DetailMedicalStaff = () => {
           medicalStaffDataWithStatus.status = getMedicalStaffStatus(medicalStaffDataWithStatus.schedule);
         
         setMedicalStaff(medicalStaffDataWithStatus);
-        console.log("here",medicalStaff)
       } catch (error) {
         console.log(error); 
       }

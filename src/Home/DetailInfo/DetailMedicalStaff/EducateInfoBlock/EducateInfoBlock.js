@@ -131,6 +131,7 @@ const EducateInfoBlock = ({ medicalStaff }) => {
                   variant="outline-danger"
                   onClick={handleDelete}
                   style={{ position: "absolute", right: "1vw", top: "10vh" }}
+                  disabled={educations.length <=1}
                 >
                   <FontAwesomeIcon icon={faXmark} />
                 </Button>
