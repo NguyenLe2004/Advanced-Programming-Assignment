@@ -48,10 +48,19 @@ const deleteManyItems = async (reqBody) => {
     console.error("Error adding document: ", error);
   }
 }
+const findOneById = async (id) => {
+  try {
+    const specialist = await specialistModel.findOneById(id);
+    return specialist
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
 export const specialistService = {
   createNew,
   update,
   getAllSpecialists,
   deleteAnItem,
-  deleteManyItems
+  deleteManyItems,
+  findOneById
 }

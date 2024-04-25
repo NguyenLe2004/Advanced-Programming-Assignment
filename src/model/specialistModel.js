@@ -1,5 +1,5 @@
 import Joi from 'joi'
-import { addDoc, collection, doc, getDocs, updateDoc, deleteDoc } from "firebase/firestore"
+import { addDoc, collection, doc, getDocs, updateDoc, deleteDoc, getDoc } from "firebase/firestore"
 import { db } from '../config/firestore.js'
 import { PHONE_NUMBER_RULE, DATE_RULE, CCCD_RULE } from '../utils/validators.js'
 import { customApiErrorModule } from '../error/customError.js'
@@ -85,8 +85,9 @@ const getAllSpecialists = async () => {
 const findOneById = async (id) => {
   try {
     // const specialistDocs = await getDocs(collection(db, 'specialists'));
-    const specialist = doc(db, 'specialists', id);
-    return specialist
+    const specialistDoc = doc(db, 'specialists', id)
+    const specialist = await getDoc(specialistDoc)
+    return specialist.data()
   } catch (error) {
     throw new Error(error)
   }

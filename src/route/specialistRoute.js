@@ -13,6 +13,7 @@ specialistRouter.route('/')
 specialistRouter.route('/deleteMany')
   .put(specialistValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, specialistController.deleteManyItems)
 specialistRouter.route('/:id')
+  .get(specialistController.findOneById)
   .put(specialistValidation.update, authMiddlewareLogin, authMiddlewareRole, specialistController.update)
   .delete(specialistValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, specialistController.deleteAnItem)
 

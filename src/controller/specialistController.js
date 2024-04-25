@@ -33,6 +33,18 @@ const getAllSpecialists = async (req, res, next) => {
     console.error("Error adding document: ", e);
   }
 }
+const findOneById = async (req, res, next) => {
+  try {
+    // const docRef = await addDoc(collection(db, "users"), req.body);
+    // const page = req.query.page
+    const idSpecialist = req.params.id
+    const specialist = await specialistService.findOneById(idSpecialist);
+    // console.log("Document written with ID: ", newschedule);
+    res.status(201).json(specialist)
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
 const deleteAnItem = async (req, res, next) => {
   try {
     const id = req.params.id
@@ -55,5 +67,6 @@ export const specialistController = {
   update,
   getAllSpecialists,
   deleteAnItem,
-  deleteManyItems
+  deleteManyItems,
+  findOneById
 }

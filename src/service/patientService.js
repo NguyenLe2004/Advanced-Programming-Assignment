@@ -18,6 +18,14 @@ const getAllPatients = async () => {
     console.error("Error adding document: ", e);
   }
 }
+const findOneById = async (id) => {
+  try {
+    const Patients = await patientModel.findOneById(id);
+    return Patients
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
 const update = async (reqBody, id) => {
   try {
     // const docRef = await addDoc(collection(db, "users"), req.body);
@@ -52,5 +60,6 @@ export const patientService = {
   createNew,
   getAllPatients,
   update, deleteAnItem,
-  deleteManyItems
+  deleteManyItems,
+  findOneById
 }

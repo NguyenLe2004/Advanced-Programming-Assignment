@@ -1,5 +1,5 @@
 import Joi from 'joi'
-import { addDoc, collection, doc, getDocs, updateDoc, deleteDoc, startAfter, query, orderBy, limit } from "firebase/firestore"
+import { addDoc, collection, doc, getDocs, updateDoc, deleteDoc, startAfter, query, orderBy, limit, getDoc } from "firebase/firestore"
 import { db } from '../config/firestore.js'
 import { PHONE_NUMBER_RULE, AGE_RULE, _ID_RULE, _ID_RULE_MESSAGE, DATE_RULE, CCCD_RULE } from '../utils/validators.js'
 import { treatProcessModel } from './treatProcessModel.js'
@@ -49,8 +49,10 @@ const createNew = async (Data) => {
 const findOneById = async (id) => {
   try {
     // const patientDocs = await getDocs(collection(db, 'patients'));
-    const patient = doc(db, 'patients', id);
-    return patient
+    const patientDoc = doc(db, "patients", id);
+    const patient = await getDoc(patientDoc);
+
+    return patient.data()
   } catch (error) {
     throw new Error(error)
   }
@@ -74,7 +76,7 @@ const getAllPatients = async () => {
     //   const data = query(collection(db, 'patients'), orderBy("fullname"), startAfter(0), limit(1))
     //   patientDocs = await getDocs(data);
     // }
-    const patientDocs = await getDocs(collection(db, "patients").orderBy("dateOfBirth", "asc"))
+    const patientDocs = await getDocs(collection(db, "patients"))
     patientDocs.forEach(data => {
       const validData = {
         ...data.data(),
