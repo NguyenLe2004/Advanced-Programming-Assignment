@@ -96,9 +96,7 @@ const update = async (updateData, id) => {
     const docRef = await updateDoc(patientDoc, updateData);
     return docRef
   } catch (e) {
-    const errorMessage = new Error(error).message
-    const customError = new customApiErrorModule.CustomAPIError(422, errorMessage)
-    next(customError)
+    console.error(error)
   }
 }
 const deleteAnItem = async (id) => {

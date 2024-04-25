@@ -27,7 +27,7 @@ const createNew = async (req, res, next) => {
     address: Joi.string().required().min(3).max(2000).trim().strict(),
     hometown: Joi.string().required().min(3).max(2000).trim().strict(),
     diagnosis: Joi.string().required().min(3).max(2000).trim().strict(),
-    // Doctor_ID: Joi.string().required().pattern(_ID_RULE).message(_ID_RULE_MESSAGE),
+    // // Doctor_ID: Joi.string().required().pattern(_ID_RULE).message(_ID_RULE_MESSAGE),
     symptoms: Joi.string().min(3).max(2000).required(),
     medHistory: Joi.string().min(3).max(2000).optional()
     // treatProcess: Joi.array().default([]),
@@ -45,7 +45,7 @@ const createNew = async (req, res, next) => {
   }
 }
 
-const update = async (req, res, next) => {
+const updatePatientInfo = async (req, res, next) => {
   const dataCorrection = Joi.object({
     lastMiddleName: Joi.string().min(3).max(256).trim().strict(),
     firstName: Joi.string().min(3).max(256).trim().strict(),
@@ -57,16 +57,34 @@ const update = async (req, res, next) => {
     gender: Joi.string().valid('Nam', 'Nữ'),
     job: Joi.string().min(3).max(256).trim().strict(),
     citizenID: Joi.string().pattern(CCCD_RULE),
+    address: Joi.string().min(3).max(256).trim().strict(),
+    hometown: Joi.string().min(3).max(256).trim().strict()
+    // Doctor_ID: Joi.string().pattern(_ID_RULE).message(_ID_RULE_MESSAGE),
+    // treatProcess: Joi.array().default([]),
+    // test: Joi.array().default([]),
+  })
+  try {
+    await dataCorrection.validateAsync(req.body,
+      {
+        abortEarly: false,
+        allowUnknown: true
+      })
+    next()
+  } catch (error) {
+    const errorMessage = new Error(error).message
+    const customError = new customApiErrorModule.CustomAPIError(422, errorMessage)
+    next(customError)
+  }
+}
+const updatePatientInfoMedical = async (req, res, next) => {
+  const dataCorrection = Joi.object({
     height: Joi.string().max(256).trim().strict(),
     weight: Joi.string().max(256).trim().strict(),
     bloodType: Joi.string().max(256).trim().strict(),
-    address: Joi.string().min(3).max(256).trim().strict(),
-    hometown: Joi.string().min(3).max(256).trim().strict(),
+
     diagnosis: Joi.string().min(3).max(256).trim().strict(),
 
-
     // Doctor_ID: Joi.string().pattern(_ID_RULE).message(_ID_RULE_MESSAGE),
-
     symptoms: Joi.string().min(3).max(256),
     medHistory: Joi.string().min(3).max(256).optional()
     // treatProcess: Joi.array().default([]),
@@ -116,5 +134,5 @@ const deleteManyItems = async (req, res, next) => {
   }
 }
 export const patientValidation = {
-  createNew, update, deleteAnItem, deleteManyItems
+  createNew, updatePatientInfo, updatePatientInfoMedical, deleteAnItem, deleteManyItems
 }
