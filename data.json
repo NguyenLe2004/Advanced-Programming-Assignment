@@ -2369,36 +2369,44 @@
         {
           "room": "Phòng siêu âm số 01",
           "id": 1,
-          "date": "27-03-2024",
-          "time": "09:00"
+          "dateBegin": "27-03-2024",
+          "dateEnd": "27-03-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "11:00"
         },
         {
           "room": "Phòng siêu âm số 01",
           "id": 2,
-          "date": "30-03-2024",
-          "time": "11:00"
+          "dateBegin": "30-03-2024",
+          "dateEnd": "30-03-2024",
+          "timeBegin": "11:00",
+          "timeEnd": "13:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2409,42 +2417,52 @@
         {
           "room": "Phòng tim mạch 07",
           "id": 1,
-          "date": "21-03-2024",
-          "time": "09:00"
+          "dateBegin": "21-03-2024",
+          "dateEnd": "21-03-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "11:00"
         },
         {
           "room": "Phòng tim mạch số 01",
           "id": 2,
-          "date": "21-03-2024",
-          "time": "11:00"
+          "dateBegin": "21-03-2024",
+          "dateEnd": "21-03-2024",
+          "timeBegin": "11:00",
+          "timeEnd": "13:00"
         },
         {
           "room": "Phòng tim mạch 07",
           "id": 3,
-          "date": "22-03-2024",
-          "time": "09:00"
+          "dateBegin": "22-03-2024",
+          "dateEnd": "22-03-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "11:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2455,48 +2473,60 @@
         {
           "room": "Phòng chụp CT số 01",
           "id": 1,
-          "date": "23-03-2024",
-          "time": "08:00"
+          "dateBegin": "23-03-2024",
+          "dateEnd": "23-03-2024",
+          "timeBegin": "08:00",
+          "timeEnd": "10:00"
         },
         {
           "room": "Phòng chụp CT số 01",
           "id": 2,
-          "date": "23-03-2024",
-          "time": "11:00"
+          "dateBegin": "23-03-2024",
+          "dateEnd": "23-03-2024",
+          "timeBegin": "11:00",
+          "timeEnd": "13:00"
         },
         {
           "room": "Phòng chụp CT số 01",
           "id": 3,
-          "date": "24-03-2024",
-          "time": "15:00"
+          "dateBegin": "24-03-2024",
+          "dateEnd": "24-03-2024",
+          "timeBegin": "15:00",
+          "timeEnd": "17:00"
         },
         {
           "room": "Phòng chụp CT số 02",
           "id": 4,
-          "date": "24-03-2024",
-          "time": "15:00"
+          "dateBegin": "24-03-2024",
+          "dateEnd": "24-03-2024",
+          "timeBegin": "15:00",
+          "timeEnd": "17:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2507,36 +2537,44 @@
         {
           "room": "Phòng hồi sức cấp cứu số 01",
           "id": 1,
-          "date": "22-03-2024",
-          "time": "21:00"
+          "dateBegin": "22-03-2024",
+          "dateEnd": "22-03-2024",
+          "timeBegin": "21:00",
+          "timeEnd": "23:00"
         },
         {
           "room": "Phòng hồi sức cấp cứu số 01",
           "id": 2,
-          "date": "22-03-2024",
-          "time": "11:00"
+          "dateBegin": "22-03-2024",
+          "dateEnd": "22-03-2024",
+          "timeBegin": "11:00",
+          "timeEnd": "13:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2547,42 +2585,52 @@
         {
           "room": "Phòng cấp cứu số 01",
           "id": 1,
-          "date": "19-04-2024",
-          "time": "07:00"
+          "dateBegin": "19-04-2024",
+          "dateEnd": "19-04-2024",
+          "timeBegin": "07:00",
+          "timeEnd": "09:00"
         },
         {
           "room": "Phòng cấp cứu số 01",
           "id": 2,
-          "date": "20-04-2024",
-          "time": "11:00"
+          "dateBegin": "20-04-2024",
+          "dateEnd": "20-04-2024",
+          "timeBegin": "11:00",
+          "timeEnd": "13:00"
         },
         {
           "room": "Phòng cấp cứu số 03",
           "id": 3,
-          "date": "20-04-2024",
-          "time": "15:00"
+          "dateBegin": "20-04-2024",
+          "dateEnd": "20-04-2024",
+          "timeBegin": "15:00",
+          "timeEnd": "17:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2593,30 +2641,36 @@
         {
           "room": "Phòng cấp cứu số 01",
           "id": 1,
-          "date": "25-05-2024",
-          "time": "09:00"
+          "dateBegin": "25-05-2024",
+          "dateEnd": "25-05-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "11:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2627,60 +2681,76 @@
         {
           "room": "Phòng hồi sức số 01",
           "id": 1,
-          "date": "22-08-2024",
-          "time": "09:00"
+          "dateBegin": "22-08-2024",
+          "dateEnd": "22-08-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "11:00"
         },
         {
           "room": "Phòng hồi sức số 02",
           "id": 2,
-          "date": "22-08-2024",
-          "time": "09:00"
+          "dateBegin": "22-08-2024",
+          "dateEnd": "22-08-2024",
+          "timeBegin": "09:00",
+          "timeEnd": "11:00"
         },
         {
           "room": "Phòng hồi sức số 02",
           "id": 3,
-          "date": "22-08-2024",
-          "time": "11:00"
+          "dateBegin": "22-08-2024",
+          "dateEnd": "22-08-2024",
+          "timeBegin": "11:00",
+          "timeEnd": "13:00"
         },
         {
           "room": "Phòng hồi sức số 03",
           "id": 4,
-          "date": "22-08-2024",
-          "time": "11:00"
+          "dateBegin": "22-08-2024",
+          "dateEnd": "22-08-2024",
+          "timeBegin": "11:00",
+          "timeEnd": "13:00"
         },
         {
           "room": "Phòng hồi sức số 01",
           "id": 5,
-          "date": "23-08-2024",
-          "time": "12:00"
+          "dateBegin": "23-08-2024",
+          "dateEnd": "23-08-2024",
+          "timeBegin": "12:00",
+          "timeEnd": "14:00"
         },
         {
           "room": "Phòng hồi sức số 01",
           "id": 6,
-          "date": "23-08-2024",
-          "time": "15:00"
+          "dateBegin": "23-08-2024",
+          "dateEnd": "23-08-2024",
+          "timeBegin": "15:00",
+          "timeEnd": "17:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2691,36 +2761,44 @@
         {
           "room": "Phòng chụp X-quang",
           "id": 1,
-          "date": "02-02-2024",
-          "time": "08:00"
+          "dateBegin": "02-02-2024",
+          "dateEnd": "02-02-2024",
+          "timeBegin": "08:00",
+          "timeEnd": "10:00"
         },
         {
           "room": " Phòng chụp X-quang ",
           "id": 2,
-          "date": "02-02-2024",
-          "time": "10:00"
+          "dateBegin": "02-02-2024",
+          "dateEnd": "02-02-2024",
+          "timeBegin": "10:00",
+          "timeEnd": "12:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2731,42 +2809,52 @@
         {
           "room": "Phòng cấp cứu số 01",
           "id": 1,
-          "date": "30-04-2024",
-          "time": "00:00"
+          "dateBegin": "30-04-2024",
+          "dateEnd": "30-04-2024",
+          "timeBegin": "00:00",
+          "timeEnd": "02:00"
         },
         {
           "room": "Phòng siêu âm số 03",
           "id": 2,
-          "date": "30-04-2024",
-          "time": "01:00"
+          "dateBegin": "30-04-2024",
+          "dateEnd": "30-04-2024",
+          "timeBegin": "01:00",
+          "timeEnd": "03:00"
         },
         {
           "room": "Phòng siêu âm số 01",
           "id": 3,
-          "date": "2-05-2024",
-          "time": "22:00"
+          "dateBegin": "2-05-2024",
+          "dateEnd": "2-05-2024",
+          "timeBegin": "22:00",
+          "timeEnd": "00:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     },
@@ -2777,36 +2865,44 @@
         {
           "room": "Phòng cấp mổ 01",
           "id": 1,
-          "date": "27-04-2024",
-          "time": "00:00"
+          "dateBegin": "27-04-2024",
+          "dateEnd": "27-04-2024",
+          "timeBegin": "00:00",
+          "timeEnd": "02:00"
         },
         {
           "room": "Phòng mổ số 01",
           "id": 2,
-          "date": "30-04-2024",
-          "time": "01:00"
+          "dateBegin": "30-04-2024",
+          "dateEnd": "30-04-2024",
+          "timeBegin": "01:00",
+          "timeEnd": "03:00"
         }
       ],
       "regularMaintenance": [
         {
           "id": 1,
-          "date": "10-01-2023",
-          "description": "Cập nhập thêm chức năng"
+          "description": "Cập nhập thêm chức năng",
+          "dateBegin": "10-01-2023",
+          "dateEnd": "20-01-2023"
         },
         {
           "id": 2,
-          "date": "10-07-2023",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2023",
+          "dateEnd": "20-07-2023"
         },
         {
           "id": 3,
-          "date": "10-01-2024",
-          "description": "Nâng cấp chất liệu"
+          "description": "Nâng cấp chất liệu",
+          "dateBegin": "10-01-2024",
+          "dateEnd": "20-01-2024"
         },
         {
           "id": 4,
-          "date": "10-07-2024",
-          "description": "Bảo trì"
+          "description": "Bảo trì",
+          "dateBegin": "10-07-2024",
+          "dateEnd": "20-07-2024"
         }
       ]
     }
