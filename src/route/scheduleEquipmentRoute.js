@@ -4,18 +4,18 @@ import { schedulesEquipmentValidation } from '../validations/schedulesEquipmentv
 import { scheduleEquipmentController } from '../controller/scheduleEquipmentController.js'
 import { authMiddlewareRole, authMiddlewareLogin } from '../middleware/authMiddleware.js'
 
-const scheduleRouter = express.Router({ mergeParams: true });
+const scheduleEquipmentRouter = express.Router({ mergeParams: true });
 
 
-scheduleRouter.route('/')
+scheduleEquipmentRouter.route('/')
   .get(scheduleEquipmentController.getAllSchedule)
   .post(schedulesEquipmentValidation.createNew, authMiddlewareLogin, authMiddlewareRole, scheduleEquipmentController.createNew)
 
-scheduleRouter.route('/deleteMany')
+scheduleEquipmentRouter.route('/deleteMany')
   .put(schedulesEquipmentValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, scheduleEquipmentController.deleteManyItems)
 
-scheduleRouter.route('/:id')
+scheduleEquipmentRouter.route('/:id')
   .put(schedulesEquipmentValidation.update, authMiddlewareLogin, authMiddlewareRole, scheduleEquipmentController.update)
   .delete(schedulesEquipmentValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, scheduleEquipmentController.deleteAnItem)
 
-export default scheduleRouter
+export default scheduleEquipmentRouter

@@ -16,7 +16,7 @@ equipmentRouter.route('/:id')
   .put(equipmentValidation.update, authMiddlewareLogin, authMiddlewareRole, equipmentController.update)
   .delete(equipmentValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, equipmentController.deleteAnItem)
 
-equipmentRouter.use('/:equipmentId/schedules', scheduleEquipmentRouter)
+equipmentRouter.use('/:equipmentId/usageHistory', scheduleEquipmentRouter)
 equipmentRouter.use('/:equipmentId/maintains', historyMaintainRouter)
 
 
