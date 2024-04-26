@@ -5,7 +5,7 @@ import { PHONE_NUMBER_RULE, DATE_RULE, _ID_RULE, _ID_RULE_MESSAGE, TIME_RULE } f
 const createNew = async (req, res, next) => {
   const dataCorrection = Joi.object({
     eqName: Joi.string().required().min(3).max(256).trim().strict(),
-    // regularMaintenance: Joi.object(),
+    regularMaintenance: Joi.object().default([]),
     // usageHistory: Joi.array().default([]),
     Status: Joi.string().valid('Đã phân công', 'Chưa phân công')
   })
@@ -23,11 +23,10 @@ const createNew = async (req, res, next) => {
 const update = async (req, res, next) => {
   const dataCorrection = Joi.object({
     eqName: Joi.string().min(3).max(256).trim().strict(),
-    // regularMaintenance: Joi.object({
-    //   Description: Joi.string().min(3).max(256).trim().strict(),
-    //   Day: Joi.string().regex(DATE_RULE),
-    //   Time: Joi.string().regex(TIME_RULE).trim().strict()
-    // }).default({}),
+    regularMaintenance: Joi.object({
+      date: Joi.string().regex(DATE_RULE),
+      description: Joi.string().min(3).max(2000).trim().strict()
+    }).default({}),
     // usageHistory: Joi.array().default([]),
     Status: Joi.string().valid('Đã phân công', 'Chưa phân công')
   })
