@@ -1,5 +1,5 @@
 import Joi from 'joi'
-import { addDoc, collection, doc, getDocs, updateDoc, deleteDoc, getDoc } from "firebase/firestore"
+import { addDoc, collection, doc, getDocs, updateDoc, deleteDoc, getDoc, where, query } from "firebase/firestore"
 import { db } from '../config/firestore.js'
 import { PHONE_NUMBER_RULE, DATE_RULE, CCCD_RULE } from '../utils/validators.js'
 import { customApiErrorModule } from '../error/customError.js'
@@ -63,12 +63,13 @@ const update = async (updateData, id) => {
     next(customError)
   }
 }
-const getAllSpecialists = async () => {
+const getAllSpecialists = async (position) => {
   try {
     const specialistsList = [];
     // const queryDocs = query(scheduleDocs, orderBy("day", "asc"))
-
-    const specialistsDocs = await getDocs(collection(db, 'specialists'));
+    const specialistPositionCollection = query(collection(db, 'specialists'), where("position", "==", position))
+    // const specialistsDocs = await getDocs(collection(db, 'specialists'));
+    const specialistsDocs = await getDocs(specialistPositionCollection)
     specialistsDocs.forEach(data => {
       const validData = {
         ...data.data(),

@@ -26,7 +26,8 @@ const update = async (req, res, next) => {
 const getAllSpecialists = async (req, res, next) => {
   try {
     // const docRef = await addDoc(collection(db, "users"), req.body);
-    const allSpecialists = await specialistService.getAllSpecialists();
+    const position = req.query.position
+    const allSpecialists = await specialistService.getAllSpecialists(position);
     // console.log("Document written with ID: ", newschedule);
     res.status(201).json(allSpecialists)
   } catch (e) {
