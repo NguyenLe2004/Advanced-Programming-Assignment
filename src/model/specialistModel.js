@@ -63,13 +63,24 @@ const update = async (updateData, id) => {
     next(customError)
   }
 }
-const getAllSpecialists = async (position) => {
+const getAllSpecialists = async (position, specialty) => {
   try {
     const specialistsList = [];
-    // const queryDocs = query(scheduleDocs, orderBy("day", "asc"))
-    const specialistPositionCollection = query(collection(db, 'specialists'), where("position", "==", position))
-    // const specialistsDocs = await getDocs(collection(db, 'specialists'));
-    const specialistsDocs = await getDocs(specialistPositionCollection)
+    // const queryDocs = query(scheduleDocs, orderBy("day", "asc"))s
+    let specialistsDocs;
+    if (position && specialty) {
+      const specialistPositionCollection = query(collection(db, 'specialists'), where("position", "==", position), where("specialty", "==", specialty))
+      specialistsDocs = await getDocs(specialistPositionCollection)
+    }
+    else if (position) {
+      const specialistPositionCollection = query(collection(db, 'specialists'), where("position", "==", position))
+      specialistsDocs = await getDocs(specialistPositionCollection)
+    }
+    else {
+      specialistsDocs = await getDocs(collection(db, 'specialists'))
+    }
+
+    //const specialistsDocs = await getDocs(specialistPositionCollection)
     specialistsDocs.forEach(data => {
       const validData = {
         ...data.data(),

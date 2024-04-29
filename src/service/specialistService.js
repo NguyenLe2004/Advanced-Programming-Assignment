@@ -18,9 +18,9 @@ const update = async (reqBody, id) => {
   }
 }
 
-const getAllSpecialists = async (position) => {
+const getAllSpecialists = async (position, specialty) => {
   try {
-    const allSpecialists = await specialistModel.getAllSpecialists(position);
+    const allSpecialists = await specialistModel.getAllSpecialists(position, specialty);
     return allSpecialists
   } catch (e) {
     console.error("Error adding document: ", e);
