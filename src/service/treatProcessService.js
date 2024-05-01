@@ -1,5 +1,5 @@
 import { treatProcessModel } from '../model/treatProcessModel.js'
-
+import { specialistModel } from '../model/specialistModel.js';
 const createNew = async (reqBody, patientId) => {
   try {
     // const docRef = await addDoc(collection(db, "users"), req.body);
@@ -12,8 +12,25 @@ const createNew = async (reqBody, patientId) => {
 }
 const getAllTreatProcess = async (patientId) => {
   try {
+    const resultTreatProcess = []
     const allTreatProcess = await treatProcessModel.getAllTreatProcess(patientId);
-    return allTreatProcess
+    const promises = allTreatProcess.map(async (data) => {
+      const specialist = await specialistModel.findOneById(data.medicalStaffID);
+      const specialistName = specialist.lastMiddleName + " " + specialist.firstName;
+      const validData = {
+        ...data,
+        specialistName: specialistName
+      };
+      return validData;
+    });
+
+    // chờ đợi promise để có thể resolve
+
+    const results = await Promise.all(promises);
+
+    resultTreatProcess.push(...results);
+
+    return resultTreatProcess;
   } catch (e) {
     console.error("Error adding document: ", e);
   }
