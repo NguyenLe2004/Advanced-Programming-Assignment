@@ -9,8 +9,7 @@ const DisplayMoreInfo = (props) => {
   if (!data ||data.citizenID ==='' || data.citizenID==null) return;
 
   const deletePatient = () =>{
-    console.log("call api here");
-    axios.delete("http://localhost:3000/Patient/" + data.id)
+    axios.delete("http://localhost:8080/v1/patients/" + data.id)
       .then(response => {
         console.log("success")
         window.location.reload();

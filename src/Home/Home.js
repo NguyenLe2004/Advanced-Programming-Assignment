@@ -1,4 +1,4 @@
-import React, {useContext, useEffect}from 'react'
+import React, {useContext}from 'react'
 import Header from './Header/Header'
 import SignInForm from './SignInForm/SignInForm'
 import Body from './Body/Body'
@@ -20,8 +20,10 @@ const Home = () => {
       setIsDisplaySignInForm(false);
     }
   };
+  
   return (
     <div className='main-containter'> 
+
       {isDisplaySignInForm && (
         <SignInForm/>
       )}

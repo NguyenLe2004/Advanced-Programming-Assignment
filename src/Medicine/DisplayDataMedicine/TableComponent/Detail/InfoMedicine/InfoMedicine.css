@@ -1,0 +1,26 @@
+.update-medicine-icon{
+    font-size: 22px;
+    margin-left: 1vw;
+}
+.update-medicine-icon:hover{
+    cursor: pointer;
+    color: gray;
+}
+.status-popup{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    height: 150%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+}
+.col-detail-medicine{
+    font-weight: bold;
+    font-size: 18px;
+}
+.label-detail-medicine {
+    color: gray;
+}

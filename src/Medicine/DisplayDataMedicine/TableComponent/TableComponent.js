@@ -1,4 +1,5 @@
 import React, {  useEffect, useState } from 'react';
+import Detail from './Detail/Detail';
 import { Button } from 'react-bootstrap';
 import { faAnglesLeft, faAnglesRight,faSort, faSortUp, faSortDown, faTrashCan, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faSquare, faSquareCheck } from '@fortawesome/free-regular-svg-icons';
@@ -19,6 +20,8 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
   const [isDelete , setIsDelete] = useState(false);
   const [selectedRows, setSelectedRows] = useState([]);
   const [isSelectAll , setIsSelectAll ] = useState(false);
+  const [isDisplayDetail, setIsDisplayDetail ] =useState(false);
+  const [detailData , setDetailData ] = useState(null);
   const goToPreviousPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -96,7 +99,7 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
   }, [sortColumn, sortDirect]);
 
   useEffect(() => {
-    setCurrentID(""); // Reset the current ID when the page changes
+    setCurrentID(""); 
   }, [currentPage]);
 
   const startIndex = (currentPage - 1) * rowsPerPage;
@@ -104,6 +107,7 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
   const currentPageDataMedicine = dataMedicineDisplay.slice(startIndex,endIndex);
   return (
     <div>
+      {isDisplayDetail && <Detail detailData={detailData} setIsDisplayDetail={setIsDisplayDetail} />}
       <div className='delete-group'>
           {isDelete &&
           <span style={{marginRight:"1vw"}} > 
@@ -214,9 +218,14 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
           </thead>
           <tbody>
             {currentPageDataMedicine.map((obj,index) => (
-              <tr key={obj.id}>
+              <tr key={obj.id} style={{zIndex:"90"}} onClick={() => {
+                setIsDelete(false);
+                setIsDisplayDetail(true);
+                setDetailData(obj);
+              }}>
               {isDelete &&
-               <td className='square-icon' style={{fontSize:"25px",zIndex:"30"}} onClick={() => {
+               <td className='square-icon' style={{fontSize:"25px",zIndex:"100"}} onClick={(event) => {
+                event.stopPropagation();
                 const updatedRows = [...selectedRows];
                 if (updatedRows.includes(obj.id)) {
                   updatedRows.splice(updatedRows.indexOf(obj.id), 1);
@@ -225,7 +234,8 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
                 }
                 setSelectedRows(updatedRows);
               }}>
-            <FontAwesomeIcon  icon={selectedRows.includes(obj.id) ? faSquareCheck : faSquare} /> </td>}
+              <FontAwesomeIcon  icon={selectedRows.includes(obj.id) ? faSquareCheck : faSquare} /> 
+            </td>}
                 <td style={{color:"black"}}>{obj.name}</td>
                 <td >{obj.arrivalDate} {obj.arrivalTime}</td>
                 <td>{obj.departureDate} {obj.departureTime}</td>

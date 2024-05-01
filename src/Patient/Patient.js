@@ -28,10 +28,11 @@ const Patient = () => {
   useEffect(() => {
     const getAllPatient = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/Patient');
-        const dataWithStatusAndAge = response.data.map(item => {
+        const response = await axios.get('http://localhost:8080/v1/patients');
+        const dataWithStatusAndAge = await Promise.all(response.data.map(async item => {
           const age = getPatientAge(item.dateOfBirth);
-          const treatProcess = item.treatProcess;
+          const treatProcessPromise = await axios.get(`http://localhost:8080/v1/patients/${item.id}/treatProcess`);
+          const treatProcess = treatProcessPromise.data;
           treatProcess.sort((a, b) => {
             const dateA = moment(a.dateBegin, "DD-MM-YYYY");
             const dateB = moment(b.dateBegin, "DD-MM-YYYY");
@@ -42,9 +43,8 @@ const Patient = () => {
           });
           const status = getPatientStatus(treatProcess);
 
-
           return {...item ,status,age,treatProcess};
-        })
+        }))
         setDataPatient(dataWithStatusAndAge);
       } catch (error) {
         console.log(error); 

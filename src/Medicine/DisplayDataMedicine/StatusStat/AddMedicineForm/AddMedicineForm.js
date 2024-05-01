@@ -27,7 +27,7 @@ const AddMedicineForm = ({setShowAddMedicineForm}) => {
                 name : form.elements.name.value,
                 amount : form.elements.amount.value
             }
-            axios.post("http://localhost:3000/Medicine" , data)
+            axios.post("http://localhost:8080/v1/medicines" , data)
             .then(()=> window.location.reload())
             .catch(error => console.error(error));
         }

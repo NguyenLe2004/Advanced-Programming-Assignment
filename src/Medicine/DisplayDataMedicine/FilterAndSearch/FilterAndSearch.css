@@ -1,0 +1,36 @@
+.search-filter-container{
+    display: flex;
+    height: 7vh;
+    width: 5vw;
+    position:  relative;
+    top: 11vh;
+    width: 80vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.search-block {
+    position: relative;
+    display: flex;
+}
+.search-icon {
+    position: absolute;
+    font-size: 24px;
+    right: 0;
+    transition: all ease-in-out 1s;
+}
+.search-icon.active {
+    right: 105%;
+    transform: rotate(90deg);
+}
+.search-icon:hover{
+    cursor: pointer;
+}
+.search-form{
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in-out 1s;
+}
+.search-form.active{
+    visibility: visible;
+    opacity: 1;
+}

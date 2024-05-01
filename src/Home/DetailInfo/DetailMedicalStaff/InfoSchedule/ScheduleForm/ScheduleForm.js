@@ -7,9 +7,11 @@ import Form from "react-bootstrap/Form";
 import moment from "moment";
 import axios from "axios";
 import Row from "react-bootstrap/Row";
+import { useParams } from "react-router-dom";
 const ScheduleForm = ({ medicalStaff }) => {
   const [validated, setValidated] = useState(false);
   const [error, setError] = useState("");
+  const {id} = useParams();
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
     event.preventDefault();
@@ -30,9 +32,8 @@ const ScheduleForm = ({ medicalStaff }) => {
       const [dateBegin, timeBegin] =
         form.elements.datetimeBegin.value.split("T");
       const [dateEnd, timeEnd] = form.elements.datetimeEnd.value.split("T");
-      const newSchedule = [
-        ...medicalStaff.schedule,
-        {
+      const newSchedule = 
+       {
           dateBegin: moment(dateBegin).format("DD-MM-YYYY"),
           timeBegin: timeBegin,
           dateEnd: moment(dateEnd).format("DD-MM-YYYY"),
@@ -40,12 +41,9 @@ const ScheduleForm = ({ medicalStaff }) => {
           room: form.elements.room.value,
           title: form.elements.title.value,
           description: form.elements.description.value,
-        },
-      ];
+        }
       axios
-        .patch("http://localhost:3000/medicalStaff/" + medicalStaff.id, {
-          schedule: newSchedule,
-        })
+        .post(`http://localhost:8080/v1/specialists/${id}/schedules/`,newSchedule)
         .then(() => {
           window.location.reload();
         })

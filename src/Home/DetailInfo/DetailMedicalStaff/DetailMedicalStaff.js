@@ -41,8 +41,11 @@ const DetailMedicalStaff = () => {
   useEffect(() => {
     const getMedicalStaff = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/MedicalStaff?id=" + id);
-          let medicalStaffDataWithStatus = response.data[0]
+        let response = await axios.get("http://localhost:8080/v1/specialists/" + id);
+        const schedule = await axios.get(`http://localhost:8080/v1/specialists/${id}/schedules`)
+        response.data.schedule = schedule.data;
+        console.log(response.data.schedule)
+          let medicalStaffDataWithStatus = response.data
           if(medicalStaffDataWithStatus.schedule.length) {
             medicalStaffDataWithStatus.schedule.sort((a, b) => {
               const dateA = moment(a.date, "DD-MM-YYYY");
@@ -56,6 +59,7 @@ const DetailMedicalStaff = () => {
           medicalStaffDataWithStatus.status = getMedicalStaffStatus(medicalStaffDataWithStatus.schedule);
         
         setMedicalStaff(medicalStaffDataWithStatus);
+        console.log(medicalStaffDataWithStatus)
       } catch (error) {
         console.log(error); 
       }

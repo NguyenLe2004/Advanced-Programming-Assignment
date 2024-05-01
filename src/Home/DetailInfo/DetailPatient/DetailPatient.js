@@ -37,11 +37,13 @@ const DetailPatient = () => {
   useEffect(() => {
     const getPatient = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/Patient/" + id);
-        const status = getPatientStatus(response.data.treatProcess);
+        const response = await axios.get("http://localhost:8080/v1/patients/" + id);
+        const treatProcessPromise = await axios.get(`http://localhost:8080/v1/patients/${id}/treatProcess`);
+        const treatProcess = treatProcessPromise.data;
         const patientDataWithStatus = {
           ...response.data,
-          status:getPatientStatus(response.data.treatProcess)
+          treatProcess,
+          status:getPatientStatus(treatProcess)
         }
         patientDataWithStatus.treatProcess.sort((a, b) => {
           const dateA = moment(a.dateBegin, "DD-MM-YYYY");
@@ -51,8 +53,8 @@ const DetailPatient = () => {
           }
           return dateB - dateA;
         });
-        console.log(patientDataWithStatus)
         setPatient(patientDataWithStatus);
+        console.log(patient);
       } catch (error) {
         console.log(error); 
       }

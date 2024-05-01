@@ -1,0 +1,41 @@
+.background-medicine-detail {
+    background-color: rgb(0, 0, 0,0.3);
+    position: absolute;
+    top: 0;
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+}
+.main-medical-detail{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    height: 50vh;
+    width: 50vw;
+}
+.conatiner-img-info{
+    padding: 0vh 1vw;
+    display: flex;
+    width: 100%;
+    min-height: 85%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.medicine-pic{
+    position: relative;
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 10px 0px rgb(0,0,0); */
+
+    width: 50%;
+    /* height: 90%; */
+}
+.info-update-block{
+    /* border: 1px red solid; */
+    margin-left: 2vw;
+    width: 50%;
+    min-height: fit-content;
+}

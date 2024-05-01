@@ -37,12 +37,14 @@ const MedicalStaff = () => {
   useEffect(() => {
     const getAllMedicalStaff = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/MedicalStaff?position=${
-          position==="specialist" ?  encodeURIComponent("Bác sĩ") : position ==="nurse" ? encodeURIComponent("Y tá") : encodeURIComponent("Nhân viên hỗ trợ")
-        }`);
-        const dataWithStatusAndAge = response.data.map(item => {
+        const response = await axios.get(`http://localhost:8080/v1/specialists?position=` +  
+        encodeURI(position === 'specialist' ? 'Bác sĩ' : position === 'nurse' ? 'Y tá' : 'Nhân viên hỗ trợ')
+      );
+        const dataWithStatusAndAge =await Promise.all(  await response.data.map(async item => {
           const age = getMedicalStaffAge(item.dateOfBirth);
-          const schedule = item.schedule;
+          const response_schedule = await axios.get(`http://localhost:8080/v1/specialists/${item.id}/schedules`);
+          console.log(response_schedule.data)
+          const schedule = response_schedule.data;
           schedule.sort((a, b) => {
             const dateA = moment(a.date, "DD-MM-YYYY");
             const dateB = moment(b.date, "DD-MM-YYYY");
@@ -53,7 +55,7 @@ const MedicalStaff = () => {
           });
           const status = getMedicalStaffStatus(schedule);
           return {...item ,status,age,schedule};
-        })
+        }))
         setDataMedicalStaff(dataWithStatusAndAge);
       } catch (error) {
         console.log(error); 

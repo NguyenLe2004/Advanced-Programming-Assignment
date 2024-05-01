@@ -39,7 +39,7 @@ const ScheduleProcess = ({ medicalStaff }) => {
     }
  else {
   const Begin = moment(form.elements.datetimeBegin.value);
-  const End = moment(form.elements.datetimeEnd.value);
+  const End = moment(form.elements.datetimeEnd.value);  
   const curDay = moment();
   if (Begin.isAfter(End)) {
     setError("thời điểm bắt đầu và kết thúc không hợp lệ");
@@ -58,7 +58,6 @@ const ScheduleProcess = ({ medicalStaff }) => {
         title: form.elements.title.value,
         description: form.elements.description.value,
       };
-      console.log("schedule here", schedule);
       axios
         .patch("http://localhost:3000/medicalStaff/" + medicalStaff.id, {
           schedule: schedule,

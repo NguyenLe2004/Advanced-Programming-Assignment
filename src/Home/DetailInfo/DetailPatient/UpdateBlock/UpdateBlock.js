@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-import { InputGroup } from "react-bootstrap";
 import moment from "moment";
 import axios from "axios";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import { useParams } from "react-router-dom";
 import "./UpdateBlock.css";
 const UpdateBlock = ({ patient }) => {
   const [validated, setValidated] = useState(false);
   const [error, setError] = useState("");
+  const {id} = useParams();
   if (!patient) return;
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -18,7 +19,7 @@ const UpdateBlock = ({ patient }) => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else {
-      const dateOfBirth = moment(form.elements.dateOfBirth.value); // YYYY-MM-DD
+      const dateOfBirth = moment(form.elements.dateOfBirth.value);
       const curDate = moment();
       if (dateOfBirth.isAfter(curDate)) {
         setError("Ngày sinh không hợp lệ");
@@ -37,9 +38,11 @@ const UpdateBlock = ({ patient }) => {
         hometown: form.elements.hometown.value,
       };
       axios
-        .patch(`http://localhost:3000/patient/${patient.id}`, updatedData)
-        .then((response) => {
-          console.log("Cập nhật thông tin thành công", response.data);
+        .patch(
+          `http://localhost:8080/v1/patients/updateInfo/${id}`,
+          updatedData
+        )
+        .then(() => {
           window.location.reload();
         })
         .catch((error) => {
@@ -99,7 +102,7 @@ const UpdateBlock = ({ patient }) => {
               placeholder="Tên"
               defaultValue={patient.firstName}
               pattern="^\s*?[a-zA-ZÀ-Ỹà-ỹ']+$"
-              />
+            />
             <Form.Control.Feedback type="invalid">
               Tên không hợp lệ
             </Form.Control.Feedback>

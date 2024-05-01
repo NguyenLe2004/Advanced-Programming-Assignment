@@ -48,12 +48,8 @@ const TreatForm = ({patient}) => {
         description: form.elements.description.value,
         medicalStaffID : medStaffID
       }
-      const updateTreatProcessData = [
-        ...patient.treatProcess,
-        newTreatProcess
-      ]
       const addTreatProcess = async () => {
-          axios.patch("http://localhost:3000/Patient/" + patient.id, {treatProcess : updateTreatProcessData} )
+          axios.patch(`http://localhost:8080/v1/patients/${patient.id}/treatProcess`, newTreatProcess )
           .then(() => {
             window.location.reload();
           })
@@ -106,13 +102,13 @@ const TreatForm = ({patient}) => {
     if (position!=="") queryStr += queryStr? "&position="+position :"position="+position;
     const getMedStaff = async () => {
         try {
-          const response = await axios.get("http://localhost:3000/MedicalStaff?" + queryStr ) ;
+          const response = await axios.get("http://localhost:8080/v1/specialists?" + queryStr ) ;
           let data = response.data;
-          // console.log("data heeee" , data)
           data = data.filter(obj => {
             return isMedicalStaffAvailable(obj.schedule);
           });
           setMedStaffData(data);
+          console.log(medStaffData)
         } catch (error) {
           console.log(error); 
         }

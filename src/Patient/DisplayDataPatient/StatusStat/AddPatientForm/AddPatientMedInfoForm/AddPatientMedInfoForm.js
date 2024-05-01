@@ -21,12 +21,11 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
                 weight: form.elements.weight.value,
                 bloodType : form.elements.bloodType.value,
                 medHistory : form.elements.medHistory.value,
-                symtoms : form.elements.symtoms.value,
-                diagnosis : form.elements.diagnosis.value,
-                treatProcess : []
+                symptoms : form.elements.symptoms.value,
+                diagnosis : form.elements.diagnosis.value
             }
             try {
-                const response = await axios.post('http://localhost:3000/Patient',data);
+                const response = await axios.post('http://localhost:8080/v1/patients',data);
                 window.open(`http://localhost:4000/Patient/${response.data.id}`, '_blank');
                 window.location.reload();
               } catch (error) {
@@ -100,7 +99,7 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
         </Form.Group>
         </Row>
         <Row className="mb-3">
-        <Form.Group as={Col}  controlId="symtoms">
+        <Form.Group as={Col}  controlId="symptoms">
             <Form.Label>Triệu chứng bệnh</Form.Label>
             <Form.Control
             required

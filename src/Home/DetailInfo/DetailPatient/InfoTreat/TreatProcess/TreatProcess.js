@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./TreatProcess.css";
+
 const TreatProcess = ({ patient }) => {
   const [medStaff, setMedStaff] = useState([]);
   const [isUpdate, setIsUpdate] = useState(null);
@@ -25,7 +26,7 @@ const TreatProcess = ({ patient }) => {
   const [specialty, setSpecialty] = useState("");
   const [medStaffID, setMedStaffID] = useState("");
   const [medStaffData, setMedStaffData] = useState([]);
-  const [updateIndex, setUpdateIndex] = useState(0); // can change if use sub collect
+  const [curTreatProcess, setCurTreatProcess] = useState(null);
   const { allSpecialty } = useContext(specialtyContext);
   const [error, setError] = useState("");
 
@@ -51,20 +52,17 @@ const TreatProcess = ({ patient }) => {
         room: form.elements.room.value,
         title: form.elements.title.value,
         description: form.elements.description.value,
-        medicalStaffID: medStaffID
-          ? medStaffID
-          : patient.treatProcess[updateIndex].medicalStaffID,
-        id: patient.treatProcess[updateIndex].id,
+        medicalStaffID: form.elements.medicalStaffID.value
+          ? form.elements.medicalStaffID.value
+          : curTreatProcess.medicalStaffID,
       };
-      let updateTreatProcessData = [...patient.treatProcess];
-      updateTreatProcessData[updateIndex] = newTreatProcess;
-
       const addTreatProcess = async () => {
         axios
-          .patch("http://localhost:3000/Patient/" + patient.id, {
-            treatProcess: updateTreatProcessData,
-          })
-          .then((response) => {
+          .put(
+            `http://localhost:8080/v1/patients/${patient.id}/treatProcess/${curTreatProcess.id}`,
+            newTreatProcess
+          )
+          .then(() => {
             window.location.reload();
           })
           .catch((error) => {
@@ -104,7 +102,7 @@ const TreatProcess = ({ patient }) => {
     const getMedStaff = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/MedicalStaff?" + queryStr
+          "http://localhost:8080/v1/specialists?" + queryStr
         );
         let data = response.data;
         data = data.filter((obj) => {
@@ -129,25 +127,23 @@ const TreatProcess = ({ patient }) => {
       .map((id) => `id=${id}`)
       .join("&");
     const getMedStaff = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:3000/MedicalStaff?" + queryString
-        );
-        // console.log("api call",response.data)
-        setMedStaff(response.data);
-      } catch (error) {
-        console.log(error);
-      }
+      axios
+        .get("http://localhost:8080/v1/specialists?" + queryString)
+        .then((res) => setMedStaff(res.data))
+        .catch((error) => console.error(error));
     };
     getMedStaff();
   }, [patient.treatProcess]);
   if (!patient.treatProcess) return;
+
   const getMedStaffByID = (id) => {
     if (!medStaff) return null;
+    console.log(id);
+    console.log(medStaff);
     let medStaffName = null;
     let medStaffPosition = null;
     medStaff.forEach((obj) => {
-      if (obj.id === parseInt(id)) {
+      if (obj.id === id) {
         medStaffName = obj.lastMiddleName + " " + obj.firstName;
         medStaffPosition = obj.position;
         return;
@@ -159,13 +155,11 @@ const TreatProcess = ({ patient }) => {
       medStaffPosition: medStaffPosition,
     };
   };
-  const handleDeleteTreatProcess = (index) => {
-    let newTreatProcess = [...patient.treatProcess];
-    newTreatProcess.splice(index, 1);
+  const handleDeleteTreatProcess = (id) => {
     axios
-      .patch("http://localhost:3000/Patient/" + patient.id, {
-        treatProcess: newTreatProcess,
-      })
+      .delete(
+        `http://localhost:8080/v1/patients/${patient.id}/treatProcess/${id}`
+      )
       .then(() => window.location.reload())
       .catch((error) => console.error(error));
   };
@@ -181,7 +175,7 @@ const TreatProcess = ({ patient }) => {
   return (
     <div>
       {patient.treatProcess.map((treatment, index) => (
-        <div className="treat-circle-block">
+        <div key={index} className="treat-circle-block">
           <div
             className={`circle circle-${
               moment(treatment.dateEnd, "DD-MM-YYYY") < moment()
@@ -196,7 +190,7 @@ const TreatProcess = ({ patient }) => {
               icon={setIcon(treatment.title.toLowerCase())}
             />
           </div>
-          <div key={index} className="treat-block">
+          <div className="treat-block">
             <div
               className={`icon-in-treatform ${
                 index === isUpdate ? "close" : null
@@ -205,6 +199,7 @@ const TreatProcess = ({ patient }) => {
               <FontAwesomeIcon
                 icon={index === isUpdate ? faXmark : faPen}
                 onClick={() => {
+                  setCurTreatProcess(treatment);
                   setIsUpdate(isUpdate === index ? null : index);
                   setDateBegin(treatment.dateBegin + " " + treatment.timeBegin);
                   setDateEnd(treatment.dateEnd + " " + treatment.timeEnd);
@@ -224,10 +219,10 @@ const TreatProcess = ({ patient }) => {
                 <div className="title">{treatment.title}</div>
                 <div className="specialist">
                   <span>
-                    {getMedStaffByID(treatment.medicalStaffID)
-                      .medStaffPosition + ": "}
+                    {/* {getMedStaffByID(treatment.medicalStaffID)
+                      .medStaffPosition + ": "} */}
                   </span>
-                  <span>
+                  {/* <span>
                     <a
                       href={`/MedicalStaff/${
                         getMedStaffByID(treatment.medicalStaffID)
@@ -236,7 +231,7 @@ const TreatProcess = ({ patient }) => {
                     >
                       {getMedStaffByID(treatment.medicalStaffID).medStaffName}
                     </a>
-                  </span>
+                  </span> */}
                 </div>
                 <div>
                   <div className="description"> {treatment.description} </div>
@@ -402,7 +397,7 @@ const TreatProcess = ({ patient }) => {
                         </option>
                       </Form.Select>
                     </Form.Group>
-                    <Form.Group as={Col} md={4} controlId="validationCustom03">
+                    <Form.Group as={Col} md={4} controlId="medicalStaffID">
                       <Form.Label>Nhân viên y tế</Form.Label>
                       <Form.Select
                         disabled={!(dateBegin && dateEnd)}
@@ -452,12 +447,10 @@ const TreatProcess = ({ patient }) => {
                       </Row>
                     </Row>
                   } */}
-                  <Button onClick={() => setUpdateIndex(index)} type="submit">
-                    Đổi thông tin lịch trình
-                  </Button>
+                  <Button type="submit">Đổi thông tin lịch trình</Button>
                   <Button
                     style={{ position: "absolute", right: "1vw" }}
-                    onClick={() => handleDeleteTreatProcess(index)}
+                    onClick={() => handleDeleteTreatProcess(treatment.id)}
                     variant="danger"
                   >
                     Xoá tiến trình này

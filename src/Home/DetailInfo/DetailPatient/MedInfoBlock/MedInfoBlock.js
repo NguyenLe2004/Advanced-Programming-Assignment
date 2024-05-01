@@ -3,10 +3,12 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import "./MedInfoBlock.css";
+import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button, Form, InputGroup } from "react-bootstrap";
 const MedInfoBlock = ({ patient }) => {
   const [isUpdate, setIsUpdate] = useState(false);
   const [validated, setValidated] = useState(false);
+  const {id} = useParams();
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -23,7 +25,7 @@ const MedInfoBlock = ({ patient }) => {
         diagnosis: form.elements.diagnosis.value,
       };
       axios
-        .patch("http://localhost:3000/Patient/" + patient.id, updateData)
+        .patch("http://localhost:8080/v1/patients/updateInfoMedical/" + id, updateData)
         .then((response) => {
           window.location.reload();
         })

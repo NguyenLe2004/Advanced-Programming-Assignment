@@ -17,7 +17,7 @@ const Medicine = () => {
     useEffect(() => {
         const getAllMedicine = async () => {
         try {
-            let response = await axios.get('http://localhost:3000/Medicine');
+            let response = await axios.get('http://localhost:8080/v1/medicines');
             response.data.forEach((obj) => {
               obj.status = getMedicineStatus(obj);
             })

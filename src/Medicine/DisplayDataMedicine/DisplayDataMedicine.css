@@ -14,7 +14,7 @@
     height: fit-content;
 }
 .searchIcon{
-    position: absolute;
+    position: relative;
     top: 16%;
     color: black;
     font-weight: 1px;
@@ -37,7 +37,7 @@
 .searchInput{
     display: inline-block;
     height: 4vh;
-    position: absolute;
+    position: relative;
     transform: translate(-40%,15%) ;
     border-radius: 10px;
     border: 1px rgb(216, 230, 255) solid;
