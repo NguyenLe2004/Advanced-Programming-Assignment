@@ -38,10 +38,10 @@ const createNew = async (Data, equipmentId) => {
 const getAllSchedule = async (equipmentId) => {
   try {
     const euqipmentSchedule = [];
-    const scheduleDocs = collection(db, 'equipments', equipmentId, 'schedules_Equipment')
-    const queryDocs = query(scheduleDocs, orderBy("Day", "asc"))
+    const scheduleDocs = collection(db, 'equipments', equipmentId, 'usageHistory')
+    // const queryDocs = query(scheduleDocs, orderBy("Day", "asc"))
 
-    const schedules = await getDocs(queryDocs);
+    const schedules = await getDocs(scheduleDocs);
     schedules.forEach(data => {
       const validData = {
         ...data.data(),

@@ -9,13 +9,13 @@ const specialistRouter = express.Router();
 
 specialistRouter.route('/')
   .get(specialistController.getAllSpecialists)
-  .post(specialistValidation.createNew, authMiddlewareLogin, authMiddlewareRole, specialistController.createNew)
+  .post(specialistValidation.createNew, specialistController.createNew)
 specialistRouter.route('/deleteMany')
-  .put(specialistValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, specialistController.deleteManyItems)
+  .put(specialistValidation.deleteManyItems, specialistController.deleteManyItems)
 specialistRouter.route('/:id')
   .get(specialistController.findOneById)
-  .put(specialistValidation.update, authMiddlewareLogin, authMiddlewareRole, specialistController.update)
-  .delete(specialistValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, specialistController.deleteAnItem)
+  .put(specialistValidation.update, specialistController.update)
+  .delete(specialistValidation.deleteAnItem, specialistController.deleteAnItem)
 
 specialistRouter.use('/:specialistId/schedules', scheduleRouter)
 

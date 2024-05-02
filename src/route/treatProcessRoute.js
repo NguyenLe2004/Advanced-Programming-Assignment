@@ -8,12 +8,12 @@ const treatProcessRouter = express.Router({ mergeParams: true });
 
 treatProcessRouter.route('/')
   .get(treatProcessController.getAllTreatProcess)
-  .post(treatProcessValidation.createNew, authMiddlewareLogin, authMiddlewareRole, treatProcessController.createNew)
+  .post(treatProcessValidation.createNew, treatProcessController.createNew)
 treatProcessRouter.route('/deleteMany')
-  .put(treatProcessValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, treatProcessController.deleteManyItems)
+  .put(treatProcessValidation.deleteManyItems, treatProcessController.deleteManyItems)
 treatProcessRouter.route('/:id')
-  .put(treatProcessValidation.update, authMiddlewareLogin, authMiddlewareRole, treatProcessController.update)
-  .delete(treatProcessValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, treatProcessController.deleteAnItem)
+  .put(treatProcessValidation.update, treatProcessController.update)
+  .delete(treatProcessValidation.deleteAnItem, treatProcessController.deleteAnItem)
 
 
 export default treatProcessRouter

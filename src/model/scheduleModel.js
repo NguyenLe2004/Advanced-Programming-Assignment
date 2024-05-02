@@ -9,9 +9,10 @@ const SCHEDULE_COLLECTION_SCHEMA = Joi.object({
   description: Joi.string().required().min(3).max(2000).trim().strict(),
   title: Joi.string().required().min(3).max(256).trim().strict(),
   room: Joi.string().required().min(3).max(256).trim().strict(),
-  date: Joi.string().regex(DATE_RULE).required(),
+  dateBegin: Joi.string().regex(DATE_RULE).required(),
+  dateEnd: Joi.string().regex(DATE_RULE).required(),
   timeBegin: Joi.string().regex(TIME_RULE).required().trim().strict(),
-  timeEnd: Joi.string().regex(TIME_RULE).required().trim().strict(),
+  timeEnd: Joi.string().regex(TIME_RULE).required().trim().strict()
 })
 // const INVALID_DATA_UPDATE = ['_id', 'createdAt']
 const validObjectValue = async (data) => {
@@ -21,13 +22,12 @@ const createNew = async (Data, specialistId) => {
   try {
     const validData = await validObjectValue(Data)
     const insertData = JSON.parse(JSON.stringify(validData))
-    console.log(specialistId)
 
     // const specialistSchedule = [];
-    const docref = await addDoc(collection(db, 'specialists', specialistId, 'schedules').orderBy("dateOfBirth", "asc"), insertData)
+    const docref = await addDoc(collection(db, 'specialists', specialistId, 'schedules'), insertData)
     // const scheduleDocs = collection(db, 'specialists', specialistId, 'schedules')
     // const schedules = await getDocs(scheduleDocs);
-    // schedules.forEach(data => { specialistSchedule.push(data.data()) });
+    // schedules.forEach(data => { specialistSchedule.push(data.data()) });  
 
     // const newDoc = doc(db, 'specialists', specialistId);
     // newDoc.schedule = []
@@ -35,7 +35,7 @@ const createNew = async (Data, specialistId) => {
     // await updateDoc(newDoc, { schedule: arrayUnion(insertData) })
     // await updateDoc(newDoc, { schedule: arrayRemove(insertData) })
     console.log("Document written with ID: ", docref.id);
-  } catch (e) {
+  } catch (e) { 
     const errorMessage = new Error(e).message
     const customError = new customApiErrorModule.CustomAPIError(422, errorMessage)
     next(customError)
@@ -46,7 +46,6 @@ const getAllSchedule = async (specialistId) => {
     const specialistSchedule = [];
     const scheduleDocs = collection(db, 'specialists', specialistId, 'schedules')
     const queryDocs = query(scheduleDocs, orderBy("dateBegin", "desc"))
-
     const schedules = await getDocs(queryDocs);
     schedules.forEach(data => {
       const validData = {

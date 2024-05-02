@@ -9,13 +9,13 @@ const scheduleEquipmentRouter = express.Router({ mergeParams: true });
 
 scheduleEquipmentRouter.route('/')
   .get(scheduleEquipmentController.getAllSchedule)
-  .post(schedulesEquipmentValidation.createNew, authMiddlewareLogin, authMiddlewareRole, scheduleEquipmentController.createNew)
+  .post(schedulesEquipmentValidation.createNew, scheduleEquipmentController.createNew)
 
 scheduleEquipmentRouter.route('/deleteMany')
-  .put(schedulesEquipmentValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, scheduleEquipmentController.deleteManyItems)
+  .put(schedulesEquipmentValidation.deleteManyItems, scheduleEquipmentController.deleteManyItems)
 
 scheduleEquipmentRouter.route('/:id')
-  .put(schedulesEquipmentValidation.update, authMiddlewareLogin, authMiddlewareRole, scheduleEquipmentController.update)
-  .delete(schedulesEquipmentValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, scheduleEquipmentController.deleteAnItem)
+  .put(schedulesEquipmentValidation.update, scheduleEquipmentController.update)
+  .delete(schedulesEquipmentValidation.deleteAnItem, scheduleEquipmentController.deleteAnItem)
 
 export default scheduleEquipmentRouter

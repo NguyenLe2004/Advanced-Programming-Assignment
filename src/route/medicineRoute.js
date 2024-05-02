@@ -9,12 +9,12 @@ const medicineRouter = express.Router();
 
 medicineRouter.route('/')
   .get(medicineController.getAllMedicines)
-  .post(medicineValidation.createNew, authMiddlewareLogin, authMiddlewareRole, medicineController.createNew)
+  .post(medicineValidation.createNew, medicineController.createNew)
 medicineRouter.route('/deleteMany')
-  .put(medicineValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, medicineController.deleteManyItems)
+  .put(medicineValidation.deleteManyItems, medicineController.deleteManyItems)
 medicineRouter.route('/:id')
-  .put(medicineValidation.update, authMiddlewareLogin, authMiddlewareRole, medicineController.update)
-  .delete(medicineValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, medicineController.deleteAnItem)
+  .put(medicineValidation.update, medicineController.update)
+  .delete(medicineValidation.deleteAnItem, medicineController.deleteAnItem)
 
 
 

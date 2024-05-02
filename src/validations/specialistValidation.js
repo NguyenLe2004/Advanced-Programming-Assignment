@@ -17,8 +17,7 @@ const createNew = async (req, res, next) => {
     // age: Joi.string().pattern(AGE_RULE).trim().strict().required(),
     position: Joi.string().required().min(3).max(256),
     cert: Joi.array().default([]),
-    education: Joi.array().default([]),
-    schedule: Joi.array().default([])
+    education: Joi.array().default([])
   })
   try {
     await dataCorrection.validateAsync(req.body, { abortEarly: false })
@@ -33,7 +32,7 @@ const createNew = async (req, res, next) => {
 
 const update = async (req, res, next) => {
   const dataCorrection = Joi.object({
-    lastMiddleName: Joi.string().min(3).max(256).trim().strict(),
+    lastMiddleName: Joi.string().min(2).max(256).trim().strict(),
     firstName: Joi.string().min(3).max(256).trim().strict(),
     email: Joi.string().email().min(3).max(2000),
     phoneNum: Joi.string().regex(PHONE_NUMBER_RULE),
@@ -43,11 +42,9 @@ const update = async (req, res, next) => {
     address: Joi.string().required().min(3).max(256).trim().strict(),
     hometown: Joi.string().required().min(3).max(256).trim().strict(),
     specialty: Joi.string().required().min(3).max(256).trim().strict(),
-    // age: Joi.string().pattern(AGE_RULE).trim().strict(),
     position: Joi.string().min(3).max(256),
     cert: Joi.array().default([]),
-    education: Joi.array().default([]),
-    schedule: Joi.array().default([])
+    education: Joi.array().default([])
   })
   try {
     await dataCorrection.validateAsync(req.body,
