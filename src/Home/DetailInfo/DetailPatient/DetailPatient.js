@@ -40,6 +40,7 @@ const DetailPatient = () => {
         const response = await axios.get("http://localhost:8080/v1/patients/" + id);
         const treatProcessPromise = await axios.get(`http://localhost:8080/v1/patients/${id}/treatProcess`);
         const treatProcess = treatProcessPromise.data;
+        console.log(treatProcessPromise.data)
         const patientDataWithStatus = {
           ...response.data,
           treatProcess,
@@ -54,7 +55,6 @@ const DetailPatient = () => {
           return dateB - dateA;
         });
         setPatient(patientDataWithStatus);
-        console.log(patient);
       } catch (error) {
         console.log(error); 
       }

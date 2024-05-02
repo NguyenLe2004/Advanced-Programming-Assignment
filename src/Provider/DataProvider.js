@@ -8,26 +8,24 @@ const DataProvider = ({children}) => {
     const [allSpecialty, setAllSpecialty] = useState({
       "Bác sĩ": [
         "Tim mạch",
-        "khoa nội",
-        "khoa tai mũi họng",
-        "khoa Da liễu",
-        "khoa ngoại",
-        "khoa răng hàm mặt",
-        "khoa Xét nghiệm",
-        "khoa sản",
-        "khoa Y học cổ truyền"
+        "Nội",
+        "Tai mũi họng",
+        "Da liễu",
+        "Ngoại",
+        "Răng hàm mặt",
+        "Xét nghiệm",
+        "Sản",
+        "Y học cổ truyền"
       ],
       "Y tá": [
-        "Hộ Sinh",
+        "Hộ sinh",
         "Điều dưỡng",
-        "Gây mê hồi sức",
-        "Hộ sinh"
+        "Gây mê hồi sức"
       ],
       "Nhân viên hỗ trợ": [
-        "Hộ Sinh",
+        "Hộ sinh",
         "Điều dưỡng",
-        "Gây mê hồi sức",
-        "Hộ sinh"
+        "Gây mê hồi sức"
       ]
     })
   return (

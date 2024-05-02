@@ -108,7 +108,7 @@ const TreatProcess = ({ patient }) => {
         data = data.filter((obj) => {
           return isMedicalStaffAvailable(obj.schedule);
         });
-        console.log("data,here", data);
+        console.log("data here", data);
         setMedStaffData(data);
       } catch (error) {
         console.log(error);
@@ -116,24 +116,6 @@ const TreatProcess = ({ patient }) => {
     };
     getMedStaff();
   };
-  useEffect(() => {
-    if (!patient) return;
-    if (!patient.treatProcess) return;
-    const uniqueMedicalStaffIds = new Set();
-    patient.treatProcess.forEach((obj) => {
-      uniqueMedicalStaffIds.add(obj.medicalStaffID);
-    });
-    const queryString = Array.from(uniqueMedicalStaffIds)
-      .map((id) => `id=${id}`)
-      .join("&");
-    const getMedStaff = async () => {
-      axios
-        .get("http://localhost:8080/v1/specialists?" + queryString)
-        .then((res) => setMedStaff(res.data))
-        .catch((error) => console.error(error));
-    };
-    getMedStaff();
-  }, [patient.treatProcess]);
   if (!patient.treatProcess) return;
 
   const getMedStaffByID = (id) => {
@@ -219,19 +201,17 @@ const TreatProcess = ({ patient }) => {
                 <div className="title">{treatment.title}</div>
                 <div className="specialist">
                   <span>
-                    {/* {getMedStaffByID(treatment.medicalStaffID)
-                      .medStaffPosition + ": "} */}
+                    {treatment.specialistPosition + " "} 
                   </span>
-                  {/* <span>
+                  <span>
                     <a
                       href={`/MedicalStaff/${
-                        getMedStaffByID(treatment.medicalStaffID)
-                          .medStaffPosition
+                          treatment.position ==="Bác sĩ" ? "specialist" : treatment.position ==="Y tá" ? "nurse" : "supportStaff"
                       }/${treatment.medicalStaffID}`}
                     >
-                      {getMedStaffByID(treatment.medicalStaffID).medStaffName}
+                      {treatment.specialistName}
                     </a>
-                  </span> */}
+                  </span>
                 </div>
                 <div>
                   <div className="description"> {treatment.description} </div>
@@ -329,16 +309,15 @@ const TreatProcess = ({ patient }) => {
                     </Form.Group>
                     <Form.Group as={Col} md="3">
                       <Form.Label>
-                        {
-                          getMedStaffByID(treatment.medicalStaffID)
-                            .medStaffPosition
+                        { 
+                          treatment.specialistPosition
                         }
                       </Form.Label>
                       <Form.Control
                         type="text"
                         aria-describedby="inputGroupPrepend"
                         defaultValue={
-                          getMedStaffByID(treatment.medicalStaffID).medStaffName
+                          treatment.specialistName
                         }
                         disabled
                       />
@@ -362,27 +341,39 @@ const TreatProcess = ({ patient }) => {
                     <h5>Thay đổi nhân viên y tế</h5>
                   </Row>
                   <Row className="mb-3">
-                    <Form.Group as={Col} md={4} controlId="specialty">
-                      <Form.Label>Chuyên khoa</Form.Label>
-                      <Form.Select
-                        onChange={(event) => setSpecialty(event.target.value)}
-                        defaultValue={treatment.specialty}
-                      >
-                        <option>{""}</option>
-                        {position
-                          ? allSpecialty[position].map((specialty, index) => {
-                              return <option key={index}>{specialty}</option>;
-                            })
-                          : Object.values(allSpecialty).flatMap(
+                  <Form.Group as={Col} md={4} controlId="specialty">
+                    <Form.Label>Chuyên khoa</Form.Label>
+                    <Form.Select
+                      onChange={(event) => setSpecialty(event.target.value)}
+                      defaultValue={treatment.specialty}
+                    >
+                      <option>{""}</option>
+                      {position
+                        ? allSpecialty[position].map((specialty, index) => {
+                            return <option key={index}>{specialty}</option>;
+                          })
+                        : (() => {
+                            // Tạo một mảng tạm để lưu trữ các specialty đã được render
+                            let renderedSpecialties = [];
+
+                            return Object.values(allSpecialty).flatMap(
                               (specialties, index) =>
-                                specialties.map((specialty, subIndex) => (
-                                  <option key={`${index}-${subIndex}`}>
-                                    {specialty}
-                                  </option>
-                                ))
-                            )}
-                      </Form.Select>
-                    </Form.Group>
+                                specialties.map((specialty, subIndex) => {
+                                  // Kiểm tra xem specialty đã được render trước đó chưa
+                                  if (renderedSpecialties.includes(specialty)) {
+                                    return null; // Nếu specialty đã tồn tại, không render option mới
+                                  } else {
+                                    // Nếu specialty chưa tồn tại, thêm nó vào mảng renderedSpecialties và render option mới
+                                    renderedSpecialties.push(specialty);
+                                    return (
+                                      <option key={`${index}-${subIndex}`}>{specialty}</option>
+                                    );
+                                  }
+                                })
+                            );
+                          })()}
+                    </Form.Select>
+                  </Form.Group>
                     <Form.Group as={Col} md={4} controlId="position">
                       <Form.Label>Vị trí</Form.Label>
                       <Form.Select
