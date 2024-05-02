@@ -45,7 +45,7 @@ const getAllSchedule = async (specialistId) => {
   try {
     const specialistSchedule = [];
     const scheduleDocs = collection(db, 'specialists', specialistId, 'schedules')
-    const queryDocs = query(scheduleDocs, orderBy("dateBegin", "asc"))
+    const queryDocs = query(scheduleDocs, orderBy("dateBegin", "desc"))
 
     const schedules = await getDocs(queryDocs);
     schedules.forEach(data => {

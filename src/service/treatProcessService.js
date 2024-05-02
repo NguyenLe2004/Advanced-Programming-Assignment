@@ -19,6 +19,7 @@ const getAllTreatProcess = async (patientId) => {
       const specialistName = specialist.lastMiddleName + " " + specialist.firstName;
       const validData = {
         ...data,
+        speicalistPosition: specialist.position,
         specialistName: specialistName
       };
       return validData;

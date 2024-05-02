@@ -76,6 +76,10 @@ const getAllSpecialists = async (position, specialty) => {
       const specialistPositionCollection = query(collection(db, 'specialists'), where("position", "==", position))
       specialistsDocs = await getDocs(specialistPositionCollection)
     }
+    else if (specialty) {
+      const specialistPositionCollection = query(collection(db, 'specialists'), where("specialty", "==", specialty))
+      specialistsDocs = await getDocs(specialistPositionCollection)
+    }
     else {
       specialistsDocs = await getDocs(collection(db, 'specialists'))
     }
