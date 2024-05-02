@@ -58,25 +58,6 @@ const TreatForm = ({patient}) => {
           });
       }
 
-      // const addSchedule = async ( ) => {
-      //   const response = await axios.get("http://localhost:3000/MedicalStaff/"+medStaffID);
-      //   const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
-      //   const [dateEnd, timeEnd] = form.elements.datetimeBegin.value.split("T")
-      //   const newSchedule = [
-      //     ...response.data.schedule,
-      //     {
-      //       dateBegin: dateBegin,
-      //       dateEnd:dateEnd,
-      //       timeBegin:timeBegin,
-      //       timeEnd:timeEnd,
-      //       room:form.elements.room.value,
-      //       title : form.elements.medstaffTitle.value,
-      //       description : form.elements.medstaffDescription.value
-      //     }
-      //   ]
-      //   axios.patch("http://localhost:3000/medicalStaff/"+medStaffID, {schedule : newSchedule});
-      // }
-      // addSchedule();
       addTreatProcess();
     }
     setValidated(true);
@@ -96,25 +77,41 @@ const TreatForm = ({patient}) => {
     return true;
   }
 
-  const handleDisplayMedStaff = () =>{
-    let queryStr="";
-    if (specialty!=="") queryStr ="specialty="+specialty;
-    if (position!=="") queryStr += queryStr? "&position="+position :"position="+position;
+  const handleDisplayMedStaff = () => {
+    let queryStr = "";
+    if (specialty !== "") queryStr = "specialty=" + (specialty);
+    if (position !== "")
+      queryStr += queryStr ? "&position=" + (position) : "position=" + (position);
     const getMedStaff = async () => {
-        try {
-          const response = await axios.get("http://localhost:8080/v1/specialists?" + queryStr ) ;
-          let data = response.data;
-          data = data.filter(obj => {
-            return isMedicalStaffAvailable(obj.schedule);
-          });
-          setMedStaffData(data);
-          console.log(medStaffData)
-        } catch (error) {
-          console.log(error); 
-        }
-      };
+      try {
+        const response = await axios.get(
+          "http://localhost:8080/v1/specialists?" + queryStr
+        )
+        console.log("http://localhost:8080/v1/specialists?" + queryStr)
+            let dataWithSchedule = await Promise.all(  await response.data.map(async item => {
+              const response_schedule = await axios.get(`http://localhost:8080/v1/specialists/${item.id}/schedules`);
+              const schedule = response_schedule.data;
+              schedule.sort((a, b) => {
+                const dateA = moment(a.date, "DD-MM-YYYY");
+                const dateB = moment(b.date, "DD-MM-YYYY");
+                if (dateA.isSame(dateB)) {
+                  return moment(a.timeBegin, "HH-mm") - moment(b.timeBegin, "HH-mm");
+                }
+                return dateA - dateB;
+              });
+              return {...item,schedule};
+            }));
+        dataWithSchedule = dataWithSchedule.filter((obj) => {
+          return isMedicalStaffAvailable(obj.schedule);
+        });
+        console.log("data here", dataWithSchedule);
+        setMedStaffData(dataWithSchedule); 
+      } catch (error) {
+        console.log(error);
+      }
+    };
     getMedStaff();
-  }
+  };
   return (
     <div className='form-block'>
 <Form noValidate validated={validated} onSubmit={handleSubmit}>

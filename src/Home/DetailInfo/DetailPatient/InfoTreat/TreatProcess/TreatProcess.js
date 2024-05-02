@@ -96,20 +96,32 @@ const TreatProcess = ({ patient }) => {
   };
   const handleDisplayMedStaff = () => {
     let queryStr = "";
-    if (specialty !== "") queryStr = "specialty=" + specialty;
+    if (specialty !== "") queryStr = "specialty=" + encodeURI(specialty);
     if (position !== "")
-      queryStr += queryStr ? "&position=" + position : "position=" + position;
+      queryStr += queryStr ? "&position=" + encodeURI(position) : "position=" + encodeURI(position);
     const getMedStaff = async () => {
       try {
         const response = await axios.get(
           "http://localhost:8080/v1/specialists?" + queryStr
-        );
-        let data = response.data;
-        data = data.filter((obj) => {
+        )
+            let dataWithSchedule = await Promise.all(  await response.data.map(async item => {
+              const response_schedule = await axios.get(`http://localhost:8080/v1/specialists/${item.id}/schedules`);
+              const schedule = response_schedule.data;
+              schedule.sort((a, b) => {
+                const dateA = moment(a.date, "DD-MM-YYYY");
+                const dateB = moment(b.date, "DD-MM-YYYY");
+                if (dateA.isSame(dateB)) {
+                  return moment(a.timeBegin, "HH-mm") - moment(b.timeBegin, "HH-mm");
+                }
+                return dateA - dateB;
+              });
+              return {...item,schedule};
+            }));
+        dataWithSchedule = dataWithSchedule.filter((obj) => {
           return isMedicalStaffAvailable(obj.schedule);
         });
-        console.log("data here", data);
-        setMedStaffData(data);
+        console.log("data here", dataWithSchedule);
+        setMedStaffData(dataWithSchedule); 
       } catch (error) {
         console.log(error);
       }

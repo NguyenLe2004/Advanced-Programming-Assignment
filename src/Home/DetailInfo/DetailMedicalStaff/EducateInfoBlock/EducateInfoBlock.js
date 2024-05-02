@@ -11,6 +11,8 @@ import axios from "axios";
 import moment from "moment";
 import "./EducateInfoBlock.css";
 import { Row, Col, Button, Form } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import { update } from "firebase/database";
 const EducateInfoBlock = ({ medicalStaff }) => {
   const [isUpdate, setIsUpdate] = useState(false);
   const [isAdd, setIsAdd] = useState(false);
@@ -18,18 +20,21 @@ const EducateInfoBlock = ({ medicalStaff }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [error, setError] = useState("");
   const educations = medicalStaff.education;
+  const {id} = useParams();
   if (!educations) return;
   const totalPage = educations.length;
 
   const handleDelete = () => {
     let newEducates = [...educations];
     newEducates.splice(currentPage - 1, 1);
-    const updateData = {
+    let updateData = {
+      ...medicalStaff,
       education: newEducates,
     };
+    delete updateData.schedule;
     axios
-      .patch(
-        "http://localhost:3000/MedicalStaff/" + medicalStaff.id,
+      .put(
+        "http://localhost:8080/v1/specialists/" + id,
         updateData
       )
       .then(() => window.location.reload())
@@ -70,9 +75,9 @@ const EducateInfoBlock = ({ medicalStaff }) => {
           university: form.elements.university.value,
         });
       }
-      if (isUpdate) {
         axios
-          .patch("http://localhost:3000/medicalStaff/" + medicalStaff.id, {
+          .put("http://localhost:8080/v1/specialists/" + id, {
+            ...medicalStaff,
             education: updateData,
           })
           .then((response) => {
@@ -81,19 +86,7 @@ const EducateInfoBlock = ({ medicalStaff }) => {
           .catch((error) => {
             console.error(error);
           });
-      } else {
-        axios
-          .patch("http://localhost:3000/medicalStaff/" + medicalStaff.id, {
-            education: updateData,
-          })
-          .then((response) => {
-            window.location.reload();
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      }
-    }
+    } 
 
     setValidated(true);
   };

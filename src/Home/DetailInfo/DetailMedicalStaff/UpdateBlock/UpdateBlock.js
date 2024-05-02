@@ -10,7 +10,7 @@ import { specialtyContext } from '../../../../Provider/DataProvider';
 import { useParams } from 'react-router-dom';
 import "./UpdateBlock.css"
 const UpdateBlock = ({medicalStaff}) => {
-    const {position} = useParams()
+    const {position,id} = useParams()
     const [validated, setValidated] = useState(false);
     const {allSpecialty} = useContext(specialtyContext)
     const[error,setError] = useState("")
@@ -37,10 +37,12 @@ const UpdateBlock = ({medicalStaff}) => {
           citizenID: form.elements.citizenID.value,
           dateOfBirth: formatDate(form.elements.dateOfBirth.value),
           address: form.elements.address.value,
-          hometown: form.elements.hometown.value
-
+          hometown: form.elements.hometown.value,
+          education : medicalStaff.education,
+          cert : medicalStaff.cert
         };
-        axios.patch(`http://localhost:3000/medicalStaff/${medicalStaff.id}`, updatedData)
+        console.log(updatedData)
+        axios.put(`http://localhost:8080/v1/specialists/` + id, updatedData)
         .then(response => {
           console.log('Cập nhật thông tin thành công', response.data);
           window.location.reload();
@@ -147,9 +149,8 @@ const UpdateBlock = ({medicalStaff}) => {
         <Form.Group as={Col} md='5' controlId = "specialty" >
           <Form.Label>Chuyên môn</Form.Label>
           <Form.Select 
-          defaultValue={medicalStaff.specialty}
            required >
-            <option>{""}</option>
+            <option>{medicalStaff.specialty}</option>
             {allSpecialty[position === "specialist" ? "Bác sĩ"  : position === "nurse" ? "Y tá" : "Nhân viên hỗ trợ"].map((element,index) => {
               return (
                 <option key={index} > {element}</option>

@@ -42,6 +42,7 @@ const ScheduleForm = ({ medicalStaff }) => {
           title: form.elements.title.value,
           description: form.elements.description.value,
         }
+        console.log(newSchedule)
       axios
         .post(`http://localhost:8080/v1/specialists/${id}/schedules/`,newSchedule)
         .then(() => {

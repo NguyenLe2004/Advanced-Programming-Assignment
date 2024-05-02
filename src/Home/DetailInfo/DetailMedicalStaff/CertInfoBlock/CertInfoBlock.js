@@ -5,12 +5,14 @@ import axios from 'axios'
 import moment from 'moment'
 import "./CertInfoBlock.css"
 import { Row, Col, Button,Form } from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
 const CertInfoBlock = ({medicalStaff}) => {
     const [isUpdate, setIsUpdate] = useState(false)
     const [isAdd, setIsAdd] = useState(false);
     const [validated, setValidated] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [error,setError] = useState("")
+    const {id} = useParams();
     const cert = medicalStaff.cert;
     if (!cert) return;
     const totalPage = cert.length;
@@ -18,9 +20,10 @@ const CertInfoBlock = ({medicalStaff}) => {
         let newCerts = [...cert];
         newCerts.splice(currentPage-1,1);
         const updateData = {
+            ...medicalStaff,
             cert : newCerts 
         }
-        axios.patch("http://localhost:3000/MedicalStaff/"+ medicalStaff.id,updateData)
+        axios.put("http://localhost:8080/v1/specialists/"+ id,updateData)
         .then(() => window.location.reload()) 
         .catch((error) => console.error(error))
     }
@@ -48,12 +51,12 @@ const CertInfoBlock = ({medicalStaff}) => {
         } else {
             updateData.push({
                 date: form.elements.date.value,
-            organization : form.elements.organization.value,
-            title : form.elements.title.value
+                organization : form.elements.organization.value,
+                title : form.elements.title.value
             })
         }
-        if(isUpdate) {
-            axios.patch("http://localhost:3000/medicalStaff/" + medicalStaff.id,{
+            axios.put("http://localhost:8080/v1/specialists/" + id,{
+                ...medicalStaff,
                 cert : updateData
             })
             .then((response) => {
@@ -62,17 +65,6 @@ const CertInfoBlock = ({medicalStaff}) => {
             .catch((error) => {
                 console.error(error);
             })
-        } else{
-            axios.patch("http://localhost:3000/medicalStaff/" + medicalStaff.id,{
-                cert:updateData
-            })
-            .then((response) => {
-                window.location.reload();
-            })
-            .catch((error) => {
-                console.error(error);
-            })
-        }
 
       } 
       setValidated(true);

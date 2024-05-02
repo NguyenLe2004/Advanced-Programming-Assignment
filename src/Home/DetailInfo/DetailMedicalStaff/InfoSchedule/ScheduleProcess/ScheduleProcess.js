@@ -18,7 +18,7 @@ import "./ScheduleProcess.css";
 const ScheduleProcess = ({ medicalStaff }) => {
   const [isUpdate, setIsUpdate] = useState(null);
   const [validated, setValidated] = useState(false);
-  const [scheduleID, setScheduleID] = useState(1);
+  const [scheduleID, setScheduleID] = useState(null);
   const [error, setError] = useState("");
   const handleDeleteSchedule = (id) => {
     let newSchedule = [...medicalStaff.schedule];
@@ -45,11 +45,9 @@ const ScheduleProcess = ({ medicalStaff }) => {
     setError("thời điểm bắt đầu và kết thúc không hợp lệ");
     return;
   }
-      let schedule = [...medicalStaff.schedule];
-      const [dateBegin, timeBegin] =
-        form.elements.datetimeBegin.value.split("T");
+      const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
       const [dateEnd, timeEnd] = form.elements.datetimeEnd.value.split("T");
-      schedule[scheduleID] = {
+      const newSchedule = { 
         dateBegin: dateBegin,
         timeBegin: timeBegin,
         dateEnd: dateEnd,
@@ -58,10 +56,9 @@ const ScheduleProcess = ({ medicalStaff }) => {
         title: form.elements.title.value,
         description: form.elements.description.value,
       };
+      console.log(newSchedule)
       axios
-        .patch("http://localhost:3000/medicalStaff/" + medicalStaff.id, {
-          schedule: schedule,
-        })
+        .put(`http://localhost:8080/v1/specialists/${medicalStaff.id}/schedules/${scheduleID}` ,newSchedule)
         .then(() => {
           window.location.reload();
         })
@@ -222,7 +219,7 @@ const ScheduleProcess = ({ medicalStaff }) => {
                       </Form.Control.Feedback>
                     </Form.Group>
                   </Row>
-                  <Button type="submit" onClick={() => setScheduleID(index)}>
+                  <Button type="submit" onClick={() => setScheduleID(schedule.id)}>
                     Đổi thông tin lịch
                   </Button>
                   <Button
