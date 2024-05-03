@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import moment from "moment";
 import DisplayDataEquipment from "./DisplayDataEquipment/DisplayDataEquipment";
+
+
 const Equipment = () => {
   const [dataEquipment, setDataEquipment] = useState([]);
   const getLastUsageDatetime = (usageHistory) => {

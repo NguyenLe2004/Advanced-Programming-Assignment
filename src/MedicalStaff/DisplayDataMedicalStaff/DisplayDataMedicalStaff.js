@@ -5,6 +5,7 @@ import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import "./DisplayDataMedicalStaff.css"
 import TableComponent from './TableComponent/TableComponent';
 import StatusStat from './StatusStat/StatusStat';
+import FilterAndSearch from './FilterAndSearch/FilterAndSearch'
 
 const DisplayDataMedicalStaff = ({dataMedicalStaff,position}) => {
   const [dataMedicalStaffDisplay, setDataMedicalStaffDisplay] = useState([]);
@@ -67,6 +68,9 @@ const DisplayDataMedicalStaff = ({dataMedicalStaff,position}) => {
   return (
         <div className='main-page'>
           <StatusStat schedule = {Object.values(dataMedicalStaff).map(MedicalStaff =>  MedicalStaff.schedule)} position={position}/>
+            
+          <FilterAndSearch setDataMedicalStaffDisplay = {setDataMedicalStaffDisplay} dataMedicalStaff = {dataMedicalStaff} />
+           {/* 
             <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
               <input 
                 placeholder='Nhập số căn cước công dân' 
@@ -87,6 +91,8 @@ const DisplayDataMedicalStaff = ({dataMedicalStaff,position}) => {
           {searchError}
         </Alert>
         )}
+
+      */}
         {Object.keys(dataMedicalStaffDisplay).length !== 0 ? (
             <TableComponent dataMedicalStaffDisplay = {dataMedicalStaffDisplay} setDataMedicalStaffDisplay={setDataMedicalStaffDisplay}  />
           ):(
