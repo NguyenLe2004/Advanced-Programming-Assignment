@@ -23,7 +23,10 @@ const FilterAndSearch = ({setDataMedicineDisplay, dataMedicineDisplay}) => {
         <span className='search-block' ref={searchBlockRef}>
             <Form className={`search-form ${isClickSearchIcon ? 'active' : ""}`}>
                 <Form.Group >
-                    <Form.Control type='search' placeholder='Nhập tên thuốc' />
+                    <Form.Control type='search' placeholder='Nhập tên thuốc' pattern="^[a-zA-Z0-9]+$" />
+            <Form.Control.Feedback type="invalid">
+             Tên không hợp lệ
+            </Form.Control.Feedback>
                 </Form.Group>
             </Form>
             <span className={`search-icon ${isClickSearchIcon ? 'active' : ""}`} onClick={() => setIsClickSearchIcon(true)} >

@@ -45,7 +45,11 @@ const UpdateMedicineForm = ({medicineData,setIsUpdate}) => {
               type="text"
               placeholder="Tên thuốc"
               defaultValue={medicineData.name}
+              pattern="^[a-zA-Z0-9]+$"
             />
+              <Form.Control.Feedback type="invalid">
+             Tên không hợp lệ
+            </Form.Control.Feedback>
           </Form.Group>
         </Row>
         <Row className="mb-4">
@@ -55,14 +59,14 @@ const UpdateMedicineForm = ({medicineData,setIsUpdate}) => {
               moment(medicineData.arrivalDate,"DD-MM-YYYY").format("YYYY-MM-DD")+ "T" + medicineData.arrivalTime
             } />
             <Form.Control.Feedback type="invalid">
-              Please provide a .
+              Thời điểm không hợp lệ
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="5" controlId="expireDate" >
             <Form.Label>Ngày hết hạn</Form.Label>
             <Form.Control type="date"  required defaultValue={moment(medicineData.arrivalDate,"DD-MM-YYYY").format("YYYY-MM-DD")} />
             <Form.Control.Feedback type="invalid">
-              Please provide a 
+              Thời điểm không hợp lệ
             </Form.Control.Feedback>
           </Form.Group>
         </Row>
@@ -71,14 +75,14 @@ const UpdateMedicineForm = ({medicineData,setIsUpdate}) => {
             <Form.Label>Thời điểm xuất kho</Form.Label>
             <Form.Control type="datetime-local"  required defaultValue={moment(medicineData.departureDate,"DD-MM-YYYY").format("YYYY-MM-DD")+ "T" + medicineData.departureTime} />
             <Form.Control.Feedback type="invalid">
-              Please provide a .
+              Thời điểm không hợp lệ
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="5" controlId="amount">
             <Form.Label>Số lượng</Form.Label>
-            <Form.Control type="number" placeholder="Số lượng" required defaultValue={medicineData.amount} />
+            <Form.Control type="number" placeholder="Số lượng" min ='0' required defaultValue={medicineData.amount} />
             <Form.Control.Feedback type="invalid">
-              Please provide a 
+              Số lượng không hợp lệ
             </Form.Control.Feedback>
           </Form.Group>
         </Row>

@@ -12,7 +12,6 @@ import moment from "moment";
 import "./EducateInfoBlock.css";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import { update } from "firebase/database";
 const EducateInfoBlock = ({ medicalStaff }) => {
   const [isUpdate, setIsUpdate] = useState(false);
   const [isAdd, setIsAdd] = useState(false);

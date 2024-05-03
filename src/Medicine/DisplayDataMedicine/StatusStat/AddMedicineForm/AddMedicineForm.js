@@ -9,13 +9,19 @@ import "./AddMedicineForm.css"
 import moment from 'moment';
 const AddMedicineForm = ({setShowAddMedicineForm}) => {
     const [validated, setValidated] = useState(false);
-
+    const [error,setError] = useState("");
     const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
+                const expire = moment(form.elements.expireDate.value);
+                const curDate = moment();
+                if (expire.isBefore(curDate)) {
+                  setError("Hạn sử dụng không hợp lệ");
+                  return;
+            }
             const [arrivalDate , arrivalTime] = form.elements.arrivalDatetime.value.split("T");
             const [departureDate , departureTime] = form.elements.departureDatetime.value.split("T");
             const data = {
@@ -49,6 +55,21 @@ return (
                     <Form style={{padding:"2vh 1vw"}} noValidate validated={validated} onSubmit={handleSubmit}>
                         <Row className="mb-3" ><h3>Thông tin thuốc</h3></Row>
                         <Row className="mb-3">
+                        {error && (
+                      <div>
+                        <style>
+                          {`
+                          .alert-danger {
+                          font-size: 15px; /* Điều chỉnh kích thước phù hợp */
+                          padding: 5px 10px;
+                            }
+                          `}
+                        </style>
+                        <div class="alert alert-danger" role="alert">
+                          {error}
+                        </div>
+                      </div>
+                    )}
                         <Form.Group controlId="name">
                         <Form.Label>Tên thuốc</Form.Label>
                             <Form.Control
@@ -56,9 +77,10 @@ return (
                             placeholder="Tên thuốc"
                             aria-describedby="inputGroupPrepend"
                             required
+                            pattern="^[a-zA-Z0-9]+$"
                             />
                             <Form.Control.Feedback type="invalid">
-                            Please choose a username.
+                            Tên thuốc không hợp lệ
                             </Form.Control.Feedback>
                         </Form.Group>
                         </Row>
@@ -70,7 +92,9 @@ return (
                                 type="datetime-local"
                                 placeholder="Lịch sử bệnh án"
                                 />
-
+                                <Form.Control.Feedback type="invalid">
+                                Thời điểm không hợp lệ
+                                </Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group as={Col} controlId="departureDatetime">
                                 <Form.Label>Thời điểm xuất kho</Form.Label>
@@ -79,9 +103,10 @@ return (
                                 type="datetime-local"
                                 placeholder="Lịch sử bệnh án"
                                 />
-
+                                <Form.Control.Feedback type="invalid">
+                                Thời điểm không hợp lệ
+                                </Form.Control.Feedback>
                             </Form.Group>
-
                         </Row>
                         <Row className="mb-3" >
                             <Form.Group as={Col}  controlId="expireDate">
@@ -91,16 +116,21 @@ return (
                                 type="date"
                                 placeholder="Lịch sử bệnh án"
                                 />
-
+                                <Form.Control.Feedback type="invalid">
+                                Thời điểm không hợp lệ
+                                </Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group as={Col} controlId="amount">
                                 <Form.Label> Số lượng</Form.Label>
                                 <Form.Control 
                                 type='number'
                                 placeholder="Nhập số lượng"
-                                required />
+                                required
+                                min = "0"
+                                pattern='^\d+$' 
+                                />
                                 <Form.Control.Feedback type="invalid">
-                                Please provide a valid city.
+                                Số lượng không hợp lệ
                                 </Form.Control.Feedback>
                             </Form.Group>
                         </Row>

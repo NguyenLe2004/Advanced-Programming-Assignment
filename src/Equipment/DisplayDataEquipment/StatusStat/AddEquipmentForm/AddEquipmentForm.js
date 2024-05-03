@@ -60,6 +60,9 @@ return (
                                 type="text"
                                 placeholder="Tên thiết bị"
                                 />
+                            <Form.Control.Feedback type="invalid">
+                            Tên thiết bị không hợp lệ
+                            </Form.Control.Feedback>
                             </Form.Group>
                         </Row>
                         <Row>

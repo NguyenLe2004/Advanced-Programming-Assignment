@@ -45,7 +45,7 @@ const AddEquipmentMaintainForm = ({maintain,setMaintain}) => {
       <Row className="mb-3">
         <Form.Group controlId="description">
           <Form.Label>Mô tả</Form.Label>
-          <Form.Control type="text" placeholder="Mô tả" required />
+          <Form.Control type="text" placeholder="Mô tả" required/>
           <Form.Control.Feedback type="invalid">
             Thông tin không hợp lệ
           </Form.Control.Feedback>
@@ -56,14 +56,14 @@ const AddEquipmentMaintainForm = ({maintain,setMaintain}) => {
           <Form.Label>Ngày bắt đầu</Form.Label>
           <Form.Control type="date" required />
           <Form.Control.Feedback type="invalid">
-            Thông tin không hợp lệ
+            Thời điểm không hợp lệ
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="dateEnd">
           <Form.Label>Ngày kết thúc</Form.Label>
           <Form.Control type="date" required />
           <Form.Control.Feedback type="invalid" required>
-            Thông tin không hợp lệ
+            Thời điểm không hợp lệ
           </Form.Control.Feedback>
         </Form.Group>
         <Col style={{border:"1px red solid",position:"relative"}}>
