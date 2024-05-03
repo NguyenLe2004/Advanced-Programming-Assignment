@@ -5,6 +5,7 @@ import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import "./DisplayDataPatient.css"
 import TableComponent from './TableComponent/TableComponent';
 import StatusStat from './StatusStat/StatusStat';
+import FilterAndSearch from './FilterAndSearch/FilterAndSearch';
 
 const DisplayDataPatient = ({dataPatient}) => {
   const [dataPatientDisplay, setDataPatientDisplay] = useState([]);
@@ -69,6 +70,8 @@ const DisplayDataPatient = ({dataPatient}) => {
   return (
         <div className='main-page'>
           <StatusStat treatProcess = {Object.values(dataPatient).map(patient =>  patient.treatProcess)}/>
+
+          {/*
             <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
               <input 
                 placeholder='Nhập số căn cước công dân' 
@@ -84,11 +87,14 @@ const DisplayDataPatient = ({dataPatient}) => {
               />
             </span>
 
-        {searchError && (
-        <Alert variant={'danger'} className='search-error' onClose={() => setSearchError("")} dismissible>
-          {searchError}
-        </Alert>
-        )}
+            {searchError && (
+            <Alert variant={'danger'} className='search-error' onClose={() => setSearchError("")} dismissible>
+              {searchError}
+            </Alert>
+            )}
+          */}
+          
+        <FilterAndSearch setDataPatientDisplay = {setDataPatientDisplay} dataPatient = {dataPatient} />
         {Object.keys(dataPatientDisplay).length !== 0 ? (
             <TableComponent dataPatientDisplay = {dataPatientDisplay} setDataPatientDisplay={setDataPatientDisplay}  />
           ):(

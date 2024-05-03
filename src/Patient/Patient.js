@@ -29,6 +29,7 @@ const Patient = () => {
     const getAllPatient = async () => {
       try {
         const response = await axios.get('http://localhost:8080/v1/patients');
+        console.log(response.data);
         const dataWithStatusAndAge = await Promise.all(response.data.map(async item => {
           const age = getPatientAge(item.dateOfBirth);
           const treatProcessPromise = await axios.get(`http://localhost:8080/v1/patients/${item.id}/treatProcess`);

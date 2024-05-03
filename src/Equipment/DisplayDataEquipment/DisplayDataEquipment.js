@@ -5,6 +5,7 @@ import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import "./DisplayDataEquipment.css"
 import TableComponent from './TableComponent/TableComponent';
 import StatusStat from './StatusStat/StatusStat';
+import FilterAndSearch from './FilterAndSearch/FilterAndSearch';
 
 const DisplayDataEquipment = ({dataEquipment}) => {
   const [dataEquipmentDisplay, setDataEquipmentDisplay] = useState([]);
@@ -65,7 +66,7 @@ const DisplayDataEquipment = ({dataEquipment}) => {
   return (
         <div className='main-page'>
           <StatusStat dataEquipment ={dataEquipment}/>
-            <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
+            {/* <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
               <input 
                 placeholder='Nhập tên thiết bị' 
                 className={`searchInput ${isClicked ? 'active' : ''}`} 
@@ -78,13 +79,14 @@ const DisplayDataEquipment = ({dataEquipment}) => {
                 className={`searchIcon ${isClicked ? 'active' : ''}`}
                 onClick={handleIconClick}
               />
-            </span>
+            </span> */}
 
         {/* {searchError && (
         <Alert variant={'danger'} className='search-error' onClose={() => setSearchError("")} dismissible>
           {searchError}
         </Alert>
         )} */}
+        <FilterAndSearch setDataEquipmentDisplay = {setDataEquipmentDisplay} dataEquipment = {dataEquipment} />
         {Object.keys(dataEquipmentDisplay).length !== 0 ? (
             <TableComponent dataEquipmentDisplay = {dataEquipmentDisplay} setDataEquipmentDisplay={setDataEquipmentDisplay}  />
           ):(

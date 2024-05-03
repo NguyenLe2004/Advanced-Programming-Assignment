@@ -31,7 +31,7 @@ const DisplayMoreInfo = (props) => {
           <Row className='detail-info-row'>
             <Col>
               <div className='detail-label'> Họ và Tên đệm</div>
-              <div>{data.lastMidleName} </div>
+              <div>{data.lastMiddleName} </div>
             </Col>
             <Col>
               <div className='detail-label'>Tên</div>

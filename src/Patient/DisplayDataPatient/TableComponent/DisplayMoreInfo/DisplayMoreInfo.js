@@ -7,17 +7,7 @@ import axios from 'axios';
 const DisplayMoreInfo = (props) => {
   const data = props.dataMoreInfo;
   if (!data ||data.citizenID ==='' || data.citizenID==null) return;
-
-  const deletePatient = () =>{
-    axios.delete("http://localhost:8080/v1/patients/" + data.id)
-      .then(response => {
-        console.log("success")
-        window.location.reload();
-      })
-      .catch(error => {
-        console.error(error);
-      }) 
-  }
+ 
   return (
     <div> 
       <Offcanvas show={props.show} onHide={props.handleClose} placement='end' >
@@ -25,12 +15,13 @@ const DisplayMoreInfo = (props) => {
           <Offcanvas.Title>Thông tin bệnh nhân</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        <div><Button href={`Patient/${data.id}`}> Thông tin chi tiết </Button></div>
+        
         <Container>
-          <Row className='detail-info-row'>
+
+        <Row className='detail-info-row'>
             <Col>
               <div className='detail-label'> Họ và Tên đệm</div>
-              <div>{data.lastMidleName} </div>
+              <div>{data.lastMiddleName} </div>
             </Col>
             <Col>
               <div className='detail-label'>Tên</div>
@@ -38,7 +29,17 @@ const DisplayMoreInfo = (props) => {
             </Col>
           </Row>
           <Row className='detail-info-row'>
-
+            <Col>
+              <div className='detail-label'>CCCD</div>
+              <div> {data.citizenID}</div>
+            </Col>
+            <Col>
+              <div className='detail-label'>Nghề nghiệp</div>
+              <div> {data.job}</div>
+            </Col>
+          </Row>
+          
+          <Row className='detail-info-row'>
             <Col>
               <div className='detail-label'>Quê quán</div>
               <div>{data.hometown}</div>
@@ -60,8 +61,19 @@ const DisplayMoreInfo = (props) => {
               <div> {data.dateOfBirth} </div>
             </Col>
           </Row>
+          <Row className='detail-info-row'>
+            <Col>
+              <div className='detail-label'>Trạng thái khám bệnh</div>
+              <div>{data.status}</div>
+            </Col>
+          </Row>
+          <Row>
+            
+
+            <div><Button href={`Patient/${data.id}`}> Thông tin chi tiết </Button></div>
+          </Row>
         </Container>
-        <Button variant='danger' onClick={deletePatient}>Xoá bệnh nhân</Button>
+        
 
         </Offcanvas.Body>
       </Offcanvas>

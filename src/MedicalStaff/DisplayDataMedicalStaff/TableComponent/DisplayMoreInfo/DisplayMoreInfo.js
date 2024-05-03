@@ -9,24 +9,15 @@ const DisplayMoreInfo = (props) => {
   const {position} = useParams()
   const data = props.dataMoreInfo;
   if (!data ||data.citizenID ==='' || data.citizenID==null) return;
-
-  const deleteMedicalStaff = () =>{
-    axios.delete("http://localhost:3000/MedicalStaff/" + data.id)
-      .then(response => {
-        window.location.reload();
-      })
-      .catch(error => {
-        console.error(error);
-      }) 
-  }
+ 
   return (
     <div> 
       <Offcanvas show={props.show} onHide={props.handleClose} placement='end' >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Thông tin bệnh nhân</Offcanvas.Title>
+          <Offcanvas.Title>Thông tin nhân viên</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        <div><Button href={`/medicalStaff/${position}/${data.id}`}> Thông tin chi tiết </Button></div>
+        
         <Container>
           <Row className='detail-info-row'>
             <Col>
@@ -36,6 +27,16 @@ const DisplayMoreInfo = (props) => {
             <Col>
               <div className='detail-label'>Tên</div>
               <div> {data.firstName} </div>
+            </Col>
+          </Row>
+          <Row className='detail-info-row'>
+            <Col>
+              <div className='detail-label'> Chuyên khoa </div>
+              <div> {data.specialty} </div>
+            </Col>
+            <Col>
+              <div className='detail-label'> Tuổi </div>
+              <div> {data.age} </div>
             </Col>
           </Row>
           <Row className='detail-info-row'>
@@ -62,7 +63,10 @@ const DisplayMoreInfo = (props) => {
             </Col>
           </Row>
         </Container>
-        <Button variant='danger' onClick={deleteMedicalStaff}>Xoá bệnh nhân</Button>
+
+        <div>
+          <Button href={`/medicalStaff/${position}/${data.id}`}> Thông tin chi tiết </Button>
+        </div>
 
         </Offcanvas.Body>
       </Offcanvas>
