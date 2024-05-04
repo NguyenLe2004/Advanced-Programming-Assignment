@@ -1,10 +1,9 @@
 import React from 'react'
-import Carousel from './CarouselPart/CarouselPart'
-
+import BodyNotAdmin from './BodyNotAdmin/BodyNotAdmin'
 const Body = () => {
   return (
     <div>
-      <Carousel/>
+      <BodyNotAdmin/>
     </div>
   )
 }

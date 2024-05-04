@@ -22,10 +22,6 @@ const NavigatorBar = () => {
           <ul>
             <li className='brand'> <a href='/'>BK Heath Care</a></li>
             <li className='icon-block'>
-              <a href='/'><FontAwesomeIcon icon={faHouse}/></a>
-              <div className='label'>Trang chủ</div>
-            </li>
-            <li className='icon-block'>
               <a href='/patient'><FontAwesomeIcon icon={faUser}/></a>
               <div className='label'>Bệnh nhân</div>
             </li>

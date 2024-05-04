@@ -1,0 +1,21 @@
+.flex-container {
+    display: flex;
+    background-color: rgb(30, 144, 255,0.1);
+    margin-top: 12vh;
+    justify-content: center;
+  }
+  
+  .flex-container > div {
+    box-shadow: 5px 5px 5px rgba(68, 139, 252, 0.5);
+    border: 3px solid rgba(68, 139, 252, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 20vw;
+    margin: 5vh 20px;
+    padding: 2vh 3vw;
+    font-size: 30px;
+  }

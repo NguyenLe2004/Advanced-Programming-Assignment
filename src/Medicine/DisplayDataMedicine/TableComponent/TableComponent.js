@@ -113,11 +113,13 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay}) => {
           <span style={{marginRight:"1vw"}} > 
             <Button variant='danger' disabled={!selectedRows.length} onClick={handleDelete}> Xoá </Button>
           </span>}
-        <i className='delete-icon' onClick={() => {
+      <i className='delete-icon' onClick={() => {
           setSelectedRows([])
           setIsDelete(prevState => !prevState)
           setIsSelectAll(false);
-        }}><FontAwesomeIcon icon={isDelete ? faXmark : faTrashCan} /></i>
+        }}>
+        <FontAwesomeIcon icon={isDelete ? faXmark : faTrashCan} />
+      </i>
       </div>
 
       <div className='outer-table'>
