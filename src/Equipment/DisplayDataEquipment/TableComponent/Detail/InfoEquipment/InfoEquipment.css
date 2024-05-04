@@ -1,0 +1,51 @@
+.update-equipment-icon{
+
+    font-size: 22px;
+
+    margin-left: 1vw;
+
+}
+
+.update-equipment-icon:hover{
+
+    cursor: pointer;
+
+    color: gray;
+
+}
+
+.status-popup{
+
+    position: relative;
+
+    width: fit-content;
+
+    display: flex;
+
+    height: 150%;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 8px;
+
+    padding: 5px 10px 5px 10px;
+
+    font-weight: bold;
+
+}
+
+.col-detail-equipment{
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+}
+
+.label-detail-equipment {
+
+    color: gray;
+
+}

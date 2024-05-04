@@ -1,8 +1,10 @@
 import React, {  useEffect, useState } from 'react';
 import DisplayMoreInfo from './DisplayMoreInfo/DisplayMoreInfo';
 import { Button } from 'react-bootstrap';
-import { faAnglesLeft, faAnglesRight,faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesLeft, faAnglesRight,faSort, faSortUp, faSortDown, faTrashCan, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faSquare, faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 
 import "./TableComponent.css";
 
@@ -14,7 +16,9 @@ const TableComponent = ({dataMedicalStaffDisplay,setDataMedicalStaffDisplay}) =>
   const [currentID,setCurrentID] = useState("");
   const [sortColumn, setSortColumn] = useState("");
   const [sortDirect, setSortDirect] = useState("desc");
-
+  const [isDelete , setIsDelete] = useState(false);
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [isSelectAll , setIsSelectAll ] = useState(false);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -58,7 +62,17 @@ const TableComponent = ({dataMedicalStaffDisplay,setDataMedicalStaffDisplay}) =>
       setSortDirect('desc');
     }
   }
+  const handleSelectAll = () =>{
+    setSelectedRows( !isSelectAll ? dataMedicalStaffDisplay.map(obj => obj.id) : [])
+  }
 
+  const handleDelete = () =>{
+    selectedRows.forEach(id => {
+      axios.delete("http://localhost:3000/MedicalStaff/"+id)
+      .catch(error=>console.error(error));
+    })
+    window.location.reload();
+  }
   useEffect(() => {
     if (!dataMedicalStaffDisplay || !sortColumn) {
       return;
@@ -90,11 +104,31 @@ const TableComponent = ({dataMedicalStaffDisplay,setDataMedicalStaffDisplay}) =>
   const currentPageDataMedicalStaff = dataMedicalStaffDisplay.slice(startIndex,endIndex);
   return (
     <div>
+       <div className='delete-group'>
+          {isDelete &&
+          <span style={{marginRight:"1vw"}} > 
+            <Button variant='danger' disabled={!selectedRows.length} onClick={handleDelete}> Xoá </Button>
+          </span>}
+        <i className='delete-icon' onClick={() => {
+          setSelectedRows([])
+          setIsDelete(prevState => !prevState)
+          setIsSelectAll(false);
+        }}><FontAwesomeIcon icon={isDelete ? faXmark : faTrashCan} /></i>
+      </div>
       <DisplayMoreInfo show = {show} handleClose = {handleClose} dataMoreInfo = {dataMedicalStaffDisplay[currentID]} />
       <div className='outer-table'>
         <table>
           <thead>
             <tr>
+            {isDelete &&
+              <th > 
+             <i style={{fontSize:"20px",marginRight:"10px"}} onClick={() => {
+                handleSelectAll();
+                setIsSelectAll(prevState => !prevState);
+              }}>
+             <FontAwesomeIcon icon={isSelectAll ? faSquareCheck: faSquare}/>
+             </i> 
+             <span>Xoá </span> </th>}
               <th>ID </th>
               <th className='sort-col'  onClick={() => handleSort('lastMiddleName')}>
                 <span>Họ và tên đệm</span>
@@ -174,6 +208,17 @@ const TableComponent = ({dataMedicalStaffDisplay,setDataMedicalStaffDisplay}) =>
               <tr key={obj.citizenID} onClick={() => handleClickRow(
                 currentPage > 1 ? index + rowsPerPage*(currentPage-1) : index
               )} >
+                  {isDelete &&
+               <td className='square-icon' style={{fontSize:"25px",zIndex:"30"}} onClick={() => {
+                const updatedRows = [...selectedRows];
+                if (updatedRows.includes(obj.id)) {
+                  updatedRows.splice(updatedRows.indexOf(obj.id), 1);
+                } else {
+                  updatedRows.push(obj.id);
+                }
+                setSelectedRows(updatedRows);
+              }}>
+            <FontAwesomeIcon  icon={selectedRows.includes(obj.id) ? faSquareCheck : faSquare} /> </td>}
                 <td className='MedicalStaff-id'>{obj.citizenID}</td>
                 <td className='MedicalStaff-name'>{obj.lastMiddleName}</td>
                 <td >{obj.firstName}</td>
