@@ -21,7 +21,8 @@ const signIn = async (req, res, next) => {
       maxAge: 30 * 60 * 1000,
       //secure: true 
     })
-    res.status(201).json(loginUser)
+    const { token, ...result } = loginUser
+    res.status(201).json(result)
   } catch (e) {
     console.error("Error adding document: ", e);
   }

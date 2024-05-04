@@ -7,7 +7,7 @@ const signUp = async (req, res, next) => {
     name: Joi.string().required().min(3).max(256).trim().strict(),
     email: Joi.string().email().required().min(3).max(50),
     password: Joi.string().min(7).required().trim().strict(),
-    role: Joi.string().valid(env.ROLE_ADMIN, env.ROLE_USER).required()
+    role: Joi.string().required()
   })
   try {
     await dataCorrection.validateAsync(req.body, { abortEarly: false })

@@ -11,7 +11,7 @@ const USER_SIGNUP_COLLECTION_SCHEMA = Joi.object({
   name: Joi.string().required().min(3).max(256).trim().strict(),
   email: Joi.string().email().required().min(3).max(50),
   password: Joi.string().min(7).required().trim().strict(),
-  role: Joi.string().valid(env.ROLE_ADMIN, env.ROLE_USER).required()
+  role: Joi.string().required()
 })
 const USER_SIGNIN_COLLECTION_SCHEMA = Joi.object({
   email: Joi.string().email().required().min(3).max(50),
