@@ -16,7 +16,6 @@ const DetailPatient = () => {
   const { id } = useParams();
   const [patient, setPatient] = useState({})
   const [isUpdate, setIsUpdate] = useState(false);
-
   const getPatientStatus = (treatProcess) => {
     const length = treatProcess.length;
     if (length === 0) {
@@ -37,23 +36,22 @@ const DetailPatient = () => {
   useEffect(() => {
     const getPatient = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/v1/patients/" + id);
+        let response = await axios.get("http://localhost:8080/v1/patients/" + id);
         const treatProcessPromise = await axios.get(`http://localhost:8080/v1/patients/${id}/treatProcess`);
         const treatProcess = treatProcessPromise.data;
-        console.log(treatProcessPromise.data)
-        const patientDataWithStatus = {
-          ...response.data,
-          treatProcess,
-          status:getPatientStatus(treatProcess)
-        }
-        patientDataWithStatus.treatProcess.sort((a, b) => {
+        response.data.treatProcess = treatProcess.sort((a, b) => {
           const dateA = moment(a.dateBegin, "DD-MM-YYYY");
           const dateB = moment(b.dateBegin, "DD-MM-YYYY");
           if (dateA.isSame(dateB)) {
-            return moment(b.dateEnd, "DD-MM-YYYY") - moment(a.dateEnd, "DD-MM-YYYY");
+            return moment(b.dateEnd, "DD-MM-YYYY").diff(moment(a.dateEnd, "DD-MM-YYYY"));
           }
-          return dateB - dateA;
+          return dateB.diff(dateA);
         });
+        const patientDataWithStatus = {
+          ...response.data,
+          status:getPatientStatus(treatProcess)
+        }
+        console.log(patientDataWithStatus)
         setPatient(patientDataWithStatus);
       } catch (error) {
         console.log(error); 

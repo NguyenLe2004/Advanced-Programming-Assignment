@@ -38,9 +38,9 @@ const Patient = () => {
             const dateA = moment(a.dateBegin, "DD-MM-YYYY");
             const dateB = moment(b.dateBegin, "DD-MM-YYYY");
             if (dateA.isSame(dateB)) {
-              return moment(b.dateEnd, "DD-MM-YYYY") - moment(a.dateEnd, "DD-MM-YYYY");
+              return moment(b.dateEnd, "DD-MM-YYYY").diff(moment(a.dateEnd, "DD-MM-YYYY"));
             }
-            return dateB - dateA;
+            return dateB.diff(dateA);
           });
           const status = getPatientStatus(treatProcess);
 

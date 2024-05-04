@@ -66,26 +66,6 @@ const DisplayDataEquipment = ({dataEquipment}) => {
   return (
         <div className='main-page'>
           <StatusStat dataEquipment ={dataEquipment}/>
-            {/* <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
-              <input 
-                placeholder='Nhập tên thiết bị' 
-                className={`searchInput ${isClicked ? 'active' : ''}`} 
-                value={inputValue}
-                onChange={(event) => setInputValue(event.target.value)}
-                onKeyDown={handleKeyPress}
-              />
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                className={`searchIcon ${isClicked ? 'active' : ''}`}
-                onClick={handleIconClick}
-              />
-            </span> */}
-
-        {/* {searchError && (
-        <Alert variant={'danger'} className='search-error' onClose={() => setSearchError("")} dismissible>
-          {searchError}
-        </Alert>
-        )} */}
         <FilterAndSearch setDataEquipmentDisplay = {setDataEquipmentDisplay} dataEquipment = {dataEquipment} />
         {Object.keys(dataEquipmentDisplay).length !== 0 ? (
             <TableComponent dataEquipmentDisplay = {dataEquipmentDisplay} setDataEquipmentDisplay={setDataEquipmentDisplay}  />

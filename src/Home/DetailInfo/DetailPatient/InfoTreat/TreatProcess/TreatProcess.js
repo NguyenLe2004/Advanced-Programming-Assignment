@@ -14,6 +14,7 @@ import {
   faSyringe,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useParams } from "react-router-dom";
 import "./TreatProcess.css";
 
 const TreatProcess = ({ patient }) => {
@@ -29,7 +30,7 @@ const TreatProcess = ({ patient }) => {
   const [curTreatProcess, setCurTreatProcess] = useState(null);
   const { allSpecialty } = useContext(specialtyContext);
   const [error, setError] = useState("");
-
+  const {id} = useParams();
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
     event.preventDefault();
@@ -59,7 +60,7 @@ const TreatProcess = ({ patient }) => {
       const addTreatProcess = async () => {
         axios
           .put(
-            `http://localhost:8080/v1/patients/${patient.id}/treatProcess/${curTreatProcess.id}`,
+            `http://localhost:8080/v1/patients/${id}/treatProcess/${curTreatProcess.id}`,
             newTreatProcess
           )
           .then(() => {
@@ -149,10 +150,10 @@ const TreatProcess = ({ patient }) => {
       medStaffPosition: medStaffPosition,
     };
   };
-  const handleDeleteTreatProcess = (id) => {
+  const handleDeleteTreatProcess = (idTP) => {
     axios
       .delete(
-        `http://localhost:8080/v1/patients/${patient.id}/treatProcess/${id}`
+        `http://localhost:8080/v1/patients/${id}/treatProcess/${idTP}`
       )
       .then(() => window.location.reload())
       .catch((error) => console.error(error));

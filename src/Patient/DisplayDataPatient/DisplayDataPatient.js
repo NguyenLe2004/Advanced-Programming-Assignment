@@ -69,31 +69,7 @@ const DisplayDataPatient = ({dataPatient}) => {
 
   return (
         <div className='main-page'>
-          <StatusStat treatProcess = {Object.values(dataPatient).map(patient =>  patient.treatProcess)}/>
-
-          {/*
-            <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
-              <input 
-                placeholder='Nhập số căn cước công dân' 
-                className={`searchInput ${isClicked ? 'active' : ''}`} 
-                value={inputValue}
-                onChange={(event) => setInputValue(event.target.value.replace(/\s/g, ""))}
-                onKeyDown={handleKeyPress}
-              />
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                className={`searchIcon ${isClicked ? 'active' : ''}`}
-                onClick={handleIconClick}
-              />
-            </span>
-
-            {searchError && (
-            <Alert variant={'danger'} className='search-error' onClose={() => setSearchError("")} dismissible>
-              {searchError}
-            </Alert>
-            )}
-          */}
-          
+          <StatusStat dataPatient = {dataPatient}/>
         <FilterAndSearch setDataPatientDisplay = {setDataPatientDisplay} dataPatient = {dataPatient} />
         {Object.keys(dataPatientDisplay).length !== 0 ? (
             <TableComponent dataPatientDisplay = {dataPatientDisplay} setDataPatientDisplay={setDataPatientDisplay}  />

@@ -10,21 +10,23 @@ const MedicalStaff = () => {
   const {position} = useParams();
   const {dataMedicalStaff,setDataMedicalStaff} = useContext(dataMedicalStaffContext);
   const getMedicalStaffStatus = (schedule) => {
+    if (!schedule.length) return "Mới khởi tạo"
     const curDate = moment(moment().format("DD-MM-YYYY"),"DD-MM-YYYY");
     const curTime = moment(moment().format("HH-mm"),"HH:mm");
     let status="Sẵn sàng";
-    schedule.forEach(obj => {
-      const date = moment(obj.date,"DD-MM-YYYY");
-      if(date < curDate) return ;
+    for (let i =0 ; i<schedule.length; ++i) {
+      const obj = schedule[i];
+      const dateBegin = moment(obj.dateBegin,"DD-MM-YYYY");
+      const dateEnd = moment(obj.dateEnd,"DD-MM-YYYY");
+
+      if(!dateBegin.isSame(curDate) && !dateEnd.isSame(curDate)) continue;
       if(obj.description ==="Nghỉ phép"){
-        status = "Nghỉ phép";
-        return;
+        return  "Nghỉ phép";
       }
-      if(date.isSame(curDate) && moment(obj.timeBegin,"HH:mm").isSameOrBefore(curTime) && moment(obj.timeEnd,"HH:mm").isSameOrAfter(curTime)) {
-        status = "Đang làm việc";
-        return;
+      if(moment(obj.timeBegin,"HH:mm").isSameOrBefore(curTime) && moment(obj.timeEnd,"HH:mm").isSameOrAfter(curTime)) {
+        return "Đang làm việc";
       }
-    });
+    }
     return status;
   }
 
@@ -43,18 +45,20 @@ const MedicalStaff = () => {
         const dataWithStatusAndAge =await Promise.all(  await response.data.map(async item => {
           const age = getMedicalStaffAge(item.dateOfBirth);
           const response_schedule = await axios.get(`http://localhost:8080/v1/specialists/${item.id}/schedules`);
-          console.log(response_schedule.data)
-          const schedule = response_schedule.data;
-          schedule.sort((a, b) => {
-            const dateA = moment(a.date, "DD-MM-YYYY");
-            const dateB = moment(b.date, "DD-MM-YYYY");
+          // console.log(response_schedule.data)
+          let schedule = response_schedule.data;
+          schedule = schedule.sort((a, b) => {
+            const dateA = moment(a.dateBegin, "DD-MM-YYYY");
+            const dateB = moment(b.dateBegin, "DD-MM-YYYY");
             if (dateA.isSame(dateB)) {
-              return moment(a.timeBegin, "HH-mm") - moment(b.timeBegin, "HH-mm");
+              const timeA = moment(a.timeBegin, "HH:mm");
+              const timeB = moment(b.timeBegin, "HH:mm");
+              return timeA.diff(timeB);
             }
-            return dateA - dateB;
+            return dateA.diff(dateB);
           });
           const status = getMedicalStaffStatus(schedule);
-          return {...item ,status,age,schedule};
+          return {...item ,status,age,schedule}; 
         }))
         setDataMedicalStaff(dataWithStatusAndAge);
       } catch (error) {

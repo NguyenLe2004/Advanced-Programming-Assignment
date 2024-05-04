@@ -23,18 +23,19 @@ const DetailMedicalStaff = () => {
     const curDate = moment(moment().format("DD-MM-YYYY"),"DD-MM-YYYY");
     const curTime = moment(moment().format("HH-mm"),"HH:mm");
     let status="Sẵn sàng";
-    schedule.forEach(obj => {
-      const date = moment(obj.date,"DD-MM-YYYY");
-      if(date < curDate) return ;
+    for (let i =0 ; i<schedule.length; ++i) {
+      const obj = schedule[i];
+      const dateBegin = moment(obj.dateBegin,"DD-MM-YYYY");
+      const dateEnd = moment(obj.dateEnd,"DD-MM-YYYY");
+
+      if(!dateBegin.isSame(curDate) && !dateEnd.isSame(curDate)) continue;
       if(obj.description ==="Nghỉ phép"){
-        status = "Nghỉ phép";
-        return;
+        return  "Nghỉ phép";
       }
-      if(date.isSame(curDate) && moment(obj.timeBegin,"HH:mm").isSameOrBefore(curTime) && moment(obj.timeEnd,"HH:mm").isSameOrAfter(curTime)) {
-        status = "Đang làm việc";
-        return;
+      if(moment(obj.timeBegin,"HH:mm").isSameOrBefore(curTime) && moment(obj.timeEnd,"HH:mm").isSameOrAfter(curTime)) {
+        return "Đang làm việc";
       }
-    });
+    }
     return status;
   }
 
@@ -44,17 +45,17 @@ const DetailMedicalStaff = () => {
         let response = await axios.get("http://localhost:8080/v1/specialists/" + id);
         const schedule = await axios.get(`http://localhost:8080/v1/specialists/${id}/schedules`)
         response.data.schedule = schedule.data;
-        console.log(response.data.schedule)
           let medicalStaffDataWithStatus = response.data
           if(medicalStaffDataWithStatus.schedule.length) {
-            medicalStaffDataWithStatus.schedule.sort((a, b) => {
-              const dateA = moment(a.date, "DD-MM-YYYY");
-              const dateB = moment(b.date, "DD-MM-YYYY");
+            medicalStaffDataWithStatus.schedule=medicalStaffDataWithStatus.schedule.sort((a, b) => {
+              const dateA = moment(a.dateBegin, "DD-MM-YYYY");
+              const dateB = moment(b.dateBegin, "DD-MM-YYYY");
               if (dateA.isSame(dateB)) {
-                return moment(a.timeBegin, "HH:mm") - moment(b.timeBegin, "HH:mm");
+                return moment(b.timeBegin, "HH:mm").diff(moment(a.timeBegin, "HH:mm"));
               }
-              return dateA - dateB;
-            });
+              // console.log("diff here",dateA.diff(dateB))
+              return dateB.diff(dateA);
+            }); 
           }
           medicalStaffDataWithStatus.status = getMedicalStaffStatus(medicalStaffDataWithStatus.schedule);
         

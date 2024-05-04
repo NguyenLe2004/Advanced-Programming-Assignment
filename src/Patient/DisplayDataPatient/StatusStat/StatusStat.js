@@ -4,22 +4,10 @@ import AddPatientForm from './AddPatientForm/AddPatientForm'
 import moment from 'moment'
 import "./StatusStat.css"
 
-const StatusStat = ({treatProcess}) => {
+const StatusStat = ({dataPatient}) => {
     const [showAddPatientForm, setShowAddPatientForm] = useState(false);
     const handleClickAddBtn = () =>{
         setShowAddPatientForm(true);
-    }
-    const getPatientStatus = (treatProcess) => {
-        const length = treatProcess.length;
-        if (length === 0) {
-            return "Chưa điều trị";
-        }
-        const currentDate = moment();
-        const lastTreatDay = moment(treatProcess[length-1].dateEnd, 'DD/MM/YYYY');
-        if (lastTreatDay < currentDate) {
-            return "Hoàn thành điều trị";
-        }
-        return "Đang điều trị";
     }
 
     const frequencyCount = {
@@ -28,13 +16,8 @@ const StatusStat = ({treatProcess}) => {
         "Đang điều trị" :0
     };
 
-    treatProcess.forEach((item) => {
-        const status = getPatientStatus(item)
-      if (frequencyCount[status]) {
-        frequencyCount[status] += 1;
-      } else {
-        frequencyCount[status] = 1;
-      }
+    dataPatient.forEach((obj) => {
+        frequencyCount[obj.status] += 1;
     });
   return (
         <div>
@@ -49,7 +32,7 @@ const StatusStat = ({treatProcess}) => {
                     <Row>
                         <Col className='stat-col'>
                             <div className='stat-total total'>
-                                {treatProcess.length}
+                                {dataPatient.length}
                             </div>
                             <div>Bệnh nhân</div>
                         </Col>

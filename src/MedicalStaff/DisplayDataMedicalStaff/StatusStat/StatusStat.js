@@ -4,29 +4,11 @@ import AddMedicalStaffForm from './AddMedicalStaffForm/AddMedicalStaffForm'
 import moment from 'moment'
 import "./StatusStat.css"
 
-const StatusStat = ({schedule,position}) => {
+const StatusStat = ({dataMedicalStaff,position}) => {
     const [showAddMedicalStaffForm, setShowAddMedicalStaffForm] = useState(false);
     const handleClickAddBtn = () =>{
         setShowAddMedicalStaffForm(true);
     }
-    const getMedicalStaffStatus = (schedule) => {
-        const curDate = moment(moment().format("DD-MM-YYYY"),"DD-MM-YYYY");
-        const curTime = moment(moment().format("HH-mm"),"HH:mm");
-        let status="Sẵn sàng";
-        schedule.forEach(obj => {
-          const date = moment(obj.date,"DD-MM-YYYY");
-          if(date < curDate) return ;
-          if(obj.description ==="Nghỉ phép"){
-            status = "Nghỉ phép";
-            return;
-          }
-          if(date.isSame(curDate) && moment(obj.timeBegin,"HH:mm").isSameOrBefore(curTime) && moment(obj.timeEnd,"HH:mm").isSameOrAfter(curTime)) {
-            status = "Đang làm việc";
-            return;
-          }
-        });
-        return status;
-      }
 
     const frequencyCount = {
         "Sẵn sàng" : 0,
@@ -34,9 +16,8 @@ const StatusStat = ({schedule,position}) => {
         "Nghỉ phép" :0,
     };
 
-    schedule.forEach((item) => {
-        const status = getMedicalStaffStatus(item)
-        frequencyCount[status] ++;
+    dataMedicalStaff.forEach((obj) => {
+        frequencyCount[obj.status] ++;
     });
   return (
         <div>
@@ -51,7 +32,7 @@ const StatusStat = ({schedule,position}) => {
                     <Row>
                         <Col className='stat-col'>
                             <div className='stat-total total'>
-                                {schedule.length}
+                                {dataMedicalStaff.length}
                             </div>
                             <div>{position==="specialist" ? "Bác sĩ" : position==="nurse" ? "Y tá" : "Nhân viên hỗ trợ" }</div>
                         </Col>

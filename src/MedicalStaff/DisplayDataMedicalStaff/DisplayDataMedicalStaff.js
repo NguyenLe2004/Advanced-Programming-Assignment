@@ -67,32 +67,9 @@ const DisplayDataMedicalStaff = ({dataMedicalStaff,position}) => {
 
   return (
         <div className='main-page'>
-          <StatusStat schedule = {Object.values(dataMedicalStaff).map(MedicalStaff =>  MedicalStaff.schedule)} position={position}/>
+          <StatusStat dataMedicalStaff={dataMedicalStaff} position={position}/>
             
           <FilterAndSearch setDataMedicalStaffDisplay = {setDataMedicalStaffDisplay} dataMedicalStaff = {dataMedicalStaff} />
-           {/* 
-            <span className={`searchBlock ${isClicked ? 'active' : ''}`} ref={searchBlockRef}>
-              <input 
-                placeholder='Nhập số căn cước công dân' 
-                className={`searchInput ${isClicked ? 'active' : ''}`} 
-                value={inputValue}
-                onChange={(event) => setInputValue(event.target.value.replace(/\s/g, ""))}
-                onKeyDown={handleKeyPress}
-              />
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                className={`searchIcon ${isClicked ? 'active' : ''}`}
-                onClick={handleIconClick}
-              />
-            </span>
-
-        {searchError && (
-        <Alert variant={'danger'} className='search-error' onClose={() => setSearchError("")} dismissible>
-          {searchError}
-        </Alert>
-        )}
-
-      */}
         {Object.keys(dataMedicalStaffDisplay).length !== 0 ? (
             <TableComponent dataMedicalStaffDisplay = {dataMedicalStaffDisplay} setDataMedicalStaffDisplay={setDataMedicalStaffDisplay}  />
           ):(

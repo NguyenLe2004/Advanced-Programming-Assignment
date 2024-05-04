@@ -8,6 +8,7 @@ import moment from 'moment';
 import axios from 'axios'
 import Row from 'react-bootstrap/Row';
 import { specialtyContext } from '../../../../../Provider/DataProvider';
+import { useParams } from 'react-router-dom';
 const TreatForm = ({patient}) => {
   const {allSpecialty} = useContext(specialtyContext);
   const [validated, setValidated] = useState(false);
@@ -18,6 +19,7 @@ const TreatForm = ({patient}) => {
   const [medStaffID, setMedStaffID] = useState("");
   const [medStaffData, setMedStaffData] = useState([]);
   const [error, setError] = useState("")
+  const {id} = useParams();
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
     event.preventDefault();
@@ -49,7 +51,7 @@ const TreatForm = ({patient}) => {
         medicalStaffID : medStaffID
       }
       const addTreatProcess = async () => {
-          axios.patch(`http://localhost:8080/v1/patients/${patient.id}/treatProcess`, newTreatProcess )
+          axios.post(`http://localhost:8080/v1/patients/${id}/treatProcess`, newTreatProcess )
           .then(() => {
             window.location.reload();
           })

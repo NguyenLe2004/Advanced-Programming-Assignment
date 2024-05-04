@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { useParams } from "react-router-dom";
 import {
   faKitMedical,
   faMicroscope,
@@ -20,13 +21,10 @@ const ScheduleProcess = ({ medicalStaff }) => {
   const [validated, setValidated] = useState(false);
   const [scheduleID, setScheduleID] = useState(null);
   const [error, setError] = useState("");
-  const handleDeleteSchedule = (id) => {
-    let newSchedule = [...medicalStaff.schedule];
-    newSchedule.splice(id, 1);
+  const {id} = useParams()
+  const handleDeleteSchedule = () => {
     axios
-      .patch("http://localhost:3000/MedicalStaff/" + medicalStaff.id, {
-        schedule: newSchedule,
-      })
+      .delete(`http://localhost:8080/v1/specialists/${id}/schedules/${scheduleID}`)
       .then(() => window.location.reload())
       .catch((error) => console.error(error));
   };
@@ -56,9 +54,8 @@ const ScheduleProcess = ({ medicalStaff }) => {
         title: form.elements.title.value,
         description: form.elements.description.value,
       };
-      console.log(newSchedule)
       axios
-        .put(`http://localhost:8080/v1/specialists/${medicalStaff.id}/schedules/${scheduleID}` ,newSchedule)
+        .put(`http://localhost:8080/v1/specialists/${id}/schedules/${scheduleID}` ,newSchedule)
         .then(() => {
           window.location.reload();
         })
@@ -112,7 +109,10 @@ const ScheduleProcess = ({ medicalStaff }) => {
             >
               <FontAwesomeIcon
                 icon={index === isUpdate ? faXmark : faPen}
-                onClick={() => setIsUpdate(isUpdate === index ? null : index)}
+                onClick={() => {
+                  setIsUpdate(isUpdate === index ? null : index) 
+                  setScheduleID(schedule.id)
+                }}
               />{" "}
             </div>
             {!(index === isUpdate) ? (
@@ -219,12 +219,12 @@ const ScheduleProcess = ({ medicalStaff }) => {
                       </Form.Control.Feedback>
                     </Form.Group>
                   </Row>
-                  <Button type="submit" onClick={() => setScheduleID(schedule.id)}>
+                  <Button type="submit" >
                     Đổi thông tin lịch
                   </Button>
                   <Button
                     style={{ position: "absolute", right: "1vw" }}
-                    onClick={() => handleDeleteSchedule(index)}
+                    onClick={() => handleDeleteSchedule()}
                     variant="danger"
                   >
                     {" "}

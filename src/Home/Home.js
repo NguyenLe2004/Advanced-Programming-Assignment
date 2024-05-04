@@ -18,18 +18,20 @@ const Home = () => {
   const isLoginRoute = location.pathname === '/login';
   return (
     <div className='main-containter'> 
-        {!isLoginRoute&& <Header className = "navBar"/>}
-        <Routes>
-          <Route path ='/' element = {<Body/>} />
-          <Route path='/login' element = {<SignInForm />} />
-          <Route path='/patient' element ={<Patient/>}/>
-          <Route path='/medicalStaff/:position/:id' element ={<DetailMedicalStaff/>}/>
-          <Route path = '/patient/:id' element={<DetailPatient/>} />
-          <Route path='/medicalStaff/:position' element ={<MedicalStaff/>}/>
-          <Route path='/medicine' element ={<Medicine />}/>
-          <Route path='/equipment' element ={<Equipment/>}/>
-        </Routes>
-        {!isLoginRoute && <Footer/>}
+    <div className="mainPage">
+      {!isLoginRoute&& <Header className = "navBar"/>}
+          <Routes>
+            <Route path ='/' element = {<Body/>} />
+            <Route path='/login' element = {<SignInForm />} />
+            <Route path='/patient' element ={<Patient/>}/>
+            <Route path='/medicalStaff/:position/:id' element ={<DetailMedicalStaff/>}/>
+            <Route path = '/patient/:id' element={<DetailPatient/>} />
+            <Route path='/medicalStaff/:position' element ={<MedicalStaff/>}/>
+            <Route path='/medicine' element ={<Medicine />}/>
+            <Route path='/equipment' element ={<Equipment/>}/>
+          </Routes>
+        {/* {!isLoginRoute && <Footer/>} */}
+    </div>
     </div>
   )
 }
