@@ -4,14 +4,15 @@ import {
   _ID_RULE,
   _ID_RULE_MESSAGE,
   AGE_RULE,
-  DATE_RULE
+  DATE_RULE,
+  TIME_RULE
 } from '../utils/validators.js'
 
 const createNew = async (req, res, next) => {
   const dataCorrection = Joi.object({
     name: Joi.string().required().min(3).max(256).trim().strict(),
-    arriveTime: Joi.string().regex(DATE_RULE).required(),
-    departureTime: Joi.string().regex(DATE_RULE).required(),
+    arrivalTime: Joi.string().regex(TIME_RULE).required(),
+    departureTime: Joi.string().regex(TIME_RULE).required(),
     expireDate: Joi.string().regex(DATE_RULE).required(),
     arrivalDate: Joi.string().regex(DATE_RULE).required(),
     departureDate: Joi.string().regex(DATE_RULE).required(),
@@ -33,8 +34,8 @@ const createNew = async (req, res, next) => {
 const update = async (req, res, next) => {
   const dataCorrection = Joi.object({
     name: Joi.string().min(3).max(256).trim().strict(),
-    arriveTime: Joi.string().regex(DATE_RULE),
-    departureTime: Joi.string().regex(DATE_RULE),
+    arrivalTime: Joi.string().regex(TIME_RULE),
+    departureTime: Joi.string().regex(TIME_RULE),
     expireDate: Joi.string().regex(DATE_RULE),
     arrivalDate: Joi.string().regex(DATE_RULE),
     departureDate: Joi.string().regex(DATE_RULE),

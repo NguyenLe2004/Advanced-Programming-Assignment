@@ -9,12 +9,12 @@ const equipmentRouter = express.Router();
 
 equipmentRouter.route('/')
   .get(equipmentController.getAllEquipments)
-  .post(equipmentValidation.createNew, authMiddlewareLogin, authMiddlewareRole, equipmentController.createNew)
+  .post(equipmentValidation.createNew, equipmentController.createNew)
 equipmentRouter.route('/deleteMany')
-  .put(equipmentValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, equipmentController.deleteManyItems)
+  .put(equipmentValidation.deleteManyItems, equipmentController.deleteManyItems)
 equipmentRouter.route('/:id')
-  .put(equipmentValidation.update, authMiddlewareLogin, authMiddlewareRole, equipmentController.update)
-  .delete(equipmentValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, equipmentController.deleteAnItem)
+  .put(equipmentValidation.update, equipmentController.update)
+  .delete(equipmentValidation.deleteAnItem, equipmentController.deleteAnItem)
 
 equipmentRouter.use('/:equipmentId/usageHistory', scheduleEquipmentRouter)
 equipmentRouter.use('/:equipmentId/maintains', historyMaintainRouter)

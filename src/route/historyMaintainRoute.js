@@ -9,13 +9,13 @@ const historyMaintainRouter = express.Router({ mergeParams: true });
 
 historyMaintainRouter.route('/')
   .get(historyMaintainController.getAllSchedule)
-  .post(historyMaintainValidation.createNew, authMiddlewareLogin, authMiddlewareRole, historyMaintainController.createNew)
+  .post(historyMaintainValidation.createNew, historyMaintainController.createNew)
 
 historyMaintainRouter.route('/deleteMany')
-  .put(historyMaintainValidation.deleteManyItems, authMiddlewareLogin, authMiddlewareRole, historyMaintainController.deleteManyItems)
+  .put(historyMaintainValidation.deleteManyItems, historyMaintainController.deleteManyItems)
 
 historyMaintainRouter.route('/:id')
-  .put(historyMaintainValidation.update, authMiddlewareLogin, authMiddlewareRole, historyMaintainController.update)
-  .delete(historyMaintainValidation.deleteAnItem, authMiddlewareLogin, authMiddlewareRole, historyMaintainController.deleteAnItem)
+  .put(historyMaintainValidation.update, historyMaintainController.update)
+  .delete(historyMaintainValidation.deleteAnItem, historyMaintainController.deleteAnItem)
 
 export default historyMaintainRouter
