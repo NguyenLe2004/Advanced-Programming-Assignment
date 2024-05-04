@@ -25,11 +25,29 @@ const SignInForm = () => {
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
-  const handleSubmit = (event) => {
+  //-------------------------------------
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log("helloworld");
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
-      event.preventDefault();
       event.stopPropagation();
+    }
+    else {
+      const data= { 
+        email: form.elements.email.value, 
+        password: form.elements.password.value, 
+      }
+      console.log(data.email);
+      console.log(data.password);
+    try {
+        const response = await axios.post('http://localhost:8080/v1/users/login',data); 
+        console.log(response.data);
+        console.log(response); 
+        window.location.href = '/';
+      } catch (error) {
+        console.error(error);
+      }
     }
 
     setValidated(true);
@@ -59,12 +77,12 @@ const SignInForm = () => {
           <img style={{height:"15vh",width:"15vw"}} src={logo} />
           <div style={{fontWeight:"bold",fontSize:"60px",marginTop:"2vh"}}>Đăng nhập</div>
         </div>
-            <Form.Group className="mb-3"  controlId="Email">
+            <Form.Group className="mb-3"  controlId="email">
                 <Form.Label style={{fontWeight:"bold"}}>Email</Form.Label>
                 <Form.Control pattern=".+@.+\.[A-Za-z]+$" required type="email" placeholder="name@example.com"/>
                 <Form.Control.Feedback type='invalid'  >Email không hợp lệ</Form.Control.Feedback>
             </Form.Group> 
-            <Form.Group style={{position:"relative"}} className="mb-3" controlId="Password">
+            <Form.Group style={{position:"relative"}} className="mb-3" controlId="password">
                 <Form.Label style={{fontWeight:"bold"}}>Password</Form.Label>
                 <Form.Control onClick={()=>setIsDisplayEyeIcon(true)} required type={passwordVisible ? 'text' : 'password'} placeholder="Password"/>
                 <FontAwesomeIcon className='eye-icon' onClick={togglePasswordVisibility} icon={passwordVisible ?  faEye : faEyeSlash} />

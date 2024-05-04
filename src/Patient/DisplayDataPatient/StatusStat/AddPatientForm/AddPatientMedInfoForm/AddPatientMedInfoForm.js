@@ -33,7 +33,7 @@ const AddPatientMedInfoForm = ({setIsSlide,personalInfo}) => {
               }
         }
         setValidated(true);
-        };
+    };
   return (
     <Form style={{padding:"2vh 1vw"}} noValidate validated={validated} onSubmit={handleSubmit}>
     <Row className="mb-3" ><h3>Thông tin y tế</h3></Row>
