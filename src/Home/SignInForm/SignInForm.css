@@ -21,6 +21,7 @@
 .submitBtn{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 .closeBtn{
     font-size: 30px;
