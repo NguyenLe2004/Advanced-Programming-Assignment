@@ -1,15 +1,22 @@
 .loginForm{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 50vh;
-    width: 50vh;
+    min-height: 100%;
+    width: 30vw;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     z-index: 2;
+}
+.outer-sign-in {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 132, 255, 0.477);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backgound{
+    height: 100%;
+    width: 55vw;
 }
 .submitBtn{
     display: flex;
@@ -27,4 +34,10 @@
 .closeBtn:hover{
     cursor: pointer;
     color: gray;
+}
+.eye-icon {
+    /* top: 0; */
+    position: absolute;
+    right: 2vw;
+    top: 4.7vh;
 }

@@ -4,6 +4,7 @@ import { displaySignInFormContext } from '../../../Provider/DisplaySignInProvide
 import { faHouse, faUser, faUserDoctor, faUserNurse, faHeadset, faPills,faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./NavigatorBar.css"
+import { Button } from 'react-bootstrap';
 const NavigatorBar = () => {
   const {isSignIn,setIsSignIn} = useContext(signInContext);
   const {isDisplaySignInForm,setIsDisplaySignInForm} = useContext(displaySignInFormContext);
@@ -16,8 +17,8 @@ const NavigatorBar = () => {
     setIsSignIn(false);
   }
     return (
-      <div className='nav-bar'>
-        <nav>
+      <div className='nav-bar' >
+        <nav >
           <ul>
             <li className='brand'> <a href='/'>BK Heath Care</a></li>
             <li className='icon-block'>
@@ -49,6 +50,7 @@ const NavigatorBar = () => {
               <div className='label'>thiết bị</div>
             </li>
           </ul>
+          <div className='login-btn' ><Button href="/login" >Đăng nhập</Button></div>
         </nav>
       </div>
       );

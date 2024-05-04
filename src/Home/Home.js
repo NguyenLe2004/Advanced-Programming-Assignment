@@ -1,8 +1,6 @@
-import React, {useContext}from 'react'
+import React, {useContext, useState}from 'react'
 import Header from './Header/Header'
-import SignInForm from './SignInForm/SignInForm'
 import Body from './Body/Body'
-import Footer from './Footer/Footer'
 import Patient from '../Patient/Patient'
 import MedicalStaff from '../MedicalStaff/MedicalStaff'
 import Medicine from '../Medicine/Medicine'
@@ -11,27 +9,19 @@ import { Routes, Route } from 'react-router-dom';
 import { displaySignInFormContext } from '../Provider/DisplaySignInProvider'
 import DetailPatient from './DetailInfo/DetailPatient/DetailPatient'
 import DetailMedicalStaff from './DetailInfo/DetailMedicalStaff/DetailMedicalStaff'
+import Footer from './Footer/Footer'
+import SignInForm from './SignInForm/SignInForm'
+import { useLocation } from 'react-router-dom'
 import "./Home.css"
 const Home = () => {
-  const {isDisplaySignInForm,setIsDisplaySignInForm} = useContext(displaySignInFormContext);
-
-  const hideSignInForm = () => { // hide login form if click outside 
-    if(isDisplaySignInForm) {
-      setIsDisplaySignInForm(false);
-    }
-  };
-  
+  const location = useLocation();
+  const isLoginRoute = location.pathname === '/login';
   return (
     <div className='main-containter'> 
-
-      {isDisplaySignInForm && (
-        <SignInForm/>
-      )}
-
-      <div onClick={hideSignInForm} className={`mainPage-${isDisplaySignInForm? 'whileDisplayForm' : ''}`}>
-        <Header className = "navBar"/>
+        {!isLoginRoute&& <Header className = "navBar"/>}
         <Routes>
           <Route path ='/' element = {<Body/>} />
+          <Route path='/login' element = {<SignInForm />} />
           <Route path='/patient' element ={<Patient/>}/>
           <Route path='/medicalStaff/:position/:id' element ={<DetailMedicalStaff/>}/>
           <Route path = '/patient/:id' element={<DetailPatient/>} />
@@ -39,8 +29,7 @@ const Home = () => {
           <Route path='/medicine' element ={<Medicine />}/>
           <Route path='/equipment' element ={<Equipment/>}/>
         </Routes>
-        {/* <Footer/> */}
-      </div>
+        {!isLoginRoute && <Footer/>}
     </div>
   )
 }

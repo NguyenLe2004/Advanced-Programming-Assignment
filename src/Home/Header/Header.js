@@ -2,7 +2,7 @@ import React from 'react'
 import NavigatorBar from './NavigatorBar/NavigatorBar'
 const Header = () => {
   return (
-    <NavigatorBar/>
+    <NavigatorBar />
   )
 }
 

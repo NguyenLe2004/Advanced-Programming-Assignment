@@ -10,6 +10,7 @@ const DisplayMoreInfo = (props) => {
   const data = props.dataMoreInfo;
   if (!data ||data.citizenID ==='' || data.citizenID==null) return;
  
+
   return (
     <div> 
       <Offcanvas show={props.show} onHide={props.handleClose} placement='end' >
