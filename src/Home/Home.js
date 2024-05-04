@@ -19,6 +19,7 @@ const Home = () => {
   return (
     <div className='main-containter'> 
         {!isLoginRoute&& <Header className = "navBar"/>}
+        
         <Routes>
           <Route path ='/' element = {<Body/>} />
           <Route path='/login' element = {<SignInForm />} />
@@ -30,6 +31,7 @@ const Home = () => {
           <Route path='/equipment' element ={<Equipment/>}/>
         </Routes>
         {!isLoginRoute && <Footer/>}
+
     </div>
   )
 }
