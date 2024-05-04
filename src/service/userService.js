@@ -13,7 +13,7 @@ const signIn = async (reqBody) => {
   try {
     // const docRef = await addDoc(collection(db, "users"), req.body);
     const loginUser = await userModel.signIn(reqBody);
-    const { password, ...dataUser } = loginUser
+    const { password, token, ...dataUser } = loginUser
     return dataUser
   } catch (e) {
     console.error("Error adding document: ", e);
