@@ -4,7 +4,7 @@ import AddMedicineForm from './AddMedicineForm/AddMedicineForm'
 import moment from 'moment'
 import "./StatusStat.css"
 
-const StatusStat = ({dataMedicine}) => {
+const StatusStat = ({dataMedicine, role}) => {
     const [showAddMedicineForm, setShowAddMedicineForm] = useState(false);
     const handleClickAddBtn = () =>{
         setShowAddMedicineForm(true);
@@ -54,7 +54,7 @@ const StatusStat = ({dataMedicine}) => {
                             <div>Hết hạn</div>
                         </Col>
                         <Col className='stat-col'>
-                            <div className='more-stat-btn'><Button onClick={handleClickAddBtn}  > Thêm Thuốc</Button></div>
+                            <div className='more-stat-btn'><Button disabled = {role !== "admin"} onClick={handleClickAddBtn}  > Thêm Thuốc</Button></div>
                         </Col>
                     </Row>
                 </Container>

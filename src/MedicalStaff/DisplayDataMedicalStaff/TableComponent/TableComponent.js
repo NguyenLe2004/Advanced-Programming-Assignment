@@ -8,7 +8,7 @@ import axios from 'axios';
 
 import "./TableComponent.css";
 
-const TableComponent = ({dataMedicalStaffDisplay,setDataMedicalStaffDisplay}) => {
+const TableComponent = ({dataMedicalStaffDisplay,setDataMedicalStaffDisplay, role}) => {
   const rowsPerPage = 9;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -109,13 +109,13 @@ const TableComponent = ({dataMedicalStaffDisplay,setDataMedicalStaffDisplay}) =>
           <span style={{marginRight:"1vw"}} > 
             <Button variant='danger' disabled={!selectedRows.length} onClick={handleDelete}> Xoá </Button>
           </span>}
-        <i className='delete-icon' onClick={() => {
+        { (role === "admin") && <i className='delete-icon' onClick={() => {
           setSelectedRows([])
           setIsDelete(prevState => !prevState)
           setIsSelectAll(false);
-        }}><FontAwesomeIcon icon={isDelete ? faXmark : faTrashCan} /></i>
+        }}><FontAwesomeIcon icon={isDelete ? faXmark : faTrashCan} /></i>}
       </div>
-      <DisplayMoreInfo show = {show} handleClose = {handleClose} dataMoreInfo = {dataMedicalStaffDisplay[currentID]} />
+      <DisplayMoreInfo show = {show} handleClose = {handleClose} dataMoreInfo = {dataMedicalStaffDisplay[currentID]} role = {role}/>
       <div className='outer-table'>
         <table>
           <thead>

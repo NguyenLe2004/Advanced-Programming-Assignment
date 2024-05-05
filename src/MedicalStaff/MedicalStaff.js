@@ -6,7 +6,7 @@ import {useParams} from 'react-router-dom'
 import TimeLine from './TimeLine/TimeLine'
 import "./MedicalStaff.css"
 import { dataMedicalStaffContext } from '../Provider/DataProvider'
-const MedicalStaff = () => {
+const MedicalStaff = ({role}) => {
   const {position} = useParams();
   const {dataMedicalStaff,setDataMedicalStaff} = useContext(dataMedicalStaffContext);
   const getMedicalStaffStatus = (schedule) => {
@@ -70,7 +70,7 @@ const MedicalStaff = () => {
 
   return (
     <div>
-      <DisplayDataMedicalStaff dataMedicalStaff = {dataMedicalStaff} position = {position}/>
+      <DisplayDataMedicalStaff dataMedicalStaff = {dataMedicalStaff} position = {position} role = {role}/>
       <div style={{height:"100vh",marginTop:"45%"}}>
         <div className="time-line">
         <TimeLine dataMedicalStaff = {dataMedicalStaff} />

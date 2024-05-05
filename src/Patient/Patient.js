@@ -3,7 +3,7 @@ import axios from 'axios'
 import moment from 'moment'
 import DisplayDataPatient from './DisplayDataPatient/DisplayDataPatient'
 import { dataPatientContext } from '../Provider/DataProvider'
-const Patient = () => {
+const Patient = ({role}) => {
   const {dataPatient,setDataPatient} = useContext(dataPatientContext);
 
   const getPatientStatus = (treatProcess) => {

@@ -27,8 +27,7 @@ const SignInForm = () => {
   };
   //-------------------------------------
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    console.log("helloworld");
+    event.preventDefault(); 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
@@ -41,14 +40,16 @@ const SignInForm = () => {
       console.log(data.email);
       console.log(data.password);
     try {
-        const response = await axios.post('http://localhost:8080/v1/users/login',data); 
-        console.log(response.data);
-        console.log(response); 
-        window.location.href = '/';
-      } catch (error) {
-        console.error(error);
-      }
+        const response = await axios.post('http://localhost:8080/v1/users/login',data, { withCredentials: true }); 
+        
+        if (response.data.message)
+          console.log("Login failed");
+        if(response.data.role)
+          window.location.href = '/';
+    } catch (error) {
+      console.error(error);
     }
+  }
 
     setValidated(true);
   };

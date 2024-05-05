@@ -66,7 +66,7 @@ const DisplayMoreInfo = (props) => {
         </Container>
 
         <div>
-          <Button href={`/medicalStaff/${position}/${data.id}`}> Thông tin chi tiết </Button>
+          <Button disabled = {props.role !== "admin"} href={`/medicalStaff/${position}/${data.id}`}> Thông tin chi tiết </Button>
         </div>
 
         </Offcanvas.Body>

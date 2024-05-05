@@ -6,7 +6,10 @@ import {
 	Column,
 	FooterLink,
 	Heading,
-} from "./FooterStyles";
+} from "./FooterStyles"; 
+import { Container } from "react-bootstrap";
+
+// import "./style.css"
 
 const Footer = () => {
 	return (
@@ -14,13 +17,37 @@ const Footer = () => {
 			<h1
 				style={{
 					color: "white",
+					minHeight: "70px",
 					textAlign: "center",
-					marginTop: "10px",
+					marginTop: "10px", 
+					fontFamily: "Brush Script MT, Brush Script Std, cursive"
+
 				}}
 			>
 				Bach Khoa Heath Care
 			</h1>
-			<FooterContainer>
+			<h4
+				style={{
+					color: "white",
+					minHeight: "30px",
+					textAlign: "center",
+					marginTop: "10px", 
+					fontFamily: "Brush Script MT, Brush Script Std, cursive"
+				}}
+			>- WE TAKE ONE STEP AT A TIME -
+			</h4>
+			<h1
+				style={{
+					color: "white",
+					minHeight: "30px",
+					textAlign: "center",
+					marginTop: "10px", 
+				}}
+			>
+			</h1>
+			<FooterContainer style = {{
+					fontFamily: "Brush Script MT, Brush Script Std, cursive"
+			}}>
 				<Row>
 					<Column>
 						<Heading>About Us</Heading>

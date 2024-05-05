@@ -7,7 +7,7 @@ import TableComponent from './TableComponent/TableComponent';
 import StatusStat from './StatusStat/StatusStat';
 import FilterAndSearch from './FilterAndSearch/FilterAndSearch';
 
-const DisplayDataPatient = ({dataPatient}) => {
+const DisplayDataPatient = ({dataPatient, role}) => {
   const [dataPatientDisplay, setDataPatientDisplay] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
   const [inputValue, setInputValue] = useState('');
@@ -71,8 +71,9 @@ const DisplayDataPatient = ({dataPatient}) => {
         <div className='main-page'>
           <StatusStat dataPatient = {dataPatient}/>
         <FilterAndSearch setDataPatientDisplay = {setDataPatientDisplay} dataPatient = {dataPatient} />
+        
         {Object.keys(dataPatientDisplay).length !== 0 ? (
-            <TableComponent dataPatientDisplay = {dataPatientDisplay} setDataPatientDisplay={setDataPatientDisplay}  />
+            <TableComponent dataPatientDisplay = {dataPatientDisplay} setDataPatientDisplay={setDataPatientDisplay} role = {role} />
           ):(
             <div> NO DATA AVAILABLE </div>
           )}

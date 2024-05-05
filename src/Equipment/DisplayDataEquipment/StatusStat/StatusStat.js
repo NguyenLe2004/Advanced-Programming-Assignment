@@ -4,7 +4,7 @@ import AddEquipmentForm from './AddEquipmentForm/AddEquipmentForm'
 import moment from 'moment'
 import "./StatusStat.css"
 
-const StatusStat = ({dataEquipment}) => {
+const StatusStat = ({dataEquipment, role}) => {
     const [showAddEquipmentForm, setShowAddEquipmentForm] = useState(false);
     const handleClickAddBtn = () =>{
         setShowAddEquipmentForm(true);
@@ -16,7 +16,7 @@ const StatusStat = ({dataEquipment}) => {
     };
 
     dataEquipment.forEach((item) => {
-        frequencyCount[item.status] ++;
+        frequencyCount[item.status]++;
     });
   return (
         <div>
@@ -54,7 +54,7 @@ const StatusStat = ({dataEquipment}) => {
                             <div>Đang bảo trì</div>
                         </Col>
                         <Col className='stat-col'>
-                            <div className='more-stat-btn'><Button onClick={handleClickAddBtn}  > Thêm Thiết bị</Button></div>
+                            <div className='more-stat-btn'><Button disabled = {role !== "admin"} onClick={handleClickAddBtn}  > Thêm Thiết bị</Button></div>
                         </Col>
                     </Row>
                 </Container>

@@ -4,7 +4,7 @@ import moment from "moment";
 import DisplayDataEquipment from "./DisplayDataEquipment/DisplayDataEquipment";
 
 
-const Equipment = () => {
+const Equipment = ({role}) => {
   const [dataEquipment, setDataEquipment] = useState([]);
   const getLastUsageDatetime = (usageHistory) => {
     let lastUse = usageHistory[usageHistory.length - 1];

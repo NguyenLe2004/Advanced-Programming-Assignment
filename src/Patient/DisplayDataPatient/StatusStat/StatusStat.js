@@ -54,6 +54,7 @@ const StatusStat = ({dataPatient}) => {
                             </div>
                             <div>Chưa điều trị</div>
                         </Col>
+
                         <Col className='stat-col'>
                             <div className='more-stat-btn'><Button onClick={handleClickAddBtn}  > Thêm bệnh nhân</Button></div>
                         </Col>

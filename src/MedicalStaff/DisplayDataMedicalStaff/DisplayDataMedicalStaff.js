@@ -7,7 +7,7 @@ import TableComponent from './TableComponent/TableComponent';
 import StatusStat from './StatusStat/StatusStat';
 import FilterAndSearch from './FilterAndSearch/FilterAndSearch'
 
-const DisplayDataMedicalStaff = ({dataMedicalStaff,position}) => {
+const DisplayDataMedicalStaff = ({dataMedicalStaff,position, role}) => {
   const [dataMedicalStaffDisplay, setDataMedicalStaffDisplay] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
   const [inputValue, setInputValue] = useState('');
@@ -67,11 +67,11 @@ const DisplayDataMedicalStaff = ({dataMedicalStaff,position}) => {
 
   return (
         <div className='main-page'>
-          <StatusStat dataMedicalStaff={dataMedicalStaff} position={position}/>
+          <StatusStat dataMedicalStaff={dataMedicalStaff} position={position} role={role}/>
             
           <FilterAndSearch setDataMedicalStaffDisplay = {setDataMedicalStaffDisplay} dataMedicalStaff = {dataMedicalStaff} />
         {Object.keys(dataMedicalStaffDisplay).length !== 0 ? (
-            <TableComponent dataMedicalStaffDisplay = {dataMedicalStaffDisplay} setDataMedicalStaffDisplay={setDataMedicalStaffDisplay}  />
+            <TableComponent dataMedicalStaffDisplay = {dataMedicalStaffDisplay} setDataMedicalStaffDisplay={setDataMedicalStaffDisplay} role = {role} />
           ):(
             <div> NO DATA AVAILABLE </div>
           )}

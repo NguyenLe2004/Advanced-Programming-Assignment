@@ -7,7 +7,7 @@ import TableComponent from './TableComponent/TableComponent';
 import StatusStat from './StatusStat/StatusStat';
 import FilterAndSearch from './FilterAndSearch/FilterAndSearch';
 
-const DisplayDataEquipment = ({dataEquipment}) => {
+const DisplayDataEquipment = ({dataEquipment, role}) => {
   const [dataEquipmentDisplay, setDataEquipmentDisplay] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
   const [inputValue, setInputValue] = useState('');
@@ -64,11 +64,12 @@ const DisplayDataEquipment = ({dataEquipment}) => {
   },[dataEquipment]);
 
   return (
-        <div className='main-page'>
-          <StatusStat dataEquipment ={dataEquipment}/>
+        <div className='main-page'> 
+          <StatusStat dataEquipment ={dataEquipment} role = {role}/> 
+           
         <FilterAndSearch setDataEquipmentDisplay = {setDataEquipmentDisplay} dataEquipment = {dataEquipment} />
         {Object.keys(dataEquipmentDisplay).length !== 0 ? (
-            <TableComponent dataEquipmentDisplay = {dataEquipmentDisplay} setDataEquipmentDisplay={setDataEquipmentDisplay}  />
+            <TableComponent dataEquipmentDisplay = {dataEquipmentDisplay} setDataEquipmentDisplay={setDataEquipmentDisplay} role={role} />
           ):(
             <div> NO DATA AVAILABLE </div>
           )}

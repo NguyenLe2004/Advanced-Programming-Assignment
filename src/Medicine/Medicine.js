@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import moment from 'moment'
 import DisplayDataMedicine from './DisplayDataMedicine/DisplayDataMedicine'
-const Medicine = () => {
+const Medicine = ({role}) => {
     const [dataMedicine , setDataMedicine] = useState([])
     const getMedicineStatus = (medicine) => {
       const curDate = moment();
