@@ -54,7 +54,6 @@ const Home = () => {
     return (
       <div className='main-containter'>
         <div className="mainPage">
-          {!isLoginRoute && <Header className="navBar" />}
           <Routes>
             <Route path='/' render element={<Body />} />
             <Route path='/login' element={<SignInForm />} />
