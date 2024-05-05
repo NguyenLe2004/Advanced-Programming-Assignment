@@ -64,19 +64,7 @@ const signUp = async (Data) => {
   } catch (e) {
     console.error("Error adding document: ", e);
   }
-}
-// const update = async (updateData, id) => {
-//   try {
-//     const specialistDoc = doc(db, 'specialists', id);
-//     const docRef = await updateDoc(specialistDoc, updateData);
-//     return docRef
-//   } catch (e) {
-//     const errorMessage = new Error(error).message
-//     const customError = new customApiErrorModule.CustomAPIError(422, errorMessage)
-//     next(customError)
-//   }
-// }
-
+} 
 const findOneById = async (id) => {
   try {
     // const specialistDocs = await getDocs(collection(db, 'specialists'));
@@ -92,11 +80,11 @@ const signIn = async (Data) => {
     let insertData = JSON.parse(JSON.stringify(validData))
     const userList = await getAllUsers()
     const targetUser = userList.filter(user => user.email === insertData.email)
-    if (!targetUser[0]) {
-      return { message: "Email không tồn tại !" }
+    if (!targetUser[0]) { 
+      return { message: "email khong ton tai" }
     }
     const compareResule = await bcrypt.compare(insertData.password, targetUser[0].password)
-    if (!compareResule) {
+    if (!compareResule) { 
       return { message: "Mật khẩu không hợp lệ !" }
     }
     const token = jwt.sign({ id: targetUser[0].id }, env.JWT_PRIVATE_KEY, { expiresIn: "1h" })

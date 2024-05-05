@@ -2,22 +2,24 @@ import { userModel } from "../model/userModel.js"
 import { env } from "../config/environment.js"
 
 // kiểm tra user đã đăng nhập chưa
-export const authMiddlewareLogin = async (req, res, next) => {
+const authMiddlewareLogin = async (req, res, next) => {
   try {
-    const cookie = req.cookies["token"]
+    const cookie = req.cookies['token']
+    // console.log(cookie);
     if (!cookie) {
-      res.status(404).json({ message: "token is not released" })
+      res.status(201).json({ message: "token is not released" })
     }
     else {
-      req.cookie = cookie
-      next()
+      req.cookie = cookie ;
+      // res.status(200).json({ message: "something else" })
+      next();
     }
   } catch (e) {
     console.error("Error adding document: ", e);
   }
 }
-//kiểm tra user có quyênd truy cập không 
-export const authMiddlewareRole = async (req, res, next) => {
+//kiểm tra user có quyên truy cập không 
+const authMiddlewareRole = async (req, res, next) => {
   const userLogged = await userModel.getUser(req.cookie)
   if (!userLogged) {
     res.status(422).json({ message: "You must login !" })
@@ -30,3 +32,4 @@ export const authMiddlewareRole = async (req, res, next) => {
     next()
   }
 }
+export const userMiddleWare = {authMiddlewareRole, authMiddlewareLogin};

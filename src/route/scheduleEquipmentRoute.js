@@ -2,7 +2,6 @@ import express from 'express'
 
 import { schedulesEquipmentValidation } from '../validations/schedulesEquipmentvalidation.js';
 import { scheduleEquipmentController } from '../controller/scheduleEquipmentController.js'
-import { authMiddlewareRole, authMiddlewareLogin } from '../middleware/authMiddleware.js'
 
 const scheduleEquipmentRouter = express.Router({ mergeParams: true });
 

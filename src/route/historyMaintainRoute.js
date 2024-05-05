@@ -2,7 +2,6 @@ import express from 'express'
 
 import { historyMaintainValidation } from '../validations/historyMaintainValidation.js';
 import { historyMaintainController } from '../controller/historyMaintainController.js'
-import { authMiddlewareRole, authMiddlewareLogin } from '../middleware/authMiddleware.js'
 
 const historyMaintainRouter = express.Router({ mergeParams: true });
 

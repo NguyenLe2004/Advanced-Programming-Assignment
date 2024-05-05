@@ -13,9 +13,11 @@ const signUp = async (req, res, next) => {
 
 }
 const signIn = async (req, res, next) => {
-  try {
-    // const docRef = await addDoc(collection(db, "users"), req.body);
+  try { 
     const loginUser = await userService.signIn(req.body);
+    console.log(loginUser);
+    console.log(loginUser.token);
+    // res.cookies["token"]
     res.cookie("token", loginUser.token, {
       httpOnly: true,
       maxAge: 30 * 60 * 1000,
@@ -27,17 +29,8 @@ const signIn = async (req, res, next) => {
     console.error("Error adding document: ", e);
   }
 
-}
-// const update = async (req, res, next) => {
-//   try {
-//     const id = req.params.id
-//     const newMedicine = await medicineService.update(req.body, id);
-//     // console.log("Document written with ID: ", newSpecialist);
-//     res.status(201).json(newMedicine)
-//   } catch (e) {
-//     console.error("Error adding document: ", e);
-//   }
-// }
+} 
+
 const getUser = async (req, res, next) => {
   try {
     const cookie = req.cookies["token"]

@@ -2,7 +2,6 @@ import express from 'express'
 import { specialistController } from '../controller/specialistController.js'
 import { specialistValidation } from '../validations/specialistValidation.js'
 import scheduleRouter from './scheduleRoute.js'
-import { authMiddlewareRole, authMiddlewareLogin } from '../middleware/authMiddleware.js'
 
 const specialistRouter = express.Router();
 

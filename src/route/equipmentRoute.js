@@ -2,7 +2,6 @@ import express from 'express'
 import { equipmentController } from '../controller/equipmentController.js'
 import { equipmentValidation } from '../validations/equipmentValidation.js'
 import scheduleEquipmentRouter from './scheduleEquipmentRoute.js'
-import { authMiddlewareRole, authMiddlewareLogin } from '../middleware/authMiddleware.js'
 import historyMaintainRouter from './historyMaintainRoute.js'
 const equipmentRouter = express.Router();
 

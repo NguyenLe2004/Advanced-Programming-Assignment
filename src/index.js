@@ -10,8 +10,8 @@ import bodyParser from 'body-parser'
 import { corsOptions } from './config/cors.js';
 
 const app = express();
-
 app.use(cookieParser())
+
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(errorHandlerMiddleware)
@@ -20,9 +20,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(notFound)
 
 app.use('/v1', Router);
-// app.route('/get').get((req, res) => {
-//   res.status(200).end('<h1>Hello World!</h1><hr>')
-// })
 app.get("/", (req, res) => {
   res.send("task manager")
 })

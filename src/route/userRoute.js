@@ -11,3 +11,6 @@ userRouter.route('/logout').post(userController.logOut)
 
 
 export default userRouter
+
+
+

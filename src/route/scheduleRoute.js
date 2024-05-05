@@ -2,7 +2,6 @@ import express from 'express'
 
 import { schedulesValidation } from '../validations/schedulesValidation.js'
 import { scheduleController } from '../controller/scheduleController.js'
-import { authMiddlewareRole, authMiddlewareLogin } from '../middleware/authMiddleware.js'
 
 const scheduleRouter = express.Router({ mergeParams: true });
 

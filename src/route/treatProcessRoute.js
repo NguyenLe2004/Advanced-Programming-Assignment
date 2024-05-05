@@ -2,7 +2,6 @@ import express from 'express'
 import { schedulesValidation } from '../validations/schedulesValidation.js'
 import { treatProcessController } from '../controller/treatProcessController.js'
 import { treatProcessValidation } from '../validations/treatProcessValidation.js'
-import { authMiddlewareRole, authMiddlewareLogin } from '../middleware/authMiddleware.js'
 const treatProcessRouter = express.Router({ mergeParams: true });
 
 

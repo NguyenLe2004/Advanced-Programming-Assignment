@@ -15,9 +15,7 @@ const createNew = async (req, res, next) => {
     firstName: Joi.string().required().max(2000).trim().strict(),
     email: Joi.string().email().required().min(3),
     phoneNum: Joi.string().regex(PHONE_NUMBER_RULE).required(),
-    dateOfBirth: Joi.string().regex(DATE_RULE).required(),
-    // age: Joi.string().pattern(/^[0-9]+$/, 'numbers').trim().strict().required(),
-    // age: Joi.string().required().pattern(AGE_RULE).trim().strict(),
+    dateOfBirth: Joi.string().regex(DATE_RULE).required(), 
     gender: Joi.string().valid('Nam', 'Nữ').required(),
     job: Joi.string().required().min(3).max(2000).trim().strict(),
     citizenID: Joi.string().required().pattern(CCCD_RULE),
@@ -26,18 +24,14 @@ const createNew = async (req, res, next) => {
     bloodType: Joi.string().required().max(2000).trim().strict(),
     address: Joi.string().required().min(3).max(2000).trim().strict(),
     hometown: Joi.string().required().min(3).max(2000).trim().strict(),
-    diagnosis: Joi.string().required().min(3).max(2000).trim().strict(),
-    // // Doctor_ID: Joi.string().required().pattern(_ID_RULE).message(_ID_RULE_MESSAGE),
+    diagnosis: Joi.string().required().min(3).max(2000).trim().strict(), 
     symptoms: Joi.string().min(3).max(2000).required(),
-    medHistory: Joi.string().min(3).max(2000).optional()
-    // treatProcess: Joi.array().default([]),
-    // test: Joi.array().default([]),
-
+    medHistory: Joi.string().min(3).max(2000).optional()  
   })
   try {
     await dataCorrection.validateAsync(req.body, { abortEarly: false })
-    next()
-    // res.status(201).json("Tao thanh cong")
+    // next()
+    res.status(201).json("Tao thanh cong")
   } catch (error) {
     const errorMessage = new Error(error).message
     const customError = new customApiErrorModule.CustomAPIError(422, errorMessage)
