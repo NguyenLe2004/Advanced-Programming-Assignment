@@ -30,7 +30,7 @@ const Medicine = () => {
         getAllMedicine();
     }, []);
   return (
-    <div>
+    <div style={{height:"100vh"}}>
       <DisplayDataMedicine dataMedicine={dataMedicine} />
     </div>
   )

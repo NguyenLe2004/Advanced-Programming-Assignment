@@ -79,7 +79,7 @@ const Equipment = () => {
     getAllEquipment();
   }, []);
   return (
-    <div>
+    <div style={{height:"100vh"}}>
       <DisplayDataEquipment dataEquipment={dataEquipment} />
     </div>
   );
