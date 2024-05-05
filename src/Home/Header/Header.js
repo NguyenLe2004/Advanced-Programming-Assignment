@@ -1,8 +1,8 @@
 import React from 'react'
 import NavigatorBar from './NavigatorBar/NavigatorBar'
-const Header = () => {
+const Header = ({role}) => {
   return (
-    <NavigatorBar />
+    <NavigatorBar role = {role}/>
   )
 }
 

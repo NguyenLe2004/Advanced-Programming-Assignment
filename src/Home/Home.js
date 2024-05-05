@@ -14,6 +14,8 @@ import Footer from './Footer/Footer'
 import RegisterForm from './RegisterForm/RegisterForm'
 import SignInForm from './SignInForm/SignInForm'
 import { useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
 
 import "./Home.css"
 import axios from 'axios'
@@ -27,7 +29,7 @@ const Home = () => {
   const [globalEmail, setEmail] = useState(null);
   const [globalName, setName] = useState(null);
   const [globalID, setID] = useState(null);
-
+  const routeChange = useNavigate();
 
   const [checkLogin, setLogin] = useState(false);
 
@@ -61,16 +63,18 @@ const Home = () => {
     getRole();
   }, []);
 
-  console.log(checkLogin);
   if (checkLogin === false && globalRole === "null") {
+    if((location.pathname !== "/") && (location.pathname !== "/login")){
+      return <Navigate to= '/login' replace/>
+    }
     return (
       <div className='main-containter'>
         <div className="mainPage">
-        {!isLoginRoute && <Header className="navBar" />}
+        {!isLoginRoute && <Header className="navBar" role = {""} />}
           <Routes>
             <Route path='/' render element={<Body />} />
             <Route path='/login' element={<SignInForm />} />
-            <Route path='/profile' element={<SignInForm />} />
+            <Route path='/profile' onClick= {()=> {routeChange('/login')}} element={<SignInForm />} />
             <Route path='/patient' element={<SignInForm />}/>
             <Route path='/patient/:id' element={<SignInForm />} />
             <Route path='/medicalStaff/:position' element={<SignInForm />} />
@@ -87,13 +91,12 @@ const Home = () => {
   return (
 
     <div className='main-containter'>
-
-
       <div className="mainPage">
-        {!isLoginRoute && <Header className="navBar" />}
+        {!isLoginRoute && <Header className="navBar" role = {globalRole} />}
         <Routes>
           <Route path='/' render element={<Body />} />
           <Route path='/login' element={<SignInForm />} />
+          <Route path='/register' element={< RegisterForm role = {globalRole}/>} />
           <Route path='/profile' element={<Profile email = {globalEmail} name = {globalName} role = {globalRole} id = {globalID}/>} />
           <Route path='/patient' element={ <Patient role = {globalRole}/>} />
           <Route path='/patient/:id' element={<DetailPatient />} />

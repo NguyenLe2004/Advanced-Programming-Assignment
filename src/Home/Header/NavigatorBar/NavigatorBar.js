@@ -1,15 +1,24 @@
-import React, { useContext,useState,useRef, useEffect } from 'react'
+import React, { useContext, useState, useRef, useEffect } from 'react'
 import { signInContext } from '../../../Provider/SignInProvider';
 import { displaySignInFormContext } from '../../../Provider/DisplaySignInProvider';
-import { faUser, faUserDoctor, faUserNurse, faHeadset, faPills,faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faUserDoctor, faUserNurse, faHeadset, faPills, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./NavigatorBar.css"
+import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row';
+import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import axios from 'axios';
 import eximg from "../../../Image/example-img.jpeg"
-import { Button } from 'react-bootstrap';
 import Profile from '../../../Profile/Profile';
-const NavigatorBar = () => {
+const NavigatorBar = ({ role }) => {
   const { isSignIn, setIsSignIn } = useContext(signInContext);
   const { isDisplaySignInForm, setIsDisplaySignInForm } = useContext(displaySignInFormContext);
   const [isDisplayDropDown, setIsDisplayDropDown] = useState(false);
@@ -36,6 +45,7 @@ const NavigatorBar = () => {
   const handleSignOut = () => {
     setIsSignIn(false);
   }
+
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsDisplayDropDown(false);
@@ -77,18 +87,26 @@ const NavigatorBar = () => {
             <a href='/equipment'><FontAwesomeIcon icon={faScrewdriverWrench} /></a>
             <div className='label'>thiết bị</div>
           </li>
+          
+          {(role) ?
+            <li >
+              {(role === "admin") && <Button href='/register'>Add user</Button>}
+            </li>
+            :
+            <li > <Button style={{ position: "absolute", right: "5vw", display: "flex", flexDirection: "column" }} href='/login'>Đăng nhập</Button></li>
+          }
 
 
-          <li >
-            <div style={{position:"absolute",right:"5vw",display:"flex",flexDirection:"column"}} >
-                <img style={{height:"4vh", width:"4vh",borderRadius:"50%", position:"absolute",right:"1vw"}} onClick={()=>setIsDisplayDropDown(true)} className='profileImage' src={eximg} alt='Profile' />
+          {(role) && <li >
+            <div style={{ position: "absolute", right: "5vw", display: "flex", flexDirection: "column" }} >
+              <img style={{ height: "4vh", width: "4vh", borderRadius: "50%", position: "absolute", right: "1vw" }} onClick={() => setIsDisplayDropDown(true)} className='profileImage' src={eximg} alt='Profile' />
               {isDisplayDropDown && <div ref={dropdownRef} className='user-option'>
                 <li><a href="/profile">My Profile</a></li>
                 <li><a onClick={handleSubmit} href="/login">Sign out</a></li>
                 <li><a href="/login">Sign in</a></li>
               </div>}
             </div>
-          </li>
+          </li>}
         </ul>
 
       </nav>
