@@ -99,6 +99,7 @@ const deleteManyItems = async (arrayItems, specialistId) => {
 const deleteAnItem = async (id, specialistId) => {
   try {
     const specialistDocContain = collection(db, 'specialists', specialistId, 'schedules')
+    console.log("delete here",specialistId, id)
     const schedule = await deleteDoc(doc(specialistDocContain, id))
 
     // const docRef = await updateDoc(scheduleDoc, updateData);

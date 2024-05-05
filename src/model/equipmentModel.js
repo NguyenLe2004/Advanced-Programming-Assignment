@@ -8,10 +8,12 @@ import { scheduleEquipmentModel } from '../model/scheduleEquipmentModel.js'
 
 
 const EQUIPMENT_COLLECTION_SCHEMA = Joi.object({
-  eqName: Joi.string().required().min(3).max(256).trim().strict(),
+  name: Joi.string().required().min(3).max(256).trim().strict(),
   regularMaintenance: Joi.object({
-    date: Joi.string().regex(DATE_RULE).required(),
-    description: Joi.string().required().min(3).max(2000).trim().strict()
+    dateBegin: Joi.string().regex(DATE_RULE),
+    dateEnd: Joi.string().regex(DATE_RULE),
+    description: Joi.string().min(3).max(2000).trim().strict()
+    
   }).default({}),
   usageHistory: Joi.array().default([]),
   Status: Joi.string().valid('Đã phân công', 'Chưa phân công')

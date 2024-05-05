@@ -4,10 +4,9 @@ import { PHONE_NUMBER_RULE, DATE_RULE, _ID_RULE, _ID_RULE_MESSAGE, TIME_RULE } f
 
 const createNew = async (req, res, next) => {
   const dataCorrection = Joi.object({
-    eqName: Joi.string().required().min(3).max(256).trim().strict(),
+    name: Joi.string().required().min(3).max(256).trim().strict(),
     regularMaintenance: Joi.object().default([]),
     // usageHistory: Joi.array().default([]),
-    Status: Joi.string().valid('Đã phân công', 'Chưa phân công')
   })
   try {
     await dataCorrection.validateAsync(req.body, { abortEarly: false })
@@ -18,17 +17,19 @@ const createNew = async (req, res, next) => {
     const customError = new customApiErrorModule.CustomAPIError(422, errorMessage)
     next(customError)
   }
-}
+} 
 
 const update = async (req, res, next) => {
   const dataCorrection = Joi.object({
-    eqName: Joi.string().min(3).max(256).trim().strict(),
-    regularMaintenance: Joi.object({
-      date: Joi.string().regex(DATE_RULE),
-      description: Joi.string().min(3).max(2000).trim().strict()
-    }).default({}),
+    name: Joi.string().min(3).max(256).trim().strict(),
+    regularMaintenance: Joi.array().items(
+      Joi.object({
+        dateBegin: Joi.string().regex(DATE_RULE),
+        dateEnd: Joi.string().regex(DATE_RULE),
+        description: Joi.string().min(3).max(2000).trim().strict()
+      })
+    ).default([])
     // usageHistory: Joi.array().default([]),
-    Status: Joi.string().valid('Đã phân công', 'Chưa phân công')
   })
   try {
     await dataCorrection.validateAsync(req.body,

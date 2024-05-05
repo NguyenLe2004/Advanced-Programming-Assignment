@@ -7,8 +7,10 @@ import { customApiErrorModule } from '../error/customError.js'
 
 const SCHEDULE_EQUIPMENT_COLLECTION_SCHEMA = Joi.object({
   room: Joi.string().required().min(3).max(256).trim().strict(),
-  date: Joi.string().regex(DATE_RULE).required(),
-  time: Joi.string().regex(TIME_RULE).required().trim().strict()
+  dateBegin: Joi.string().regex(DATE_RULE).required(),
+  dateEnd: Joi.string().regex(DATE_RULE).required(),
+  timeBegin: Joi.string().regex(TIME_RULE).required().trim().strict(),
+  timeEnd: Joi.string().regex(TIME_RULE).required().trim().strict()
 })
 // const INVALID_DATA_UPDATE = ['_id', 'createdAt']
 const validObjectValue = async (data) => {
@@ -20,7 +22,7 @@ const createNew = async (Data, equipmentId) => {
     const insertData = JSON.parse(JSON.stringify(validData))
 
     // const specialistSchedule = [];
-    const docref = await addDoc(collection(db, 'equipments', equipmentId, 'schedules_Equipment'), insertData)
+    const docref = await addDoc(collection(db, 'equipments', equipmentId, 'usageHistory'), insertData)
     // const scheduleDocs = collection(db, 'specialists', specialistId, 'schedules')
     // const schedules = await getDocs(scheduleDocs);
     // schedules.forEach(data => { specialistSchedule.push(data.data()) });
@@ -56,7 +58,7 @@ const getAllSchedule = async (equipmentId) => {
 }
 const findOneById = async (id, equipmentId) => {
   try {
-    const scheduleDocs = collection(db, 'equipments', equipmentId, 'schedules_Equipment')
+    const scheduleDocs = collection(db, 'equipments', equipmentId, 'usageHistory')
 
     const schedule = doc(scheduleDocs, id);
 
@@ -67,7 +69,7 @@ const findOneById = async (id, equipmentId) => {
 }
 const update = async (updateData, id, equipmentId) => {
   try {
-    const equipmentDocContain = collection(db, 'equipments', equipmentId, 'schedules_Equipment')
+    const equipmentDocContain = collection(db, 'equipments', equipmentId, 'usageHistory')
     const scheduleDoc = doc(equipmentDocContain, id);
     const docRef = await updateDoc(scheduleDoc, updateData);
     return docRef
@@ -77,7 +79,7 @@ const update = async (updateData, id, equipmentId) => {
 }
 const deleteManyItems = async (arrayItems, equipmentId) => {
   try {
-    const equipmentDocContain = collection(db, 'equipments', equipmentId, 'schedules_Equipment')
+    const equipmentDocContain = collection(db, 'equipments', equipmentId, 'usageHistory')
     arrayItems.forEach(async (_id) => {
       await deleteDoc(doc(equipmentDocContain, _id))
     })
@@ -89,7 +91,7 @@ const deleteManyItems = async (arrayItems, equipmentId) => {
 }
 const deleteAnItem = async (id, equipmentId) => {
   try {
-    const equipmentDocContain = collection(db, 'equipments', equipmentId, 'schedules_Equipment')
+    const equipmentDocContain = collection(db, 'equipments', equipmentId, 'usageHistory')
     const schedule = await deleteDoc(doc(equipmentDocContain, id))
 
     // const docRef = await updateDoc(scheduleDoc, updateData);

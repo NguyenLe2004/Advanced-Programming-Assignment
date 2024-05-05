@@ -5,8 +5,10 @@ import { TIME_RULE, DATE_RULE, _ID_RULE, _ID_RULE_MESSAGE } from '../utils/valid
 const createNew = async (req, res, next) => {
   const dataCorrection = Joi.object({
     room: Joi.string().required().min(3).max(256).trim().strict(),
-    date: Joi.string().regex(DATE_RULE).required(),
-    time: Joi.string().regex(TIME_RULE).required().trim().strict()
+    dateBegin: Joi.string().regex(DATE_RULE).required(),
+    dateEnd: Joi.string().regex(DATE_RULE).required(),
+    timeBegin: Joi.string().regex(TIME_RULE).required().trim().strict(),
+    timeEnd: Joi.string().regex(TIME_RULE).required().trim().strict()
   })
   try {
     await dataCorrection.validateAsync(req.body, { abortEarly: false })
@@ -23,8 +25,10 @@ const createNew = async (req, res, next) => {
 const update = async (req, res, next) => {
   const dataCorrection = Joi.object({
     room: Joi.string().required().min(3).max(256).trim().strict(),
-    date: Joi.string().regex(DATE_RULE).required(),
-    time: Joi.string().regex(TIME_RULE).required().trim().strict()
+    dateBegin: Joi.string().regex(DATE_RULE).required(),
+    dateEnd: Joi.string().regex(DATE_RULE).required(),
+    timeBegin: Joi.string().regex(TIME_RULE).required().trim().strict(),
+    timeEnd: Joi.string().regex(TIME_RULE).required().trim().strict()
   })
   try {
     await dataCorrection.validateAsync(req.body,
