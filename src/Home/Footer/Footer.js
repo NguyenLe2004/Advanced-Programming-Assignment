@@ -60,16 +60,16 @@ const Footer = () => {
 					</Column>
 					<Column>
 						<Heading>Services</Heading>
-						<FooterLink href="#">
+						<FooterLink href="/patient">
 							Patients
 						</FooterLink>
-						<FooterLink href="#">
+						<FooterLink href="/medicalStaff/:position">
 							MedicalStaffs
 						</FooterLink>
-						<FooterLink href="#">
+						<FooterLink href="/medicine">
 							Medicine
 						</FooterLink>
-						<FooterLink href="#">
+						<FooterLink href="/equipment">
 							Equipment
 						</FooterLink>
 					</Column>
@@ -87,7 +87,7 @@ const Footer = () => {
 					</Column>
 					 <Column>
 						<Heading>Social Media</Heading>
-						<FooterLink href="#">
+						<FooterLink href="https://www.facebook.com/watch/?v=2482391628734623">
 							<i className="fab fa-facebook-f">
 								<span
 									style={{
@@ -98,7 +98,7 @@ const Footer = () => {
 								</span>
 							</i>
 						</FooterLink>
-						<FooterLink href="#">
+						<FooterLink href="https://www.instagram.com/p/C4X5ZiLS8wU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
 							<i className="fab fa-instagram">
 								<span
 									style={{
@@ -109,18 +109,19 @@ const Footer = () => {
 								</span>
 							</i>
 						</FooterLink>
-						<FooterLink href="#">
+						<FooterLink href="https://twitter.com/rickastley?lang=en">
 							<i className="fab fa-twitter">
 								<span
 									style={{
 										marginLeft: "10px",
 									}}
 								>
-									Twitter
+									X
 								</span>
 							</i>
 						</FooterLink>
-						<FooterLink href="#">
+						<FooterLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+							
 							<i className="fab fa-youtube">
 								<span
 									style={{

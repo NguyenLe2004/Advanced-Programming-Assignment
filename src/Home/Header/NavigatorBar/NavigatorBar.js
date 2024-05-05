@@ -10,6 +10,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
+import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 const NavigatorBar = () => {
   const { isSignIn, setIsSignIn } = useContext(signInContext);
@@ -23,8 +24,10 @@ const NavigatorBar = () => {
     event.preventDefault();
     try {
       const response = await axios.post('http://localhost:8080/v1/users/logout', null, { withCredentials: true });
-      if (response.data.message)
+      if (response.data.message){
         console.log("logout successed");
+        
+      }
     } catch (error) {
       console.error(error);
     }

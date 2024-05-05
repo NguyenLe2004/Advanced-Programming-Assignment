@@ -65,6 +65,7 @@ const Home = () => {
             <Route path='/medicine' element={<SignInForm />} />
             <Route path='/equipment' element={<SignInForm />} />
           </Routes>
+          <Footer/>
         </div>
       </div>
     )
