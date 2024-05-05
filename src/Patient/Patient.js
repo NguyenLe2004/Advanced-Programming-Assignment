@@ -55,7 +55,7 @@ const Patient = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{height:"100vh"}}>
       <DisplayDataPatient dataPatient = {dataPatient}/>
     </div>
   )

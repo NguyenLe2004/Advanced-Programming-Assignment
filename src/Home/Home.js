@@ -10,6 +10,7 @@ import { displaySignInFormContext } from '../Provider/DisplaySignInProvider'
 import DetailPatient from './DetailInfo/DetailPatient/DetailPatient'
 import DetailMedicalStaff from './DetailInfo/DetailMedicalStaff/DetailMedicalStaff'
 import Footer from './Footer/Footer'
+import RegisterForm from './RegisterForm/RegisterForm'
 import SignInForm from './SignInForm/SignInForm'
 import { useLocation } from 'react-router-dom'
 import "./Home.css"
@@ -23,6 +24,7 @@ const Home = () => {
           <Routes>
             <Route path ='/' element = {<Body/>} />
             <Route path='/login' element = {<SignInForm />} />
+            <Route path='/register' element = {<RegisterForm />} />
             <Route path='/patient' element ={<Patient/>}/>
             <Route path='/medicalStaff/:position/:id' element ={<DetailMedicalStaff/>}/>
             <Route path = '/patient/:id' element={<DetailPatient/>} />
