@@ -36,6 +36,7 @@ const StatusStat = ({dataMedicalStaff,position, role}) => {
                             <div className='stat-total total'>
                                 {dataMedicalStaff.length}
                             </div>
+                            <div>Nhân viên</div>
                         </Col>
                         <Col className="stat-col">
                             <div className="stat-total done">
