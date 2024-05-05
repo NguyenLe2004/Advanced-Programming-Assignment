@@ -60,7 +60,7 @@ const Review = () => {
           </div>
         </div>
         <q>
-        Tôi rất ấn tượng với dịch vụ tại bệnh viện. Tôi nhận thấy mọi người rất tận tâm và chu đáo. Tôi muốn cảm ơn toàn bộ đội ngũ y tế và nhân viên tại bệnh viện ABC vì đã tạo ra một trải nghiệm tuyệt vời cho tôi          </q>
+        Tôi rất ấn tượng với dịch vụ tại bệnh viện. Tôi nhận thấy mọi người rất tận tâm và chu đáo. Tôi muốn cảm ơn toàn bộ đội ngũ y tế và nhân viên tại bệnh viện BK Health Care vì đã tạo ra một trải nghiệm tuyệt vời cho tôi          </q>
       </div> 
       <div className='review-block'>
         <div style={{display:"flex"}}>

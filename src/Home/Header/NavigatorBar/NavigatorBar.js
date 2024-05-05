@@ -11,10 +11,15 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
 import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import axios from 'axios';
 const NavigatorBar = () => {
   const { isSignIn, setIsSignIn } = useContext(signInContext);
   const { isDisplaySignInForm, setIsDisplaySignInForm } = useContext(displaySignInFormContext);
+  const routeChange = useNavigate();
 
   const displaySignInForm = () => {
     setIsDisplaySignInForm(true);
@@ -24,9 +29,9 @@ const NavigatorBar = () => {
     event.preventDefault();
     try {
       const response = await axios.post('http://localhost:8080/v1/users/logout', null, { withCredentials: true });
-      if (response.data.message){
+      if (response.data.message) {
         console.log("logout successed");
-        
+        routeChange('/login');
       }
     } catch (error) {
       console.error(error);
@@ -40,7 +45,7 @@ const NavigatorBar = () => {
     <div className='nav-bar' >
       <nav >
         <ul>
-          <li className='brand'> <a style={{fontFamily: "Brush Script MT, Brush Script Std, cursive"}} href='/'>BK Heath Care</a></li>
+          <li className='brand'> <a style={{ fontFamily: "Brush Script MT, Brush Script Std, cursive" }} href='/'>BK Heath Care</a></li>
           <li className='icon-block'>
             <a href='/patient'><FontAwesomeIcon icon={faUser} /></a>
             <div className='label'>Bệnh nhân</div>
@@ -65,20 +70,21 @@ const NavigatorBar = () => {
             <a href='/equipment'><FontAwesomeIcon icon={faScrewdriverWrench} /></a>
             <div className='label'>thiết bị</div>
           </li>
-          <li>
-            <div>
 
-              <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  Dropdown Button
-                </Dropdown.Toggle>
 
-                <Dropdown.Menu>
-                  <Dropdown.Item href="/">Home</Dropdown.Item>
-                  <Dropdown.Item href="/login">Login</Dropdown.Item>
-                  <Dropdown.Item onClick={handleSubmit} href="/login">Logout</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+          <li style={{right}}>
+            <div className="dropdown show">
+              <button className="btn dropdown-toggle" style={{ border: "transparent" }}
+                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <img className='profileImage' src={""} alt='Profile' />
+              </button>
+
+              <div className="dropdown-menu">
+                <li><a className="dropdown-item" href="/myProfile">My Profile</a></li>
+                <li><a className="dropdown-item" href="/myDashboard">My Dashboard </a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a className="dropdown-item" href="/signOut">Signout</a></li>
+              </div>
             </div>
           </li>
 
