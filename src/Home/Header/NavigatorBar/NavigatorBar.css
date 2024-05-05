@@ -73,3 +73,26 @@ a {
     top: 50%;
     transform: translateY(-50%);
 }
+.user-option {
+    margin-top: 4vh;
+    background-color: white;
+    /* padding : 1vh 1vw; */
+
+
+}
+.user-option li a {
+    
+    color: black;
+
+    font-size: 12px;
+}
+.user-option li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px gray solid;
+}
+.user-option li:last-child{
+    border-top: none;
+}

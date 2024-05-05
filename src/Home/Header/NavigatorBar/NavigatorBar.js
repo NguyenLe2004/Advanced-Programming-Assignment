@@ -1,24 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState,useRef, useEffect } from 'react'
 import { signInContext } from '../../../Provider/SignInProvider';
 import { displaySignInFormContext } from '../../../Provider/DisplaySignInProvider';
-import { faHouse, faUser, faUserDoctor, faUserNurse, faHeadset, faPills, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faUserDoctor, faUserNurse, faHeadset, faPills,faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./NavigatorBar.css"
-import Button from 'react-bootstrap/Button';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row';
-import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import axios from 'axios';
+import eximg from "../../../Image/example-img.jpeg"
 const NavigatorBar = () => {
   const { isSignIn, setIsSignIn } = useContext(signInContext);
   const { isDisplaySignInForm, setIsDisplaySignInForm } = useContext(displaySignInFormContext);
+  const [isDisplayDropDown, setIsDisplayDropDown] = useState(false);
+  const dropdownRef = useRef(null);
   const routeChange = useNavigate();
 
   const displaySignInForm = () => {
@@ -41,6 +34,18 @@ const NavigatorBar = () => {
   const handleSignOut = () => {
     setIsSignIn(false);
   }
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDisplayDropDown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
     <div className='nav-bar' >
       <nav >
@@ -72,26 +77,16 @@ const NavigatorBar = () => {
           </li>
 
 
-          <li style={{right}}>
-            <div className="dropdown show">
-              <button className="btn dropdown-toggle" style={{ border: "transparent" }}
-                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                <img className='profileImage' src={""} alt='Profile' />
-              </button>
-
-              <div className="dropdown-menu">
-                <li><a className="dropdown-item" href="/myProfile">My Profile</a></li>
-                <li><a className="dropdown-item" href="/myDashboard">My Dashboard </a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="/signOut">Signout</a></li>
-              </div>
+          <li >
+            <div style={{position:"absolute",right:"5vw",display:"flex",flexDirection:"column"}} >
+                <img style={{height:"4vh", width:"4vh",borderRadius:"50%", position:"absolute",right:"1vw"}} onClick={()=>setIsDisplayDropDown(true)} className='profileImage' src={eximg} alt='Profile' />
+              {isDisplayDropDown && <div ref={dropdownRef} className='user-option'>
+                <li><a href="/myProfile">My Profile</a></li>
+                <li><a href="/signOut">Signout</a></li>
+              </div>}
             </div>
           </li>
-
         </ul>
-
-
-
 
       </nav>
     </div>

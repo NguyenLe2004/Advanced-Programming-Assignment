@@ -3,7 +3,7 @@ import CarouselPart from './CarouselPart/CarouselPart'
 import StatComponent from './StatComponent/StatComponent'
 import CardComponent from './CardComponent/CardComponent'
 import Review from './Review/Review'
-const BodyNotAdmin = () => {
+const BodyNotStaff = () => {
   return (
     <div>
       <CarouselPart/>
@@ -14,4 +14,4 @@ const BodyNotAdmin = () => {
   )
 }
 
-export default BodyNotAdmin
+export default BodyNotStaff
