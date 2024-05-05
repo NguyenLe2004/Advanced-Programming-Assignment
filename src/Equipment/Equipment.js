@@ -80,7 +80,7 @@ const Equipment = ({role}) => {
   }, []);
   return (
     <div style={{height:"100vh"}}>
-      <DisplayDataEquipment dataEquipment={dataEquipment} />
+      <DisplayDataEquipment dataEquipment={dataEquipment} role = {role} />
     </div>
   );
 };
