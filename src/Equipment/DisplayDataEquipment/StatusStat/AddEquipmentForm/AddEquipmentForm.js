@@ -6,7 +6,6 @@ import { Form,Button, } from 'react-bootstrap';
 import CloseButton from 'react-bootstrap/CloseButton';
 import axios from 'axios'
 import "./AddEquipmentForm.css"
-import AddEquipmentMaintainForm from './AddEquipmentMaintainForm/AddEquipmentMaintainForm';
 const AddEquipmentForm = ({setShowAddEquipmentForm}) => {
 
 
@@ -18,22 +17,16 @@ const AddEquipmentForm = ({setShowAddEquipmentForm}) => {
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
-            // const data= {
-            //     ...personalInfo,
-            //     height: form.elements.height.value,
-            //     weight: form.elements.weight.value,
-            //     bloodType : form.elements.bloodType.value,
-            //     medHistory : form.elements.medHistory.value,
-            //     symtoms : form.elements.symtoms.value,
-            //     diagnosis : form.elements.diagnosis.value,
-            //     treatProcess : []
-            // }
-            // try {
-            //     const response = await axios.post('http://localhost:3000/Patient',data);
-            //     window.open(`http://localhost:4000/Patient/${response.data.id}`, '_blank');
-            //   } catch (error) {
-            //     console.error(error);
-            //   }
+            const data= {
+                name : form.elements.name.value,
+                // regularMaintenance : [] 
+            }
+            try {
+                const response = await axios.post('http://localhost:8080/v1/equipments',data);
+                window.location.reload();
+              } catch (error) {
+                console.error(error);
+              }
         }
         setValidated(true);
         };
@@ -51,9 +44,9 @@ return (
                 <Container>
                     <Row>
                     <Form id="parent" style={{padding:"2vh 1vw"}} noValidate validated={validated} onSubmit={handleSubmit}>
-                    <Row className="mb-3" ><h3>Thông tin y tế</h3></Row>
+                    <Row className="mb-3" ><h3>Thông tin thiết bị</h3></Row>
                         <Row className='mb-3'>
-                            <Form.Group as={Col} controlId="medHistory">
+                            <Form.Group as={Col} controlId="name">
                                 <Form.Label>Tên thiết bị</Form.Label>
                                 <Form.Control
                                 required
@@ -65,19 +58,8 @@ return (
                             </Form.Control.Feedback>
                             </Form.Group>
                         </Row>
-                        <Row>
-                            <h5>Thông tin bảo dưỡng</h5>
-                        </Row>
-                        <Row className="mb-3">
-                            {maintain.map((obj,index) => {
-                                return (
-                                    <div>{obj.description}</div>
-                                )
-                            })}
-                        </Row>
-                            <Button type="submit" > Thiết bị</Button>
+                            <Button type="submit" >Thêm Thiết bị</Button>
                         </Form>
-                        <AddEquipmentMaintainForm maintain={maintain} setMaintain = {setMaintain} />
                     </Row>
                 </Container>
             </div>
