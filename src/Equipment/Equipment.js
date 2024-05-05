@@ -12,6 +12,7 @@ const Equipment = ({role}) => {
   };
 
   const getLastUsageRoom = (usageHistory) => {
+    if(!usageHistory.length) return "Chưa được sử dụng"
     let lastUse = usageHistory[usageHistory.length - 1];
     return lastUse.room;
   };
@@ -61,10 +62,10 @@ const Equipment = ({role}) => {
             const usageHistoryPromise = await axios.get(
               `http://localhost:8080/v1/equipments/${obj.id}/usageHistory`
             );
-            console.log(usageHistoryPromise.data)
             obj.usageHistory = usageHistoryPromise.data;
-            obj.lastUsageDatetime = getLastUsageDatetime(obj.usageHistory);
-            obj.lastUsageRoom = getLastUsageRoom(obj.usageHistory);
+            console.log(obj.name,obj.usageHistory )
+            obj.lastUsageDatetime = ( obj.usageHistory.length ? getLastUsageDatetime(obj.usageHistory) : "Chưa được sử dụng");
+            obj.lastUsageRoom = ( obj.usageHistory.length ?getLastUsageRoom(obj.usageHistory) : "Chưa được sử dụng" );
             obj.nextMaintain = getNextMaintain(obj.regularMaintenance);
             obj.status = getEquipStatus(obj);
           })
