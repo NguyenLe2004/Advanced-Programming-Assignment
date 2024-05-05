@@ -31,7 +31,7 @@ const Medicine = ({role}) => {
     }, []);
   return (
     <div style={{height:"100vh"}}>
-      <DisplayDataMedicine dataMedicine={dataMedicine} />
+      <DisplayDataMedicine dataMedicine={dataMedicine} role = {role} />
     </div>
   )
 }

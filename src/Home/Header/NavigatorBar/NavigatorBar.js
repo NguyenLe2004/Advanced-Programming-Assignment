@@ -72,7 +72,7 @@ const NavigatorBar = () => {
           </li>
 
 
-          <li style={{right}}>
+          {/* <li style={{right}}>
             <div className="dropdown show">
               <button className="btn dropdown-toggle" style={{ border: "transparent" }}
                 id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -86,7 +86,9 @@ const NavigatorBar = () => {
                 <li><a className="dropdown-item" href="/signOut">Signout</a></li>
               </div>
             </div>
-          </li>
+          </li> */}
+          <Button href='./login'>Login</Button>
+          <Button onClick={handleSubmit} href='./login'>Logout</Button>
 
         </ul>
 
