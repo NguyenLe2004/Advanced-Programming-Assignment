@@ -64,21 +64,19 @@
     margin-bottom: 1vh;
     border-radius: 50%;
 }
-.info-block{
+.info-block2{
     display: flex;
     margin-left: 10vw;
-    width: 260vw;
-    height: 40vh;
+    width: 80vw;
+    height: 85vh;
     font-weight: bold;
     justify-content: center;
 }
-.info{
+.info2{
     background-color: white;
-    margin-top: 30vm;
-    width: 280vw;
-    height: 55%;
-    justify-content: center;
+    width: 35vw;
     border-radius: 10px;
+    height: 55%;
 }
 .med-info{
     position: relative;

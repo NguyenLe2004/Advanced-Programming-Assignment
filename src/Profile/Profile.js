@@ -11,8 +11,8 @@ const Profile = (user) => {
             </div>
 
             <div className='main-page-detail'>
-                <div className='info-block'>
-                    <span className='info'> 
+                <div className='info-block2'>
+                    <span className='info2'> 
                         <div className='avatar' >{user.name}</div>
                         <div>
                             <Container>
