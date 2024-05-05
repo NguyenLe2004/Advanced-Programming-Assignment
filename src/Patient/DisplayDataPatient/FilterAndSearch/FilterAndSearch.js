@@ -3,10 +3,12 @@ import { Form, Row,Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import "./FilterAndSearch.css"
-import moment from 'moment';
 const FilterAndSearch = ({setDataPatientDisplay, dataPatient}) => {
     const [isClickSearchIcon , setIsClickSearchIcon ] =useState(false)
     const [searchValue, setSearchValue] = useState("");
+    const [statusFilter, setStatusFilter] = useState("");
+    const [genderFilter, setGenderFilter] = useState("");
+    const [ageFilter, setAgeFilter] = useState("");
     const searchBlockRef = useRef(null)
     const handleClickOutside = (event) => {
         if (searchBlockRef.current && !searchBlockRef.current.contains(event.target)) {
@@ -26,39 +28,33 @@ const FilterAndSearch = ({setDataPatientDisplay, dataPatient}) => {
         const searchedData = dataPatient.filter(item => item.citizenID === citizenID);
         setDataPatientDisplay(searchedData);
     }
-    const filterDataByStatus = (status) => {
-        if (status === "") {
-            setDataPatientDisplay(dataPatient);
-        } else {
-            const filteredData = dataPatient.filter(item => item.status === status);
-            setDataPatientDisplay(filteredData);
+    const filterData = () => {
+        let filteredData = dataPatient;
+
+        if (statusFilter !== "") {
+            filteredData = filteredData.filter(item => item.status === statusFilter);
         }
-    }
-    const filterDataByGender = (gender) => {
-        if (gender === "") {
-            setDataPatientDisplay(dataPatient);
-        } else {
-            const filteredData = dataPatient.filter(item => item.gender === gender);
-            setDataPatientDisplay(filteredData);
+
+        if (genderFilter !== "") {
+            filteredData = filteredData.filter(item => item.gender === genderFilter);
         }
-    }
-    const filterDataByAge = (age) => {
-        if (age === "") {
-            setDataPatientDisplay(dataPatient);
-        } else {
-            const Date = moment();
-            const filteredData = dataPatient.filter(item => {
-                const birthDayOfPatient = moment(item.dateOfBirth)
-                const ageOfPatient = Date.diff(birthDayOfPatient, 'years');
-                if (age === "< 18 tuổi") {
+
+        if (ageFilter !== "") {
+            filteredData = filteredData.filter(item => {
+                const ageOfPatient = (item.age)
+                if (ageFilter === "< 18 tuổi") {
                     return ageOfPatient < 18;
-                } else if (age === ">= 18 tuổi") {
+                } else if (ageFilter === ">= 18 tuổi") {
                     return ageOfPatient >= 18;
                 }
             });
-            setDataPatientDisplay(filteredData);
         }
-    }
+
+        setDataPatientDisplay(filteredData);
+    };
+    useEffect(() => {
+        filterData();
+    }, [statusFilter, genderFilter, ageFilter]);
     useEffect(() => {
         document.addEventListener('click', handleClickOutside);
         return () => {
@@ -91,9 +87,7 @@ const FilterAndSearch = ({setDataPatientDisplay, dataPatient}) => {
                     <Row>
                     <Col>
                         <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByStatus(e.target.value);
-                                    }}>
+                        <Form.Select onChange={(e) => setStatusFilter(e.target.value)}>
                                         <option value="">Trạng thái</option>
                                         <option value="Hoàn thành điều trị">Hoàn thành điều trị</option>
                                         <option value="Đang điều trị">Đang điều trị</option>
@@ -103,9 +97,7 @@ const FilterAndSearch = ({setDataPatientDisplay, dataPatient}) => {
                     </Col>
                     <Col>
                     <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByGender(e.target.value);
-                                    }}>
+                    <Form.Select onChange={(e) => setGenderFilter(e.target.value)}>
                                         <option value="">Giới tính</option>
                                         <option value="Nam">Nam</option>
                                         <option value="Nữ">Nữ</option>
@@ -113,10 +105,8 @@ const FilterAndSearch = ({setDataPatientDisplay, dataPatient}) => {
                         </Form.Group>
                     </Col>
                     <Col>
-                    <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByAge(e.target.value);
-                                    }}>
+                    <Form.Group>        
+                    <Form.Select onChange={(e) => setAgeFilter(e.target.value)}>
                                         <option value="">Tuổi</option>
                                         <option value="< 18 tuổi">Dưới 18 tuổi</option>
                                         <option value=">= 18 tuổi">Trên 18 tuổi</option>

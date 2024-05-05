@@ -7,6 +7,10 @@ import moment from 'moment';
 const FilterAndSearch = ({setDataMedicalStaffDisplay, dataMedicalStaff, position}) => { 
     const [isClickSearchIcon , setIsClickSearchIcon ] =useState(false)
     const [searchValue, setSearchValue] = useState("");
+    const [statusFilter, setStatusFilter] = useState("");
+    const [genderFilter, setGenderFilter] = useState("");
+    const [ageFilter, setAgeFilter] = useState("");
+    const [specialtyFilter, setSpecialtyFilter] = useState("");
     const searchBlockRef = useRef(null)
     const handleClickOutside = (event) => {
         if (searchBlockRef.current && !searchBlockRef.current.contains(event.target)) {
@@ -26,47 +30,39 @@ const FilterAndSearch = ({setDataMedicalStaffDisplay, dataMedicalStaff, position
         const searchedData = dataMedicalStaff.filter(item => item.citizenID === citizenID);
         setDataMedicalStaffDisplay(searchedData);
     }
-    const filterDataByStatus = (status) => {
-        if (status === "") {
-            setDataMedicalStaffDisplay(dataMedicalStaff);
-        } else {
-            const filteredData = dataMedicalStaff.filter(item => item.status === status);
-            setDataMedicalStaffDisplay(filteredData);
+    const filterData = () => {
+        let filteredData = dataMedicalStaff;
+
+        if (statusFilter !== "") {
+            filteredData = filteredData.filter(item => item.status === statusFilter);
         }
-    }
-    const filterDataBySpecialty = (specialty) => {
-        if (specialty === "") {
-            setDataMedicalStaffDisplay(dataMedicalStaff);
-        } else {
-            const filteredData = dataMedicalStaff.filter(item => item.specialty === specialty);
-            setDataMedicalStaffDisplay(filteredData);
+
+        if (genderFilter !== "") {
+            filteredData = filteredData.filter(item => item.gender === genderFilter);
         }
-    }
-    const filterDataByGender = (gender) => {
-        if (gender === "") {
-            setDataMedicalStaffDisplay(dataMedicalStaff);
-        } else {
-            const filteredData = dataMedicalStaff.filter(item => item.gender === gender);
-            setDataMedicalStaffDisplay(filteredData);
-        }
-    }
-    const filterDataByAge = (age) => {
-        if (age === "") {
-            setDataMedicalStaffDisplay(dataMedicalStaff);
-        } else {
-            const Date = moment();
-            const filteredData = dataMedicalStaff.filter(item => {
-                const birthDayOfPatient = moment(item.dateOfBirth)
-                const ageOfPatient = Date.diff(birthDayOfPatient, 'years');
-                if (age === "< 35 tuổi") {
+
+        if (ageFilter !== "") {
+            filteredData = filteredData.filter(item => {
+                const ageOfPatient = (item.age)
+                if (ageFilter === "< 35 tuổi") {
                     return ageOfPatient < 35;
-                } else if (age === ">= 35 tuổi") {
+                } else if (ageFilter === ">= 35 tuổi") {
                     return ageOfPatient >= 35;
                 }
             });
-            setDataMedicalStaffDisplay(filteredData);
         }
-    }
+
+        if (specialtyFilter !== "") {
+            filteredData = filteredData.filter(item => item.specialty === specialtyFilter);
+        }
+
+        setDataMedicalStaffDisplay(filteredData);
+    };
+
+    useEffect(() => {
+        filterData();
+    }, [statusFilter, genderFilter, ageFilter, specialtyFilter]);
+
     useEffect(() => {
         document.addEventListener('click', handleClickOutside);
         return () => {
@@ -99,9 +95,7 @@ const FilterAndSearch = ({setDataMedicalStaffDisplay, dataMedicalStaff, position
                     <Row>
                     <Col>
                         <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByStatus(e.target.value);
-                                    }}>
+                        <Form.Select onChange={(e) => setStatusFilter(e.target.value)}>
                                         <option value="">Trạng thái</option>
                                         <option value="Sẵn sàng">Sẵn sàng</option>
                                         <option value="Đang làm việc">Đang làm việc</option>
@@ -111,9 +105,7 @@ const FilterAndSearch = ({setDataMedicalStaffDisplay, dataMedicalStaff, position
                     </Col>
                     <Col>
                     <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByGender(e.target.value);
-                                    }}>
+                    <Form.Select onChange={(e) => setGenderFilter(e.target.value)}>
                                         <option value="">Giới tính</option>
                                         <option value="Nam">Nam</option>
                                         <option value="Nữ">Nữ</option>
@@ -122,9 +114,7 @@ const FilterAndSearch = ({setDataMedicalStaffDisplay, dataMedicalStaff, position
                     </Col>
                     <Col>
                     <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByAge(e.target.value);
-                                    }}>
+                    <Form.Select onChange={(e) => setAgeFilter(e.target.value)}>
                                         <option value="">Tuổi</option>
                                         <option value="< 35 tuổi">Dưới 35 tuổi</option>
                                         <option value=">= 35 tuổi">Trên 35 tuổi</option>
@@ -133,7 +123,7 @@ const FilterAndSearch = ({setDataMedicalStaffDisplay, dataMedicalStaff, position
                     </Col>
                     <Col>
   <Form.Group>
-    <Form.Select onChange={(e) => filterDataBySpecialty(e.target.value)}>
+   <Form.Select onChange={(e) => setSpecialtyFilter(e.target.value)}>
       <option value="">Chuyên Khoa</option>
       {position === 'specialist' && (
         <>

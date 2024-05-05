@@ -7,6 +7,10 @@ import moment from 'moment';
 const FilterAndSearch = ({setDataMedicineDisplay, dataMedicineDisplay}) => {
     const [isClickSearchIcon , setIsClickSearchIcon ] =useState(false)
     const [searchValue, setSearchValue] = useState("");
+      const [statusFilter, setStatusFilter] = useState("");
+    const [expireFilter, setExpireFilter] = useState("");
+    const [countFilter, setCountFilter] = useState("");
+
     const searchBlockRef = useRef(null)
     const handleClickOutside = (event) => {
         if (searchBlockRef.current && !searchBlockRef.current.contains(event.target)) {
@@ -26,45 +30,41 @@ const FilterAndSearch = ({setDataMedicineDisplay, dataMedicineDisplay}) => {
         const searchedData = dataMedicineDisplay.filter(item => item.name === name);
         setDataMedicineDisplay(searchedData);
     }
-    const filterDataByStatus = (status) => {
-        if (status === "") {
-            setDataMedicineDisplay(dataMedicineDisplay);
-        } else {
-            const filteredData = dataMedicineDisplay.filter(item => item.status === status);
-            setDataMedicineDisplay(filteredData);
+    const filterData = () => {
+        let filteredData = dataMedicineDisplay;
+
+        if (statusFilter !== "") {
+            filteredData = filteredData.filter(item => item.status === statusFilter);
         }
-    }
-    const filterDataByExpire = (time) => {
-        if (time === "") {
-          setDataMedicineDisplay(dataMedicineDisplay);
-        } else {
+
+        if (expireFilter !== "") {
             const Date = moment();
-            const filteredData = dataMedicineDisplay.filter(item => {
-                const expireDay = moment(item.arrivalDate)
+            filteredData = filteredData.filter(item => {
+                const expireDay = moment(item.arrivalDate);
                 const expire = expireDay.diff(Date, 'years');
-                if (time === "> 10 năm") {
+                if (expireFilter === "> 10 năm") {
                     return expire > 10;
-                } else if (time === "<= 10 năm") {
+                } else if (expireFilter === "<= 10 năm") {
                     return expire <= 10;
                 }
             });
-            setDataMedicineDisplay(filteredData);
         }
-    }
-    const filterDataByCount = (count) => {
-      if (count === "") {
-          setDataMedicineDisplay(dataMedicineDisplay);
-      } else if(count ==="> 5000") {
-        const amountThreshold = parseInt(count.split(" ")[1]);
-          const filteredData = dataMedicineDisplay.filter(item => item.amount > amountThreshold);
-          setDataMedicineDisplay(filteredData);
-      }
-      else{
-        const amountThreshold = parseInt(count.split(" ")[1]);
-        const filteredData = dataMedicineDisplay.filter(item => item.amount <= amountThreshold);
-          setDataMedicineDisplay(filteredData);
-      }
-  }
+
+        if (countFilter !== "") {
+            if (countFilter === "> 5000") {
+                filteredData = filteredData.filter(item => item.amount > 5000);
+            } else if (countFilter === "<= 5000") {
+                filteredData = filteredData.filter(item => item.amount <= 5000);
+            }
+        }
+
+        setDataMedicineDisplay(filteredData);
+    };
+
+    useEffect(() => {
+        filterData();
+    }, [statusFilter, expireFilter, countFilter]);
+
     useEffect(() => {
         document.addEventListener('click', handleClickOutside);
         return () => {
@@ -97,9 +97,7 @@ const FilterAndSearch = ({setDataMedicineDisplay, dataMedicineDisplay}) => {
                     <Row>
                     <Col>
                         <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByStatus(e.target.value);
-                                    }}>
+                        <Form.Select onChange={(e) => setStatusFilter(e.target.value)}>
                                         <option value="">Trạng thái</option>
                                         <option value="Hết thuốc">Hết thuốc</option>
                                         <option value="Sẵn sàng">Sẵn sàng</option>
@@ -109,9 +107,7 @@ const FilterAndSearch = ({setDataMedicineDisplay, dataMedicineDisplay}) => {
                     </Col>
                     <Col>
                     <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByExpire(e.target.value);
-                                    }}>
+                    <Form.Select onChange={(e) => setExpireFilter(e.target.value)}>
                                         <option value="">Hạn sử dụng</option>
                                         <option value="> 10 năm">Trên 10 năm</option>
                                         <option value="<= 10 năm">Dưới 10 năm</option>
@@ -120,9 +116,7 @@ const FilterAndSearch = ({setDataMedicineDisplay, dataMedicineDisplay}) => {
                     </Col>
                     <Col>
                         <Form.Group>
-                        <Form.Select onChange={(e) => {
-                                        filterDataByCount(e.target.value);
-                                    }}>
+                        <Form.Select onChange={(e) => setCountFilter(e.target.value)}>
                                         <option value="">Số lượng</option>
                                         <option value="> 5000">Trên 5000</option>
                                         <option value="<= 5000">Dưới 5000</option>
