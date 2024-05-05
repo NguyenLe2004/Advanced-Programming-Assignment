@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import eximg from "../../../Image/example-img.jpeg"
 import { Button } from 'react-bootstrap';
-// import Profile from '../../../Profile/Profile';
+import Profile from '../../../Profile/Profile';
 const NavigatorBar = () => {
   const { isSignIn, setIsSignIn } = useContext(signInContext);
   const { isDisplaySignInForm, setIsDisplaySignInForm } = useContext(displaySignInFormContext);
@@ -83,7 +83,7 @@ const NavigatorBar = () => {
             <div style={{position:"absolute",right:"5vw",display:"flex",flexDirection:"column"}} >
                 <img style={{height:"4vh", width:"4vh",borderRadius:"50%", position:"absolute",right:"1vw"}} onClick={()=>setIsDisplayDropDown(true)} className='profileImage' src={eximg} alt='Profile' />
               {isDisplayDropDown && <div ref={dropdownRef} className='user-option'>
-                <li><a href="/">My Profile</a></li>
+                <li><a href="/profile">My Profile</a></li>
                 <li><a onClick={handleSubmit} href="/login">Sign out</a></li>
                 <li><a href="/login">Sign in</a></li>
               </div>}
