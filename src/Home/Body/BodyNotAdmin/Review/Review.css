@@ -1,0 +1,26 @@
+.outer-review{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: nowrap;
+    margin-top: 10vh;
+}
+.outer-review > .review-block {
+    margin: 5vh 2vw;
+}
+.review-block{
+    background-color: white;
+    padding: 2vh 1vw 3vh 1vw;
+    width: 20vw;
+    height: 100%;
+}
+.avg-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avg-header >span {
+    margin-left: 10px;
+    font-size: "22px";
+}

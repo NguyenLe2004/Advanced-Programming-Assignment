@@ -30,7 +30,7 @@ const Home = () => {
             <Route path='/medicine' element ={<Medicine />}/>
             <Route path='/equipment' element ={<Equipment/>}/>
           </Routes>
-        {/* {!isLoginRoute && <Footer/>} */}
+        {!isLoginRoute && <Footer/>}
     </div>
     </div>
   )

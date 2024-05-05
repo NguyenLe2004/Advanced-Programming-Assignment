@@ -5,7 +5,7 @@ export const Box = styled.div`
 	background: rgb(50, 183, 255);
 	// position: absolute;
 	bottom: 0;
-	width: 95%;
+	width: 100%;
 
 	@media (max-width: 1000px) {
 		// padding: 70px 30px;

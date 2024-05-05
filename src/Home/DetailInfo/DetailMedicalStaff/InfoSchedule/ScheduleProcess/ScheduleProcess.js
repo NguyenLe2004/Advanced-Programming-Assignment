@@ -46,14 +46,15 @@ const ScheduleProcess = ({ medicalStaff }) => {
       const [dateBegin, timeBegin] = form.elements.datetimeBegin.value.split("T");
       const [dateEnd, timeEnd] = form.elements.datetimeEnd.value.split("T");
       const newSchedule = { 
-        dateBegin: dateBegin,
+        dateBegin: moment(dateBegin,"YYYY-MM-DD").format("DD-MM-YYYY"),
         timeBegin: timeBegin,
-        dateEnd: dateEnd,
+        dateEnd: moment(dateEnd,"YYYY-MM-DD").format("DD-MM-YYYY"),
         timeEnd: timeEnd,
         room: form.elements.room.value,
         title: form.elements.title.value,
         description: form.elements.description.value,
       };
+      console.log(newSchedule)
       axios
         .put(`http://localhost:8080/v1/specialists/${id}/schedules/${scheduleID}` ,newSchedule)
         .then(() => {
