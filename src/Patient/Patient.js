@@ -47,7 +47,7 @@ const Patient = ({role}) => {
           return {...item ,status,age,treatProcess};
         }))
         setDataPatient(dataWithStatusAndAge);
-        console.log(dataWithStatusAndAge);
+        // console.log(dataWithStatusAndAge);
       } catch (error) {
         console.log(error); 
       }

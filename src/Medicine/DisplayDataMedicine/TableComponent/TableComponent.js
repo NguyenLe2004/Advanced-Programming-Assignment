@@ -57,14 +57,22 @@ const TableComponent = ({dataMedicineDisplay,setDataMedicineDisplay, role}) => {
   const handleSelectAll = () =>{
     setSelectedRows( !isSelectAll ? dataMedicineDisplay.map(obj => obj.id) : [])
   }
+ 
 
-  const handleDelete = () =>{
-    selectedRows.forEach(id => {
-      axios.delete("http://localhost:3000/Medicine/"+id)
-      .catch(error=>console.error(error));
-    })
+  const handleDelete = async () =>{ 
+    try{
+      const response = await axios.put("http://localhost:8080/v1/medicines/deleteMany", selectedRows);
+      console.log(selectedRows);       
+      
+    }
+    catch(error){
+      console.log(error);
+    }
     window.location.reload();
   }
+
+
+
   useEffect(() => {
     if (!dataMedicineDisplay || !sortColumn) {
       return;

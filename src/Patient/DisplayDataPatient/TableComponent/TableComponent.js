@@ -66,13 +66,20 @@ const TableComponent = ({ dataPatientDisplay, setDataPatientDisplay, role }) => 
     setSelectedRows( !isSelectAll ? dataPatientDisplay.map(obj => obj.id) : [])
   }
 
-  const handleDelete = () =>{
-    selectedRows.forEach(id => {
-      axios.delete("http://localhost:3000/Patient/"+id)
-      .catch(error=>console.error(error));
-    })
+  const handleDelete = async () =>{ 
+    try{
+      const response = await axios.put("http://localhost:8080/v1/patients/deleteMany", selectedRows);
+      console.log(selectedRows);
+      console.log("hello");
+      
+      
+    }
+    catch(error){
+      console.log(error);
+    }
     window.location.reload();
   }
+
   useEffect(() => {
     if (!dataPatientDisplay || !sortColumn) {
       return;
@@ -228,7 +235,8 @@ const TableComponent = ({ dataPatientDisplay, setDataPatientDisplay, role }) => 
                 }
               >
                    {isDelete &&
-               <td className='square-icon' style={{fontSize:"25px",zIndex:"30"}} onClick={() => {
+               <td className='square-icon' style={{fontSize:"25px",zIndex:"30"}} onClick={(event) => {
+                event.stopPropagation();
                 const updatedRows = [...selectedRows];
                 if (updatedRows.includes(obj.id)) {
                   updatedRows.splice(updatedRows.indexOf(obj.id), 1);

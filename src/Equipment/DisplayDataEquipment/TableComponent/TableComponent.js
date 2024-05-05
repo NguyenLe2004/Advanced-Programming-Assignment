@@ -68,13 +68,20 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay, role}) =>
     setSelectedRows( !isSelectAll ? dataEquipmentDisplay.map(obj => obj.id) : [])
   }
 
-  const handleDelete = () =>{
-    selectedRows.forEach(id => {
-      axios.delete("http://localhost:3000/Equipment/"+id)
-      .catch(error=>console.error(error));
-    })
+  const handleDelete = async () =>{ 
+    try{
+      const response = await axios.put("http://localhost:8080/v1/equipments/deleteMany", selectedRows);
+      console.log(selectedRows);       
+      
+    }
+    catch(error){
+      console.log(error);
+    }
     window.location.reload();
   }
+
+
+
   useEffect(() => {
     if (!dataEquipmentDisplay || !sortColumn) {
       return;
@@ -216,7 +223,8 @@ const TableComponent = ({dataEquipmentDisplay,setDataEquipmentDisplay, role}) =>
                 setDetailData(obj);
               }}>
                 {isDelete &&
-               <td className='square-icon' style={{fontSize:"25px",zIndex:"30"}} onClick={() => {
+               <td className='square-icon' style={{fontSize:"25px",zIndex:"30"}} onClick={(event) => {
+                event.stopPropagation();
                 const updatedRows = [...selectedRows];
                 if (updatedRows.includes(obj.id)) {
                   updatedRows.splice(updatedRows.indexOf(obj.id), 1);

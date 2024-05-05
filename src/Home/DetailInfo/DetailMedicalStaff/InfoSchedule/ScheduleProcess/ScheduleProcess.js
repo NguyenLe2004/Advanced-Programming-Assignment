@@ -22,12 +22,16 @@ const ScheduleProcess = ({ medicalStaff }) => {
   const [scheduleID, setScheduleID] = useState(null);
   const [error, setError] = useState("");
   const {id} = useParams()
+
+
   const handleDeleteSchedule = () => {
     axios
       .delete(`http://localhost:8080/v1/specialists/${id}/schedules/${scheduleID}`)
       .then(() => window.location.reload())
       .catch((error) => console.error(error));
   };
+
+
 
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
