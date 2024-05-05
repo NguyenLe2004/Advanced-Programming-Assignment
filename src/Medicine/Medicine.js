@@ -19,7 +19,7 @@ const Medicine = ({role}) => {
         try {
             let response = await axios.get('http://localhost:8080/v1/medicines');
             response.data.forEach((obj) => {
-              obj.status = getMedicineStatus(obj);
+              obj.status = getMedicineStatus(obj); 
             })
             console.log(response.data)
             setDataMedicine(response.data);

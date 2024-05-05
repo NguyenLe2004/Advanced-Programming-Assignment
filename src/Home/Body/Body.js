@@ -4,8 +4,8 @@ import BodyStaff from './BodyStaff/BodyStaff'
 const Body = () => {
   return (
     <div>
-      <BodyNotAdmin/>
-      {/* <BodyStaff /> */}
+      {/* <BodyNotAdmin/> */}
+      <BodyStaff />
     </div>
   )
 }

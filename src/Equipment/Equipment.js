@@ -72,7 +72,7 @@ const Equipment = ({role}) => {
         );
 
         setDataEquipment(data);
-      } catch (error) {
+      } catch (error) { 
         console.log(error);
       }
     };

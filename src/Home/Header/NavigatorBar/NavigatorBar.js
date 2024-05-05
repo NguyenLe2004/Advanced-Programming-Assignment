@@ -17,7 +17,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import axios from 'axios';
 import eximg from "../../../Image/example-img.jpeg"
-import Profile from '../../../Profile/Profile';
+// import Profile from '../../../Profile/Profile';
 const NavigatorBar = ({ role }) => {
   const { isSignIn, setIsSignIn } = useContext(signInContext);
   const { isDisplaySignInForm, setIsDisplaySignInForm } = useContext(displaySignInFormContext);

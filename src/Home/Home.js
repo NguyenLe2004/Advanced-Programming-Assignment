@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom'
 
 import "./Home.css"
 import axios from 'axios'
-import Profile from '../Profile/Profile'
+// import Profile from '../Profile/Profile'
 
 const Home = () => {
   const location = useLocation();
@@ -74,7 +74,7 @@ const Home = () => {
           <Routes>
             <Route path='/' render element={<Body />} />
             <Route path='/login' element={<SignInForm />} />
-            <Route path='/profile' onClick= {()=> {routeChange('/login')}} element={<SignInForm />} />
+            {/* <Route path='/profile' onClick= {()=> {routeChange('/login')}} element={<SignInForm />} /> */}
             <Route path='/patient' element={<SignInForm />}/>
             <Route path='/patient/:id' element={<SignInForm />} />
             <Route path='/medicalStaff/:position' element={<SignInForm />} />
@@ -97,7 +97,7 @@ const Home = () => {
           <Route path='/' render element={<Body />} />
           <Route path='/login' element={<SignInForm />} />
           <Route path='/register' element={< RegisterForm role = {globalRole}/>} />
-          <Route path='/profile' element={<Profile email = {globalEmail} name = {globalName} role = {globalRole} id = {globalID}/>} />
+          {/* <Route path='/profile' element={<Profile email = {globalEmail} name = {globalName} role = {globalRole} id = {globalID}/>} /> */}
           <Route path='/patient' element={ <Patient role = {globalRole}/>} />
           <Route path='/patient/:id' element={<DetailPatient />} />
           <Route path='/medicalStaff/:position' element={<MedicalStaff role={globalRole} />} />

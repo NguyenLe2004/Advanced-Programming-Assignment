@@ -8,7 +8,7 @@ const BodyStaff = () => {
     useEffect(() => {
       const handleScroll = () => {
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-        const windowHeight = window.innerHeight;
+        const windowHeight = window.innerHeight*0.55;
   
         if (scrollPosition > windowHeight ) {
           setShouldRenderDashboard(true);
