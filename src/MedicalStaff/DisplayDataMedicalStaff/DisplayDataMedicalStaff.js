@@ -69,7 +69,7 @@ const DisplayDataMedicalStaff = ({dataMedicalStaff,position, role}) => {
         <div className='main-page'>
           <StatusStat dataMedicalStaff={dataMedicalStaff} position={position} role={role}/>
             
-          <FilterAndSearch setDataMedicalStaffDisplay = {setDataMedicalStaffDisplay} dataMedicalStaff = {dataMedicalStaff} />
+          <FilterAndSearch setDataMedicalStaffDisplay = {setDataMedicalStaffDisplay} dataMedicalStaff = {dataMedicalStaff} position={position}/>
         {Object.keys(dataMedicalStaffDisplay).length !== 0 ? (
             <TableComponent dataMedicalStaffDisplay = {dataMedicalStaffDisplay} setDataMedicalStaffDisplay={setDataMedicalStaffDisplay} role = {role} />
           ):(

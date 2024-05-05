@@ -3,33 +3,93 @@ import { Form, Row,Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import "./FilterAndSearch.css"
-
-const FilterAndSearch = ({setDataMedicineDisplay, dataMedicineDisplay}) => {
+import moment from 'moment';
+const FilterAndSearch = ({setDataMedicalStaffDisplay, dataMedicalStaff, position}) => { 
     const [isClickSearchIcon , setIsClickSearchIcon ] =useState(false)
+    const [searchValue, setSearchValue] = useState("");
     const searchBlockRef = useRef(null)
     const handleClickOutside = (event) => {
         if (searchBlockRef.current && !searchBlockRef.current.contains(event.target)) {
             setIsClickSearchIcon(false);
         }
       };
+      const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            searchByCitizenID(searchValue);
+        }
+    }
+    const searchByCitizenID =(citizenID) =>{
+        if(citizenID===""){
+            setDataMedicalStaffDisplay(dataMedicalStaff)
+        }
+        const searchedData = dataMedicalStaff.filter(item => item.citizenID === citizenID);
+        setDataMedicalStaffDisplay(searchedData);
+    }
+    const filterDataByStatus = (status) => {
+        if (status === "") {
+            setDataMedicalStaffDisplay(dataMedicalStaff);
+        } else {
+            const filteredData = dataMedicalStaff.filter(item => item.status === status);
+            setDataMedicalStaffDisplay(filteredData);
+        }
+    }
+    const filterDataBySpecialty = (specialty) => {
+        if (specialty === "") {
+            setDataMedicalStaffDisplay(dataMedicalStaff);
+        } else {
+            const filteredData = dataMedicalStaff.filter(item => item.specialty === specialty);
+            setDataMedicalStaffDisplay(filteredData);
+        }
+    }
+    const filterDataByGender = (gender) => {
+        if (gender === "") {
+            setDataMedicalStaffDisplay(dataMedicalStaff);
+        } else {
+            const filteredData = dataMedicalStaff.filter(item => item.gender === gender);
+            setDataMedicalStaffDisplay(filteredData);
+        }
+    }
+    const filterDataByAge = (age) => {
+        if (age === "") {
+            setDataMedicalStaffDisplay(dataMedicalStaff);
+        } else {
+            const Date = moment();
+            const filteredData = dataMedicalStaff.filter(item => {
+                const birthDayOfPatient = moment(item.dateOfBirth)
+                const ageOfPatient = Date.diff(birthDayOfPatient, 'years');
+                if (age === "< 35 tuổi") {
+                    return ageOfPatient < 35;
+                } else if (age === ">= 35 tuổi") {
+                    return ageOfPatient >= 35;
+                }
+            });
+            setDataMedicalStaffDisplay(filteredData);
+        }
+    }
     useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-        document.removeEventListener('click', handleClickOutside);
-    };
-    }, []);
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+        }, []);
   return (
     <div className='search-filter-container' >
         <span className='search-block' ref={searchBlockRef}>
             <Form className={`search-form ${isClickSearchIcon ? 'active' : ""}`}>
                 <Form.Group >
-                    <Form.Control type='search' placeholder='Nhập tên thuốc' pattern="^[a-zA-Z0-9]+$" />
+                    <Form.Control type='search' placeholder='Nhập CCCD'  pattern="^\d{12}"
+                             onChange={(e) => setSearchValue(e.target.value)}
+                             onKeyDown={handleKeyDown}
+                           />
             <Form.Control.Feedback type="invalid">
-             Tên không hợp lệ
+             CCCD không hợp lệ
             </Form.Control.Feedback>
                 </Form.Group>
             </Form>
-            <span className={`search-icon ${isClickSearchIcon ? 'active' : ""}`} onClick={() => setIsClickSearchIcon(true)} >
+            <span className={`search-icon ${isClickSearchIcon ? 'active' : ""}`} onClick={() => {
+                setIsClickSearchIcon(true)
+                }} >
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
             </span>
         </span>
@@ -39,14 +99,71 @@ const FilterAndSearch = ({setDataMedicineDisplay, dataMedicineDisplay}) => {
                     <Row>
                     <Col>
                         <Form.Group>
-                            <Form.Select>
-                                <option>Trạng thái</option>
-                                <option>Sẵn sàng</option>
-                                <option>Hết hạn</option>
-                                <option>Hết thuốc</option>
-                            </Form.Select>
+                        <Form.Select onChange={(e) => {
+                                        filterDataByStatus(e.target.value);
+                                    }}>
+                                        <option value="">Trạng thái</option>
+                                        <option value="Sẵn sàng">Sẵn sàng</option>
+                                        <option value="Đang làm việc">Đang làm việc</option>
+                                        <option value="Nghỉ phép">Nghỉ phép</option>
+                                    </Form.Select>
                         </Form.Group>
                     </Col>
+                    <Col>
+                    <Form.Group>
+                        <Form.Select onChange={(e) => {
+                                        filterDataByGender(e.target.value);
+                                    }}>
+                                        <option value="">Giới tính</option>
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                    </Form.Select>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                    <Form.Group>
+                        <Form.Select onChange={(e) => {
+                                        filterDataByAge(e.target.value);
+                                    }}>
+                                        <option value="">Tuổi</option>
+                                        <option value="< 35 tuổi">Dưới 35 tuổi</option>
+                                        <option value=">= 35 tuổi">Trên 35 tuổi</option>
+                                    </Form.Select>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+  <Form.Group>
+    <Form.Select onChange={(e) => filterDataBySpecialty(e.target.value)}>
+      <option value="">Chuyên Khoa</option>
+      {position === 'specialist' && (
+        <>
+          <option value="Nội">Nội</option>
+          <option value="Ngoại">Ngoại</option>
+          <option value="Tim mạch">Tim mạch</option>
+          <option value="Sản">Sản</option>
+          <option value="Da liễu">Da liễu</option>
+          <option value="Tai mũi họng">Tai mũi họng</option>
+          <option value="Y học cổ truyền">Y học cổ truyền</option>
+        </>
+      )}
+      {position === 'nurse' && (
+        <>
+          <option value="Hộ sinh">Hộ sinh</option>
+          <option value="Gây mê hồi sức ">Gây mê hồi sức</option>
+          <option value="Điều dưỡng">Điều dưỡng</option>
+        </>
+      )}
+      {position === 'support' && (
+        <>
+          <option value="Nhân viên sữa chữa">Nhân viên sữa chữa</option>
+          <option value="Nhân viên bảo vệ">Nhân viên bảo vệ</option>
+          <option value="Tư vấn viên">Tư vấn viên</option>
+          <option value="Nhân viên vệ sinh">Nhân viên vệ sinh</option>
+        </>
+      )}
+    </Form.Select>
+  </Form.Group>
+</Col>
                     <Col>
                         <Form.Group>
                             {/* <Form.Label>dsfjkgasfghdsfkuydgs</Form.Label> */}
