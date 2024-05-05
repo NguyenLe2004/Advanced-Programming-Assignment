@@ -22,7 +22,7 @@ const DetailPatient = () => {
         return "Chưa điều trị";
     }
     const currentDate = moment();
-    const lastTreatDay = moment(treatProcess[length-1].dateEnd, 'DD/MM/YYYY');
+    const lastTreatDay = moment(treatProcess[0].dateEnd, 'DD/MM/YYYY');
     if (lastTreatDay < currentDate) {
         return "Hoàn thành điều trị";
     }

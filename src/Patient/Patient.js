@@ -27,7 +27,7 @@ const Patient = () => {
 
   useEffect(() => {
     const getAllPatient = async () => {
-      try {
+      try { 
         const response = await axios.get('http://localhost:8080/v1/patients');
         console.log(response.data);
         const dataWithStatusAndAge = await Promise.all(response.data.map(async item => {
