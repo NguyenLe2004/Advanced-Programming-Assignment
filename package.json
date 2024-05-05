@@ -35,11 +35,7 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-<<<<<<< HEAD
-    "start": "cross-env PORT=4000 react-scripts start",
-=======
     "start": "react-scripts start",
->>>>>>> 4f23fe864fe4b6474cde6649e3b2532c084e9f55
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
