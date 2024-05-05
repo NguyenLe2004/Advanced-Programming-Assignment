@@ -129,14 +129,14 @@ const UsageHisInfoBlock = ({equipmentData}) => {
                     <Form.Label>Thời điểm bắt đầu</Form.Label>
                     <Form.Control type="datetime-local"  defaultValue={isAdd ? "":moment(usageHistory[currentPage-1].dateBegin,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")} required />
                     <Form.Control.Feedback type="invalid">
-                    Thông tin không hợp lệ
+                    Thời điểm không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="6" controlId="datetimeEnd">
                     <Form.Label>Thời điểm kết thúc</Form.Label>
                     <Form.Control type="datetime-local" defaultValue={isAdd ? "":moment(usageHistory[currentPage-1].dateEnd,"DD-MM-YYYY HH:mm").format("YYYY-MM-DDTHH:mm")} required />
                     <Form.Control.Feedback type="invalid">
-                    Thông tin không hợp lệ
+                    Thời điểm không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                 </Row>

@@ -38,6 +38,9 @@ const UpdateEquipmentForm = ({equipmentData,setIsUpdate}) => {
               placeholder="Tên thiết bị"
               defaultValue={equipmentData.name}
             />
+            <Form.Control.Feedback type="invalid">
+              Tên thiết bị không hợp lệ
+            </Form.Control.Feedback>
           </Form.Group>
         </Row>
         <Button type="submit">Đổi thông tin thiết bị</Button>

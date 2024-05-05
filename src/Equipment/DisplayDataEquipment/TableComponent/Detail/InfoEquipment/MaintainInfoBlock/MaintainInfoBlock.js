@@ -123,14 +123,14 @@ const MaintainInfoBlock = ({equipmentData}) => {
                     <Form.Label>Ngày bắt đầu</Form.Label>
                     <Form.Control type="date" placeholder="Ngày cấp" defaultValue={isAdd ? "":moment(regularMaintenance[currentPage-1].dateBegin,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
                     <Form.Control.Feedback type="invalid">
-                    Thông tin không hợp lệ
+                    Thời điểm không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="5" controlId="dateEnd">
                     <Form.Label>Ngày kết thúc</Form.Label>
                     <Form.Control type="date" placeholder="Ngày cấp" defaultValue={isAdd ? "":moment(regularMaintenance[currentPage-1].dateEnd,"DD-MM-YYYY").format("YYYY-MM-DD")} required />
                     <Form.Control.Feedback type="invalid">
-                    Thông tin không hợp lệ
+                    Thời điểm không hợp lệ
                     </Form.Control.Feedback>
                     </Form.Group>
                 </Row>
