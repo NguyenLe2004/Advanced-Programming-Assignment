@@ -1,0 +1,102 @@
+.patient-info{
+    margin-top: 2vh;
+}
+.patient-label{
+    padding-left: 2vw;
+}
+.patient-value {
+    padding-right: 2vw;
+}
+.patient-img{
+    width: 40%;
+}
+.all-status{
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+}
+.status-on-going{
+    background-color: rgb(253,167,40,0.3);
+    color: rgb(214, 129, 2);
+}
+.status-not{
+    background-color: rgb(237,81,80,0.3);
+    color: rgb(237,81,80);
+}
+.status-complete{
+    background-color: #48b3ff4d;
+    color: rgb(0, 149, 255);
+}
+.patient-value{
+    color: rgb(74, 74, 74);
+}
+
+.main-page-detail{
+    position: center;
+    top: 8vh;
+    display: grid;
+    flex-direction: column;
+    width: 200%;
+    min-height: 100%;
+    background-color: rgb(204, 230, 255,0.3);
+}
+.avatar{
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    align-items: center;
+    width: 15vh;
+    height:15vh;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 5vh 5vh 5vh 5vh;
+    background-color: rgb(57, 113, 0);
+    color: white;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    border-radius: 50%;
+}
+.info-block{
+    display: flex;
+    margin-left: 10vw;
+    width: 260vw;
+    height: 40vh;
+    font-weight: bold;
+    justify-content: center;
+}
+.info{
+    background-color: white;
+    margin-top: 30vm;
+    width: 280vw;
+    height: 55%;
+    justify-content: center;
+    border-radius: 10px;
+}
+.med-info{
+    position: relative;
+    margin-left: 10vw;
+    border-radius: 10px;
+    width: 60%;
+}
+.pen-to-square-icon {
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    left: 37vw;
+}
+.pen-to-square-icon:hover{
+    cursor: pointer;
+    color: gray;
+}
+.treat-page{
+    margin-top: 7vh;
+    min-height: 100vh;
+}
