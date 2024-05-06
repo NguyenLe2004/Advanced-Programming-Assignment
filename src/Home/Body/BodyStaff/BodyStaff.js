@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import IntroPart from './IntroPart/IntroPart'
 import ButtonGroup from './ButtonGroup/ButtonGroup'
 import DashBoard from './DashBoard/DashBoard'
-const BodyStaff = () => {
+const BodyStaff = ({role}) => {
     const [shouldRenderDashboard, setShouldRenderDashboard] = useState(false);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const BodyStaff = () => {
       };
     }, []);
   return (
-    <div style={{minHeight:"200vh",display:"flex",alignItems:"center",flexDirection:"column"}}>
+    <div style={{minHeight: "200vh",display:"flex",alignItems:"center",flexDirection:"column"}}>
         <IntroPart />
         <ButtonGroup/>
         {shouldRenderDashboard && <DashBoard />}

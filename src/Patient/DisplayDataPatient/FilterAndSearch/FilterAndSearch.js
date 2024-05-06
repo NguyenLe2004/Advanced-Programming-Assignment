@@ -82,7 +82,7 @@ const FilterAndSearch = ({setDataPatientDisplay, dataPatient}) => {
             </span>
         </span>
         <span>
-            <div style={{ border:"1px red solid"}}>
+            <div style={{marginBottom:"2vh",marginLeft:"2vw"}}>
                 <Form style={{display:"flex"}}>
                     <Row>
                     <Col>
