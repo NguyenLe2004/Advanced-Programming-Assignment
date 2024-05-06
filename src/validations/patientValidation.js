@@ -30,8 +30,8 @@ const createNew = async (req, res, next) => {
   })
   try {
     await dataCorrection.validateAsync(req.body, { abortEarly: false })
-    // next()
-    res.status(201).json("Tao thanh cong")
+    next()
+    //res.status(201).json("Tao thanh cong")
   } catch (error) {
     const errorMessage = new Error(error).message
     const customError = new customApiErrorModule.CustomAPIError(422, errorMessage)
