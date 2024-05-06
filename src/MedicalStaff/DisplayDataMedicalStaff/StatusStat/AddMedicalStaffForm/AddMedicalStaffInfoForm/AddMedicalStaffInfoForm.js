@@ -34,7 +34,7 @@ const AddMedicalStaffInfoForm = ({ setIsSlide1, setPersonalInfo }) => {
         phoneNum: form.elements.phoneNum.value,
         email: form.elements.email.value,
         citizenID: form.elements.citizenID.value,
-        dateOfBirth: form.elements.dateOfBirth.value,
+        dateOfBirth: moment(form.elements.dateOfBirth.value,"YYYY-MM-DD").format("DD-MM-YYYY"),
         address: form.elements.address.value,
         hometown: form.elements.hometown.value,
       });

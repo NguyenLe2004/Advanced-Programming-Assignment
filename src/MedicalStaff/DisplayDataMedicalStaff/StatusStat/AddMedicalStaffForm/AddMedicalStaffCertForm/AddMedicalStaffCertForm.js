@@ -24,9 +24,9 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
       education: education,
       cert : cert,
       position: position ==="specialist" ? "Bác sĩ" : position === "nurse" ? "Y tá"  : "Nhân viên hỗ trợ",
-      schedule :[]
     }
-    axios.post("http://localhost:3000/MedicalStaff",data)
+    console.log(data)
+    axios.post("http://localhost:8080/v1/specialists",data)
       .then((response) => {
         window.open(`http://localhost:4000/medicalstaff/${position}/${response.data.id}`,'_blank')
         window.location.reload();
@@ -50,7 +50,7 @@ const AddMedicalStaffCertForm = ({setIsSlide2,personalInfo, education}) => {
         setCert([
           ...cert,
           {
-            date: form.elements.date.value,
+            date: moment(form.elements.date.value,"YYYY-MM-DD").format("DD-MM-YYYY"),
             organization : form.elements.organization.value,
             title : form.elements.title.value
           }
