@@ -1,12 +1,13 @@
-# Features of this application include:
+## Website project for Advanced programming course
+To use this app, all you need is to download two branches into your local machine
+Including: "Front-end" for the frontend of the app and "minh_code" for the backend
+### Dont forget to use the 'npm install' command for all your local repos before proceeding with any further instruction
+1. You start by deploying the backend server with 'npm start' on your "minh_code" branch
+2. The last step to make the app running is to use the same 'npm start' command on the "Front-End" branch to start up the frontend
+3. After starting up, now you are on the Homepage, have a look around
+4. Using the login button ... you know, to login. We have provided a sample account for you
 
-- Three different User Permission Levels
-- Associated databases for easy relationship management
-- Easy visual views of information
-- Mobile-friendly design
-- Tình trạng sức khỏe bệnh nhân
-  + Đối với quản lý bệnh nhân, hệ thống sẽ cho phép lưu trữ thông tin chi tiết về bệnh nhân bao gồm lịch sử bệnh án, kết quả xét nghiệm, và lịch trình điều trị. 
-- Lịch trình làm việc của nhân viên
-  + Các tính năng quản lý nhân viên y tế sẽ bao gồm việc theo dõi thông tin cá nhân, bằng cấp, và lịch trình làm việc, cũng như phân công công việc dựa trên chuyên môn và sự sẵn có của họ. 
-- Tình trạng sử dụng và bảo dưỡng của trang bị y tế
-  + Đối với quản lý thuốc và trang thiết bị, hệ thống sẽ cung cấp các công cụ để theo dõi tình trạng và lịch sử sử dụng, bảo dưỡng định kỳ, và đảm bảo sẵn có khi cần thiết.
+   Minh@gmail.com
+   1234567
+6. Have a look and enjoy.
+   
